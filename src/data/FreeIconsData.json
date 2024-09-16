@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Font Awesome",
+    "description": "A popular icon set and toolkit.",
+    "url": "https://fontawesome.com/"
+  },
+  {
+    "id": 2,
+    "title": "Material Design Icons",
+    "description": "Icons based on Google's Material Design guidelines.",
+    "url": "https://fonts.google.com/icons"
+  },
+  {
+    "id": 3,
+    "title": "Ionicons",
+    "description": "Icons crafted for web, iOS, Android, and desktop apps.",
+    "url": "https://ionic.io/ionicons"
+  },
+  {
+    "id": 4,
+    "title": "Bootstrap Icons",
+    "description": "Official open source SVG icon library for Bootstrap.",
+    "url": "https://icons.getbootstrap.com/"
+  },
+  {
+    "id": 5,
+    "title": "Line Awesome",
+    "description": "A simple yet elegant icon set for all your needs.",
+    "url": "https://icons8.com/line-awesome"
+  },
+  {
+    "id": 6,
+    "title": "Feather Icons",
+    "description": "A collection of simply beautiful open source icons.",
+    "url": "https://feathericons.com/"
+  },
+  {
+    "id": 7,
+    "title": "Ant Design Icons",
+    "description": "Icons for Ant Design, a popular React UI framework.",
+    "url": "https://ant.design/components/icon/"
+  },
+  {
+    "id": 8,
+    "title": "Remix Icon",
+    "description": "A set of open source neutral-style system symbols.",
+    "url": "https://remixicon.com/"
+  },
+  {
+    "id": 9,
+    "title": "Eva Icons",
+    "description": "A pack of more than 480 beautifully crafted Open Source icons.",
+    "url": "https://akveo.github.io/eva-icons/"
+  },
+  {
+    "id": 10,
+    "title": "Simple Icons",
+    "description": "Free SVG icons for popular brands.",
+    "url": "https://simpleicons.org/"
+  },
+  {
+    "id": 11,
+    "title": "Heroicons",
+    "description": "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.",
+    "url": "https://heroicons.com/"
+  },
+  {
+    "id": 12,
+    "title": "Jam Icons",
+    "description": "A set of 896 handcrafted icons for your web projects.",
+    "url": "https://jam-icons.com/"
+  },
+  {
+    "id": 13,
+    "title": "Iconscout",
+    "description": "Free and premium vector icons, illustrations, and 3D assets.",
+    "url": "https://iconscout.com/"
+  },
+  {
+    "id": 14,
+    "title": "Flaticon",
+    "description": "The largest database of free icons available in PNG, SVG, EPS, PSD, and BASE 64 formats.",
+    "url": "https://www.flaticon.com/"
+  },
+  {
+    "id": 15,
+    "title": "Freepik",
+    "description": "Free vectors, stock photos, PSD, and icons.",
+    "url": "https://www.freepik.com/"
+  },
+  {
+    "id": 16,
+    "title": "Noun Project",
+    "description": "Icons for everything, providing free and premium icons.",
+    "url": "https://thenounproject.com/"
+  }
+]

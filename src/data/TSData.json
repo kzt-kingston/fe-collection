@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "TypeScript",
+    "description": "Official TypeScript website.",
+    "url": "https://www.typescriptlang.org/"
+  },
+  {
+    "id": 2,
+    "title": "Learn TypeScript (w3schools)",
+    "description": "A comprehensive guide to learning TypeScript provided by w3schools.",
+    "url": "https://www.w3schools.com/typescript/index.php"
+  },
+  {
+    "id": 3,
+    "title": "TypeScript Official Link",
+    "description": "Official TypeScript handbook - TypeScript in 5 minutes.",
+    "url": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+  },
+  {
+    "id": 4,
+    "title": "TypeScript Cheat Sheet",
+    "description": "Cheat sheet for TypeScript syntax and usage.",
+    "url": "https://www.typescriptlang.org/cheatsheets/"
+  },
+  {
+    "id": 5,
+    "title": "TypeScript API Reference",
+    "description": "Official API reference for TypeScript.",
+    "url": "https://www.typescriptlang.org/docs/handbook/api-reference.html"
+  },
+  {
+    "id": 6,
+    "title": "TypeScript Compiler Options",
+    "description": "Guide to TypeScript compiler options.",
+    "url": "https://www.typescriptlang.org/docs/handbook/compiler-options.html"
+  },
+  {
+    "id": 7,
+    "title": "TypeScript Generics",
+    "description": "Official guide to using generics in TypeScript.",
+    "url": "https://www.typescriptlang.org/docs/handbook/generics.html"
+  },
+  {
+    "id": 8,
+    "title": "TypeScript Interfaces",
+    "description": "Official guide to using interfaces in TypeScript.",
+    "url": "https://www.typescriptlang.org/docs/handbook/interfaces.html"
+  },
+  {
+    "id": 9,
+    "title": "TypeScript Classes",
+    "description": "Official guide to using classes in TypeScript.",
+    "url": "https://www.typescriptlang.org/docs/handbook/classes.html"
+  },
+  {
+    "id": 10,
+    "title": "TypeScript Modules",
+    "description": "Official guide to using modules in TypeScript.",
+    "url": "https://www.typescriptlang.org/docs/handbook/modules.html"
+  },
+  {
+    "id": 11,
+    "title": "TypeScript Decorators",
+    "description": "Official guide to using decorators in TypeScript.",
+    "url": "https://www.typescriptlang.org/docs/handbook/decorators.html"
+  }
+]

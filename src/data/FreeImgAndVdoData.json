@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Unsplash",
+    "description": "A website offering a large collection of free high-resolution photos.",
+    "url": "https://unsplash.com/"
+  },
+  {
+    "id": 2,
+    "title": "Pexels",
+    "description": "A platform for free stock photos and videos shared by talented creators.",
+    "url": "https://www.pexels.com/"
+  },
+  {
+    "id": 3,
+    "title": "Pixabay",
+    "description": "A community of creatives sharing copyright-free images and videos.",
+    "url": "https://pixabay.com/"
+  },
+  {
+    "id": 4,
+    "title": "StockSnap",
+    "description": "A site with beautiful free stock photos in high resolution.",
+    "url": "https://stocksnap.io/"
+  },
+  {
+    "id": 5,
+    "title": "Burst",
+    "description": "Free stock photos and images for websites and commercial use, provided by Shopify.",
+    "url": "https://burst.shopify.com/"
+  },
+  {
+    "id": 6,
+    "title": "Foter",
+    "description": "A resource for free stock photos, with easy searching and categorization.",
+    "url": "https://foter.com/"
+  },
+  {
+    "id": 7,
+    "title": "Morguefile",
+    "description": "A site offering free photos for creatives by creatives.",
+    "url": "https://morguefile.com/"
+  },
+  {
+    "id": 8,
+    "title": "Videvo",
+    "description": "Free stock video footage and motion graphics.",
+    "url": "https://www.videvo.net/"
+  },
+  {
+    "id": 9,
+    "title": "Coverr",
+    "description": "Beautiful free stock video footage for your homepage.",
+    "url": "https://coverr.co/"
+  },
+  {
+    "id": 10,
+    "title": "Pexels Videos",
+    "description": "Free stock videos shared by the Pexels community.",
+    "url": "https://www.pexels.com/videos/"
+  },
+  {
+    "id": 11,
+    "title": "Videezy",
+    "description": "A website offering free HD stock footage and 4K videos.",
+    "url": "https://www.videezy.com/"
+  },
+  {
+    "id": 12,
+    "title": "Mixkit",
+    "description": "High-quality stock videos, music, and sound effects for free.",
+    "url": "https://mixkit.co/"
+  },
+  {
+    "id": 13,
+    "title": "Artgrid",
+    "description": "High-quality stock footage and video clips.",
+    "url": "https://artgrid.io/"
+  },
+  {
+    "id": 14,
+    "title": "Storyblocks",
+    "description": "Affordable stock video, audio, and images.",
+    "url": "https://www.storyblocks.com/"
+  },
+  {
+    "id": 15,
+    "title": "Shutterstock",
+    "description": "Premium stock images, photos, vectors, and videos.",
+    "url": "https://www.shutterstock.com/"
+  },
+  {
+    "id": 16,
+    "title": "Adobe Stock",
+    "description": "High-quality stock images, graphics, and videos integrated with Adobe Creative Cloud.",
+    "url": "https://stock.adobe.com/"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Awwwards",
+    "description": "Recognizing the talent and effort of the best web designers, developers, and agencies in the world.",
+    "url": "https://www.awwwards.com/"
+  },
+  {
+    "id": 2,
+    "title": "CSS Design Awards",
+    "description": "Showcasing the best in contemporary web design.",
+    "url": "https://www.cssdesignawards.com/"
+  },
+  {
+    "id": 3,
+    "title": "SiteInspire",
+    "description": "Showcasing the finest web and interactive design.",
+    "url": "https://www.siteinspire.com/"
+  },
+  {
+    "id": 4,
+    "title": "Behance",
+    "description": "A platform to showcase and discover creative work.",
+    "url": "https://www.behance.net/"
+  },
+  {
+    "id": 5,
+    "title": "Dribbble",
+    "description": "A community of designers sharing screenshots of their work, process, and projects.",
+    "url": "https://dribbble.com/"
+  }
+]

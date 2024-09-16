@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "React",
+    "description": "Official React website.",
+    "url": "https://react.dev/"
+  },
+  {
+    "id": 2,
+    "title": "Learn React (w3schools)",
+    "description": "A comprehensive guide to learning React provided by w3schools.",
+    "url": "https://www.w3schools.com/react/default.asp"
+  },
+  {
+    "id": 3,
+    "title": "React Cheat Sheet",
+    "description": "A cheat sheet for React with essential concepts and examples.",
+    "url": "https://reactcheatsheet.com/"
+  },
+  {
+    "id": 4,
+    "title": "React Cheat Sheet (devhints)",
+    "description": "React cheat sheet on devhints.",
+    "url": "https://devhints.io/react"
+  },
+  {
+    "id": 5,
+    "title": "React API Reference",
+    "description": "Official API reference for React.",
+    "url": "https://reactjs.org/docs/react-api.html"
+  },
+  {
+    "id": 6,
+    "title": "React Hooks",
+    "description": "Official guide to using hooks in React.",
+    "url": "https://reactjs.org/docs/hooks-intro.html"
+  },
+  {
+    "id": 7,
+    "title": "React Context",
+    "description": "Official guide to using context in React.",
+    "url": "https://reactjs.org/docs/context.html"
+  },
+  {
+    "id": 8,
+    "title": "React Router",
+    "description": "Official website for React Router, a library for routing in React applications.",
+    "url": "https://reactrouter.com/"
+  },
+  {
+    "id": 9,
+    "title": "React Redux",
+    "description": "Official website for React Redux, a library for managing state in React applications.",
+    "url": "https://redux.js.org/"
+  },
+  {
+    "id": 10,
+    "title": "React Redux Cheat Sheet (devhints)",
+    "description": "Redux cheat sheet on devhints.",
+    "url": "https://devhints.io/redux"
+  },
+  {
+    "id": 11,
+    "title": "React Testing",
+    "description": "Official website for Jest, a testing framework for React applications.",
+    "url": "https://jestjs.io/"
+  }
+]

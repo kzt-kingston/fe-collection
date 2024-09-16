@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Vue.js Official Link",
+    "description": "Official Vue.js website.",
+    "url": "https://vuejs.org/"
+  },
+  {
+    "id": 2,
+    "title": "Vue.js Cheat Sheet (devhints)",
+    "description": "Vue.js cheat sheet on devhints.",
+    "url": "https://devhints.io/vue"
+  },
+  {
+    "id": 3,
+    "title": "Vue.js Cheat Sheet (learnvue.co)",
+    "description": "Comprehensive Vue 3 cheat sheet provided by learnvue.co.",
+    "url": "https://learnvue.co/LearnVue-Vue-3-Cheatsheet.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Vue.js Cheat Sheet (themeselection.com)",
+    "description": "Vue.js cheat sheet provided by Theme Selection.",
+    "url": "https://vue-cheatsheet.themeselection.com/"
+  },
+  {
+    "id": 5,
+    "title": "Vue.js API Reference",
+    "description": "Official API reference for Vue.js.",
+    "url": "https://vuejs.org/v2/api/"
+  },
+  {
+    "id": 6,
+    "title": "Vue.js Reactivity",
+    "description": "Guide to reactivity in Vue.js.",
+    "url": "https://vuejs.org/v2/guide/reactivity.html"
+  },
+  {
+    "id": 7,
+    "title": "Vue.js Component Lifecycle",
+    "description": "Guide to the component lifecycle in Vue.js.",
+    "url": "https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle"
+  },
+  {
+    "id": 8,
+    "title": "Vue.js Event Handling",
+    "description": "Guide to event handling in Vue.js.",
+    "url": "https://vuejs.org/v2/guide/events.html"
+  },
+  {
+    "id": 9,
+    "title": "Vue.js Routing",
+    "description": "Official website for Vue Router, a library for routing in Vue.js applications.",
+    "url": "https://router.vuejs.org/"
+  },
+  {
+    "id": 10,
+    "title": "Vue.js State Management",
+    "description": "Official website for Vuex, a state management library for Vue.js applications.",
+    "url": "https://vuex.vuejs.org/"
+  },
+  {
+    "id": 11,
+    "title": "Vue.js Internationalization (i18n)",
+    "description": "Official website for Vue I18n, a library for internationalization in Vue.js applications.",
+    "url": "https://vue-i18n.intlify.dev/"
+  },
+  {
+    "id": 12,
+    "title": "Vue.js Testing",
+    "description": "Official website for Vue Test Utils, a testing utility library for Vue.js applications.",
+    "url": "https://vue-test-utils.vuejs.org/"
+  }
+]

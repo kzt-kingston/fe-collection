@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Learn CSS (w3schools)",
+    "description": "A comprehensive guide to learning CSS provided by w3schools.",
+    "url": "https://www.w3schools.com/css/default.asp"
+  },
+  {
+    "id": 2,
+    "title": "CSS Selectors Reference",
+    "description": "Detailed reference for CSS selectors on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
+  },
+  {
+    "id": 3,
+    "title": "CSS Properties Reference",
+    "description": "Comprehensive reference for CSS properties on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+  },
+  {
+    "id": 4,
+    "title": "CSS Selectors Reference (w3schools)",
+    "description": "CSS selectors reference provided by w3schools.",
+    "url": "https://www.w3schools.com/cssref/css_selectors.asp"
+  },
+  {
+    "id": 5,
+    "title": "Reference",
+    "description": "CSS reference on w3schools.",
+    "url": "https://www.w3schools.com/cssref/index.php"
+  },
+  {
+    "id": 6,
+    "title": "Browser Support",
+    "description": "CSS3 browser support information on w3schools.",
+    "url": "https://www.w3schools.com/cssref/css3_browsersupport.php"
+  },
+  {
+    "id": 7,
+    "title": "Selectors",
+    "description": "CSS selectors reference on w3schools.",
+    "url": "https://www.w3schools.com/cssref/css_selectors.php"
+  },
+  {
+    "id": 8,
+    "title": "Functions",
+    "description": "CSS functions reference on w3schools.",
+    "url": "https://www.w3schools.com/cssref/css_functions.php"
+  },
+  {
+    "id": 9,
+    "title": "Aural",
+    "description": "CSS aural properties reference.",
+    "url": "https://www.w3schools.com/cssref/css3_aural.php"
+  },
+  {
+    "id": 10,
+    "title": "Web Safe Fonts",
+    "description": "Web safe fonts reference on w3schools.",
+    "url": "https://www.w3schools.com/cssref/css_websafe_fonts.php"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Git Cheatsheet",
+    "description": "Official Git cheat sheet with common commands and usage examples.",
+    "url": "https://git-scm.com/docs/git-cheat-sheet"
+  },
+  {
+    "id": 2,
+    "title": "Git Commands Reference",
+    "description": "Comprehensive reference for Git commands.",
+    "url": "https://git-scm.com/docs/git-commands"
+  },
+  {
+    "id": 3,
+    "title": "Git Workflow",
+    "description": "Guide to basic branching and merging in Git.",
+    "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"
+  }
+]

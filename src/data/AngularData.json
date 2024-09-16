@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Angular",
+    "description": "Official Angular website.",
+    "url": "https://v17.angular.io/docs"
+  },
+  {
+    "id": 2,
+    "title": "Learn Angular (w3schools)",
+    "description": "A comprehensive guide to learning Angular provided by w3schools.",
+    "url": "https://www.w3schools.com/angular/default.asp"
+  },
+  {
+    "id": 3,
+    "title": "Angular Official Link",
+    "description": "Official Angular cheat sheet.",
+    "url": "https://angular.io/docs/ts/latest/cheatsheet/"
+  },
+  {
+    "id": 4,
+    "title": "Angular API Reference",
+    "description": "Official API reference for Angular.",
+    "url": "https://angular.io/api"
+  },
+  {
+    "id": 5,
+    "title": "Angular Observables and Promises",
+    "description": "Guide to using observables and promises in Angular.",
+    "url": "https://angular.io/guide/observables"
+  },
+  {
+    "id": 6,
+    "title": "Angular Dependency Injection",
+    "description": "Guide to using dependency injection in Angular.",
+    "url": "https://angular.io/guide/dependency-injection"
+  },
+  {
+    "id": 7,
+    "title": "Angular Routing",
+    "description": "Guide to using the router in Angular.",
+    "url": "https://angular.io/guide/router"
+  },
+  {
+    "id": 8,
+    "title": "Angular Forms",
+    "description": "Guide to using forms in Angular.",
+    "url": "https://angular.io/guide/forms"
+  },
+  {
+    "id": 9,
+    "title": "Angular HTTP Requests",
+    "description": "Guide to making HTTP requests in Angular.",
+    "url": "https://angular.io/guide/http"
+  },
+  {
+    "id": 10,
+    "title": "Angular Testing",
+    "description": "Guide to testing Angular applications.",
+    "url": "https://angular.io/guide/testing"
+  }
+]

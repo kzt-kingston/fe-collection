@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "title": "Learn HTML (w3schools)",
+    "description": "A comprehensive guide to learning HTML provided by w3schools.",
+    "url": "https://www.w3schools.com/html/default.asp"
+  },
+  {
+    "id": 2,
+    "title": "HTML Element Reference",
+    "description": "Detailed reference for HTML elements on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+  },
+  {
+    "id": 3,
+    "title": "HTML Cheat Sheet (Geeks for geeks)",
+    "description": "A basic guide to HTML by Geeks for Geeks.",
+    "url": "https://www.geeksforgeeks.org/html-cheat-sheet-a-basic-guide-to-html/"
+  },
+  {
+    "id": 4,
+    "title": "HTML Cheat Sheet (Codecademy)",
+    "description": "HTML elements cheat sheet provided by Codecademy.",
+    "url": "https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet"
+  },
+  {
+    "id": 5,
+    "title": "Tag List",
+    "description": "HTML tag list reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/default.asp"
+  },
+  {
+    "id": 6,
+    "title": "Attribute Reference",
+    "description": "HTML attribute reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_attributes.asp"
+  },
+  {
+    "id": 7,
+    "title": "Global Attributes",
+    "description": "HTML global attributes reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_standardattributes.asp"
+  },
+  {
+    "id": 8,
+    "title": "Event Attributes",
+    "description": "HTML event attributes reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_eventattributes.asp"
+  },
+  {
+    "id": 9,
+    "title": "Colors",
+    "description": "HTML color names reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_colornames.asp"
+  },
+  {
+    "id": 10,
+    "title": "Canvas",
+    "description": "HTML canvas reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_canvas.asp"
+  },
+  {
+    "id": 11,
+    "title": "Audio/Video",
+    "description": "HTML audio and video reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_av_dom.asp"
+  },
+  {
+    "id": 12,
+    "title": "Character Sets",
+    "description": "HTML character sets reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_charactersets.asp"
+  },
+  {
+    "id": 13,
+    "title": "<!DOCTYPE>",
+    "description": "HTML DOCTYPE declaration reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_html_dtd.asp"
+  },
+  {
+    "id": 14,
+    "title": "Language Codes",
+    "description": "HTML language codes reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_language_codes.asp"
+  },
+  {
+    "id": 15,
+    "title": "Country Codes",
+    "description": "HTML country codes reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_country_codes.asp"
+  },
+  {
+    "id": 16,
+    "title": "HTTP Status Messages",
+    "description": "HTTP status messages reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_httpmessages.asp"
+  },
+  {
+    "id": 17,
+    "title": "HTTP Request Methods",
+    "description": "HTTP request methods reference on w3schools.",
+    "url": "https://www.w3schools.com/tags/ref_httpmethods.asp"
+  }
+]

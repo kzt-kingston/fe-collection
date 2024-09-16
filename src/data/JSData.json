@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Learn JavaScript (w3schools)",
+    "description": "A comprehensive guide to learning JavaScript provided by w3schools.",
+    "url": "https://www.w3schools.com/js/default.asp"
+  },
+  {
+    "id": 2,
+    "title": "Learn JavaScript - The Modern JS Tutorial",
+    "description": "A modern JavaScript tutorial covering ES6 and beyond.",
+    "url": "https://javascript.info/"
+  },
+  {
+    "id": 3,
+    "title": "JavaScript Cheat Sheet (devhints)",
+    "description": "A cheat sheet for ES6 syntax and features.",
+    "url": "https://devhints.io/es6"
+  },
+  {
+    "id": 4,
+    "title": "JavaScript Syntax Reference",
+    "description": "Detailed reference for JavaScript syntax on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+  },
+  {
+    "id": 5,
+    "title": "JavaScript Objects Reference",
+    "description": "Reference for JavaScript objects and their methods on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+  },
+  {
+    "id": 6,
+    "title": "JavaScript Array Reference",
+    "description": "Reference for JavaScript arrays and their methods on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript String Reference",
+    "description": "Reference for JavaScript strings and their methods on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+  },
+  {
+    "id": 8,
+    "title": "JavaScript Function Reference",
+    "description": "Reference for JavaScript functions and their methods on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"
+  },
+  {
+    "id": 9,
+    "title": "JavaScript Regular Expression Reference",
+    "description": "Reference for JavaScript regular expressions and their methods on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"
+  },
+  {
+    "id": 10,
+    "title": "JavaScript Math Object Reference",
+    "description": "Reference for JavaScript Math object and its methods on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"
+  },
+  {
+    "id": 11,
+    "title": "JavaScript JSON Reference",
+    "description": "Reference for JavaScript JSON object and its methods on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"
+  }
+]

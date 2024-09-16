@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "ThemeForest",
+    "description": "A leading marketplace for premium WordPress themes, HTML templates, and more.",
+    "url": "https://themeforest.net/"
+  },
+  {
+    "id": 2,
+    "title": "Creative Market",
+    "description": "Handcrafted design content from independent creatives around the world.",
+    "url": "https://creativemarket.com/"
+  },
+  {
+    "id": 3,
+    "title": "Envato Elements",
+    "description": "Unlimited downloads of premium creative assets, including templates, graphics, and more.",
+    "url": "https://elements.envato.com/"
+  },
+  {
+    "id": 4,
+    "title": "Template Monster",
+    "description": "Premium templates for websites, CMS platforms, and eCommerce sites.",
+    "url": "https://www.templatemonster.com/"
+  },
+  {
+    "id": 5,
+    "title": "UI8",
+    "description": "Curated design resources for startups, agencies, and designers.",
+    "url": "https://ui8.net/"
+  }
+]

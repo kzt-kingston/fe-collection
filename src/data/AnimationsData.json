@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "CSS Animation Cheat Sheet",
+    "description": "A comprehensive guide to CSS animations and their properties.",
+    "url": "https://css-tricks.com/almanac/properties/a/animation/"
+  },
+  {
+    "id": 2,
+    "title": "CSS and JavaScript animation performance",
+    "description": "Best practices for optimizing CSS and JavaScript animations for performance.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance"
+  },
+  {
+    "id": 3,
+    "title": "GreenSock Animation Platform",
+    "description": "Powerful JavaScript animation library for HTML5, WebGL, and other platforms.",
+    "url": "https://greensock.com/docs/"
+  },
+  {
+    "id": 4,
+    "title": "Animate.css Cheat Sheet",
+    "description": "A collection of ready-to-use CSS animations.",
+    "url": "https://daneden.github.io/animate.css/"
+  },
+  {
+    "id": 5,
+    "title": "Anime.js Cheat Sheet",
+    "description": "A lightweight JavaScript animation library.",
+    "url": "https://animejs.com/documentation/"
+  },
+  {
+    "id": 6,
+    "title": "Lottie Animation Library",
+    "description": "Render After Effects animations natively on the web.",
+    "url": "https://lottiefiles.com/docs/"
+  },
+  {
+    "id": 7,
+    "title": "Three.js Animation Guide",
+    "description": "Animation guide for Three.js, a JavaScript library for creating 3D content.",
+    "url": "https://threejs.org/docs/#manual/introduction/Animation"
+  },
+  {
+    "id": 8,
+    "title": "WebGL Animation Tutorial",
+    "description": "Tutorial on creating 3D animations using WebGL.",
+    "url": "https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_animations"
+  },
+  {
+    "id": 9,
+    "title": "SVG Animation Tutorial",
+    "description": "Tutorial on creating animations with SVG (Scalable Vector Graphics).",
+    "url": "https://www.w3schools.com/graphics/svg_animation.asp"
+  }
+]

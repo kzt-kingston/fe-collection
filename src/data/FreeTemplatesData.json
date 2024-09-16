@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Bootstrap Templates",
+    "description": "A collection of free Bootstrap themes and templates.",
+    "url": "https://startbootstrap.com/"
+  },
+  {
+    "id": 2,
+    "title": "Tailwind Templates",
+    "description": "Premium UI components and templates for Tailwind CSS.",
+    "url": "https://tailwindui.com/"
+  },
+  {
+    "id": 3,
+    "title": "Material Design Templates",
+    "description": "Official Material Design templates and themes.",
+    "url": "https://material-ui.com/store/"
+  },
+  {
+    "id": 4,
+    "title": "Semantic UI Templates",
+    "description": "Templates built with Semantic UI.",
+    "url": "https://semantic-ui.com/templates/"
+  },
+  {
+    "id": 5,
+    "title": "Foundation Templates",
+    "description": "Templates and themes for Foundation by ZURB.",
+    "url": "https://foundation.zurb.com/templates"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "HTTP Status Codes",
+    "description": "Descriptions and definitions of HTTP status codes.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+  },
+  {
+    "id": 2,
+    "title": "JSON Syntax Reference",
+    "description": "Official JSON syntax rules and guidelines.",
+    "url": "https://www.json.org/"
+  },
+  {
+    "id": 3,
+    "title": "Unix Command Reference",
+    "description": "A comprehensive guide to Unix commands.",
+    "url": "https://ss64.com/bash/"
+  },
+  {
+    "id": 4,
+    "title": "Keyboard Shortcuts for Windows and Mac (to save time)",
+    "description": "Common keyboard shortcuts for both Windows and Mac OS.",
+    "url": "https://www.w3schools.com/tags/ref_keyboardshortcuts.asp"
+  },
+  {
+    "id": 5,
+    "title": "VS Code Keyboard Shortcuts for Windows",
+    "description": "Keyboard shortcuts reference for Visual Studio Code on Windows.",
+    "url": "https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf"
+  },
+  {
+    "id": 6,
+    "title": "VS Code Keyboard Shortcuts for Mac",
+    "description": "Keyboard shortcuts reference for Visual Studio Code on macOS.",
+    "url": "https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf"
+  },
+  {
+    "id": 7,
+    "title": "REST API Tutorial",
+    "description": "A comprehensive tutorial on designing and implementing RESTful APIs.",
+    "url": "https://restfulapi.net/"
+  }
+]
