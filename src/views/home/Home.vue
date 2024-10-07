@@ -1,6 +1,14 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
+import { onMounted, ref } from 'vue';
+import { getDictionary } from '@/locale/dict';
+
+const dict = ref({});
+
+onMounted(() => {
+    const lang = localStorage.getItem('lang') || 'en';
+    dict.value = getDictionary(lang);
+});
 </script>
 <template>
     <section id="hero">
@@ -11,8 +19,7 @@ import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
                     Collection!</span>
                 <br />
                 <br />
-                <div class="mb-5">A place where you can explore all the resources, cheat sheets, tips and tricks in one
-                    place!
+                <div class="mb-5">{{ dict.a_place_where }}
                 </div>
             </div>
             <div class="col-span-1 flex justify-center">
@@ -24,7 +31,7 @@ import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 
                 <button class="bg-cyan-500 text-white font-bold rounded-md p-3 hover:bg-cyan-600 cursor-pointer w-4/5">
                     <div>
-                        Start Explore
+                        {{ dict.start_expore }}
                     </div>
                 </button>
             </div>

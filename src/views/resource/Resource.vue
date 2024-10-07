@@ -1,15 +1,22 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import resourceTitles from './data.json';
 import ResourceDetails from './components/ResourceDetails.vue';
+import { getDictionary } from '@/locale/dict';
 
 const router = useRouter();
 const selectedTitle = ref("");
 const openDialog = ref(false);
 const cssClass = ref(null);
+const dict = ref({});
+
+onMounted(() => {
+    const lang = localStorage.getItem('lang') || 'en';
+    dict.value = getDictionary(lang);
+});
 
 // go back history
 const goBack = () => {
@@ -79,7 +86,7 @@ const showResourceDetails = (title, cssClass) => {
               <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <button type="button"
                   class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                  @click="openDialog = false" ref="cancelButtonRef">Close</button>
+                  @click="openDialog = false" ref="cancelButtonRef">{{dict.close}}</button>
               </div>
             </DialogPanel>
           </TransitionChild>
