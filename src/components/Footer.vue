@@ -25,7 +25,7 @@ onMounted(() => {
 
         <!-- Buy me a coffee link -->
         <div class="flex justify-center">
-            <a class="text-cyan-400 hover:text-cyan-600 flex align-middle justify-center"
+            <a class="text-cyan-400 hover:text-cyan-600 text-xs flex align-middle justify-center"
                 href="https://buymeacoffee.com/kyawkingston" target="_blank" rel="noopener noreferrer">
                 {{ dict.support_me_by }}
             </a>

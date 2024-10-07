@@ -40,14 +40,14 @@ const showResourceDetails = (title, cssClass) => {
   <!-- <h1 class="text-2xl mb-5 font-bold">Choose a category:</h1> -->
 
   <!-- Grid Display Data for resources -->
-  <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+  <div class="grid my-10 grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
     <div v-for="resourceTitle in resourceTitles" :key="resourceTitle.id">
       <div @click="showResourceDetails(resourceTitle.title, resourceTitle.class)" :key="resourceTitle.id"
         class="cursor-pointer">
         <div class="block h-[100px] text-md text-wrap font-bold p-6 shadow-md rounded-lg align-middle all-resource"
           :class="resourceTitle.class">
         </div>
-        <div class="mt-2 text-center text-lg font-semibold">{{
+        <div class="my-5 text-center text-md font-semibold">{{
           resourceTitle.title }}</div>
       </div>
     </div>
