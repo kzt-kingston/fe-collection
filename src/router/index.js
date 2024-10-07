@@ -24,7 +24,7 @@ const router = createRouter({
       component: About
     },
     {
-      path: '/music-palyer',
+      path: '/music-player',
       name: 'MusicPlayer',
       component: MusicPlayer
     }

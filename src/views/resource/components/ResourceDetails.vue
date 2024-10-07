@@ -20,7 +20,6 @@
 import getData from '@/util/getData';
 import { onMounted, ref } from 'vue';
 import { getDictionary } from '@/locale/dict';
-import { defineProps } from 'vue';
 
 const dict = ref({});
 const details = ref([]);

@@ -1,7 +1,9 @@
 <template>
+    <h1>Music Player</h1>
     <div class="bg-gradient-to-r from-pink-300 to-purple-300 p-6 rounded-xl shadow-lg max-w-xs mx-auto">
       <div class="bg-white rounded-lg p-4 shadow-inner">
         <div class="w-full h-32 bg-gray-200 rounded-lg mb-4 overflow-hidden">
+            Hello
           <!-- <img
             src="/placeholder.svg?height=128&width=256"
             alt="Album cover"
