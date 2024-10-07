@@ -10,7 +10,7 @@ import { getDictionary } from '@/locale/dict';
 const router = useRouter();
 const selectedTitle = ref("");
 const openDialog = ref(false);
-const cssClass = ref(null);
+const className = ref(null);
 const dict = ref({});
 
 onMounted(() => {
@@ -25,9 +25,11 @@ const goBack = () => {
 
 // show resource details
 const showResourceDetails = (title, cssClass) => {
+  console.log('Selected title:', title);
+  console.log('Selected cssClass:', cssClass);
   selectedTitle.value = title;
   openDialog.value = true;
-  cssClass.value = cssClass;
+  className.value = cssClass + '_resource';
 }
 </script>
 <template>
@@ -74,7 +76,7 @@ const showResourceDetails = (title, cssClass) => {
                       selectedTitle
                       }}
                     </DialogTitle>
-                    <div class="block h-[100px]" :class="cssClass">
+                    <div class="block h-[100px]" :class="className">
                     </div>
                     <div class="mt-2">
                       <!-- Show ResourceDetails component based on selectedTitle -->
