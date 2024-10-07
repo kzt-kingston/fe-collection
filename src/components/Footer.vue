@@ -19,11 +19,14 @@ onMounted(() => {
                     one place!</div> -->
             </div>
         </div>
-        <DotLottieVue class="lottie" autoplay loop src="/lottie/buy-me-a-coffee.json" />
+        <a href="https://buymeacoffee.com/kyawkingston" target="_blank" rel="noopener noreferrer">
+            <DotLottieVue class="lottie" autoplay loop src="/lottie/buy-me-a-coffee.json" />
+        </a>
+
         <!-- Buy me a coffee link -->
         <div class="flex justify-center">
-            <a class="text-cyan-400 hover:text-cyan-600 flex align-middle justify-center" href="https://buymeacoffee.com/kyawkingston"
-                target="_blank" rel="noopener noreferrer">
+            <a class="text-cyan-400 hover:text-cyan-600 flex align-middle justify-center"
+                href="https://buymeacoffee.com/kyawkingston" target="_blank" rel="noopener noreferrer">
                 {{ dict.support_me_by }}
             </a>
         </div>
