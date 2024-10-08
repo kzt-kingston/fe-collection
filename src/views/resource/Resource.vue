@@ -2,12 +2,10 @@
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
 import resourceTitles from './data.json';
 import ResourceDetails from './components/ResourceDetails.vue';
 import { getDictionary } from '@/locale/dict';
 
-const router = useRouter();
 const selectedTitle = ref("");
 const openDialog = ref(false);
 const className = ref(null);
@@ -17,11 +15,6 @@ onMounted(() => {
     const lang = localStorage.getItem('lang') || 'en';
     dict.value = getDictionary(lang);
 });
-
-// go back history
-const goBack = () => {
-  router.go(-1);
-}
 
 // show resource details
 const showResourceDetails = (title, cssClass) => {
@@ -33,12 +26,6 @@ const showResourceDetails = (title, cssClass) => {
 }
 </script>
 <template>
-
-  <!-- Back Button -->
-  <img src="/back.png" alt="back" class="cursor-pointer mb-5" width="30px" @click="goBack" />
-
-  <!-- <h1 class="text-2xl mb-5 font-bold">Choose a category:</h1> -->
-
   <!-- Grid Display Data for resources -->
   <div class="grid my-10 grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
     <div v-for="resourceTitle in resourceTitles" :key="resourceTitle.id">

@@ -12,7 +12,7 @@ onMounted(() => {
 </script>
 <template>
     <section id="hero">
-        <div class="grid mt-28 md:grid-cols-2 gap-4 items-center">
+        <div class="grid md:grid-cols-2 gap-4 items-center">
             <div class="col-span-1 text-lg leading-normal text-center">
                 <!-- <div class="text-xl">Welcome to</div> -->
                 <span class="text-6xl font-bold"><span class="text-cyan-500 animate-pulse">Frontend</span>
