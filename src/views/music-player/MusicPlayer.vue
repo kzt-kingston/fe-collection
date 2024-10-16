@@ -10,10 +10,8 @@
       <div class="bg-white rounded-lg p-4 shadow-inner">
 
         <div v-if="props.showMusicPlayer" class="w-full h-32 bg-gray-200 rounded-lg mb-4 overflow-hidden">
-          <div v-if="pauseLottieAnimation">
-            <DotLottieVue loop class="lottie" src="/lottie/piano-play.json" />
-          </div>
-          <DotLottieVue autoplay loop class="lottie" src="/lottie/piano-play.json" />
+          <DotLottieVue v-if="pauseLottieAnimation" loop class="lottie" src="/lottie/piano-play.json" />
+          <DotLottieVue v-else autoplay loop class="lottie" src="/lottie/piano-play.json" />
         </div>
         <h2 class="text-lg font-semibold text-gray-800 mb-1">{{ currentTrackName }}</h2>
         <!-- show track number 1/8 -->
@@ -25,9 +23,15 @@
           <button @click="playPreviousTrack" class="text-gray-600 hover:text-pink-500 transition-colors">
             <SkipBack size="24" />
           </button>
+          <button @click="skipBackward" class="text-gray-600 hover:text-pink-500 transition-colors">
+            <Rewind size="24" />
+          </button>
           <button @click="togglePlayPause"
             class="bg-pink-500 text-white rounded-full p-3 hover:bg-pink-600 transition-colors">
             <component :is="isPlaying ? Pause : Play" size="24" />
+          </button>
+          <button @click="skipForward" class="text-gray-600 hover:text-pink-500 transition-colors">
+            <FastForward size="24" />
           </button>
           <button @click="playNextTrack" class="text-gray-600 hover:text-pink-500 transition-colors">
             <SkipForward size="24" />
@@ -38,7 +42,9 @@
 
     <!-- Disclaimer about the music tracks used from Pixabay -->
     <div class="text-center mt-5">
-      <p class="text-xs text-gray-500">{{ dict.music_tracks_used }}</p>
+      <a href="https://pixabay.com/music/" target="_blank" referrerpolicy="noreferrer">
+        <p class="text-xs text-gray-500">{{ dict.music_tracks_used }}</p>
+      </a>
     </div>
 
   </section>
@@ -46,7 +52,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { Play, Pause, SkipBack, SkipForward } from 'lucide-vue-next'
+import { Play, Pause, SkipBack, SkipForward, Rewind, FastForward } from 'lucide-vue-next'
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 import { getDictionary } from '@/locale/dict';
 
@@ -59,8 +65,28 @@ const props = defineProps({
 
 })
 
-const tracks = import.meta.glob('@/assets/music/*.mp3');
-const totalTracks = Object.values(tracks).length
+// const tracks = import.meta.glob('@/assets/music/*.mp3');
+const tracks = [
+  { name: 'Calm Bird', path: '/music/calm-bird-117017.mp3' },
+  { name: 'Classical Piano Music Carmen', path: '/music/classical-piano-music-carmen-239495.mp3' },
+  { name: 'Evening Glow Soft Piano Music', path: '/music/evening-glow-soft-piano-music-243818.mp3' },
+  { name: 'Faded Relaxing Piano Music', path: '/music/faded-relaxing-piano-music-218335.mp3' },
+  { name: 'Good Night Melody Piano', path: '/music/good-night-melody-piano-245836.mp3' },
+  { name: 'Hold On Relaxing Piano Music', path: '/music/hold-on-relaxing-piano-music-212489.mp3' },
+  { name: 'Moonlit Night Relaxing Piano', path: '/music/moonlit-night-relaxing-piano-225114.mp3' },
+  { name: 'Morning Espresso Relaxing Piano', path: '/music/morning-espresso-relaxing-piano-music-239265.mp3' },
+  { name: 'Pleasantly', path: '/music/pleasantly-142607.mp3' },
+  { name: 'Please Calm My Mind', path: '/music/please-calm-my-mind-125566.mp3' },
+  { name: 'Relaxing', path: '/music/relaxing-145038.mp3' },
+  { name: 'Relaxing Music Harmony of Love', path: '/music/relaxing-music-harmony-of-love-247525.mp3' },
+  { name: 'Relaxing Piano', path: '/music/relaxing-piano-239514.mp3' },
+  { name: 'Relaxing Piano Music', path: '/music/relaxing-piano-music-151497.mp3' },
+  { name: 'Relaxing Piano Music Peaceful', path: '/music/relaxing-piano-music-peaceful-240748.mp3' },
+  { name: 'Spring Forest', path: '/music/spring-forest-142116.mp3' },
+  { name: 'Stress Relief Piano', path: '/music/stress-relief-piano-171013.mp3' }
+];
+
+const totalTracks = tracks.length
 const isPlaying = ref(false)
 const progress = ref(0)
 const currentTrack = ref(null)
@@ -103,19 +129,19 @@ const skipForward = () => {
 }
 
 const playNextTrack = () => {
-  currentTrackIndex.value = (currentTrackIndex.value + 1) % Object.values(tracks).length
-  currentTrack.value = Object.values(tracks)[currentTrackIndex.value].name;
-  currentTrackName.value = getTrackName(currentTrack.value)
-  audioRef.value.src = currentTrack.value
+  currentTrackIndex.value = (currentTrackIndex.value + 1) % tracks.length
+  currentTrack.value = tracks[currentTrackIndex.value];
+  currentTrackName.value = getTrackName(currentTrack.value.name)
+  audioRef.value.src = currentTrack.value.path
   audioRef.value.play()
   isPlaying.value = true // auto play next track
 }
 
 const playPreviousTrack = () => {
-  currentTrackIndex.value = (currentTrackIndex.value - 1 + Object.values(tracks).length) % Object.values(tracks).length
-  currentTrack.value = Object.values(tracks)[currentTrackIndex.value].name;
-  currentTrackName.value = getTrackName(currentTrack.value)
-  audioRef.value.src = currentTrack.value
+  currentTrackIndex.value = (currentTrackIndex.value - 1 + tracks.length) % tracks.length
+  currentTrack.value = tracks[currentTrackIndex.value];
+  currentTrackName.value = getTrackName(currentTrack.value.name)
+  audioRef.value.src = currentTrack.value.path
   audioRef.value.play()
   isPlaying.value = true // auto play previous track
 }
@@ -125,8 +151,9 @@ const getTrackName = (track) => {
 }
 
 const init = () => {
-  currentTrack.value = Object.values(tracks)[0].name;
-  currentTrackName.value = getTrackName(currentTrack.value)
+  console.log("Tracks:", tracks);
+  currentTrack.value = tracks[0].path;
+  currentTrackName.value = tracks[0].name;
   audioRef.value = new Audio(currentTrack.value)
   audioRef.value.addEventListener('timeupdate', handleTimeUpdate)
   audioRef.value.addEventListener('ended', playNextTrack)
