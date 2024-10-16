@@ -3,7 +3,7 @@
         <div class="flex items-center">
             <button v-if="route.name !== 'Home'" @click="goBack"
                 class="text-xs hover:text-cyan-500 transition-colors ml-5">
-                Home
+                <House size="20" />
             </button>
         </div>
         <div class="flex justify-end p-5">
@@ -19,7 +19,7 @@
             <!-- Music Player Menu -->
             <div class="flex items-center">
                 <button @click="$emit('toggleMusicPlayer')" :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
-                    Music Player
+                    <Music size="20" />
                 </button>
             </div>
             <!-- line break -->
@@ -28,7 +28,7 @@
             <div class="flex items-center">
                 <select name="language" class="rounded-md text-xs" @change="changeLang">
                     <option value="en">English</option>
-                    <option value="my">Myanmar</option>
+                    <option value="my">မြန်မာ</option>
                 </select>
             </div>
         </div>
@@ -38,6 +38,7 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted } from 'vue'
+import { Music, House } from 'lucide-vue-next';
 
 const props = defineProps({
     activeMusicPlayer: {

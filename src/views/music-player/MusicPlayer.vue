@@ -76,23 +76,38 @@ const closeMusicPlayer = () => {
 
 // const tracks = import.meta.glob('@/assets/music/*.mp3');
 const tracks = [
-  { name: 'Calm Bird', path: '/music/calm-bird-117017.mp3' },
-  { name: 'Classical Piano Music Carmen', path: '/music/classical-piano-music-carmen-239495.mp3' },
-  { name: 'Evening Glow Soft Piano Music', path: '/music/evening-glow-soft-piano-music-243818.mp3' },
-  { name: 'Faded Relaxing Piano Music', path: '/music/faded-relaxing-piano-music-218335.mp3' },
-  { name: 'Good Night Melody Piano', path: '/music/good-night-melody-piano-245836.mp3' },
-  { name: 'Hold On Relaxing Piano Music', path: '/music/hold-on-relaxing-piano-music-212489.mp3' },
-  { name: 'Moonlit Night Relaxing Piano', path: '/music/moonlit-night-relaxing-piano-225114.mp3' },
-  { name: 'Morning Espresso Relaxing Piano', path: '/music/morning-espresso-relaxing-piano-music-239265.mp3' },
-  { name: 'Pleasantly', path: '/music/pleasantly-142607.mp3' },
-  { name: 'Please Calm My Mind', path: '/music/please-calm-my-mind-125566.mp3' },
-  { name: 'Relaxing', path: '/music/relaxing-145038.mp3' },
-  { name: 'Relaxing Music Harmony of Love', path: '/music/relaxing-music-harmony-of-love-247525.mp3' },
-  { name: 'Relaxing Piano', path: '/music/relaxing-piano-239514.mp3' },
-  { name: 'Relaxing Piano Music', path: '/music/relaxing-piano-music-151497.mp3' },
-  { name: 'Relaxing Piano Music Peaceful', path: '/music/relaxing-piano-music-peaceful-240748.mp3' },
-  { name: 'Spring Forest', path: '/music/spring-forest-142116.mp3' },
-  { name: 'Stress Relief Piano', path: '/music/stress-relief-piano-171013.mp3' }
+  // Piano Songs
+  { name: 'Calm Bird', path: '/music/piano/calm-bird-117017.mp3' },
+  { name: 'Classical Piano Music Carmen', path: '/music/piano/classical-piano-music-carmen-239495.mp3' },
+  { name: 'Evening Glow Soft Piano Music', path: '/music/piano/evening-glow-soft-piano-music-243818.mp3' },
+  { name: 'Faded Relaxing Piano Music', path: '/music/piano/faded-relaxing-piano-music-218335.mp3' },
+  { name: 'Good Night Melody Piano', path: '/music/piano/good-night-melody-piano-245836.mp3' },
+  { name: 'Hold On Relaxing Piano Music', path: '/music/piano/hold-on-relaxing-piano-music-212489.mp3' },
+  { name: 'Moonlit Night Relaxing Piano', path: '/music/piano/moonlit-night-relaxing-piano-225114.mp3' },
+  { name: 'Morning Espresso Relaxing Piano', path: '/music/piano/morning-espresso-relaxing-piano-music-239265.mp3' },
+  { name: 'Pleasantly', path: '/music/piano/pleasantly-142607.mp3' },
+  { name: 'Please Calm My Mind', path: '/music/piano/please-calm-my-mind-125566.mp3' },
+  { name: 'Relaxing', path: '/music/piano/relaxing-145038.mp3' },
+  { name: 'Relaxing Music Harmony of Love', path: '/music/piano/relaxing-music-harmony-of-love-247525.mp3' },
+  { name: 'Relaxing Piano', path: '/music/piano/relaxing-piano-239514.mp3' },
+  { name: 'Relaxing Piano Music', path: '/music/piano/relaxing-piano-music-151497.mp3' },
+  { name: 'Relaxing Piano Music Peaceful', path: '/music/piano/relaxing-piano-music-peaceful-240748.mp3' },
+  { name: 'Spring Forest', path: '/music/piano/spring-forest-141216.mp3' },
+  { name: 'Stress Relief Piano', path: '/music/piano/stress-relief-piano-117013.mp3' },
+  // Lofi Songs
+  { name: 'Blue Bunny Lofi Pink Trees', path: '/music/lofi/blue-bunny-lofi-pink-trees-251323.mp3' },
+  { name: 'Mepa Exyz Physical', path: '/music/lofi/mepa-exyz-physical-7978.mp3' },
+  { name: 'The Last Call', path: '/music/lofi/the-last-call-246154.mp3' },
+  { name: 'Zombies Lofi', path: '/music/lofi/zombies-lofi-154347.mp3' },
+  { name: 'Fat Chillin', path: '/music/lofi/fat-chillin-196099.mp3' },
+  { name: 'Lofi Chill Commercial Fashion Vlog', path: '/music/lofi/lofi-chill-commercial-fashion-vlog-140858.mp3' },
+  { name: 'Lofi Hip Hop', path: '/music/lofi/lofi-hip-hop-248665.mp3' },
+  { name: 'Forest Guitar Lofi', path: '/music/lofi/forest-guitar-lofi-161108.mp3' },
+  { name: 'Good Night Lofi Cozy Chill Music', path: '/music/lofi/good-night-lofi-cozy-chill-music-160166.mp3' },
+  { name: 'Avenue Lofi 1', path: '/music/lofi/avenue-lofi-154343.mp3' },
+  { name: 'Spirit Blossom', path: '/music/lofi/spirit-blossom-15285.mp3' },
+  { name: 'For A Dream Lofi Vibes', path: '/music/lofi/for-a-dream-lofi-vibes-216038.mp3' },
+  { name: 'Analog Dreams Lofi Vibes', path: '/music/lofi/analog-dreams-lofi-vibes-216040.mp3' },
 ];
 
 const totalTracks = tracks.length
@@ -156,7 +171,14 @@ const playPreviousTrack = () => {
 }
 
 const getTrackName = (track) => {
-  return track.split('/').pop().split('.').shift()
+  // if track name length is longer than 20 characters, truncate it
+  if (track.length > 20) {
+    return track.split('/').pop().split('.').shift().substring(0, 20) + '...'
+  }
+  else {
+    return track.split('/').pop().split('.').shift()
+  }
+
 }
 
 const init = () => {
