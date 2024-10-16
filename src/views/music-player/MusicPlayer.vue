@@ -1,15 +1,18 @@
 <template>
-  <section id="music-player" class="my-20">
+  <section v-show="props.showMusicPlayer" id="music-player">
     <div class="text-center">
       <!-- Title Music Player -->
-      <h1 class="text-2xl font-semibold text-gray-800 mb-2"><span class="text-cyan-500 animate-pulse">Frontend</span>
+      <h1 class="text-2xl font-semibold text-gray-800 py-2"><span class="text-cyan-500 animate-pulse">Frontend</span>
         Collection</h1>
       <h2 class="text-md font-semibold text-gray-800 mb-4">Music Player</h2>
     </div>
     <div class="bg-gradient-to-r from-cyan-300 to-purple-300 p-6 rounded-xl shadow-lg max-w-xs mx-auto">
       <div class="bg-white rounded-lg p-4 shadow-inner">
 
-        <div class="w-full h-32 bg-gray-200 rounded-lg mb-4 overflow-hidden">
+        <div v-if="props.showMusicPlayer" class="w-full h-32 bg-gray-200 rounded-lg mb-4 overflow-hidden">
+          <div v-if="pauseLottieAnimation">
+            <DotLottieVue loop class="lottie" src="/lottie/piano-play.json" />
+          </div>
           <DotLottieVue autoplay loop class="lottie" src="/lottie/piano-play.json" />
         </div>
         <h2 class="text-lg font-semibold text-gray-800 mb-1">{{ currentTrackName }}</h2>
@@ -35,7 +38,7 @@
 
     <!-- Disclaimer about the music tracks used from Pixabay -->
     <div class="text-center mt-5">
-      <p class="text-xs text-gray-500">{{dict.music_tracks_used}}</p>
+      <p class="text-xs text-gray-500">{{ dict.music_tracks_used }}</p>
     </div>
 
   </section>
@@ -47,6 +50,15 @@ import { Play, Pause, SkipBack, SkipForward } from 'lucide-vue-next'
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 import { getDictionary } from '@/locale/dict';
 
+const props = defineProps({
+
+  showMusicPlayer: {
+    type: Boolean,
+    default: false
+  }
+
+})
+
 const tracks = import.meta.glob('@/assets/music/*.mp3');
 const totalTracks = Object.values(tracks).length
 const isPlaying = ref(false)
@@ -56,6 +68,7 @@ const currentTrackIndex = ref(0)
 const currentTrackName = ref('')
 const audioRef = ref(null)
 const dict = ref({});
+const pauseLottieAnimation = ref(false)
 
 const handleTimeUpdate = () => {
   if (audioRef.value) {
@@ -68,8 +81,10 @@ const togglePlayPause = () => {
   if (audioRef.value) {
     if (isPlaying.value) {
       audioRef.value.pause()
+      pauseLottieAnimation.value = true
     } else {
       audioRef.value.play()
+      pauseLottieAnimation.value = false
     }
     isPlaying.value = !isPlaying.value
   }
@@ -153,6 +168,14 @@ onUnmounted(() => {
 
 #music-player {
   animation: fadeIn 1s;
+  // show the music player on overlay of the page in full screen mode and show the music player in the center
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
 }
 
 h1 {

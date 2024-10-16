@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between p-1">
+    <div id="navbar" class="flex justify-between p-1">
         <div class="flex items-center">
             <button v-if="route.name !== 'Home'" @click="goBack"
                 class="text-xs hover:text-cyan-500 transition-colors ml-5">
@@ -18,9 +18,9 @@
 
             <!-- Music Player Menu -->
             <div class="flex items-center">
-                <router-link to="/music-player" class="text-xs hover:text-cyan-500 transition-colors">
+                <button @click="$emit('toggleMusicPlayer')" :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
                     Music Player
-                </router-link>
+                </button>
             </div>
             <!-- line break -->
             <div class="flex items-center mx-2">|</div>
@@ -39,8 +39,16 @@
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted } from 'vue'
 
+const props = defineProps({
+    activeMusicPlayer: {
+        type: Boolean,
+        default: false
+    }
+})
+
 const router = useRouter()
 const route = useRoute()
+const emits = defineEmits(['toggleMusicPlayer']);
 
 // go back history
 const goBack = () => {
@@ -66,3 +74,14 @@ const changeLang = (e) => {
     location.reload()
 }
 </script>
+<style lang="scss" scoped>
+#navbar{
+    // fixed top
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255);
+}
+</style>
