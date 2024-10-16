@@ -47,23 +47,32 @@
       </a>
     </div>
 
+    <!-- Close button -->
+    <button @click="closeMusicPlayer"
+      class="text-gray-800 rounded-full p-2 hover:text-gray-900 transition-colors flex mx-auto my-5">
+      <CircleX size="30" />
+    </button>
   </section>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { Play, Pause, SkipBack, SkipForward, Rewind, FastForward } from 'lucide-vue-next'
+import { Play, Pause, SkipBack, SkipForward, Rewind, FastForward, CircleX } from 'lucide-vue-next'
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 import { getDictionary } from '@/locale/dict';
 
 const props = defineProps({
-
   showMusicPlayer: {
     type: Boolean,
     default: false
   }
-
 })
+
+const emit = defineEmits(['close-player']);
+
+const closeMusicPlayer = () => {
+  emit('close-player');
+};
 
 // const tracks = import.meta.glob('@/assets/music/*.mp3');
 const tracks = [
@@ -201,8 +210,9 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 1000;
+  overflow-y: auto;
 }
 
 h1 {
