@@ -91,7 +91,7 @@ const showResourceDetails = (title, cssClass) => {
 @import '../../assets/resource.scss';
 
 .all-resource:hover {
-  background-color: #d4f4fd;
+  background-color: rgb(6, 182, 212);
   transform: scale(1.1);
   transition: transform 0.5s;
 }
