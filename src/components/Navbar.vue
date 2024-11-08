@@ -17,13 +17,13 @@
             <div class="flex items-center mx-2">|</div>
 
             <!-- Video Corner Menu -->
-            <div class="flex items-center">
+            <!-- <div class="flex items-center">
                 <router-link to="/video-corner" class="text-xs hover:text-cyan-500 transition-colors">
                     Video Corner
                 </router-link>
-            </div>
+            </div> -->
             <!-- line break -->
-            <div class="flex items-center mx-2">|</div>
+            <!-- <div class="flex items-center mx-2">|</div> -->
 
             <!-- Music Player Menu -->
             <div class="flex items-center">
