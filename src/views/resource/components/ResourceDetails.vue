@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <hr/>
-    <div class="py-6">
+    <div id="resource-details" class="py-6">
         <div v-if="resourceType == 'websites'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="detail in details" :key="detail.id" class="mb-4">
                 <div class="bg-white shadow-md rounded-lg p-6">
@@ -13,8 +13,8 @@
                 </div>
             </div>
         </div>
-        <div v-else-if="resourceType == 'videos'">
-            <div v-if="videos" class="flex flex-col md:flex-row h-screen bg-white">
+        <div id="video-player" v-else-if="resourceType == 'videos'">
+            <div v-if="videos" class="flex flex-col md:flex-row bg-white">
                 <!-- Main video player -->
                 <div class="md:w-3/5 p-4">
                     <div class="aspect-w-16 aspect-h-9">
@@ -60,6 +60,8 @@ const videos = ref([]);
 const currentVideo = ref(details[0])
 const setCurrentVideo = (video) => {
     currentVideo.value = video
+    // auto scroll to the top of the video player
+    document.getElementById('resource-details').scrollIntoView({ behavior: 'smooth' });
 }
 const resourceType = ref('');
 const title = ref('');
