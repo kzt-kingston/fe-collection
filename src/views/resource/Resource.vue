@@ -19,6 +19,8 @@ onMounted(() => {
 
 // show resource details
 const showResourceDetails = (title, cssClass) => {
+  // clear previous selected resource
+  selectedResourceType.value = "";
   console.log('Selected title:', title);
   console.log('Selected cssClass:', cssClass);
   selectedTitle.value = title;
@@ -54,28 +56,28 @@ const showSelectedResource = (type) => {
       </TransitionChild>
 
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div class="flex min-h-full mt-20 items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="flex min-h-full mt-20 justify-center p-4 text-center">
           <TransitionChild as="template" enter="ease-out duration-300"
             enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
             leave-from="opacity-100 translate-y-0 sm:scale-100"
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
             <DialogPanel
-              class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl md:max-w-4xl">
+              class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all w-full sm:w-full sm:max-w-xl md:max-w-4xl">
               <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                 <div class="grid">
-                  <div class="mt-3 text-center">
+                  <div class="text-center">
                     <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-cyan-500 text-center mb-5">{{
                       selectedTitle
                       }}
                     </DialogTitle>
-                    <div class="block h-[100px]" :class="className">
+                    <div class="block w-full h-[100px]" :class="className">
                     </div>
                     <div class="my-5">
                       {{ dict.choose_resource }}
                     </div>
                     <div class="mb-10">
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div class="grid grid-cols-2 gap-4">
                         <div
                           class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
                           @click="() => showSelectedResource('websites')">
@@ -90,7 +92,7 @@ const showSelectedResource = (type) => {
                         </div>
                       </div>
                     </div>
-                    <div>
+                    <div class="grid">
                       <ResourceDetails v-if="selectedResourceType == 'websites'" :title="selectedTitle"
                         :resource-type="selectedResourceType" />
                       <ResourceDetails v-else-if="selectedResourceType == 'videos'" :title="selectedTitle"

@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <!-- <div class="shadow-md rounded-lg my-10"> -->
+    <hr/>
     <div class="py-6">
         <div v-if="resourceType == 'websites'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="detail in details" :key="detail.id" class="mb-4">
