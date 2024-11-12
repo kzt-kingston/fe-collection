@@ -10,10 +10,11 @@ const selectedTitle = ref("");
 const openDialog = ref(false);
 const className = ref(null);
 const dict = ref({});
+const selectedResourceType = ref(""); // websites | videos
 
 onMounted(() => {
-    const lang = localStorage.getItem('lang') || 'en';
-    dict.value = getDictionary(lang);
+  const lang = localStorage.getItem('lang') || 'en';
+  dict.value = getDictionary(lang);
 });
 
 // show resource details
@@ -23,6 +24,11 @@ const showResourceDetails = (title, cssClass) => {
   selectedTitle.value = title;
   openDialog.value = true;
   className.value = cssClass + '_resource';
+}
+
+const showSelectedResource = (type) => {
+  console.log('Selected resource type:', type);
+  selectedResourceType.value = type;
 }
 </script>
 <template>
@@ -57,17 +63,38 @@ const showResourceDetails = (title, cssClass) => {
             <DialogPanel
               class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl md:max-w-4xl">
               <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                <div class="sm:flex sm:items-start">
-                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                    <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-gray-900 text-center mb-5">{{
+                <div class="grid">
+                  <div class="mt-3 text-center">
+                    <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-cyan-500 text-center mb-5">{{
                       selectedTitle
                       }}
                     </DialogTitle>
                     <div class="block h-[100px]" :class="className">
                     </div>
-                    <div class="mt-2">
-                      <!-- Show ResourceDetails component based on selectedTitle -->
-                      <ResourceDetails :title="selectedTitle" />
+                    <div class="my-5">
+                      {{ dict.choose_resource }}
+                    </div>
+                    <div class="mb-10">
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div
+                          class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
+                          @click="() => showSelectedResource('websites')">
+                          <img src="/websites.png" alt="websites" class="w-20 h-20 mx-auto mb-5">
+                          Websites
+                        </div>
+                        <div
+                          class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
+                          @click="() => showSelectedResource('videos')">
+                          <img src="/videos.png" alt="videos" class="w-20 h-20 mx-auto mb-5">
+                          Videos
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <ResourceDetails v-if="selectedResourceType == 'websites'" :title="selectedTitle"
+                        :resource-type="selectedResourceType" />
+                      <ResourceDetails v-else-if="selectedResourceType == 'videos'" :title="selectedTitle"
+                        :resource-type="selectedResourceType" />
                     </div>
                   </div>
                 </div>
@@ -75,7 +102,7 @@ const showResourceDetails = (title, cssClass) => {
               <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <button type="button"
                   class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                  @click="openDialog = false" ref="cancelButtonRef">{{dict.close}}</button>
+                  @click="openDialog = false" ref="cancelButtonRef">{{ dict.close }}</button>
               </div>
             </DialogPanel>
           </TransitionChild>

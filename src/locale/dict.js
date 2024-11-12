@@ -6,6 +6,8 @@ const multiLang = {
         visit_website: "Visit Website",
         close: "Close",
         music_tracks_used: "Music tracks used in this project are from Pixabay",
+        no_video: "No video found",
+        choose_resource: "Choose a resource to explore",
     },
     my: {
         a_place_where: "Frontend နဲ.ပတ်သတ်တဲ့ လေ့လာစရာစာတွေ၊ အကူညီစာမျက်နှာများ၊ အကြံပြုချက်များနှင့် လှည့်ကွက်များအားလုံးကို တစ်နေရာထဲမှာ စု၀ေးပေးထားတဲ့ နေရာလေးတစ်ခုပါ!",
@@ -14,6 +16,8 @@ const multiLang = {
         visit_website: "ဝဘ်ဆိုဒ်သို့ သွားရောက်ကြည့်ရှုပါ",
         close: "ပိတ်ပါ",
         music_tracks_used: "သီချင်းများကို Pixabay မှကူးယူထားပါသည်",
+        no_video: "ဗီဒီယိုမရှိပါ",
+        choose_resource: "လေ့လာရန်ရွေးချယ်ပါ",
     }    
 }
 
