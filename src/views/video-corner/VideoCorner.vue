@@ -1,20 +1,20 @@
 <template>
     <div class="flex flex-col md:flex-row h-screen bg-white">
       <!-- Main video player -->
-      <div class="md:w-3/4 p-4">
+      <div class="md:w-3/5 p-4">
         <div class="aspect-w-16 aspect-h-9">
           <iframe
             :src="`https://www.youtube.com/embed/${currentVideo.id}`"
             allow="autoplay; encrypted-media"
             allowfullscreen
-            class="w-full h-full"
+            class="w-full h-full rounded-md"
           ></iframe>
         </div>
         <h2 class="text-xl font-bold mt-4">{{ currentVideo.title }}</h2>
       </div>
   
       <!-- Video playlist -->
-      <div class="md:w-1/4 bg-gray-100 p-4 overflow-y-auto">
+      <div class="md:w-2/5 bg-gray-100 p-4 overflow-y-auto">
         <h3 class="text-lg font-semibold mb-4">Playlist</h3>
         <ul>
           <li

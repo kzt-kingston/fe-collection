@@ -36,7 +36,7 @@ onMounted(() => {
 
 const fetchData = async () => {
     try {
-        details.value = await getData(props.title);
+        details.value = await getData(props.title,'websites');
         console.log('Fetched data', JSON.stringify(this.details))
     }
     catch {
