@@ -5,7 +5,9 @@
 import HTMLData from "@/data/websites/HTMLData.json";
 import HTMLVideoData from "@/data/videos/HTMLVideoData.json";
 import CSSData from "@/data/websites/CSSData.json";
+import CSSVideoData from "@/data/videos/CSSVideoData.json";
 import JSData from "@/data/websites/JSData.json";
+import JSVideoData from "@/data/videos/JSVideoData.json";
 import TSData from "@/data/websites/TSData.json";
 import VueData from "@/data/websites/VueData.json";
 import ReactData from "@/data/websites/ReactData.json";
@@ -72,7 +74,14 @@ export default function getData(language, type) {
     if (language === "HTML") {
       console.log("Videos Data: ", HTMLVideoData)
       return HTMLVideoData;
-    } else return null;
+    } 
+    else if (language === "CSS") {
+      return CSSVideoData;
+    }
+    else if (language === "JavaScript") {
+      return JSVideoData;
+    }
+    else return null;
   } else {
     return null;
   }
