@@ -15,18 +15,15 @@ onMounted(() => {
         <div class="flex justify-center">
             <div class="flex flex-col items-center">
                 <div class="text-lg font-bold">Frontend Collection</div>
-                <!-- <div class="text-sm">A place where you can explore all the resources, cheat sheets, tips and tricks in
-                    one place!</div> -->
             </div>
         </div>
-        <a href="https://buymeacoffee.com/kyawkingston" target="_blank" rel="noopener noreferrer">
+        <a href="/support-me">
             <DotLottieVue class="lottie" autoplay loop src="/lottie/buy-me-a-coffee.json" />
         </a>
 
         <!-- Buy me a coffee link -->
         <div class="flex justify-center">
-            <a class="text-cyan-400 hover:text-cyan-600 text-xs flex align-middle justify-center"
-                href="https://buymeacoffee.com/kyawkingston" target="_blank" rel="noopener noreferrer">
+            <a class="text-cyan-400 hover:text-cyan-600 text-xs flex align-middle justify-center" href="/support-me">
                 {{ dict.support_me_by }}
             </a>
         </div>
