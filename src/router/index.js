@@ -4,6 +4,7 @@ import Home from '@/views/home/Home.vue'
 import Resource from '@/views/resource/Resource.vue'
 import About from '@/views/about/About.vue'
 import MusicPlayer from '@/views/music-player/MusicPlayer.vue'
+import SupportMe from '@/views/support-me/SupportMe.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/music-player',
       name: 'MusicPlayer',
       component: MusicPlayer
+    },
+    {
+      path: '/support-me',
+      name: 'SupportMe',
+      component: SupportMe
     }
   ]
 })
