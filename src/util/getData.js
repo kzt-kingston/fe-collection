@@ -4,13 +4,19 @@
 */
 import HTMLData from "@/data/websites/HTMLData.json";
 import HTMLVideoData from "@/data/videos/HTMLVideoData.json";
+import HTMLPlaygroundData from "@/data/playground/HTMLPlaygroundData.json";
 import CSSData from "@/data/websites/CSSData.json";
 import CSSVideoData from "@/data/videos/CSSVideoData.json";
+import CSSPlaygroundData from "@/data/playground/CSSPlaygroundData.json";
 import JSData from "@/data/websites/JSData.json";
 import JSVideoData from "@/data/videos/JSVideoData.json";
+import JSPlaygroundData from "@/data/playground/JSPlaygroundData.json";
 import TSData from "@/data/websites/TSData.json";
+import TSPlaygroundData from "@/data/playground/TSPlaygroundData.json";
 import VueData from "@/data/websites/VueData.json";
+import VuePlaygroundData from "@/data/playground/VuePlaygroundData.json";
 import ReactData from "@/data/websites/ReactData.json";
+import ReactPlaygroundData from "@/data/playground/ReactPlaygroundData.json";
 import AngularData from "@/data/websites/AngularData.json";
 import GitData from "@/data/websites/GitData.json";
 import FreeIconsData from "@/data/websites/FreeIconsData.json";
@@ -70,18 +76,31 @@ export default function getData(language, type) {
     }
   } else if (type === "videos") {
     console.log("Videos");
-    console.log("language is: ",language);
+    console.log("language is: ", language);
     if (language === "HTML") {
-      console.log("Videos Data: ", HTMLVideoData)
+      console.log("Videos Data: ", HTMLVideoData);
       return HTMLVideoData;
-    } 
-    else if (language === "CSS") {
+    } else if (language === "CSS") {
       return CSSVideoData;
-    }
-    else if (language === "JavaScript") {
+    } else if (language === "JavaScript") {
       return JSVideoData;
+    } else return null;
+  } else if (type === "playground") {
+    if (language === "HTML") {
+      return HTMLPlaygroundData;
+    } else if (language === "CSS") {
+      return CSSPlaygroundData;
+    } else if (language === "JavaScript") {
+      return JSPlaygroundData;
+    } else if (language === "TypeScript") {
+      return TSPlaygroundData;
+    } else if (language === "Vue") {
+      return VuePlaygroundData;
+    } else if (language === "React") {
+      return ReactPlaygroundData;
+    } else {
+      return null;
     }
-    else return null;
   } else {
     return null;
   }

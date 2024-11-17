@@ -90,12 +90,20 @@ const showSelectedResource = (type) => {
                           <img src="/videos.png" alt="videos" class="w-20 h-20 mx-auto mb-5">
                           Videos
                         </div>
+                        <div
+                          class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
+                          @click="() => showSelectedResource('playground')">
+                          <img src="/playground.png" alt="playground" class="w-20 h-20 mx-auto mb-5">
+                          Playground
+                        </div>
                       </div>
                     </div>
                     <div class="grid">
                       <ResourceDetails v-if="selectedResourceType == 'websites'" :title="selectedTitle"
                         :resource-type="selectedResourceType" />
                       <ResourceDetails v-else-if="selectedResourceType == 'videos'" :title="selectedTitle"
+                        :resource-type="selectedResourceType" />
+                      <ResourceDetails v-else-if="selectedResourceType == 'playground'" :title="selectedTitle"
                         :resource-type="selectedResourceType" />
                     </div>
                   </div>

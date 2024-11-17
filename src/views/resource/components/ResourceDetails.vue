@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <hr/>
+    <hr />
     <div id="resource-details" class="py-6">
         <div v-if="resourceType == 'websites'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="detail in details" :key="detail.id" class="mb-4">
@@ -44,6 +44,23 @@
             <div v-else>
                 <!-- show there is no video message -->
                 <div class="text-center text-lg font-semibold">{{ dict.no_video }}</div>
+            </div>
+        </div>
+        <div v-if="resourceType == 'playground'" class="grid grid-cols-1 gap-4">
+            <div v-if="details">
+                <div v-for="detail in details" :key="detail.id" class="mb-4">
+                    <div class="bg-white shadow-md rounded-lg p-6">
+                        <h3 class="text-lg font-semibold mb-2">{{ detail.title }}</h3>
+                        <p class="text-gray-700 mb-10">{{ detail.description }}</p>
+                        <a :href="detail.url"
+                            class="text-cyan-900 text-xs bg-cyan-200 hover:bg-cyan-300 px-5 py-2 rounded-full"
+                            target="_blank">{{ dict.visit_website }}</a>
+                    </div>
+                </div>
+            </div>
+            <div v-else>
+                <!-- show there is no video message -->
+                <div class="text-center text-lg font-semibold">{{ dict.no_playground }}</div>
             </div>
         </div>
     </div>
@@ -94,13 +111,16 @@ onMounted(() => {
 const fetchData = async () => {
     try {
         const data = await getData(title.value, resourceType.value);
-        if(resourceType.value === 'websites') {
+        if (resourceType.value === 'websites') {
             details.value = data;
             videos.value = [];
-        } else if(resourceType.value === 'videos') {
+        } else if (resourceType.value === 'videos') {
             videos.value = data;
             currentVideo.value = videos.value[0];
             details.value = [];
+        } else if (resourceType.value === 'playground') {
+            details.value = data;
+            videos.value = [];
         }
 
         console.log('Data:', data);
