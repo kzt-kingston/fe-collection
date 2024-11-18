@@ -8,7 +8,7 @@
         <ElCard class="p-5 bg-gray-300 rounded-lg">
           <template #header>
             <div class="card-header mb-5 text-center">
-              <div class="text-2xl font-bold my-2">Prompt Pay QR Code</div>
+              <div class="text-2xl font-bold my-2">Prompt Pay</div>
               <div>{{dict.scan_with_your}}</div>
             </div>
           </template>
@@ -22,7 +22,7 @@
         <ElCard class="p-5 bg-gray-300 rounded-lg">
           <template #header>
             <div class="card-header mb-5 text-center">
-              <div class="text-2xl font-bold my-2">KBZ Pay QR Code</div>
+              <div class="text-2xl font-bold my-2">KBZ Pay</div>
               <div>{{dict.scan_with_your}}</div>
             </div>
           </template>
@@ -36,13 +36,13 @@
         <ElCard class="p-5 bg-gray-300 rounded-lg md:col-span-2">
           <template #header>
             <div class="card-header mb-5 text-center">
-              <div class="text-2xl font-bold my-2">Buy me a coffee</div>
+              <div class="text-2xl font-bold my-2">Card</div>
               <div>You can support me by buying a cup of coffee</div>
             </div>
           </template>
           <template #footer>
             <div class="card-header text-center">
-              <button class="bg-cyan-500 w-40 text-white p-2 rounded-lg mt-5">
+              <button class="bg-cyan-500 w-40 text-white p-2 rounded-lg">
                 <a href="https://buymeacoffee.com/kyawkingston" target="_blank" rel="noopener noreferrer">
                   Buy me a coffee
                 </a>
