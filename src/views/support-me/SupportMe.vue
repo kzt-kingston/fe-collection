@@ -4,7 +4,7 @@
       <h1 class="text-3xl font-bold text-cyan-500 mb-6 text-center">{{dict.support_our_cause}}</h1>
       <p class="text-gray-600 mb-8 text-center">{{dict.your_donation_helps}}</p>
 
-      <div class="grid gap-6 md:grid-cols-2">
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
         <ElCard class="p-5 bg-gray-300 rounded-lg">
           <template #header>
             <div class="card-header mb-5 text-center">
@@ -33,7 +33,7 @@
           </template>
         </ElCard>
 
-        <ElCard class="p-5 bg-gray-300 rounded-lg col-span-2">
+        <ElCard class="p-5 bg-gray-300 rounded-lg md:col-span-2">
           <template #header>
             <div class="card-header mb-5 text-center">
               <div class="text-2xl font-bold my-2">Buy me a coffee</div>
