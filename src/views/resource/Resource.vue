@@ -5,12 +5,32 @@ import { ref, onMounted } from 'vue';
 import resourceTitles from './data.json';
 import ResourceDetails from './components/ResourceDetails.vue';
 import { getDictionary } from '@/locale/dict';
+import getData from '@/util/getData';
 
 const selectedTitle = ref("");
 const openDialog = ref(false);
 const className = ref(null);
 const dict = ref({});
-const selectedResourceType = ref(""); // websites | videos
+const selectedResourceType = ref(""); // websites | videos | playground
+const hideResourceDetails = ref({
+  websites: false,
+  videos: false,
+  playground: false
+})
+
+const checkAvailableData = (type) => {
+  const data = getData(selectedTitle.value, type);
+  if (data) {
+    return false;
+  }
+  return true;
+}
+
+const showHideResourceDetails = () => {
+  hideResourceDetails.value.websites = checkAvailableData('websites');
+  hideResourceDetails.value.videos = checkAvailableData('videos');
+  hideResourceDetails.value.playground = checkAvailableData('playground');
+}
 
 onMounted(() => {
   const lang = localStorage.getItem('lang') || 'en';
@@ -24,6 +44,11 @@ const showResourceDetails = (title, cssClass) => {
   console.log('Selected title:', title);
   console.log('Selected cssClass:', cssClass);
   selectedTitle.value = title;
+
+  // check if data is available for each resource type
+  showHideResourceDetails();
+  console.log("showHideResourceDetails", hideResourceDetails.value);
+
   openDialog.value = true;
   className.value = cssClass + '_resource';
 }
@@ -69,7 +94,7 @@ const showSelectedResource = (type) => {
                   <div class="text-center">
                     <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-cyan-500 text-center mb-5">{{
                       selectedTitle
-                      }}
+                    }}
                     </DialogTitle>
                     <div class="block w-full h-[100px]" :class="className">
                     </div>
@@ -78,19 +103,19 @@ const showSelectedResource = (type) => {
                     </div>
                     <div class="mb-10">
                       <div class="grid grid-cols-2 gap-4">
-                        <div
+                        <div v-if="!hideResourceDetails.websites"
                           class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
                           @click="() => showSelectedResource('websites')">
                           <img src="/websites.png" alt="websites" class="w-20 h-20 mx-auto mb-5">
                           Websites
                         </div>
-                        <div
+                        <div v-if="!hideResourceDetails.videos"
                           class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
                           @click="() => showSelectedResource('videos')">
                           <img src="/videos.png" alt="videos" class="w-20 h-20 mx-auto mb-5">
                           Videos
                         </div>
-                        <div
+                        <div v-if="!hideResourceDetails.playground"
                           class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
                           @click="() => showSelectedResource('playground')">
                           <img src="/playground.png" alt="playground" class="w-20 h-20 mx-auto mb-5">
