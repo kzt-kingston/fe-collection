@@ -16,6 +16,7 @@ import TSPlaygroundData from "@/data/playground/TSPlaygroundData.json";
 import VueData from "@/data/websites/VueData.json";
 import VuePlaygroundData from "@/data/playground/VuePlaygroundData.json";
 import ReactData from "@/data/websites/ReactData.json";
+import ReactVideoData from "@/data/videos/ReactVideoData.json";
 import ReactPlaygroundData from "@/data/playground/ReactPlaygroundData.json";
 import AngularData from "@/data/websites/AngularData.json";
 import GitData from "@/data/websites/GitData.json";
@@ -84,6 +85,8 @@ export default function getData(language, type) {
       return CSSVideoData;
     } else if (language === "JavaScript") {
       return JSVideoData;
+    } else if (language === "React") {
+      return ReactVideoData;
     } else return null;
   } else if (type === "playground") {
     if (language === "HTML") {
