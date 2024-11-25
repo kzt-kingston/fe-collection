@@ -3,7 +3,6 @@
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { ref, onMounted } from 'vue';
 import resourceTitles from './data.json';
-import ResourceDetails from './components/ResourceDetails.vue';
 import { getDictionary } from '@/locale/dict';
 import getData from '@/util/getData';
 
@@ -56,7 +55,12 @@ const showResourceDetails = (title, cssClass) => {
 const showSelectedResource = (type) => {
   console.log('Selected resource type:', type);
   selectedResourceType.value = type;
+  emits("openNewTab", selectedTitle.value, type);
+  // close dialog
+  openDialog.value = false;
 }
+
+const emits = defineEmits(['openNewTab']);
 </script>
 <template>
   <!-- Grid Display Data for resources -->
@@ -122,14 +126,6 @@ const showSelectedResource = (type) => {
                           Playground
                         </div>
                       </div>
-                    </div>
-                    <div class="grid">
-                      <ResourceDetails v-if="selectedResourceType == 'websites'" :title="selectedTitle"
-                        :resource-type="selectedResourceType" />
-                      <ResourceDetails v-else-if="selectedResourceType == 'videos'" :title="selectedTitle"
-                        :resource-type="selectedResourceType" />
-                      <ResourceDetails v-else-if="selectedResourceType == 'playground'" :title="selectedTitle"
-                        :resource-type="selectedResourceType" />
                     </div>
                   </div>
                 </div>

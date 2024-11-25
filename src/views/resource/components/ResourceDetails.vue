@@ -1,6 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <hr />
     <div id="resource-details" class="py-6">
         <div v-if="resourceType == 'websites'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="detail in details" :key="detail.id" class="mb-4">
@@ -18,8 +17,8 @@
                 <!-- Main video player -->
                 <div class="md:w-3/5 p-4">
                     <div class="aspect-w-16 aspect-h-9">
-                        <iframe :src="`https://www.youtube.com/embed/${currentVideo.id}`"
-                            allow="autoplay; encrypted-media" allowfullscreen class="w-full h-full rounded-md"></iframe>
+                        <iframe :src="`https://www.youtube.com/embed/${currentVideo.id}`" allowfullscreen
+                            class="w-full h-full rounded-md"></iframe>
                     </div>
                     <h2 class="text-xl font-bold mt-4">{{ currentVideo.title }}</h2>
                 </div>
@@ -74,7 +73,7 @@ import { getDictionary } from '@/locale/dict';
 const dict = ref({});
 const details = ref([]);
 const videos = ref([]);
-const currentVideo = ref(details[0])
+const currentVideo = ref({});
 const setCurrentVideo = (video) => {
     currentVideo.value = video
     // auto scroll to the top of the video player
