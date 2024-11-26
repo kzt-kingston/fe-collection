@@ -37,14 +37,15 @@ const openNewTab = (title, resourceType) => {
 </script>
 
 <template>
-    <div class="w-full max-w-3xl mx-auto">
+    <div class="w-full max-w-4xl mx-auto">
         <div class="flex items-center bg-background border rounded-t-lg overflow-x-scroll">
             <div class="h-10 bg-transparent flex">
                 <div v-for="tab in tabs" :key="tab.id"
-                    class="relative items-center gap-2 px-4 py-2 whitespace-nowrap rounded-t-lg cursor-pointer"
+                    class="relative flex items-center gap-2 px-4 py-2 whitespace-nowrap rounded-t-lg cursor-pointer"
                     :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">
+                    <img v-if="tab.id !== '1'" :src="'/resources/' + tab.title.toLowerCase() + '.png'" class="h-4 w-4" />
                     {{ tab.title + " " + tab.resourceType }}
-                    <button v-if="tab.id !== '1'" class="h-4 w-4 p-0 opacity-50 hover:opacity-100"
+                    <button v-if="tab.id !== '1'" :id="tab.id" class="h-4 w-4 p-0 opacity-50 hover:opacity-100"
                         @click.stop="removeTab(tab.id)">
                         <X class="h-3 w-3" />
                         <span class="sr-only">Close tab</span>
