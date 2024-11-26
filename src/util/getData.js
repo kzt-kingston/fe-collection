@@ -12,14 +12,18 @@ import JSData from "@/data/websites/JSData.json";
 import JSVideoData from "@/data/videos/JSVideoData.json";
 import JSPlaygroundData from "@/data/playground/JSPlaygroundData.json";
 import TSData from "@/data/websites/TSData.json";
+import TSVideoData from "@/data/videos/TSVideoData.json";
 import TSPlaygroundData from "@/data/playground/TSPlaygroundData.json";
 import VueData from "@/data/websites/VueData.json";
+import VueVideoData from "@/data/videos/VueVideoData.json";
 import VuePlaygroundData from "@/data/playground/VuePlaygroundData.json";
 import ReactData from "@/data/websites/ReactData.json";
 import ReactVideoData from "@/data/videos/ReactVideoData.json";
 import ReactPlaygroundData from "@/data/playground/ReactPlaygroundData.json";
 import AngularData from "@/data/websites/AngularData.json";
+import AngularVideoData from "@/data/videos/AngularVideoData.json";
 import GitData from "@/data/websites/GitData.json";
+import GitVideoData from "@/data/videos/GitVideoData.json";
 import FreeIconsData from "@/data/websites/FreeIconsData.json";
 import FreeImgVdoData from "@/data/websites/FreeImgAndVdoData.json";
 import FreeTemplatesData from "@/data/websites/FreeTemplatesData.json";
@@ -85,8 +89,16 @@ export default function getData(language, type) {
       return CSSVideoData;
     } else if (language === "JavaScript") {
       return JSVideoData;
+    } else if (language === "TypeScript") {
+      return TSVideoData;
     } else if (language === "React") {
       return ReactVideoData;
+    } else if (language === "Vue") {
+      return VueVideoData;
+    } else if (language === "Angular") {
+      return AngularVideoData;
+    } else if (language === "Git") {
+      return GitVideoData;
     } else return null;
   } else if (type === "playground") {
     if (language === "HTML") {

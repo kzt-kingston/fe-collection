@@ -1,47 +1,46 @@
 [
   {
     "id": "RVFAyFWO4go",
-    "title": "React JS Full Course for Beginners | Complete All-in-One Tutorial | 9 Hours",
-    "level": "Beginner"
+    "title": "React JS Full Course for Beginners | Complete All-in-One Tutorial | 9 Hours"
   },
   {
     "id": "XJtv8KwlTyE",
-    "title": "React Deep Dive Full Course | Beginner to Intermediate",
-    "level": "Beginner"
+    "title": "React Deep Dive Full Course | Beginner to Intermediate"
   },
   {
     "id": "SqcY0GlETPk",
-    "title": "React Tutorial for Beginners",
-    "level": "Beginner"
+    "title": "React Tutorial for Beginners"
   },
   {
     "id": "-yIsQPp31L0",
-    "title": "All 12 useState & useEffect Mistakes Junior React Developers Still Make in 2024",
-    "level": "Intermediate"
+    "title": "All 12 useState & useEffect Mistakes Junior React Developers Still Make in 2024"
   },
   {
     "id": "mECV6nGOqNo",
-    "title": "Understanding this React concept will make you a pro React developer!",
-    "level": "Intermediate"
+    "title": "Understanding this React concept will make you a pro React developer!"
   },
   {
     "id": "b0IZo2Aho9Y",
-    "title": "10 React Antipatterns to Avoid - Code This, Not That!",
-    "level": "Intermediate"
+    "title": "10 React Antipatterns to Avoid - Code This, Not That!"
   },
   {
     "id": "Rh3tobg7hEo",
-    "title": "Learn React With This One Project",
-    "level": "Advanced"
+    "title": "Learn React With This One Project"
   },
   {
     "id": "Zpvzv8Uma8Q",
-    "title": "HARD React Interview Questions (3 patterns)",
-    "level": "Advanced"
+    "title": "HARD React Interview Questions (3 patterns)"
   },
   {
     "id": "RbxHZwFtRT4",
-    "title": "Build and Deploy 3 Modern UI/UX Websites and Get Hired as a Frontend Developer | Full 10-Hour Course",
-    "level": "Advanced"
+    "title": "Build and Deploy 3 Modern UI/UX Websites and Get Hired as a Frontend Developer | Full 10-Hour Course"
+  },
+  {
+    "id": "8jx96lzHNJE",
+    "title": "React Tips and Tricks that Will Make You A Better React Developer"
+  },
+  {
+    "id": "4AXQgOcL1mo",
+    "title": "7 React Lessons I Wish I Knew Earlier"
   }
 ]
