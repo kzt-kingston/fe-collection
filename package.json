@@ -13,8 +13,6 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
     "@lottiefiles/dotlottie-vue": "^0.4.14",
-    "@vercel/analytics": "^1.4.1",
-    "@vercel/speed-insights": "^1.1.0",
     "element-plus": "^2.8.7",
     "lucide-vue-next": "^0.447.0",
     "sass": "^1.77.8",
