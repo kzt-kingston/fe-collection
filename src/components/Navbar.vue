@@ -13,17 +13,19 @@
                     Resource
                 </router-link>
             </div>
+            
             <!-- line break -->
             <div class="flex items-center mx-2">|</div>
 
-            <!-- Video Corner Menu -->
-            <!-- <div class="flex items-center">
-                <router-link to="/video-corner" class="text-xs hover:text-cyan-500 transition-colors">
-                    Video Corner
+             <!-- Favourite Lists Menu -->
+             <div class="flex items-center">
+                <router-link to="/bookmark" class="text-xs hover:text-red-500 transition-colors">
+                    <Heart size="20" />
                 </router-link>
-            </div> -->
+            </div>
+
             <!-- line break -->
-            <!-- <div class="flex items-center mx-2">|</div> -->
+            <div class="flex items-center mx-2">|</div>
 
             <!-- Music Player Menu -->
             <div class="flex items-center">
@@ -31,6 +33,7 @@
                     <Music size="20" />
                 </button>
             </div>
+
             <!-- line break -->
             <div class="flex items-center mx-2">|</div>
             <!-- Language Dropdown -->
@@ -47,7 +50,7 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted } from 'vue'
-import { Music, House } from 'lucide-vue-next';
+import { Music, House, Heart } from 'lucide-vue-next';
 
 const props = defineProps({
     activeMusicPlayer: {

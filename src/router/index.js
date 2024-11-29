@@ -5,6 +5,7 @@ import Resource from '@/views/resource/ResourceTabs.vue'
 import About from '@/views/about/About.vue'
 import MusicPlayer from '@/views/music-player/MusicPlayer.vue'
 import SupportMe from '@/views/support-me/SupportMe.vue'
+import Bookmark from '@/views/bookmark/Bookmark.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: '/support-me',
       name: 'SupportMe',
       component: SupportMe
+    },
+    {
+      path: '/bookmark',
+      name: 'Bookmark',
+      component: Bookmark
     }
   ]
 })

@@ -3,8 +3,11 @@
     <div id="resource-details" class="py-6">
         <div v-if="resourceType == 'websites'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="detail in details" :key="detail.id" class="mb-4">
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-lg font-semibold mb-2">{{ detail.title }}</h3>
+                <div class="bg-white shadow-md rounded-lg p-6 relative">
+                    <Heart @click="() => saveBookMark(detail.id, detail.title, detail.url, title, resourceType)"
+                        class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-5 right-5" size="20"
+                        :class="{ 'text-red-500': isBookmarked(detail.id, detail.title, title) }" />
+                    <h3 class="text-lg font-semibold mt-5 mb-2">{{ detail.title }}</h3>
                     <p class="text-gray-700 mb-10">{{ detail.description }}</p>
                     <a :href="detail.url"
                         class="text-cyan-900 text-xs bg-cyan-200 hover:bg-cyan-300 px-5 py-2 rounded-full"
@@ -69,6 +72,8 @@
 import getData from '@/util/getData';
 import { onMounted, ref } from 'vue';
 import { getDictionary } from '@/locale/dict';
+import { Heart } from 'lucide-vue-next';
+import { ElNotification } from 'element-plus';
 
 const dict = ref({});
 const details = ref([]);
@@ -81,6 +86,46 @@ const setCurrentVideo = (video) => {
 }
 const resourceType = ref('');
 const title = ref('');
+const bookmarks = ref([]);
+
+// Save bookmark to local storage and update reactive state
+const saveBookMark = (id, title, url, category, resourceType) => {
+    const bookmark = { id, title, url, category, resourceType };
+
+    // Check if bookmark already exists
+    const index = bookmarks.value.findIndex(
+        b => b.id === id && b.title === title && b.category === category
+    );
+
+    if (index !== -1) {
+        // Remove from bookmarks
+        bookmarks.value.splice(index, 1);
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks.value));
+        ElNotification({
+            title: 'Bookmark Removed',
+            message: 'Bookmark removed successfully',
+            type: 'info',
+            duration: 1000
+        });
+    } else {
+        // Add to bookmarks
+        bookmarks.value.push(bookmark);
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks.value));
+        ElNotification({
+            title: 'Bookmark Saved',
+            message: 'Bookmark saved successfully',
+            type: 'success',
+            duration: 1000
+        });
+    }
+};
+
+// Reactive check for bookmarked status
+const isBookmarked = (id, title, category) => {
+    return bookmarks.value.some(
+        bookmark => bookmark.id === id && bookmark.title === title && bookmark.category === category
+    );
+};
 
 const props = defineProps({
     title: {
@@ -96,12 +141,9 @@ const props = defineProps({
 });
 
 onMounted(() => {
-    console.log('ResourceDetails mounted');
+    bookmarks.value = JSON.parse(localStorage.getItem('bookmarks')) || [];
     resourceType.value = props.resourceType;
     title.value = props.title;
-
-    console.log('Resource type:', resourceType.value);
-    console.log('Title:', title.value);
     fetchData();
     const lang = localStorage.getItem('lang') || 'en';
     dict.value = getDictionary(lang);
@@ -121,10 +163,6 @@ const fetchData = async () => {
             details.value = data;
             videos.value = [];
         }
-
-        console.log('Data:', data);
-        console.log('Details:', details.value);
-        console.log('Videos:', videos.value);
     }
     catch {
         console.error('Error fetching data:', error);
