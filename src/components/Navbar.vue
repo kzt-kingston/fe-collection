@@ -1,7 +1,7 @@
 <template>
     <div id="navbar" class="flex justify-between p-1">
         <div class="flex items-center">
-            <button v-if="route.name !== 'Home'" @click="goBack"
+            <button v-if="route.name !== 'Home'" @click="goBack" aria-label="home"
                 class="text-xs hover:text-cyan-500 transition-colors ml-5">
                 <House size="20" />
             </button>
@@ -29,7 +29,7 @@
 
             <!-- Music Player Menu -->
             <div class="flex items-center">
-                <button @click="$emit('toggleMusicPlayer')" :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
+                <button aria-label="music-player" @click="$emit('toggleMusicPlayer')" :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
                     <Music size="20" />
                 </button>
             </div>
