@@ -40,5 +40,59 @@
     "title": "REST API Tutorial",
     "description": "A comprehensive tutorial on designing and implementing RESTful APIs.",
     "url": "https://restfulapi.net/"
+  },
+  {
+    "id": 8,
+    "title": "Omatsuri",
+    "description": "A suite of 12 open-source tools for web developers. Perfect for designing, optimizing, and debugging your projects.",
+    "url": "https://omatsuri.app/"
+  },
+  {
+    "id": 9,
+    "title": "HTMLRev",
+    "description": "Offers a vast collection of free templates for websites, blogs, portfolios, and more. Fully customizable and ready to deploy.",
+    "url": "https://htmlrev.com/"
+  },
+  {
+    "id": 10,
+    "title": "UIVerse",
+    "description": "Over 3,000 pre-designed CSS and Tailwind UI elements. Free to use under the MIT license. Copy and paste code with ease.",
+    "url": "https://uiverse.io/"
+  },
+  {
+    "id": 11,
+    "title": "Undraw",
+    "description": "Free and customizable SVG illustrations. Perfect for landing pages, blog posts, and product sections. Fresh illustrations are added regularly.",
+    "url": "https://undraw.co/"
+  },
+  {
+    "id": 12,
+    "title": "PatternPad",
+    "description": "Create endless pattern variations with unique shapes and colors. Export patterns as SVGs for seamless use in designs.",
+    "url": "https://patternpad.com/"
+  },
+  {
+    "id": 13,
+    "title": "Shape Divider",
+    "description": "Generates clean, customizable divider shapes. Simple copy-paste integration into your code.",
+    "url": "https://shapedivider.app/"
+  },
+  {
+    "id": 14,
+    "title": "Photopea",
+    "description": "Photopea is a Photoshop alternative right in your browser. Supports PSD, XD, Sketch, and other popular file formats. No installation needed — edit on the go. Great for quick image edits or design tweaks.",
+    "url": "https://photopea.com/"
+  },
+  {
+    "id": 15,
+    "title": "QuickRef",
+    "description": "Cheat sheets galore! QuickRef keeps all your favorite references in one place. From programming languages to design tools, find the cheat sheet you need.",
+    "url": "https://quickref.me/"
+  },
+  {
+    "id": 16,
+    "title": "Omatsuri",
+    "description": "A suite of 12 open-source tools for web developers. Perfect for designing, optimizing, and debugging your projects.",
+    "url": "https://restfulapi.net/"
   }
 ]
