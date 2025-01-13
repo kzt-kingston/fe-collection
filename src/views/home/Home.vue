@@ -21,6 +21,9 @@ onMounted(() => {
                 <br />
                 <div class="mb-5">{{ dict.a_place_where }}
                 </div>
+                <a href="https://roadmap.sh/frontend" target="_blank" rel="noopener noreferrer"
+                    class="text-cyan-500 text-md font-bold rounded-md p-3 hover:text-cyan-600 cursor-pointer">View
+                    Roadmap 🚀</a>
             </div>
             <div class="col-span-1 flex justify-center">
                 <img class="w-80 flex mx-auto" src="/logo.jpeg" alt="logo" />
