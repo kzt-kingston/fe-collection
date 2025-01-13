@@ -17,15 +17,14 @@ onMounted(() => {
                 <div class="text-lg font-bold">Frontend Collection</div>
             </div>
         </div>
-        <a href="/support-me">
+        <router-link to="/support-me">
             <DotLottieVue style="width:200px;" class="mx-auto" autoplay loop src="/lottie/buy-me-a-coffee.json" />
 
             <!-- Buy me a coffee link -->
             <span class="text-cyan-400 hover:text-cyan-600 text-xs inline align-middle">
                 {{ dict.support_me_by }}
             </span>
-        </a>
+        </router-link>
     </footer>
 </template>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
