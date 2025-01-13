@@ -28,5 +28,11 @@
     "title": "Dribbble",
     "description": "A community of designers sharing screenshots of their work, process, and projects.",
     "url": "https://dribbble.com/"
+  },
+  {
+    "id": 6,
+    "title": "CalltoInspiration",
+    "description": "A gallery of web design inspiration.",
+    "url": "https://calltoinspiration.com/"
   }
 ]

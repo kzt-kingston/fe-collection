@@ -21,7 +21,7 @@
                 <div class="md:w-3/5 p-4">
                     <div class="aspect-w-16 aspect-h-9">
                         <iframe :src="`https://www.youtube.com/embed/${currentVideo.id}`" allowfullscreen
-                            class="w-full h-full rounded-md"></iframe>
+                            class="w-full h-[200px] sm:h-[300px] lg:h-[450px] rounded-md"></iframe>
                     </div>
                     <h2 class="text-xl font-bold mt-4">{{ currentVideo.title }}</h2>
                 </div>

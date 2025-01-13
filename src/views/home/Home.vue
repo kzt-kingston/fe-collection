@@ -11,7 +11,7 @@ onMounted(() => {
 });
 </script>
 <template>
-    <section id="hero">
+    <section id="hero" class="max-w-4xl mx-auto">
         <div class="mt-28 grid md:grid-cols-2 gap-4 items-center">
             <div class="col-span-1 text-lg leading-normal text-center">
                 <!-- <div class="text-xl">Welcome to</div> -->
