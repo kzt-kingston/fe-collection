@@ -53,11 +53,76 @@ const selectCategory = (category: string) => {
     selectedCategory.value = category
     console.log(selectedCategory.value)
 }
+
+// export bookmarks from local storage and download as JSON file
+const exportBookmarks = () => {
+    const data = JSON.stringify(bookmarks.value)
+    const blob = new Blob([data], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'bookmarks.json'
+    a.click()
+    URL.revokeObjectURL(url)
+}
+
+// import bookmarks from JSON file and save to local storage as bookmarks
+const importBookmarks = (file: File) => {
+    const reader = new FileReader()
+    reader.onload = () => {
+        const data = reader.result as string
+        const importedBookmarks = JSON.parse(data) as Bookmark[]
+        localStorage.setItem('bookmarks', JSON.stringify(importedBookmarks))
+        bookmarks.value = importedBookmarks
+        ElNotification({
+            title: 'Bookmarks Imported',
+            message: 'Bookmarks imported successfully',
+            type: 'success',
+            duration: 1000
+        })
+    }
+    reader.readAsText(file?.raw as Blob)
+}
+
+// clear all bookmarks from local storage and bookmarks ref
+const clearBookmarks = () => {
+    bookmarks.value = []
+    localStorage.removeItem('bookmarks')
+    ElNotification({
+        title: 'Bookmarks Cleared',
+        message: 'Bookmarks cleared successfully',
+        type: 'warning',
+        duration: 1000
+    })
+}
 </script>
 
 <template>
     <div class="min-h-screen bg-white p-8">
         <h1 class="text-4xl font-bold mb-6 text-cyan-500">Bookmarks</h1>
+        <p class="text-gray-500 text-sm mb-2">
+            Your bookmarks are stored in your local storage. Clearing your cache will remove your bookmarks.
+            If you want to keep your bookmarks, you can export them as a JSON file and import them later.
+        </p>
+        <!-- Create export and import bookmark feature from local storage -->
+        <div class="flex space-x-2 mb-5 items-center">
+            <el-button style="color: white;" type="primary" color="#06B6D4" size="small" @click="exportBookmarks">Export
+            </el-button>
+            <!-- import bookmark by selecting the file and import the json file and set it inside the local storage -->
+            <el-upload class="inline-block" action="#" :on-change="importBookmarks" :show-file-list="false"
+                :before-upload="() => false">
+                <el-button style="color: white;" type="primary" color="#06B6D4" size="small">Import
+                </el-button>
+            </el-upload>
+            <!-- clear all bookmarks and ask for confirmation first whether confirm to delete or not -->
+            <el-popconfirm :hide-icon="true" width="200" title="Are you sure to clear all bookmarks?"
+                @confirm="clearBookmarks">
+                <template #reference>
+                    <el-button style="color: white;" type="danger" size="small">Clear All</el-button>
+                </template>
+            </el-popconfirm>
+
+        </div>
 
         <div class="mb-6 grid sm:grid-cols-2">
             <div class="relative w-full col-span-1 flex items-center">
