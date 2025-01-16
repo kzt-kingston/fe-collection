@@ -158,27 +158,33 @@ const clearBookmarks = () => {
                 <template v-else>
                     <ul class="divide-y divide-gray-200">
                         <li v-for="bookmark in filteredBookmarks" :key="bookmark.id + bookmark.category"
-                            class="p-4 items-center text-sm grid md:grid-cols-12">
-                            <div class="md:col-span-9 flex items-center my-2">
-                                <img v-if="bookmark.category" :src="`/resources/${bookmark.category.toLowerCase()}.png`"
-                                    :alt="bookmark.category" class="w-6 h-6 mr-5" />
-                                <span class="text-gray-500 text-sm w-20 mr-5">{{ bookmark.category }}</span>
-                                <span class="text-gray-800 min-w-62 mr-5">{{ bookmark.title }}</span>
+                            class="p-4 text-sm flex flex-col md:grid md:grid-cols-12 gap-3">
+                            <!-- Mobile: Icon & Category in One Line, Title on Separate Line -->
+                            <div class="md:col-span-9 w-full">
+                                <div class="flex items-center space-x-3">
+                                    <img v-if="bookmark.category"
+                                        :src="`/resources/${bookmark.category.toLowerCase()}.png`"
+                                        :alt="bookmark.category" class="w-6 h-6" />
+                                    <span class="text-gray-500 text-sm">{{ bookmark.category }}</span>
+                                </div>
+                                <span class="block text-gray-800 font-medium truncate max-w-full mt-1">
+                                    {{ bookmark.title }}
+                                </span>
                             </div>
-                            <div class="md:col-span-3 flex items-center">
+
+                            <!-- Right Section: Actions -->
+                            <div class="md:col-span-3 flex items-center justify-end space-x-4">
                                 <a :href="bookmark.url" target="_blank" rel="noopener noreferrer"
-                                    class="items-center space-x-4 mr-5 w-10">
-                                    <!-- <span class="text-cyan-500 font-semibold w-8">{{ bookmark.id }}.</span> -->
+                                    class="flex items-center">
                                     <el-tooltip content="Open link" placement="top">
                                         <ExternalLink class="text-cyan-500 w-6 h-6" />
                                     </el-tooltip>
                                 </a>
-                                <div class="w-10">
-                                    <el-tooltip class="w-[50px]" content="Remove bookmark" placement="top">
-                                        <Heart class="text-red-500 cursor-pointer"
-                                            @click="() => removeBookmark(bookmark.id, bookmark.title, bookmark.url, bookmark.category)" />
-                                    </el-tooltip>
-                                </div>
+
+                                <el-tooltip content="Remove bookmark" placement="top">
+                                    <Heart class="text-red-500 cursor-pointer"
+                                        @click="() => removeBookmark(bookmark.id, bookmark.title, bookmark.url, bookmark.category)" />
+                                </el-tooltip>
                             </div>
                         </li>
                     </ul>
