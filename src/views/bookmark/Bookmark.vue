@@ -67,7 +67,17 @@ const exportBookmarks = () => {
 }
 
 // import bookmarks from JSON file and save to local storage as bookmarks
-const importBookmarks = (file: File) => {
+const importBookmarks = (file: any) => {
+    if (file.raw.type !== 'application/json') {
+        ElNotification({
+            title: 'Invalid File Type',
+            message: 'Please upload a JSON file.',
+            type: 'error',
+            duration: 1000
+        })
+        return
+    }
+
     const reader = new FileReader()
     reader.onload = () => {
         const data = reader.result as string
@@ -110,7 +120,7 @@ const clearBookmarks = () => {
             </el-button>
             <!-- import bookmark by selecting the file and import the json file and set it inside the local storage -->
             <el-upload class="inline-block" action="#" :on-change="importBookmarks" :show-file-list="false"
-                :before-upload="() => false">
+                :before-upload="() => false" accept=".json">
                 <el-button style="color: white;" type="primary" color="#06B6D4" size="small">Import
                 </el-button>
             </el-upload>
