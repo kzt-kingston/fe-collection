@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch, nextTick } from 'vue';
 import { Plus, X } from 'lucide-vue-next';
 import Resource from './Resource.vue';
 import ResourceDetails from './components/ResourceDetails.vue';
@@ -9,6 +9,7 @@ const tabs = ref([
     { id: '1', title: '📚 Choose Resource', resourceType: '' },
 ]);
 const activeTab = ref(tabs.value[0].id);
+const tabsContainer = ref(null);
 
 // Add a new tab
 const addTab = (title, resourceType) => {
@@ -34,13 +35,24 @@ const openNewTab = (title, resourceType) => {
     console.log("Open new tab", title, resourceType);
     addTab(title, resourceType);
 };
+
+watch(activeTab, async (newVal) => {
+    await nextTick();
+    const container = tabsContainer.value;
+    const tabEl = container?.querySelector(`[data-tab-id="${newVal}"]`);
+    if (tabEl) {
+        tabEl.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+    window.scrollTo(0, 0);
+});
 </script>
 
 <template>
     <div class="w-full mx-auto">
-        <div class="flex items-center bg-background border rounded-t-lg overflow-x-scroll">
+        <div id="tab-container" ref="tabsContainer"
+            class="flex items-center bg-background border rounded-t-lg overflow-x-scroll">
             <div class="h-10 bg-transparent flex">
-                <div v-for="tab in tabs" :key="tab.id"
+                <div v-for="tab in tabs" :key="tab.id" :data-tab-id="tab.id"
                     class="relative flex items-center gap-2 px-4 py-2 whitespace-nowrap rounded-t-lg cursor-pointer"
                     :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">
                     <img v-if="tab.id !== '1'" :src="'/resources/' + tab.title.toLowerCase() + '.png'"
