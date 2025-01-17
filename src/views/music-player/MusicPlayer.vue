@@ -6,13 +6,19 @@
         Collection</h1>
       <h2 class="text-md font-semibold text-gray-800 mb-4">Music Player</h2>
     </div>
-    <div class="bg-gradient-to-r from-cyan-300 to-purple-300 p-6 rounded-xl shadow-lg max-w-xs mx-auto">
+    <div v-show="showPlaylist != true"
+      class="bg-gradient-to-r from-cyan-300 to-purple-300 p-6 rounded-xl shadow-lg max-w-xs mx-auto">
       <div class="bg-white rounded-lg p-4 shadow-inner">
 
         <div v-if="props.showMusicPlayer" class="w-full h-32 bg-gray-200 rounded-lg mb-4 overflow-hidden">
           <DotLottieVue autoplay loop class="lottie" src="/lottie/music-animation.json" />
         </div>
-        <h2 class="text-lg font-semibold text-gray-800 mb-1">{{ currentTrackName }}</h2>
+        <div class="flex justify-between items-center">
+          <h2 class="text-md font-semibold text-gray-800 mb-1">{{ currentTrackName }}</h2>
+          <button @click="togglePlaylist" class="text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600">
+            <ListMusic size="15" />
+          </button>
+        </div>
         <!-- show track number 1/8 -->
         <p class="text-sm text-gray-500 mb-4">Track {{ currentTrackIndex + 1 }}/ {{ totalTracks }}</p>
         <div class="h-1 w-full bg-gray-200 rounded-full mb-4">
@@ -39,6 +45,23 @@
       </div>
     </div>
 
+    <!-- Playlist -->
+    <div v-show="showPlaylist"
+      class="bg-gradient-to-r from-cyan-300 to-purple-300 shadow-lg rounded-lg mt-4 p-4 max-w-xs mx-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Playlist</h3>
+        <button @click="togglePlaylist" class="text-gray-600 hover:text-pink-500 transition-colors">
+          <X size="20" />
+        </button>
+      </div>
+      <ul class="max-h-60 overflow-auto scrollbar-hide">
+        <li v-for="(track, index) in tracks" :key="index" @click="playSelectedTrack(index)"
+          class="p-2 cursor-pointer rounded-md hover:bg-gray-200" :class="{ 'bg-white': index === currentTrackIndex }">
+          {{ track.name }}
+        </li>
+      </ul>
+    </div>
+
     <!-- Disclaimer about the music tracks used from Pixabay -->
     <div class="text-center mt-5">
       <a href="https://pixabay.com/music/" target="_blank" referrerpolicy="noreferrer">
@@ -56,7 +79,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { Play, Pause, SkipBack, SkipForward, Rewind, FastForward, CircleX } from 'lucide-vue-next'
+import { Play, Pause, SkipBack, SkipForward, Rewind, FastForward, CircleX, ListMusic, X } from 'lucide-vue-next'
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 import { getDictionary } from '@/locale/dict';
 
@@ -133,6 +156,7 @@ const currentTrackIndex = ref(0)
 const currentTrackName = ref('')
 const audioRef = ref(null)
 const dict = ref({});
+const showPlaylist = ref(false);
 
 const handleTimeUpdate = () => {
   if (audioRef.value) {
@@ -140,6 +164,10 @@ const handleTimeUpdate = () => {
     progress.value = currentProgress
   }
 }
+
+const togglePlaylist = () => {
+  showPlaylist.value = !showPlaylist.value;
+};
 
 const togglePlayPause = () => {
   if (audioRef.value) {
@@ -180,6 +208,15 @@ const playPreviousTrack = () => {
   audioRef.value.src = currentTrack.value.path
   audioRef.value.play()
   isPlaying.value = true // auto play previous track
+}
+
+const playSelectedTrack = (index) => {
+  currentTrackIndex.value = index
+  currentTrack.value = tracks[currentTrackIndex.value];
+  currentTrackName.value = getTrackName(currentTrack.value.name)
+  audioRef.value.src = currentTrack.value.path
+  audioRef.value.play()
+  isPlaying.value = true
 }
 
 const getTrackName = (track) => {
@@ -263,5 +300,9 @@ button {
 
 button:hover {
   transform: scale(1.1);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 </style>
