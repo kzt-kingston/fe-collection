@@ -14,6 +14,7 @@ const multiLang = {
       "Your donation helps us make a difference. Choose your preferred payment methods below.",
     scan_with_your: "Scan with your mobile banking app",
     no_playground: "No playground found",
+    developed_by: "Developed by",
   },
   my: {
     a_place_where:
@@ -30,6 +31,7 @@ const multiLang = {
       "သင့်ရဲ.အလှူငွေက ကျွန်တော်တို.ခုလို project တွေဆက်ရေးနိုင်ဖို.အတွက်အကျိုးပြုစေပါတယ်, လှူလိုပါက ငွေလွှဲမှုနည်းများကို အောက်မှာ ရွေးချယ်ပါ",
     scan_with_your: "သင့်ရဲ. ဖုန်း application ဖြင့် scan ဖတ်ပီးငွေလွှဲပါ",
     no_playground: "playground မရှိသေးပါ",
+    developed_by: "Developed by",
   },
 };
 

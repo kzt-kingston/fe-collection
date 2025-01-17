@@ -9,16 +9,17 @@
         <div class="flex justify-end p-5">
             <!-- Resource Menu -->
             <div class="flex items-center">
-                <router-link to="/resource" class="text-xs hover:text-cyan-500 transition-colors">
-                    Resource
+                <router-link to="/resource"
+                    class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold">
+                    ResourceBase
                 </router-link>
             </div>
-            
+
             <!-- line break -->
             <div class="flex items-center mx-2">|</div>
 
-             <!-- Favourite Lists Menu -->
-             <div class="flex items-center">
+            <!-- Favourite Lists Menu -->
+            <div class="flex items-center">
                 <router-link to="/bookmark" class="text-xs hover:text-red-500 transition-colors">
                     <Heart size="20" />
                 </router-link>
@@ -29,7 +30,8 @@
 
             <!-- Music Player Menu -->
             <div class="flex items-center">
-                <button aria-label="music-player" @click="$emit('toggleMusicPlayer')" :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
+                <button aria-label="music-player" @click="$emit('toggleMusicPlayer')"
+                    :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
                     <Music size="20" />
                 </button>
             </div>
@@ -88,7 +90,7 @@ const changeLang = (e) => {
 }
 </script>
 <style lang="scss" scoped>
-#navbar{
+#navbar {
     // fixed top
     position: fixed;
     top: 0;

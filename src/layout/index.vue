@@ -17,9 +17,9 @@ const toggleMusicPlayer = () => {
             <MusicPlayer :show-music-player="showMusicPlayer" @close-player="showMusicPlayer = false" />
             <slot />
         </div>
-        <div class="w-full mx-auto">
+        <!-- <div class="w-full mx-auto">
             <Footer />
-        </div>
+        </div> -->
     </div>
 </template>
 <style></style>
