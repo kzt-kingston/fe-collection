@@ -52,8 +52,8 @@ onMounted(() => {
         </div>
         <!-- Developed By -->
         <div class="text-center text-xs text-gray-500 mt-5">
-            {{ dict.developed_by }} <a href="https:kyawkingston.com" target="_blank" rel="noopener noreferrer">
-                Kyaw Zin Thet
+            <a href="https://kyawkingston.com" target="_blank" rel="noopener noreferrer">
+                Developed by Kyaw Zin Thet
             </a>
         </div>
     </section>
