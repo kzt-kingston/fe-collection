@@ -1,12 +1,12 @@
 <script setup>
 import { ref, watch, nextTick } from 'vue';
-import { Plus, X } from 'lucide-vue-next';
+import { LayoutDashboard, Plus, X } from 'lucide-vue-next';
 import Resource from './Resource.vue';
 import ResourceDetails from './components/ResourceDetails.vue';
 
 // Define tabs data and state
 const tabs = ref([
-    { id: '1', title: '📚 Choose Resource', resourceType: '' },
+    { id: '1', title: 'Choose Resource', resourceType: '' },
 ]);
 const activeTab = ref(tabs.value[0].id);
 const tabsContainer = ref(null);
@@ -36,6 +36,13 @@ const openNewTab = (title, resourceType) => {
     addTab(title, resourceType);
 };
 
+// function to show the choose resource tab
+const showChooseResourceTab = () => {
+    activeTab.value = '1';
+    // go back to the top of the page
+    window.scrollTo(0, 0);
+};
+
 watch(activeTab, async (newVal) => {
     await nextTick();
     const container = tabsContainer.value;
@@ -48,9 +55,18 @@ watch(activeTab, async (newVal) => {
 </script>
 
 <template>
-    <div class="w-full mx-auto">
+    <div id="resource-tabs" class="w-full mx-auto">
+        <!-- Choose Resource button to show the resources back -->
+        <div class="flex justify-end mb-5">
+            <button type="button" name="Choose Resource" @click="showChooseResourceTab"
+                class="fixed z-50 top-[80px] items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-800">
+                <LayoutDashboard class="h-4 w-4" />
+            </button>
+        </div>
         <div id="tab-container" ref="tabsContainer"
             class="flex items-center bg-background border rounded-t-lg overflow-x-scroll">
+
+            <!-- Tabs -->
             <div class="h-10 bg-transparent flex">
                 <div v-for="tab in tabs" :key="tab.id" :data-tab-id="tab.id"
                     class="relative flex items-center gap-2 px-4 py-2 whitespace-nowrap rounded-t-lg cursor-pointer"
