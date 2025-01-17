@@ -69,7 +69,7 @@ watch(activeTab, async (newVal) => {
             <!-- Tabs -->
             <div class="h-10 bg-transparent flex">
                 <div v-for="tab in tabs" :key="tab.id" :data-tab-id="tab.id"
-                    class="relative flex items-center gap-2 px-4 py-2 whitespace-nowrap rounded-t-lg cursor-pointer"
+                    class="relative flex items-center text-sm font-medium gap-2 px-4 py-2 whitespace-nowrap rounded-t-lg cursor-pointer"
                     :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">
                     <img v-if="tab.id !== '1'" :src="'/resources/' + tab.title.toLowerCase() + '.png'"
                         class="h-4 w-4" />

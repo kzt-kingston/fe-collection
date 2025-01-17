@@ -10,8 +10,7 @@
       <div class="bg-white rounded-lg p-4 shadow-inner">
 
         <div v-if="props.showMusicPlayer" class="w-full h-32 bg-gray-200 rounded-lg mb-4 overflow-hidden">
-          <DotLottieVue v-if="pauseLottieAnimation" loop class="lottie" src="/lottie/piano-play.json" />
-          <DotLottieVue v-else autoplay loop class="lottie" src="/lottie/piano-play.json" />
+          <DotLottieVue autoplay loop class="lottie" src="/lottie/music-animation.json" />
         </div>
         <h2 class="text-lg font-semibold text-gray-800 mb-1">{{ currentTrackName }}</h2>
         <!-- show track number 1/8 -->
@@ -118,7 +117,6 @@ const currentTrackIndex = ref(0)
 const currentTrackName = ref('')
 const audioRef = ref(null)
 const dict = ref({});
-const pauseLottieAnimation = ref(false)
 
 const handleTimeUpdate = () => {
   if (audioRef.value) {
@@ -131,10 +129,8 @@ const togglePlayPause = () => {
   if (audioRef.value) {
     if (isPlaying.value) {
       audioRef.value.pause()
-      pauseLottieAnimation.value = true
     } else {
       audioRef.value.play()
-      pauseLottieAnimation.value = false
     }
     isPlaying.value = !isPlaying.value
   }
