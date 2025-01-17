@@ -75,6 +75,22 @@ const closeMusicPlayer = () => {
 
 // const tracks = import.meta.glob('@/assets/music/*.mp3');
 const tracks = [
+  // Beats Songs
+  { name: 'Better Day', path: '/music/beats/better-day-186374.mp3' },
+  { name: 'Creative Technology Showreel', path: '/music/beats/creative-technology-showreel-241274.mp3' },
+  { name: 'Flow', path: '/music/beats/flow-211881.mp3' },
+  { name: 'For Her Chill Upbeat Summel Travel Vlog', path: '/music/beats/for-her-chill-upbeat-summel-travel-vlog-and-ig-music-royalty-free-use-202298.mp3' },
+  { name: 'Lost in Dreams Abstract Chill Downtempo', path: '/music/beats/lost-in-dreams-abstract-chill-downtempo-cinematic-future-beats-270241.mp3' },
+  { name: 'Mellow Future Bass Bounce On It', path: '/music/beats/mellow-future-bass-bounce-on-it-184234.mp3' },
+  { name: 'Night Detective', path: '/music/beats/night-detective-226857.mp3' },
+  { name: 'Nightfall Future Bass Music', path: '/music/beats/nightfall-future-bass-music-228100.mp3' },
+  { name: 'Perfect Beauty', path: '/music/beats/perfect-beauty-191271.mp3' },
+  { name: 'Showreel Music Promo Advertising', path: '/music/beats/showreel-music-promo-advertising-opener-vlog-background-intro-theme-261601.mp3' },
+  { name: 'Soulsweeper', path: '/music/beats/soulsweeper-252499.mp3' },
+  { name: 'Spinning Head', path: '/music/beats/spinning-head-271171.mp3' },
+  { name: 'Stylish Deep Electronic', path: '/music/beats/stylish-deep-electronic-262632.mp3' },
+  { name: 'Tell Me the Truth', path: '/music/beats/tell-me-the-truth-260010.mp3' },
+  { name: 'Vlog Music Beat Trailer Showreel', path: '/music/beats/vlog-music-beat-trailer-showreel-promo-background-intro-theme-274290.mp3' },
   // Piano Songs
   { name: 'Calm Bird', path: '/music/piano/calm-bird-117017.mp3' },
   { name: 'Classical Piano Music Carmen', path: '/music/piano/classical-piano-music-carmen-239495.mp3' },
