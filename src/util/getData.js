@@ -66,7 +66,7 @@ export default function getData(language, type) {
       return FreeIconsData;
     } else if (language === "Free Images and Videos") {
       return FreeImgVdoData;
-    } else if (language === "Free Templates") {
+    } else if (language === "Free UI Libraries") {
       return FreeTemplatesData;
     } else if (language === "Premium Templates") {
       return PremiumTemplatesData;

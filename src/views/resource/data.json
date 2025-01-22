@@ -8,10 +8,30 @@
   { "id": 7, "title": "Angular", "class": "angular", "icon": "" },
   { "id": 8, "title": "Git", "class": "git", "icon": "" },
   { "id": 9, "title": "Free Icons", "class": "free-icons", "icon": "" },
-  { "id": 10, "title": "Free Templates", "class": "free-templates", "icon": "" },
-  { "id": 11, "title": "Free Images and Videos", "class": "free-img-vdo", "icon": "" },
-  { "id": 12, "title": "Premium Templates", "class": "premium-templates", "icon": "" },
-  { "id": 13, "title": "Inspiration Galleries", "class": "inspiration-galleries", "icon": "" },
+  {
+    "id": 10,
+    "title": "Free UI Libraries",
+    "class": "free-templates",
+    "icon": ""
+  },
+  {
+    "id": 11,
+    "title": "Free Images and Videos",
+    "class": "free-img-vdo",
+    "icon": ""
+  },
+  {
+    "id": 12,
+    "title": "Premium Templates",
+    "class": "premium-templates",
+    "icon": ""
+  },
+  {
+    "id": 13,
+    "title": "Inspiration Galleries",
+    "class": "inspiration-galleries",
+    "icon": ""
+  },
   { "id": 14, "title": "Animations", "class": "animations", "icon": "" },
   { "id": 15, "title": "Others", "class": "other", "icon": "" }
 ]

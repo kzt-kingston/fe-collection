@@ -1,32 +1,134 @@
 [
   {
     "id": 1,
-    "title": "Bootstrap Templates",
-    "description": "A collection of free Bootstrap themes and templates.",
-    "url": "https://startbootstrap.com/"
+    "title": "Bootstrap",
+    "description": "Popular CSS framework with responsive design components.",
+    "url": "https://getbootstrap.com/"
   },
   {
     "id": 2,
-    "title": "Tailwind Templates",
-    "description": "Premium UI components and templates for Tailwind CSS.",
-    "url": "https://tailwindui.com/"
+    "title": "Tailwind CSS",
+    "description": "Utility-first CSS framework for building modern designs.",
+    "url": "https://tailwindcss.com/"
   },
   {
     "id": 3,
-    "title": "Material Design Templates",
-    "description": "Official Material Design templates and themes.",
-    "url": "https://material-ui.com/store/"
+    "title": "Foundation",
+    "description": "Responsive front-end framework by Zurb.",
+    "url": "https://get.foundation/"
   },
   {
     "id": 4,
-    "title": "Semantic UI Templates",
-    "description": "Templates built with Semantic UI.",
-    "url": "https://semantic-ui.com/templates/"
+    "title": "MUI (Material-UI)",
+    "description": "React UI library following Material Design principles.",
+    "url": "https://mui.com/"
   },
   {
     "id": 5,
-    "title": "Foundation Templates",
-    "description": "Templates and themes for Foundation by ZURB.",
-    "url": "https://foundation.zurb.com/templates"
+    "title": "Vuetify",
+    "description": "Material Design UI framework for Vue.js.",
+    "url": "https://vuetifyjs.com/en/"
+  },
+  {
+    "id": 6,
+    "title": "Materialize",
+    "description": "Modern responsive front-end framework based on Material Design.",
+    "url": "https://materializecss.com/"
+  },
+  {
+    "id": 7,
+    "title": "Ant Design",
+    "description": "Enterprise-class UI components for React applications.",
+    "url": "https://ant.design/"
+  },
+  {
+    "id": 8,
+    "title": "Chakra UI",
+    "description": "Accessible, flexible UI components for React.",
+    "url": "https://chakra-ui.com/"
+  },
+  {
+    "id": 9,
+    "title": "Radix UI",
+    "description": "Unstyled and accessible components for React.",
+    "url": "https://www.radix-ui.com/"
+  },
+  {
+    "id": 10,
+    "title": "Headless UI",
+    "description": "Unstyled fully accessible components for Tailwind and React.",
+    "url": "https://headlessui.com/"
+  },
+  {
+    "id": 11,
+    "title": "Flowbite",
+    "description": "UI components built with Tailwind CSS.",
+    "url": "https://flowbite.com/"
+  },
+  {
+    "id": 12,
+    "title": "DaisyUI",
+    "description": "Adds beautiful component classes to Tailwind CSS.",
+    "url": "https://daisyui.com/"
+  },
+  {
+    "id": 13,
+    "title": "HyperUI",
+    "description": "Collection of prebuilt UI components for Tailwind CSS.",
+    "url": "https://hyperui.dev/"
+  },
+  {
+    "id": 14,
+    "title": "Quasar",
+    "description": "High-performance Vue.js framework with a rich UI component set.",
+    "url": "https://quasar.dev/"
+  },
+  {
+    "id": 15,
+    "title": "PrimeVue",
+    "description": "Rich UI components for Vue.js applications.",
+    "url": "https://www.primefaces.org/primevue/"
+  },
+  {
+    "id": 16,
+    "title": "Element Plus",
+    "description": "A Vue 3 UI library with elegant components.",
+    "url": "https://element-plus.org/"
+  },
+  {
+    "id": 17,
+    "title": "Blueprint",
+    "description": "React-based UI toolkit for building complex interfaces.",
+    "url": "https://blueprintjs.com/"
+  },
+  {
+    "id": 18,
+    "title": "Shoelace",
+    "description": "Framework-agnostic Web Components for modern web apps.",
+    "url": "https://shoelace.style/"
+  },
+  {
+    "id": 19,
+    "title": "Carbon Design System",
+    "description": "IBM’s design system for enterprise applications.",
+    "url": "https://carbondesignsystem.com/"
+  },
+  {
+    "id": 20,
+    "title": "ShadCN",
+    "description": "Beautifully designed and accessible React components built with Radix UI and Tailwind CSS.",
+    "url": "https://ui.shadcn.com/"
+  },
+  {
+    "id": 21,
+    "title": "Element Plus",
+    "description": "A Vue 3 UI library with elegant and feature-rich components.",
+    "url": "https://element-plus.org/"
+  },
+  {
+    "id": 22,
+    "title": "Vant",
+    "description": "A lightweight and high-performance mobile UI library for Vue.js.",
+    "url": "https://vant-ui.github.io/vant/"
   }
 ]

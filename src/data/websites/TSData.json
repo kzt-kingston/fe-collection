@@ -24,12 +24,6 @@
     "url": "https://www.typescriptlang.org/cheatsheets/"
   },
   {
-    "id": 5,
-    "title": "TypeScript API Reference",
-    "description": "Official API reference for TypeScript.",
-    "url": "https://www.typescriptlang.org/docs/handbook/api-reference.html"
-  },
-  {
     "id": 6,
     "title": "TypeScript Compiler Options",
     "description": "Guide to TypeScript compiler options.",
