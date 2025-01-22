@@ -4,7 +4,8 @@
         <div v-if="resourceType == 'websites'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="detail in details" :key="detail.id" class="mb-4">
                 <div class="bg-white shadow-md rounded-lg p-6 relative">
-                    <Heart @click="() => saveBookMark(detail.id, detail.title, detail.url, title, resourceType)"
+                    <component :is="isBookmarked(detail.id, detail.title, title) ? HeartOff : Heart"
+                        @click="() => saveBookMark(detail.id, detail.title, detail.url, title, resourceType)"
                         class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-5 right-5" size="20"
                         :class="{ 'text-red-500': isBookmarked(detail.id, detail.title, title) }" />
                     <h3 class="text-lg font-semibold mt-5 mb-2">{{ detail.title }}</h3>
@@ -72,7 +73,7 @@
 import getData from '@/util/getData';
 import { onMounted, ref } from 'vue';
 import { getDictionary } from '@/locale/dict';
-import { Heart } from 'lucide-vue-next';
+import { Heart, HeartOff } from 'lucide-vue-next';
 import { ElNotification } from 'element-plus';
 
 const dict = ref({});

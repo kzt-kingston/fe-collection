@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { Search, ExternalLink, Heart } from 'lucide-vue-next'
+import { Search, ExternalLink, HeartOff } from 'lucide-vue-next'
 import { ElNotification } from 'element-plus';
 
 const searchTerm = ref('')
@@ -182,7 +182,7 @@ const clearBookmarks = () => {
                                 </a>
 
                                 <el-tooltip content="Remove bookmark" placement="top">
-                                    <Heart class="text-red-500 cursor-pointer"
+                                    <HeartOff class="text-red-500 cursor-pointer"
                                         @click="() => removeBookmark(bookmark.id, bookmark.title, bookmark.url, bookmark.category)" />
                                 </el-tooltip>
                             </div>
