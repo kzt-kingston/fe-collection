@@ -33,90 +33,70 @@ import AnimationsData from "@/data/websites/AnimationsData.json";
 import OtherData from "@/data/websites/OtherData.json";
 
 // combine related data with icon path and return
-function combineData(data, iconPath) {
-  return data.map((item) => {
-    return {
-      ...item,
-      icon: iconPath + item.icon,
-    };
-  });
-}
-// getData function
-export default function getData(language, type) {
-  if (type === "websites") {
-    if (language === "HTML") {
-      // use combineData function to combine data with icon path
-      return combineData(HTMLData, "/public/resources/html.png");
-      // return HTMLData
-    } else if (language === "CSS") {
-      return CSSData;
-    } else if (language === "JavaScript") {
-      return JSData;
-    } else if (language === "TypeScript") {
-      return TSData;
-    } else if (language === "Vue") {
-      return VueData;
-    } else if (language === "React") {
-      return ReactData;
-    } else if (language === "Angular") {
-      return AngularData;
-    } else if (language === "Git") {
-      return GitData;
-    } else if (language === "Free Icons") {
-      return FreeIconsData;
-    } else if (language === "Free Images and Videos") {
-      return FreeImgVdoData;
-    } else if (language === "Free UI Libraries") {
-      return FreeTemplatesData;
-    } else if (language === "Premium Templates") {
-      return PremiumTemplatesData;
-    } else if (language === "Inspiration Galleries") {
-      return InspirationGalleriesData;
-    } else if (language === "Animations") {
-      return AnimationsData;
-    } else if (language === "Others") {
-      return OtherData;
-    } else {
-      return null;
-    }
-  } else if (type === "videos") {
-    console.log("Videos");
-    console.log("language is: ", language);
-    if (language === "HTML") {
-      console.log("Videos Data: ", HTMLVideoData);
-      return HTMLVideoData;
-    } else if (language === "CSS") {
-      return CSSVideoData;
-    } else if (language === "JavaScript") {
-      return JSVideoData;
-    } else if (language === "TypeScript") {
-      return TSVideoData;
-    } else if (language === "React") {
-      return ReactVideoData;
-    } else if (language === "Vue") {
-      return VueVideoData;
-    } else if (language === "Angular") {
-      return AngularVideoData;
-    } else if (language === "Git") {
-      return GitVideoData;
-    } else return null;
-  } else if (type === "playground") {
-    if (language === "HTML") {
-      return HTMLPlaygroundData;
-    } else if (language === "CSS") {
-      return CSSPlaygroundData;
-    } else if (language === "JavaScript") {
-      return JSPlaygroundData;
-    } else if (language === "TypeScript") {
-      return TSPlaygroundData;
-    } else if (language === "Vue") {
-      return VuePlaygroundData;
-    } else if (language === "React") {
-      return ReactPlaygroundData;
-    } else {
-      return null;
-    }
-  } else {
-    return null;
+const ICON_PATHS = {
+  HTML: "/public/resources/html.png",
+  CSS: "/public/resources/css.png",
+  JavaScript: "/public/resources/js.png",
+  TypeScript: "/public/resources/ts.png",
+  Vue: "/public/resources/vue.png",
+  React: "/public/resources/react.png",
+  Angular: "/public/resources/angular.png",
+  Git: "/public/resources/git.png"
+};
+
+const DATA_MAPPINGS = {
+  websites: {
+    HTML: HTMLData,
+    CSS: CSSData,
+    JavaScript: JSData,
+    TypeScript: TSData,
+    Vue: VueData,
+    React: ReactData,
+    Angular: AngularData,
+    Git: GitData,
+    "Free Icons": FreeIconsData,
+    "Free Images and Videos": FreeImgVdoData,
+    "Free UI Libraries": FreeTemplatesData,
+    "Premium Templates": PremiumTemplatesData,
+    "Inspiration Galleries": InspirationGalleriesData,
+    "Animations": AnimationsData,
+    "Others": OtherData
+  },
+  videos: {
+    HTML: HTMLVideoData,
+    CSS: CSSVideoData,
+    JavaScript: JSVideoData,
+    TypeScript: TSVideoData,
+    Vue: VueVideoData,
+    React: ReactVideoData,
+    Angular: AngularVideoData,
+    Git: GitVideoData
+  },
+  playground: {
+    HTML: HTMLPlaygroundData,
+    CSS: CSSPlaygroundData,
+    JavaScript: JSPlaygroundData,
+    TypeScript: TSPlaygroundData,
+    Vue: VuePlaygroundData,
+    React: ReactPlaygroundData
   }
+};
+
+function combineData(data, iconPath) {
+  return data.map((item) => ({
+    ...item,
+    icon: iconPath + item.icon,
+  }));
+}
+
+export default function getData(language, type) {
+  const data = DATA_MAPPINGS[type]?.[language];
+  if (!data) return null;
+  
+  // Only combine data with icons for programming languages in websites section
+  if (type === "websites" && ICON_PATHS[language]) {
+    return combineData(data, ICON_PATHS[language]);
+  }
+  
+  return data;
 }

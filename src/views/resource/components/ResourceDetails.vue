@@ -4,10 +4,19 @@
         <div v-if="resourceType == 'websites'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="detail in details" :key="detail.id" class="mb-4">
                 <div class="bg-white shadow-md rounded-lg p-6 relative">
-                    <component :is="isBookmarked(detail.id, detail.title, title) ? HeartOff : Heart"
-                        @click="() => saveBookMark(detail.id, detail.title, detail.url, title, resourceType)"
-                        class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-5 right-5" size="20"
-                        :class="{ 'text-red-500': isBookmarked(detail.id, detail.title, title) }" />
+                    <component :is="isBookmarked(detail.id, detail.title, title) ? HeartOff : Heart
+                        " @click="() =>
+                            saveBookMark(
+                                detail.id,
+                                detail.title,
+                                detail.url,
+                                title,
+                                resourceType
+                            )
+                            " class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-5 right-5" size="20"
+                        :class="{
+                            'text-red-500': isBookmarked(detail.id, detail.title, title),
+                        }" />
                     <h3 class="text-lg font-semibold mt-5 mb-2">{{ detail.title }}</h3>
                     <p class="text-gray-700 mb-10">{{ detail.description }}</p>
                     <a :href="detail.url"
@@ -24,7 +33,27 @@
                         <iframe :src="`https://www.youtube.com/embed/${currentVideo.id}`" allowfullscreen
                             class="w-full h-[200px] sm:h-[300px] lg:h-[450px] rounded-md"></iframe>
                     </div>
-                    <h2 class="text-xl font-bold mt-4">{{ currentVideo.title }}</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-4">
+                        <h2 class="text-md sm:text-xl font-bold mb-2 sm:mb-0">{{ currentVideo.title }}</h2>
+                        <component :is="isBookmarked(currentVideo.id, currentVideo.title, title)
+                            ? HeartOff
+                            : Heart
+                            " @click="() =>
+                                saveBookMark(
+                                    currentVideo.id,
+                                    currentVideo.title,
+                                    `https://www.youtube.com/watch?v=${currentVideo.id}`,
+                                    title,
+                                    resourceType
+                                )
+                                " class="hover:text-red-500 w-4 h-4 text-gray-400 cursor-pointer" :class="{
+                                    'text-red-500': isBookmarked(
+                                        currentVideo.id,
+                                        currentVideo.title,
+                                        title
+                                    ),
+                                }" />
+                    </div>
                 </div>
 
                 <!-- Video playlist -->
@@ -39,7 +68,9 @@
                         ]">
                             <img :src="`https://img.youtube.com/vi/${video.id}/default.jpg`" :alt="video.title"
                                 class="w-20 h-auto mr-2" />
-                            <span class="flex-grow text-xs text-left text-gray-800">{{ video.title }}</span>
+                            <span class="flex-grow text-xs text-left text-gray-800">{{
+                                video.title
+                                }}</span>
                         </li>
                     </ul>
                 </div>
@@ -63,30 +94,34 @@
             </div>
             <div v-else>
                 <!-- show there is no video message -->
-                <div class="text-center text-lg font-semibold">{{ dict.no_playground }}</div>
+                <div class="text-center text-lg font-semibold">
+                    {{ dict.no_playground }}
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import getData from '@/util/getData';
-import { onMounted, ref } from 'vue';
-import { getDictionary } from '@/locale/dict';
-import { Heart, HeartOff } from 'lucide-vue-next';
-import { ElNotification } from 'element-plus';
+import getData from "@/util/getData";
+import { onMounted, ref } from "vue";
+import { getDictionary } from "@/locale/dict";
+import { Heart, HeartOff } from "lucide-vue-next";
+import { ElNotification } from "element-plus";
 
 const dict = ref({});
 const details = ref([]);
 const videos = ref([]);
 const currentVideo = ref({});
 const setCurrentVideo = (video) => {
-    currentVideo.value = video
+    currentVideo.value = video;
     // auto scroll to the top of the video player
-    document.getElementById('resource-details').scrollIntoView({ behavior: 'smooth' });
-}
-const resourceType = ref('');
-const title = ref('');
+    document
+        .getElementById("resource-details")
+        .scrollIntoView({ behavior: "smooth" });
+};
+const resourceType = ref("");
+const title = ref("");
 const bookmarks = ref([]);
 
 // Save bookmark to local storage and update reactive state
@@ -95,28 +130,28 @@ const saveBookMark = (id, title, url, category, resourceType) => {
 
     // Check if bookmark already exists
     const index = bookmarks.value.findIndex(
-        b => b.id === id && b.title === title && b.category === category
+        (b) => b.id === id && b.title === title && b.category === category
     );
 
     if (index !== -1) {
         // Remove from bookmarks
         bookmarks.value.splice(index, 1);
-        localStorage.setItem('bookmarks', JSON.stringify(bookmarks.value));
+        localStorage.setItem("bookmarks", JSON.stringify(bookmarks.value));
         ElNotification({
-            title: 'Bookmark Removed',
-            message: 'Bookmark removed successfully',
-            type: 'info',
-            duration: 1000
+            title: "Bookmark Removed",
+            message: "Bookmark removed successfully",
+            type: "info",
+            duration: 1000,
         });
     } else {
         // Add to bookmarks
         bookmarks.value.push(bookmark);
-        localStorage.setItem('bookmarks', JSON.stringify(bookmarks.value));
+        localStorage.setItem("bookmarks", JSON.stringify(bookmarks.value));
         ElNotification({
-            title: 'Bookmark Saved',
-            message: 'Bookmark saved successfully',
-            type: 'success',
-            duration: 1000
+            title: "Bookmark Saved",
+            message: "Bookmark saved successfully",
+            type: "success",
+            duration: 1000,
         });
     }
 };
@@ -124,7 +159,10 @@ const saveBookMark = (id, title, url, category, resourceType) => {
 // Reactive check for bookmarked status
 const isBookmarked = (id, title, category) => {
     return bookmarks.value.some(
-        bookmark => bookmark.id === id && bookmark.title === title && bookmark.category === category
+        (bookmark) =>
+            bookmark.id === id &&
+            bookmark.title === title &&
+            bookmark.category === category
     );
 };
 
@@ -132,42 +170,40 @@ const props = defineProps({
     title: {
         type: String,
         required: true,
-        default: ''
+        default: "",
     },
     resourceType: {
         type: String,
         required: true,
-        default: ''
-    }
+        default: "",
+    },
 });
 
 onMounted(() => {
-    bookmarks.value = JSON.parse(localStorage.getItem('bookmarks')) || [];
+    bookmarks.value = JSON.parse(localStorage.getItem("bookmarks")) || [];
     resourceType.value = props.resourceType;
     title.value = props.title;
     fetchData();
-    const lang = localStorage.getItem('lang') || 'en';
+    const lang = localStorage.getItem("lang") || "en";
     dict.value = getDictionary(lang);
 });
 
 const fetchData = async () => {
     try {
         const data = await getData(title.value, resourceType.value);
-        if (resourceType.value === 'websites') {
+        if (resourceType.value === "websites") {
             details.value = data;
             videos.value = [];
-        } else if (resourceType.value === 'videos') {
+        } else if (resourceType.value === "videos") {
             videos.value = data;
             currentVideo.value = videos.value[0];
             details.value = [];
-        } else if (resourceType.value === 'playground') {
+        } else if (resourceType.value === "playground") {
             details.value = data;
             videos.value = [];
         }
+    } catch {
+        console.error("Error fetching data:", error);
     }
-    catch {
-        console.error('Error fetching data:', error);
-    }
-}
-
+};
 </script>

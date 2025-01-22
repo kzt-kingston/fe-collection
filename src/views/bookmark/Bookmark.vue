@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { Search, ExternalLink, HeartOff } from 'lucide-vue-next'
+import { Search, ExternalLink, HeartOff, Globe, Video } from 'lucide-vue-next'
 import { ElNotification } from 'element-plus';
 
 const searchTerm = ref('')
@@ -159,20 +159,26 @@ const clearBookmarks = () => {
                     <ul class="divide-y divide-gray-200">
                         <li v-for="bookmark in filteredBookmarks" :key="bookmark.id + bookmark.category"
                             class="p-4 text-sm flex flex-col md:grid md:grid-cols-12 gap-3">
-                            <!-- Mobile: Icon & Category in One Line, Title on Separate Line -->
                             <div class="md:col-span-9 w-full">
                                 <div class="flex items-center space-x-3">
                                     <img v-if="bookmark.category"
                                         :src="`/resources/${bookmark.category.toLowerCase()}.png`"
                                         :alt="bookmark.category" class="w-6 h-6" />
+                                    <!-- Resource Type Indicator -->
+                                    <span class="flex items-center text-gray-400">
+                                        <Globe class="w-4" v-if="bookmark.resourceType === 'websites'" />
+                                        <Video class="w-4" v-else-if="bookmark.resourceType === 'videos'" />
+                                        <span v-else class="text-xs">[Website]</span>
+                                    </span>
                                     <span class="text-gray-500 text-sm">{{ bookmark.category }}</span>
+
                                 </div>
                                 <span class="block text-gray-800 font-medium truncate max-w-full mt-1">
                                     {{ bookmark.title }}
                                 </span>
                             </div>
 
-                            <!-- Right Section: Actions -->
+                            <!-- Actions Section -->
                             <div class="md:col-span-3 flex items-center justify-end space-x-4">
                                 <a :href="bookmark.url" target="_blank" rel="noopener noreferrer"
                                     class="flex items-center">
@@ -180,7 +186,6 @@ const clearBookmarks = () => {
                                         <ExternalLink class="text-cyan-500 w-6 h-6" />
                                     </el-tooltip>
                                 </a>
-
                                 <el-tooltip content="Remove bookmark" placement="top">
                                     <HeartOff class="text-red-500 cursor-pointer"
                                         @click="() => removeBookmark(bookmark.id, bookmark.title, bookmark.url, bookmark.category)" />
