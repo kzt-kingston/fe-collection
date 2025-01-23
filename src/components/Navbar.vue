@@ -26,13 +26,13 @@
                     <template #dropdown>
                         <el-dropdown-menu>
                             <el-dropdown-item @click="drawer = true">
-                                <span class="flex items-center">
-                                    <Bot class="mr-1" size="20" />AI Image Search
+                                <span class="flex items-center text-sm">
+                                    <Image class="mr-1" size="20" />Image Search
                                 </span>
                             </el-dropdown-item>
                             <el-dropdown-item divided>
-                                <router-link to="/bookmark" class="text-xs hover:text-red-500 transition-colors">
-                                    <span class="flex items-center">
+                                <router-link to="/bookmark" class="hover:text-red-500 transition-colors">
+                                    <span class="flex items-center text-sm">
                                         <Heart class="mr-1" size="20" /> Favourite Lists
                                     </span>
                                 </router-link>
@@ -40,8 +40,8 @@
                             <!-- Music -->
                             <el-dropdown-item>
                                 <button aria-label="music-player" @click="$emit('toggleMusicPlayer')"
-                                    :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
-                                    <span class="flex items-center">
+                                    :class="props.activeMusicPlayer ? `text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
+                                    <span class="flex items-center text-sm">
                                         <Music class="mr-1" size="20" /> Music Player
                                     </span>
                                 </button>
@@ -63,7 +63,7 @@
         </div>
     </div>
     <!-- Drawer component -->
-    <Drawer :drawer="drawer" @update:drawer="drawer = $event" :size="'100%'" title="AI Image Search">
+    <Drawer :drawer="drawer" @update:drawer="drawer = $event" :size="'100%'">
         <ImageSearch />
     </Drawer>
 </template>
@@ -71,7 +71,7 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
-import { Music, House, Heart, ChevronDown, Bot, MenuSquare } from 'lucide-vue-next';
+import { Music, House, Heart, ChevronDown, Image, MenuSquare } from 'lucide-vue-next';
 import Drawer from '@/components/Drawer.vue';
 import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
 

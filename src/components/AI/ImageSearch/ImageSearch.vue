@@ -4,7 +4,7 @@
         <SearchBar @search="search" />
         <div v-if="ready === false"
             class="z-10 fixed top-0 left-0 w-full h-full bg-gray-200 bg-opacity-50 flex items-center justify-center">
-            <div class="text-black text-2xl font-bold animate-pulse">Loading model and database...</div>
+            <div class="text-black text-xl font-bold animate-pulse">Loading model and database...</div>
         </div>
         <ImageGrid :images="images" :setCurrentImage="setCurrentImage" />
     </main>
