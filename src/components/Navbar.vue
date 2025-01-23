@@ -15,25 +15,40 @@
                 </router-link>
             </div>
 
-            <!-- line break -->
+            <!-- AI Tools Drop Down -->
             <div class="flex items-center mx-2">|</div>
-
-            <!-- Favourite Lists Menu -->
             <div class="flex items-center">
-                <router-link to="/bookmark" class="text-xs hover:text-red-500 transition-colors">
-                    <Heart size="20" />
-                </router-link>
-            </div>
-
-            <!-- line break -->
-            <div class="flex items-center mx-2">|</div>
-
-            <!-- Music Player Menu -->
-            <div class="flex items-center">
-                <button aria-label="music-player" @click="$emit('toggleMusicPlayer')"
-                    :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
-                    <Music size="20" />
-                </button>
+                <el-dropdown>
+                    <span class="text-xs flex items-center justify-center">
+                        <MenuSquare size="20" class="text-orange-500" />
+                        <ChevronDown size="13" />
+                    </span>
+                    <template #dropdown>
+                        <el-dropdown-menu>
+                            <el-dropdown-item @click="drawer = true">
+                                <span class="flex items-center">
+                                    <Bot class="mr-1" size="20" />AI Image Search
+                                </span>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <router-link to="/bookmark" class="text-xs hover:text-red-500 transition-colors">
+                                    <span class="flex items-center">
+                                        <Heart class="mr-1" size="20" /> Favourite Lists
+                                    </span>
+                                </router-link>
+                            </el-dropdown-item>
+                            <!-- Music -->
+                            <el-dropdown-item>
+                                <button aria-label="music-player" @click="$emit('toggleMusicPlayer')"
+                                    :class="props.activeMusicPlayer ? `text-xs text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
+                                    <span class="flex items-center">
+                                        <Music class="mr-1" size="20" /> Music Player
+                                    </span>
+                                </button>
+                            </el-dropdown-item>
+                        </el-dropdown-menu>
+                    </template>
+                </el-dropdown>
             </div>
 
             <!-- line break -->
@@ -47,12 +62,18 @@
             </div>
         </div>
     </div>
+    <!-- Drawer component -->
+    <Drawer :drawer="drawer" @update:drawer="drawer = $event" :size="'100%'" title="AI Image Search">
+        <ImageSearch />
+    </Drawer>
 </template>
 
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
-import { onMounted } from 'vue'
-import { Music, House, Heart } from 'lucide-vue-next';
+import { onMounted, ref } from 'vue'
+import { Music, House, Heart, ChevronDown, Bot, MenuSquare } from 'lucide-vue-next';
+import Drawer from '@/components/Drawer.vue';
+import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
 
 const props = defineProps({
     activeMusicPlayer: {
@@ -64,6 +85,7 @@ const props = defineProps({
 const router = useRouter()
 const route = useRoute()
 const emits = defineEmits(['toggleMusicPlayer']);
+const drawer = ref(false)
 
 // go back history
 const goBack = () => {
