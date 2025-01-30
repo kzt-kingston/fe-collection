@@ -3,84 +3,105 @@
     "id": 1,
     "title": "HTML",
     "class": "html",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "description": "HTML (HyperText Markup Language) is the foundation of web development, used to structure content on the web. It defines elements like headings, paragraphs, links, images, and more. Every website is built using HTML, making it an essential skill for developers."
   },
   {
     "id": 2,
     "title": "CSS",
     "class": "css",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "description": "CSS (Cascading Style Sheets) is a styling language used to design web pages. It controls colors, fonts, spacing, layouts, and responsiveness, allowing developers to create visually appealing and mobile-friendly websites. CSS frameworks like Bootstrap and Tailwind make styling even easier."
   },
   {
     "id": 3,
     "title": "JavaScript",
     "class": "js",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "description": "JavaScript is a powerful programming language that enables interactive web experiences. It controls animations, dynamic content updates, form validation, and more. Popular JavaScript frameworks like React and Vue make web development more efficient."
   },
   {
     "id": 4,
     "title": "TypeScript",
     "class": "ts",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "description": "TypeScript is an enhanced version of JavaScript that adds static typing, improving code quality and preventing errors. It’s widely used in large-scale applications and integrates seamlessly with JavaScript frameworks like Angular and React."
   },
-
   {
     "id": 5,
     "title": "Vue",
     "class": "vue",
-    "category": "Frameworks & Libraries"
+    "category": "Frameworks & Libraries",
+    "description": "Vue.js is a lightweight JavaScript framework for building modern web applications. It is known for its simplicity, reactive data binding, and easy integration. Vue is perfect for both small projects and enterprise-level applications."
   },
   {
     "id": 6,
     "title": "React",
     "class": "react",
-    "category": "Frameworks & Libraries"
+    "category": "Frameworks & Libraries",
+    "description": "React is a JavaScript library developed by Facebook for creating dynamic, component-based user interfaces. It improves performance using a virtual DOM and is widely used in single-page applications (SPAs) and mobile development with React Native."
   },
   {
     "id": 7,
     "title": "Angular",
     "class": "angular",
-    "category": "Frameworks & Libraries"
+    "category": "Frameworks & Libraries",
+    "description": "Angular is a powerful frontend framework developed by Google, used for building large-scale, enterprise-level applications. It offers features like two-way data binding, dependency injection, and built-in state management."
   },
-
-  { "id": 8, "title": "Git", "class": "git", "category": "Developer Tools" },
+  {
+    "id": 8,
+    "title": "Git",
+    "class": "git",
+    "category": "Developer Tools",
+    "description": "Git is a version control system that allows developers to track code changes, collaborate with teams, and manage different versions of a project. It’s essential for working in teams and using platforms like GitHub, GitLab, and Bitbucket."
+  },
   {
     "id": 9,
     "title": "Free Icons",
     "class": "free-icons",
-    "category": "Design Resources"
+    "category": "Design Resources",
+    "description": "A collection of free icons that can enhance user interfaces. Icons are commonly used in web and app design to improve navigation, create visual hierarchy, and make interfaces more user-friendly."
   },
   {
     "id": 10,
     "title": "Free UI Libraries",
     "class": "free-templates",
-    "category": "Design Resources"
+    "category": "Design Resources",
+    "description": "UI libraries provide pre-designed components like buttons, modals, and forms to speed up development. Free UI libraries, such as Material UI and Tailwind CSS, help developers build beautiful applications without designing everything from scratch."
   },
   {
     "id": 11,
     "title": "Free Images and Videos",
     "class": "free-img-vdo",
-    "category": "Design Resources"
+    "category": "Design Resources",
+    "description": "A collection of high-quality, royalty-free images and videos that developers and designers can use in their projects. Websites like Unsplash, Pexels, and Pixabay offer thousands of free assets for creative use."
   },
   {
     "id": 12,
     "title": "Premium Templates",
     "class": "premium-templates",
-    "category": "Design Resources"
+    "category": "Design Resources",
+    "description": "Professionally designed website templates that can be purchased and customized. These templates save time and ensure high-quality design for businesses, portfolios, and e-commerce sites."
   },
   {
     "id": 13,
     "title": "Inspiration Galleries",
     "class": "inspiration-galleries",
-    "category": "Design Resources"
+    "category": "Design Resources",
+    "description": "Curated collections of beautifully designed websites and UI elements to inspire designers. Websites like Dribbble and Behance showcase top-notch design trends and ideas."
   },
-
   {
     "id": 14,
     "title": "Animations",
     "class": "animations",
-    "category": "UI/UX Enhancements"
+    "category": "UI/UX Enhancements",
+    "description": "CSS and JavaScript animations bring websites to life with motion effects, transitions, and interactive elements. They improve user engagement by making interfaces feel more dynamic and modern."
   },
-
-  { "id": 15, "title": "Others", "class": "other", "category": "Miscellaneous" }
+  {
+    "id": 15,
+    "title": "Others",
+    "class": "other",
+    "category": "Miscellaneous",
+    "description": "A collection of additional web development resources that don’t fit into other specific categories."
+  }
 ]

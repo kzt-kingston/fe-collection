@@ -7,6 +7,7 @@ import { getDictionary } from '@/locale/dict';
 import getData from '@/util/getData';
 
 const selectedTitle = ref("");
+const selectedDescription = ref("");
 const openDialog = ref(false);
 const className = ref(null);
 const dict = ref({});
@@ -37,12 +38,13 @@ onMounted(() => {
 });
 
 // show resource details
-const showResourceDetails = (title, cssClass) => {
+const showResourceDetails = (title, cssClass, description) => {
   // clear previous selected resource
   selectedResourceType.value = "";
   console.log('Selected title:', title);
   console.log('Selected cssClass:', cssClass);
   selectedTitle.value = title;
+  selectedDescription.value = description;
 
   // check if data is available for each resource type
   showHideResourceDetails();
@@ -78,7 +80,8 @@ const emits = defineEmits(['openNewTab']);
       <h3 class="text-lg font-bold leading-6 mb-5">{{ category }}</h3>
       <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
         <div v-for="resource in resourceTitles.filter(r => r.category === category)" :key="resource.id">
-          <div @click="showResourceDetails(resource.title, resource.class)" class="cursor-pointer">
+          <div @click="showResourceDetails(resource.title, resource.class, resource.description)"
+            class="cursor-pointer">
             <div class="block h-[100px] text-md text-wrap font-bold p-6 shadow-md rounded-lg align-middle all-resource"
               :class="resource.class">
             </div>
@@ -111,12 +114,18 @@ const emits = defineEmits(['openNewTab']);
               <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                 <div class="grid">
                   <div class="text-center">
-                    <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-cyan-500 text-center mb-5">{{
+                    <!-- <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-cyan-500 text-center mb-5">{{
                       selectedTitle
                       }}
-                    </DialogTitle>
+                    </DialogTitle> -->
+                    <!-- <div class="text-center text-md mb-5">{{ selectedDescription }}</div> -->
                     <div class="block w-full h-[100px]" :class="className">
                     </div>
+
+                    <div class="text-start text-md mt-5 mb-2 font-bold">{{ selectedTitle }}</div>
+
+                    <div class="text-start text-md mb-5">{{ selectedDescription }}</div>
+
                     <div class="my-5">
                       {{ dict.choose_resource }}
                     </div>
