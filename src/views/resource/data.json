@@ -1,37 +1,86 @@
 [
-  { "id": 1, "title": "HTML", "class": "html", "icon": "" },
-  { "id": 2, "title": "CSS", "class": "css", "icon": "" },
-  { "id": 3, "title": "JavaScript", "class": "js", "icon": "" },
-  { "id": 4, "title": "TypeScript", "class": "ts", "icon": "" },
-  { "id": 5, "title": "Vue", "class": "vue", "icon": "" },
-  { "id": 6, "title": "React", "class": "react", "icon": "" },
-  { "id": 7, "title": "Angular", "class": "angular", "icon": "" },
-  { "id": 8, "title": "Git", "class": "git", "icon": "" },
-  { "id": 9, "title": "Free Icons", "class": "free-icons", "icon": "" },
+  {
+    "id": 1,
+    "title": "HTML",
+    "class": "html",
+    "category": "Programming Languages"
+  },
+  {
+    "id": 2,
+    "title": "CSS",
+    "class": "css",
+    "category": "Programming Languages"
+  },
+  {
+    "id": 3,
+    "title": "JavaScript",
+    "class": "js",
+    "category": "Programming Languages"
+  },
+  {
+    "id": 4,
+    "title": "TypeScript",
+    "class": "ts",
+    "category": "Programming Languages"
+  },
+
+  {
+    "id": 5,
+    "title": "Vue",
+    "class": "vue",
+    "category": "Frameworks & Libraries"
+  },
+  {
+    "id": 6,
+    "title": "React",
+    "class": "react",
+    "category": "Frameworks & Libraries"
+  },
+  {
+    "id": 7,
+    "title": "Angular",
+    "class": "angular",
+    "category": "Frameworks & Libraries"
+  },
+
+  { "id": 8, "title": "Git", "class": "git", "category": "Developer Tools" },
+  {
+    "id": 9,
+    "title": "Free Icons",
+    "class": "free-icons",
+    "category": "Design Resources"
+  },
   {
     "id": 10,
     "title": "Free UI Libraries",
     "class": "free-templates",
-    "icon": ""
+    "category": "Design Resources"
   },
   {
     "id": 11,
     "title": "Free Images and Videos",
     "class": "free-img-vdo",
-    "icon": ""
+    "category": "Design Resources"
   },
   {
     "id": 12,
     "title": "Premium Templates",
     "class": "premium-templates",
-    "icon": ""
+    "category": "Design Resources"
   },
   {
     "id": 13,
     "title": "Inspiration Galleries",
     "class": "inspiration-galleries",
-    "icon": ""
+    "category": "Design Resources"
   },
-  { "id": 14, "title": "Animations", "class": "animations", "icon": "" },
-  { "id": 15, "title": "Others", "class": "other", "icon": "" }
+
+  {
+    "id": 14,
+    "title": "Animations",
+    "class": "animations",
+    "category": "UI/UX Enhancements"
+  },
+
+  { "id": 15, "title": "Others", "class": "other", "category": "Miscellaneous" }
 ]

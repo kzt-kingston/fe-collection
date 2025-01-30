@@ -60,21 +60,36 @@ const showSelectedResource = (type) => {
   openDialog.value = false;
 }
 
+const categories = [
+  'Programming Languages',
+  'Frameworks & Libraries',
+  'Developer Tools',
+  'Design Resources',
+  'UI/UX Enhancements',
+  'Miscellaneous'
+];
+
 const emits = defineEmits(['openNewTab']);
 </script>
 <template>
-  <!-- Grid Display Data for resources -->
-  <div class="grid my-10 grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
-    <div v-for="resourceTitle in resourceTitles" :key="resourceTitle.id">
-      <div @click="showResourceDetails(resourceTitle.title, resourceTitle.class)" :key="resourceTitle.id"
-        class="cursor-pointer">
-        <div class="block h-[100px] text-md text-wrap font-bold p-6 shadow-md rounded-lg align-middle all-resource"
-          :class="resourceTitle.class">
+  <div>
+    <!-- map the categories -->
+    <div v-for="category in categories" :key="category" class="w-full">
+      <h3 class="text-lg font-bold leading-6 mb-5">{{ category }}</h3>
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+        <div v-for="resource in resourceTitles.filter(r => r.category === category)" :key="resource.id">
+          <div @click="showResourceDetails(resource.title, resource.class)" class="cursor-pointer">
+            <div class="block h-[100px] text-md text-wrap font-bold p-6 shadow-md rounded-lg align-middle all-resource"
+              :class="resource.class">
+            </div>
+            <div class="my-5 text-center text-md font-semibold">{{ resource.title }}</div>
+          </div>
         </div>
-        <div class="my-5 text-center text-md font-semibold">{{
-          resourceTitle.title }}</div>
       </div>
+      <!-- show divider and don't show if it is the last one-->
+      <div v-if="category !== categories[categories.length - 1]" class="border-b border-gray-300 mb-5"></div>
     </div>
+
   </div>
 
   <TransitionRoot as="template" :show="openDialog">
@@ -98,7 +113,7 @@ const emits = defineEmits(['openNewTab']);
                   <div class="text-center">
                     <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-cyan-500 text-center mb-5">{{
                       selectedTitle
-                    }}
+                      }}
                     </DialogTitle>
                     <div class="block w-full h-[100px]" :class="className">
                     </div>
