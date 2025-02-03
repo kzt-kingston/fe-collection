@@ -2,18 +2,47 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { getDictionary } from '@/locale/dict';
-import { Heart } from 'lucide-vue-next';
+import { Heart, Download } from 'lucide-vue-next';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 
 const dict = ref({});
+const deferredPrompt = ref(null);
+const showInstallButton = ref(false);
+
+const installPWA = async () => {
+    if (deferredPrompt.value) {
+        (deferredPrompt.value).prompt();
+        const { outcome } = await (deferredPrompt.value).userChoice;
+        if (outcome === 'accepted') {
+            console.log('PWA installed');
+        }
+        deferredPrompt.value = null;
+        showInstallButton.value = false;
+    }
+};
 
 onMounted(() => {
     const lang = localStorage.getItem('lang') || 'en';
     dict.value = getDictionary(lang);
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault(); // Prevent automatic prompt
+        deferredPrompt.value = event;
+        showInstallButton.value = true; // Show custom install button
+    });
 });
 </script>
 <template>
     <section id="hero" class="max-w-4xl mx-auto">
+        <!-- Show for installation of PWA if not installed yet -->
+        <div v-if="showInstallButton" class="flex items-center justify-center my-2">
+            <button @click="installPWA"
+                class="flex items-center gap-2 text-xs text-cyan-500 hover:text-cyan-600 p-2 border-solid border border-cyan-500 rounded-md">
+                Install App
+                <Download size="12" class="text-cyan-500 hover:text-cyan-600" />
+            </button>
+        </div>
+
         <div class="mt-28 grid md:grid-cols-2 gap-4 items-center">
             <div class="col-span-1 text-lg leading-normal text-center">
                 <!-- <div class="text-xl">Welcome to</div> -->
