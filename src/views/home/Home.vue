@@ -34,15 +34,6 @@ onMounted(() => {
 </script>
 <template>
     <section id="hero" class="max-w-4xl mx-auto">
-        <!-- Show for installation of PWA if not installed yet -->
-        <div v-if="showInstallButton" class="flex items-center justify-center my-2">
-            <button @click="installPWA"
-                class="flex items-center gap-2 text-xs text-cyan-500 hover:text-cyan-600 p-2 border-solid border border-cyan-500 rounded-md">
-                Install App
-                <Download size="12" class="text-cyan-500 hover:text-cyan-600" />
-            </button>
-        </div>
-
         <div class="mt-28 grid md:grid-cols-2 gap-4 items-center">
             <div class="col-span-1 text-lg leading-normal text-center">
                 <!-- <div class="text-xl">Welcome to</div> -->
@@ -60,6 +51,17 @@ onMounted(() => {
                 <img class="w-80 flex mx-auto" src="/logo.jpeg" alt="logo" />
             </div>
         </div>
+
+        <!-- Install PWA -->
+        <!-- Show for installation of PWA if not installed yet -->
+        <div v-if="showInstallButton" class="flex items-center justify-center my-5">
+            <button @click="installPWA"
+                class="flex items-center gap-2 text-xs text-cyan-500 hover:text-cyan-600 p-2 border-solid border border-cyan-500 rounded-md">
+                Install App
+                <Download size="12" class="text-cyan-500 hover:text-cyan-600" />
+            </button>
+        </div>
+
         <router-link to="/resource">
             <div class="flex items-center justify-center my-10">
 
