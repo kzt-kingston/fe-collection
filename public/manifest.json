@@ -1,0 +1,20 @@
+{
+  "name": "Frontend Collection - PWA",
+  "short_name": "FE Collection",
+  "description": "A collection of frontend resources",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#42b883",
+  "icons": [
+    {
+      "src": "/icons/logo-small.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-medium.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

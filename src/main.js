@@ -11,3 +11,12 @@ const app = createApp(App);
 app.use(router);
 app.use(ElementPlus);
 app.mount("#app");
+
+// register service worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").then(() => {
+      console.log("Service Worker Registered");
+    });
+  });
+}
