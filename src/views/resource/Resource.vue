@@ -56,6 +56,12 @@ const hasWebsites = computed(() => searchResult.value?.websites?.length > 0);
 const hasVideos = computed(() => searchResult.value?.videos?.length > 0);
 const hasPlayground = computed(() => searchResult.value?.playground?.length > 0);
 
+// Add computed properties for counts
+const websitesCount = computed(() => searchResult.value?.websites?.length || 0);
+const videosCount = computed(() => searchResult.value?.videos?.length || 0);
+const playgroundCount = computed(() => searchResult.value?.playground?.length || 0);
+const totalCount = computed(() => websitesCount.value + videosCount.value + playgroundCount.value);
+
 const checkAvailableData = (type) => {
   const data = getData(selectedTitle.value, type);
   if (data) {
@@ -126,15 +132,49 @@ const emits = defineEmits(['openNewTab']);
 
         <div class="mb-8">
           <div class="flex gap-2 border-b pb-2">
-            <button class="px-4 py-2 border rounded-md" :class="{ 'bg-gray-200': activeTab === 'all' }"
-              @click="activeTab = 'all'">All</button>
-            <button v-if="hasWebsites" class="px-4 py-2 border rounded-md"
-              :class="{ 'bg-gray-200': activeTab === 'websites' }" @click="activeTab = 'websites'">Websites</button>
-            <button v-if="hasVideos" class="px-4 py-2 border rounded-md"
-              :class="{ 'bg-gray-200': activeTab === 'videos' }" @click="activeTab = 'videos'">Videos</button>
-            <button v-if="hasPlayground" class="px-4 py-2 border rounded-md"
+            <button 
+              class="px-4 py-2 border rounded-md flex items-center gap-2" 
+              :class="{ 'bg-gray-200': activeTab === 'all' }"
+              @click="activeTab = 'all'"
+            >
+              All
+              <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                {{ totalCount }}
+              </span>
+            </button>
+            <button 
+              v-if="hasWebsites" 
+              class="px-4 py-2 border rounded-md flex items-center gap-2"
+              :class="{ 'bg-gray-200': activeTab === 'websites' }" 
+              @click="activeTab = 'websites'"
+            >
+              Websites
+              <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                {{ websitesCount }}
+              </span>
+            </button>
+            <button 
+              v-if="hasVideos" 
+              class="px-4 py-2 border rounded-md flex items-center gap-2"
+              :class="{ 'bg-gray-200': activeTab === 'videos' }" 
+              @click="activeTab = 'videos'"
+            >
+              Videos
+              <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                {{ videosCount }}
+              </span>
+            </button>
+            <button 
+              v-if="hasPlayground" 
+              class="px-4 py-2 border rounded-md flex items-center gap-2"
               :class="{ 'bg-gray-200': activeTab === 'playground' }"
-              @click="activeTab = 'playground'">Playground</button>
+              @click="activeTab = 'playground'"
+            >
+              Playground
+              <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                {{ playgroundCount }}
+              </span>
+            </button>
           </div>
         </div>
 
