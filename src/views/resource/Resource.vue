@@ -99,15 +99,31 @@ onMounted(() => {
 });
 
 // Compute visibility conditions
-const hasWebsites = computed(() => searchResult.value?.websites?.length > 0);
-const hasVideos = computed(() => searchResult.value?.videos?.length > 0);
-const hasPlayground = computed(() => searchResult.value?.playground?.length > 0);
+const hasWebsites = computed(() => (searchResult.value?.websites?.length || 0) > 0);
+const hasVideos = computed(() => (searchResult.value?.videos?.length || 0) > 0);
+const hasPlayground = computed(() => (searchResult.value?.playground?.length || 0) > 0);
 
 // Add computed properties for counts
-const websitesCount = computed(() => searchResult.value?.websites?.length || 0);
-const videosCount = computed(() => searchResult.value?.videos?.length || 0);
-const playgroundCount = computed(() => searchResult.value?.playground?.length || 0);
-const totalCount = computed(() => websitesCount.value + videosCount.value + playgroundCount.value);
+const websitesCount = computed(() => {
+  console.log('Websites length:', searchResult.value?.websites?.length);
+  return searchResult.value?.websites?.length || 0;
+});
+
+const videosCount = computed(() => {
+  console.log('Videos length:', searchResult.value?.videos?.length);
+  return searchResult.value?.videos?.length || 0;
+});
+
+const playgroundCount = computed(() => {
+  console.log('Playground length:', searchResult.value?.playground?.length);
+  return searchResult.value?.playground?.length || 0;
+});
+
+const totalCount = computed(() => {
+  const total = websitesCount.value + videosCount.value + playgroundCount.value;
+  console.log('Total count:', total);
+  return total;
+});
 
 const checkAvailableData = (type) => {
   const data = getData(selectedTitle.value, type);

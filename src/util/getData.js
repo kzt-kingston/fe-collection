@@ -129,10 +129,22 @@ export function searchForData(searchText) {
     ]
   }
 
+  const searchText_lower = searchText.toLowerCase();
+
   // search for the data in all the data
-  const searchWebsitesData = data.websites.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase()));
-  const searchVideosData = data.videos.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase()));
-  const searchPlaygroundData = data.playground.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase()));
+  const searchWebsitesData = data.websites.filter((item) => 
+    item.title.toLowerCase().includes(searchText_lower) || 
+    item.description.toLowerCase().includes(searchText_lower)
+  );
+  
+  const searchVideosData = data.videos.filter((item) => 
+    item.title.toLowerCase().includes(searchText_lower)
+  );
+  
+  const searchPlaygroundData = data.playground.filter((item) => 
+    item.title.toLowerCase().includes(searchText_lower) || 
+    item.description.toLowerCase().includes(searchText_lower)
+  );
 
   // combine all the search results
   const searchResults = {
