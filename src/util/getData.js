@@ -140,8 +140,6 @@ export function searchForData(searchText) {
     videos: searchVideosData,
     playground: searchPlaygroundData
   }
-
-  console.log("Search Results: ",searchResults);
   return searchResults;
 }
 

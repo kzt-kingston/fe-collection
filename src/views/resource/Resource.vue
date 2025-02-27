@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue'; // Add watch
 import resourceTitles from './data.json';
 import { getDictionary } from '@/locale/dict';
 import getData, {searchForData} from '@/util/getData';
@@ -10,6 +10,7 @@ import { Search } from 'lucide-vue-next';
 import WebsiteCard from './components/WebsiteCard.vue';
 import VideoCard from './components/VideoCard.vue';
 import PlaygroundCard from './components/PlaygroundCard.vue';
+import { debounce } from 'lodash'; // Add debounce import
 
 const selectedTitle = ref("");
 const selectedDescription = ref("");
@@ -26,14 +27,29 @@ const searchResult = ref(null);
 const activeTab = ref('all');
 const inputData = ref(''); // Add missing ref
 
-const searchResource = (searchText) => {
+// Create a debounced search function
+const debouncedSearch = debounce((searchText) => {
   if (!searchText) {
     searchResult.value = null;
     return;
   }
   searchResult.value = searchForData(searchText);
   console.log('Search result:', searchResult.value);
-}
+}, 300);
+
+// Watch for input changes
+watch(() => inputData.value, (newValue) => {
+  debouncedSearch(newValue);
+});
+
+onMounted(() => {
+  const lang = localStorage.getItem('lang') || 'en';
+  dict.value = getDictionary(lang);
+  // Perform initial search if there's any input value
+  if (inputData.value) {
+    debouncedSearch(inputData.value);
+  }
+});
 
 // Compute visibility conditions
 const hasWebsites = computed(() => searchResult.value?.websites?.length > 0);
@@ -53,11 +69,6 @@ const showHideResourceDetails = () => {
   hideResourceDetails.value.videos = checkAvailableData('videos');
   hideResourceDetails.value.playground = checkAvailableData('playground');
 }
-
-onMounted(() => {
-  const lang = localStorage.getItem('lang') || 'en';
-  dict.value = getDictionary(lang);
-});
 
 // show resource details
 const showResourceDetails = (title, cssClass, description) => {
@@ -99,13 +110,18 @@ const emits = defineEmits(['openNewTab']);
   <div>
     <!-- search bar -->
     <div class="my-5">
-      <el-input class="w-full" size="large" :placeholder="dict.search_resources" :prefix-icon="Search" v-model="inputData"
-        @input="searchResource" />
+      <el-input 
+        class="w-full" 
+        size="large" 
+        :placeholder="dict.search_resources" 
+        :prefix-icon="Search" 
+        v-model="inputData"
+      />
     </div>
 
     <!-- search result -->
     <div v-if="searchResult" class="my-5">
-      <div class="container mx-auto px-4 py-8">
+      <div class="container mx-auto">
         <h1 class="text-3xl font-bold mb-6">{{ dict.search_result }}</h1>
 
         <div class="mb-8">
