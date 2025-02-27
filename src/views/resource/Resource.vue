@@ -1,10 +1,15 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import resourceTitles from './data.json';
 import { getDictionary } from '@/locale/dict';
-import getData from '@/util/getData';
+import getData, {searchForData} from '@/util/getData';
+import { ElInput } from 'element-plus';
+import { Search } from 'lucide-vue-next';
+import WebsiteCard from './components/WebsiteCard.vue';
+import VideoCard from './components/VideoCard.vue';
+import PlaygroundCard from './components/PlaygroundCard.vue';
 
 const selectedTitle = ref("");
 const selectedDescription = ref("");
@@ -17,6 +22,23 @@ const hideResourceDetails = ref({
   videos: false,
   playground: false
 })
+const searchResult = ref(null);
+const activeTab = ref('all');
+const inputData = ref(''); // Add missing ref
+
+const searchResource = (searchText) => {
+  if (!searchText) {
+    searchResult.value = null;
+    return;
+  }
+  searchResult.value = searchForData(searchText);
+  console.log('Search result:', searchResult.value);
+}
+
+// Compute visibility conditions
+const hasWebsites = computed(() => searchResult.value?.websites?.length > 0);
+const hasVideos = computed(() => searchResult.value?.videos?.length > 0);
+const hasPlayground = computed(() => searchResult.value?.playground?.length > 0);
 
 const checkAvailableData = (type) => {
   const data = getData(selectedTitle.value, type);
@@ -75,8 +97,57 @@ const emits = defineEmits(['openNewTab']);
 </script>
 <template>
   <div>
+    <!-- search bar -->
+    <div class="my-5">
+      <el-input class="w-full" size="large" :placeholder="dict.search_resources" :prefix-icon="Search" v-model="inputData"
+        @input="searchResource" />
+    </div>
+
+    <!-- search result -->
+    <div v-if="searchResult" class="my-5">
+      <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6">{{ dict.search_result }}</h1>
+
+        <div class="mb-8">
+          <div class="flex gap-2 border-b pb-2">
+            <button class="px-4 py-2 border rounded-md" :class="{ 'bg-gray-200': activeTab === 'all' }"
+              @click="activeTab = 'all'">All</button>
+            <button v-if="hasWebsites" class="px-4 py-2 border rounded-md"
+              :class="{ 'bg-gray-200': activeTab === 'websites' }" @click="activeTab = 'websites'">Websites</button>
+            <button v-if="hasVideos" class="px-4 py-2 border rounded-md"
+              :class="{ 'bg-gray-200': activeTab === 'videos' }" @click="activeTab = 'videos'">Videos</button>
+            <button v-if="hasPlayground" class="px-4 py-2 border rounded-md"
+              :class="{ 'bg-gray-200': activeTab === 'playground' }"
+              @click="activeTab = 'playground'">Playground</button>
+          </div>
+        </div>
+
+        <div v-if="hasWebsites && (activeTab === 'websites' || activeTab === 'all')" class="mb-5">
+          <h2 class="text-2xl font-semibold mb-4">Websites</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <WebsiteCard v-for="website in searchResult.websites" :key="website.id" :website="website" />
+          </div>
+        </div>
+
+        <div v-if="hasVideos && (activeTab === 'videos' || activeTab === 'all')" class="mb-5">
+          <h2 class="text-2xl font-semibold mb-4">Videos</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <VideoCard v-for="video in searchResult.videos" :key="video.id" :video="video" />
+          </div>
+        </div>
+
+        <div v-if="hasPlayground && (activeTab === 'playground' || activeTab === 'all')" class="mb-5">
+          <h2 class="text-2xl font-semibold mb-4">Playground</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <PlaygroundCard v-for="playground in searchResult.playground" :key="playground.id"
+              :playground="playground" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- map the categories -->
-    <div v-for="category in categories" :key="category" class="w-full">
+    <div v-else v-for="category in categories" :key="category" class="w-full">
       <h3 class="text-lg font-bold leading-6 mb-5">{{ category }}</h3>
       <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
         <div v-for="resource in resourceTitles.filter(r => r.category === category)" :key="resource.id">

@@ -89,6 +89,62 @@ function combineData(data, iconPath) {
   }));
 }
 
+// search for the data and return
+export function searchForData(searchText) {
+  const data = {
+    websites: [
+      ...HTMLData,
+      ...CSSData,
+      ...JSData,
+      ...TSData,
+      ...VueData,
+      ...ReactData,
+      ...AngularData,
+      ...GitData,
+      ...FreeIconsData,
+      ...FreeImgVdoData,
+      ...FreeTemplatesData,
+      ...PremiumTemplatesData,
+      ...InspirationGalleriesData,
+      ...AnimationsData,
+      ...OtherData
+    ],
+    videos: [
+      ...HTMLVideoData,
+      ...CSSVideoData,
+      ...JSVideoData,
+      ...TSVideoData,
+      ...VueVideoData,
+      ...ReactVideoData,
+      ...AngularVideoData,
+      ...GitVideoData
+    ],
+    playground: [
+      ...HTMLPlaygroundData,
+      ...CSSPlaygroundData,
+      ...JSPlaygroundData,
+      ...TSPlaygroundData,
+      ...VuePlaygroundData,
+      ...ReactPlaygroundData
+    ]
+  }
+
+  // search for the data in all the data
+  const searchWebsitesData = data.websites.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase()));
+  const searchVideosData = data.videos.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase()));
+  const searchPlaygroundData = data.playground.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase()));
+
+  // combine all the search results
+  const searchResults = {
+    websites: searchWebsitesData,
+    videos: searchVideosData,
+    playground: searchPlaygroundData
+  }
+
+  console.log("Search Results: ",searchResults);
+  return searchResults;
+}
+
 export default function getData(language, type) {
   const data = DATA_MAPPINGS[type]?.[language];
   if (!data) return null;
