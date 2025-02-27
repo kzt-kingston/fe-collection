@@ -6,7 +6,7 @@ import resourceTitles from './data.json';
 import { getDictionary } from '@/locale/dict';
 import getData, {searchForData} from '@/util/getData';
 import { ElInput, ElNotification, ElTabs, ElTabPane } from 'element-plus'; // Add ElTabs imports
-import { Search, Heart, HeartOff } from 'lucide-vue-next';
+import { Search, Heart, HeartOff, X } from 'lucide-vue-next'; // Add X icon import
 import WebsiteCard from './components/WebsiteCard.vue';
 import VideoCard from './components/VideoCard.vue';
 import PlaygroundCard from './components/PlaygroundCard.vue';
@@ -158,18 +158,34 @@ const categories = [
 ];
 
 const emits = defineEmits(['openNewTab']);
+
+// Add clear search function
+const clearSearch = () => {
+  inputData.value = '';
+  searchResult.value = null;
+};
+
 </script>
 <template>
   <div>
-    <!-- search bar -->
-    <div class="my-5">
+    <!-- Update search bar with clear button -->
+    <div class="my-5 relative">
       <el-input 
         class="w-full" 
         size="large" 
         :placeholder="dict.search_resources" 
         :prefix-icon="Search" 
         v-model="inputData"
-      />
+      >
+        <template #suffix>
+          <X
+            v-if="inputData"
+            @click="clearSearch"
+            class="cursor-pointer hover:text-cyan-500"
+            size="16"
+          />
+        </template>
+      </el-input>
     </div>
 
     <!-- search result -->
@@ -403,5 +419,11 @@ const emits = defineEmits(['openNewTab']);
 
 :deep(.el-tabs__active-bar) {
   background-color: rgb(6, 182, 212);
+}
+
+:deep(.el-input__suffix) {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 </style>
