@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "ChatGPT - AI",
+    "description": "ChatGPT is an AI chatbot developed by OpenAI that generates human-like responses for conversations, coding, content creation, and more. It uses advanced GPT (Generative Pre-trained Transformer) models to understand and generate text.",
+    "url": "https://chatgpt.com/"
+  },
+  {
+    "id": 2,
+    "title": "Microsoft Copilot - AI",
+    "description": "Microsoft Copilot is an AI assistant integrated into Windows, Microsoft 365 (Word, Excel, Outlook, etc.), and other Microsoft products. It helps with tasks like writing, summarizing, coding, and automation using AI-powered suggestions.",
+    "url": "https://copilot.microsoft.com/"
+  },
+  {
+    "id": 3,
+    "title": "Github Copilot - AI",
+    "description": "GitHub Copilot is an AI-powered coding assistant developed by GitHub and OpenAI. It suggests code completions, functions, and entire code snippets in real-time, helping developers write code faster inside editors like VS Code, JetBrains, and Neovim.",
+    "url": "https://github.com/copilot"
+  },
+  {
+    "id": 4,
+    "title": "Claude - AI",
+    "description": "Claude AI is an advanced AI chatbot developed by Anthropic, designed for natural conversations, content generation, and coding assistance. It focuses on safety, ethical AI use, and user-friendly interactions.",
+    "url": "https://claude.ai/"
+  },
+  {
+    "id": 5,
+    "title": "Google Gemini - AI",
+    "description": "Google Gemini AI Chat, commonly referred to as simply 'Gemini' is an AI-powered conversational tool developed by Google. It’s part of the Gemini family of models, introduced in December 2023, designed to compete with other leading AI chatbots like OpenAI’s ChatGPT",
+    "url": "https://gemini.google.com/"
+  },
+  {
+    "id": 6,
+    "title": "Microsoft Designer - AI",
+    "description": "Microsoft Designer is an AI-powered graphic design tool developed by Microsoft, designed to help users create professional-quality visuals quickly and easily, even without prior design experience.",
+    "url": "https://designer.microsoft.com/"
+  },
+  {
+    "id": 7,
+    "title": "v0 Dev by Vercel - AI",
+    "description": "V0.dev (often referred to simply as 'v0') is an AI-powered generative user interface (UI) tool developed by Vercel, the company behind Next.js.",
+    "url": "https://v0.dev/"
+  },
+  {
+    "id": 8,
+    "title": "Meta AI",
+    "description": "Meta AI is Meta’s artificial intelligence division focused on generative AI, computer vision, NLP, and AI for AR/VR. It powers products like Facebook, Instagram, and WhatsApp, driving AI chatbots, recommendations, and Metaverse experiences.",
+    "url": "https://www.meta.ai/"
+  },
+  {
+    "id": 9,
+    "title": "Deepseek - AI",
+    "description": "DeepSeek Chat is an intelligent assistant developed by DeepSeek company, which utilizes artificial intelligence technology to provide services such as information retrieval, data analysis, language understanding, and generation. It can help users quickly obtain information, answer questions, and perform text creation and editing tasks. DeepSeek Chat is designed to improve work efficiency and provide a convenient interactive experience.",
+    "url": "https://chat.deepseek.com/"
+  },
+  {
+    "id": 10,
+    "title": "QWEN Chat - AI",
+    "description": "Qwen Chat is a large language model developed by Alibaba Cloud, designed to engage in natural and fluent conversations with users. It can answer questions, provide information, generate text, and assist with various tasks across multiple languages. As part of the Qwen series, Qwen Chat aims to offer a versatile and interactive experience, making it suitable for applications such as customer service, virtual assistants, content creation, and more.",
+    "url": "https://chat.qwenlm.ai/"
+  },
+  {
+    "id": 11,
+    "title": "Grok - AI",
+    "description": "I'm Grok, created by xAI. I'm an AI designed to help users like you get straightforward, honest answers to almost any question. I aim to be as truthful as possible, often giving perspectives that cut through the noise.",
+    "url": "https://grok.com/"
+  }
+]

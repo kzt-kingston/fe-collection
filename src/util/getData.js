@@ -31,6 +31,7 @@ import PremiumTemplatesData from "@/data/websites/PremiumTemplatesData.json";
 import InspirationGalleriesData from "@/data/websites/InspirationGalleriesData.json";
 import AnimationsData from "@/data/websites/AnimationsData.json";
 import OtherData from "@/data/websites/OtherData.json";
+import AIToolsData from "@/data/websites/AIToolsData.json";
 
 // combine related data with icon path and return
 const ICON_PATHS = {
@@ -60,7 +61,8 @@ const DATA_MAPPINGS = {
     "Premium Templates": PremiumTemplatesData,
     "Inspiration Galleries": InspirationGalleriesData,
     "Animations": AnimationsData,
-    "Others": OtherData
+    "Others": OtherData,
+    "AI Tools": AIToolsData
   },
   videos: {
     HTML: HTMLVideoData,
@@ -107,7 +109,8 @@ export function searchForData(searchText) {
       ...PremiumTemplatesData,
       ...InspirationGalleriesData,
       ...AnimationsData,
-      ...OtherData
+      ...OtherData,
+      ...AIToolsData
     ],
     videos: [
       ...HTMLVideoData,

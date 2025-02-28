@@ -103,5 +103,12 @@
     "class": "other",
     "category": "Miscellaneous",
     "description": "A collection of additional web development resources that don’t fit into other specific categories."
+  },
+  {
+    "id": 16,
+    "title": "AI Tools",
+    "class": "ai-tools",
+    "category": "Miscellaneous",
+    "description": "Artificial Intelligence (AI) tools and resources for developers and designers."
   }
 ]
