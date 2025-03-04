@@ -24,6 +24,8 @@ import ReactNativeData from "@/data/websites/ReactNativeData.json";
 import ReactNativeVideoData from "@/data/videos/ReactNativeVideoData.json";
 import AngularData from "@/data/websites/AngularData.json";
 import AngularVideoData from "@/data/videos/AngularVideoData.json";
+import FlutterData from "@/data/websites/FlutterData.json";
+import FlutterVideoData from "@/data/videos/FlutterVideoData.json";
 import GitData from "@/data/websites/GitData.json";
 import GitVideoData from "@/data/videos/GitVideoData.json";
 import FreeIconsData from "@/data/websites/FreeIconsData.json";
@@ -43,8 +45,9 @@ const ICON_PATHS = {
   TypeScript: "/public/resources/ts.png",
   Vue: "/public/resources/vue.png",
   React: "/public/resources/react.png",
-  ReactNative: "/public/resources/react-native.png",
+  "React Native": "/public/resources/react-native.png",
   Angular: "/public/resources/angular.png",
+  Flutter: "/public/resources/flutter.png",
   Git: "/public/resources/git.png"
 };
 
@@ -58,6 +61,7 @@ const DATA_MAPPINGS = {
     React: ReactData,
     "React Native": ReactNativeData,
     Angular: AngularData,
+    Flutter: FlutterData,
     Git: GitData,
     "Free Icons": FreeIconsData,
     "Free Images and Videos": FreeImgVdoData,
@@ -77,6 +81,7 @@ const DATA_MAPPINGS = {
     React: ReactVideoData,
     "React Native": ReactNativeVideoData,
     Angular: AngularVideoData,
+    Flutter: FlutterVideoData,
     Git: GitVideoData
   },
   playground: {
@@ -108,6 +113,7 @@ export function searchForData(searchText) {
       ...ReactData,
       ...ReactNativeData,
       ...AngularData,
+      ...FlutterData,
       ...GitData,
       ...FreeIconsData,
       ...FreeImgVdoData,
@@ -127,6 +133,7 @@ export function searchForData(searchText) {
       ...ReactVideoData,
       ...ReactNativeVideoData,
       ...AngularVideoData,
+      ...FlutterVideoData,
       ...GitVideoData
     ],
     playground: [

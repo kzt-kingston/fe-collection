@@ -70,6 +70,15 @@
   background-color: #e23a5e;
 }
 
+.flutter {
+  //background-color: #02569b;
+  background: url("/resources/flutter.png") no-repeat center;
+}
+
+.flutter:hover {
+  background-color: #1fcaf9;
+}
+
 .git {
   //background-color: #f34f29;
   background: url("/resources/git.png") no-repeat center;
@@ -193,6 +202,11 @@
 .angular_resource {
   background: url("/resources/angularjs.png") no-repeat center;
   background-color: #e23a5e;
+}
+
+.flutter_resource {
+  background: url("/resources/flutter.png") no-repeat center;
+  background-color: #1fcaf9;
 }
 
 .git_resource {
