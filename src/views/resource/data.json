@@ -110,5 +110,12 @@
     "class": "ai-tools",
     "category": "Miscellaneous",
     "description": "Artificial Intelligence (AI) tools and resources for developers and designers."
+  },
+  {
+    "id": 17,
+    "title": "React Native",
+    "class": "react-native",
+    "category": "Frameworks & Libraries",
+    "description": "React Native is a popular framework for building native mobile applications using JavaScript and React. It allows developers to create cross-platform apps that run natively on iOS and Android using a single codebase, significantly reducing development time and maintenance costs."
   }
 ]

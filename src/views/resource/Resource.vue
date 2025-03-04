@@ -4,7 +4,7 @@ import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } fro
 import { ref, onMounted, computed, watch } from 'vue'; // Add watch
 import resourceTitles from './data.json';
 import { getDictionary } from '@/locale/dict';
-import getData, {searchForData} from '@/util/getData';
+import getData, { searchForData } from '@/util/getData';
 import { ElInput, ElNotification, ElTabs, ElTabPane } from 'element-plus'; // Add ElTabs imports
 import { Search, Heart, HeartOff, X } from 'lucide-vue-next'; // Add X icon import
 import WebsiteCard from './components/WebsiteCard.vue';
@@ -48,7 +48,7 @@ const bookmarks = ref([]);
 // Add bookmark methods
 const saveBookMark = (id, title, url, category, resourceType) => {
   const bookmark = { id, title, url, category, resourceType };
-  
+
   // Check if bookmark already exists
   const index = bookmarks.value.findIndex(
     (b) => b.id === id && b.title === title && b.category === category
@@ -186,20 +186,10 @@ const clearSearch = () => {
   <div>
     <!-- Update search bar with clear button -->
     <div class="my-5 relative">
-      <el-input 
-        class="w-full" 
-        size="large" 
-        :placeholder="dict.search_resources" 
-        :prefix-icon="Search" 
-        v-model="inputData"
-      >
+      <el-input class="w-full" size="large" :placeholder="dict.search_resources" :prefix-icon="Search"
+        v-model="inputData">
         <template #suffix>
-          <X
-            v-if="inputData"
-            @click="clearSearch"
-            class="cursor-pointer hover:text-cyan-500"
-            size="16"
-          />
+          <X v-if="inputData" @click="clearSearch" class="cursor-pointer hover:text-cyan-500" size="16" />
         </template>
       </el-input>
     </div>
@@ -216,18 +206,20 @@ const clearSearch = () => {
               <template #label>
                 <span class="flex items-center gap-2">
                   All
-                  <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                  <span
+                    class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
                     {{ totalCount }}
                   </span>
                 </span>
               </template>
             </el-tab-pane>
-            
+
             <el-tab-pane v-if="hasWebsites" name="websites">
               <template #label>
                 <span class="flex items-center gap-2">
                   Websites
-                  <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                  <span
+                    class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
                     {{ websitesCount }}
                   </span>
                 </span>
@@ -238,7 +230,8 @@ const clearSearch = () => {
               <template #label>
                 <span class="flex items-center gap-2">
                   Videos
-                  <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                  <span
+                    class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
                     {{ videosCount }}
                   </span>
                 </span>
@@ -249,7 +242,8 @@ const clearSearch = () => {
               <template #label>
                 <span class="flex items-center gap-2">
                   Playground
-                  <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
+                  <span
+                    class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
                     {{ playgroundCount }}
                   </span>
                 </span>
@@ -262,15 +256,11 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">Websites</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="website in searchResult.websites" :key="website.id" class="relative">
-              <component 
-                :is="isBookmarked(website.id, website.title, selectedTitle) ? HeartOff : Heart"
+              <component :is="isBookmarked(website.id, website.title, selectedTitle) ? HeartOff : Heart"
                 @click="() => saveBookMark(website.id, website.title, website.url, selectedTitle, 'websites')"
-                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10"
-                size="20"
-                :class="{
+                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
                   'text-red-500': isBookmarked(website.id, website.title, selectedTitle),
-                }"
-              />
+                }" />
               <WebsiteCard :website="website" />
             </div>
           </div>
@@ -280,15 +270,11 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">Videos</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="video in searchResult.videos" :key="video.id" class="relative">
-              <component 
-                :is="isBookmarked(video.id, video.title, selectedTitle) ? HeartOff : Heart"
+              <component :is="isBookmarked(video.id, video.title, selectedTitle) ? HeartOff : Heart"
                 @click="() => saveBookMark(video.id, video.title, `https://www.youtube.com/watch?v=${video.id}`, selectedTitle, 'videos')"
-                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10"
-                size="20"
-                :class="{
+                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
                   'text-red-500': isBookmarked(video.id, video.title, selectedTitle),
-                }"
-              />
+                }" />
               <VideoCard :video="video" />
             </div>
           </div>
@@ -298,15 +284,11 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">Playground</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="playground in searchResult.playground" :key="playground.id" class="relative">
-              <component 
-                :is="isBookmarked(playground.id, playground.title, selectedTitle) ? HeartOff : Heart"
+              <component :is="isBookmarked(playground.id, playground.title, selectedTitle) ? HeartOff : Heart"
                 @click="() => saveBookMark(playground.id, playground.title, playground.url, selectedTitle, 'playground')"
-                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10"
-                size="20"
-                :class="{
+                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
                   'text-red-500': isBookmarked(playground.id, playground.title, selectedTitle),
-                }"
-              />
+                }" />
               <PlaygroundCard :playground="playground" />
             </div>
           </div>
@@ -423,11 +405,11 @@ const clearSearch = () => {
 
 :deep(.el-tabs__item) {
   font-size: 14px;
-  
+
   &.is-active {
     color: rgb(6, 182, 212);
   }
-  
+
   &:hover {
     color: rgb(6, 182, 212);
   }

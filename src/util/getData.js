@@ -20,6 +20,8 @@ import VuePlaygroundData from "@/data/playground/VuePlaygroundData.json";
 import ReactData from "@/data/websites/ReactData.json";
 import ReactVideoData from "@/data/videos/ReactVideoData.json";
 import ReactPlaygroundData from "@/data/playground/ReactPlaygroundData.json";
+import ReactNativeData from "@/data/websites/ReactNativeData.json";
+import ReactNativeVideoData from "@/data/videos/ReactNativeVideoData.json";
 import AngularData from "@/data/websites/AngularData.json";
 import AngularVideoData from "@/data/videos/AngularVideoData.json";
 import GitData from "@/data/websites/GitData.json";
@@ -41,6 +43,7 @@ const ICON_PATHS = {
   TypeScript: "/public/resources/ts.png",
   Vue: "/public/resources/vue.png",
   React: "/public/resources/react.png",
+  ReactNative: "/public/resources/react-native.png",
   Angular: "/public/resources/angular.png",
   Git: "/public/resources/git.png"
 };
@@ -53,6 +56,7 @@ const DATA_MAPPINGS = {
     TypeScript: TSData,
     Vue: VueData,
     React: ReactData,
+    "React Native": ReactNativeData,
     Angular: AngularData,
     Git: GitData,
     "Free Icons": FreeIconsData,
@@ -71,6 +75,7 @@ const DATA_MAPPINGS = {
     TypeScript: TSVideoData,
     Vue: VueVideoData,
     React: ReactVideoData,
+    "React Native": ReactNativeVideoData,
     Angular: AngularVideoData,
     Git: GitVideoData
   },
@@ -101,6 +106,7 @@ export function searchForData(searchText) {
       ...TSData,
       ...VueData,
       ...ReactData,
+      ...ReactNativeData,
       ...AngularData,
       ...GitData,
       ...FreeIconsData,
@@ -119,6 +125,7 @@ export function searchForData(searchText) {
       ...TSVideoData,
       ...VueVideoData,
       ...ReactVideoData,
+      ...ReactNativeVideoData,
       ...AngularVideoData,
       ...GitVideoData
     ],
@@ -166,6 +173,8 @@ export default function getData(language, type) {
   if (type === "websites" && ICON_PATHS[language]) {
     return combineData(data, ICON_PATHS[language]);
   }
+
+  console.log("GetData: ", data);
   
   return data;
 }

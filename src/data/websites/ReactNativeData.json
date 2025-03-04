@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "React Native",
+    "description": "Official website for React Native.",
+    "url": "https://reactnative.dev/"
+  },
+  {
+    "id": 2,
+    "title": "React Native Getting Started",
+    "description": "Beginner-friendly guide on how to start building apps with React Native.",
+    "url": "https://reactnative.dev/docs/getting-started"
+  },
+  {
+    "id": 3,
+    "title": "React Native Express",
+    "description": "An interactive guide to React Native covering all the essential concepts.",
+    "url": "https://www.reactnative.express/"
+  },
+  {
+    "id": 4,
+    "title": "React.js vs React Native – What's the Difference? (freeCodeCamp)",
+    "description": "Article explaining the differences between React.js and React Native.",
+    "url": "https://www.freecodecamp.org/news/react-js-vs-react-native-whats-the-difference/"
+  },
+  {
+    "id": 5,
+    "title": "React Native Styling",
+    "description": "Official guide to styling in React Native.",
+    "url": "https://reactnative.dev/docs/style"
+  },
+  {
+    "id": 6,
+    "title": "React Native Navigation",
+    "description": "Guide to using navigation in React Native apps.",
+    "url": "https://reactnavigation.org/"
+  },
+  {
+    "id": 7,
+    "title": "React Native Gesture Handler",
+    "description": "Library for handling touch gestures in React Native apps.",
+    "url": "https://docs.swmansion.com/react-native-gesture-handler/"
+  },
+  {
+    "id": 8,
+    "title": "React Native Performance Optimization",
+    "description": "Guide to improving performance in React Native apps.",
+    "url": "https://reactnative.dev/docs/performance"
+  },
+  {
+    "id": 9,
+    "title": "React Native Firebase",
+    "description": "Official Firebase integration for React Native.",
+    "url": "https://rnfirebase.io/"
+  },
+  {
+    "id": 10,
+    "title": "React Native Paper",
+    "description": "Material Design library for React Native apps.",
+    "url": "https://reactnativepaper.com/"
+  },
+  {
+    "id": 11,
+    "title": "React Native Reanimated",
+    "description": "Advanced animation library for React Native.",
+    "url": "https://docs.swmansion.com/react-native-reanimated/"
+  },
+  {
+    "id": 12,
+    "title": "React Native Testing Library",
+    "description": "Guide to testing React Native apps using the Testing Library.",
+    "url": "https://callstack.github.io/react-native-testing-library/"
+  }
+]

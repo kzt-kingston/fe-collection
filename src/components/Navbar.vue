@@ -33,7 +33,7 @@
                             <el-dropdown-item divided>
                                 <router-link to="/bookmark" class="hover:text-red-500 transition-colors">
                                     <span class="flex items-center text-sm">
-                                        <Heart class="mr-1" size="20" /> Favourite Lists
+                                        <Heart class="mr-1" size="20" /> Bookmarks
                                     </span>
                                 </router-link>
                             </el-dropdown-item>
