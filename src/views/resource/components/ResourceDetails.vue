@@ -2,9 +2,15 @@
 <template>
   <div id="resource-details" class="py-6">
     <div class="my-5">
-      <div class="px-4 py-4">
-        <div class="text-start text-md mt-5 mb-2 font-bold">{{ title }}</div>
-        <div class="text-start text-md mb-5">{{ selectedDescription }}</div>
+      <div class="px-4">
+        <div :class="title.replace(/\s+/g,'').toLowerCase() + '_header p-5 rounded-lg mb-5 text-white'">
+          <div class="text-start text-lg mb-2 font-bold">{{ title }}</div>
+          <div class="text-start text-md mb-5">{{resourceTitles.filter((resource) => {
+            return resource.title === title;
+            }).map((resource) => {
+            return resource.description;
+            }) }}</div>
+        </div>
         <div class="mb-8">
           <el-tabs v-model="activeTab" class="demo-tabs">
             <el-tab-pane label="All" name="all">
@@ -64,8 +70,8 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="website in resourceData.websites" :key="website.id" class="relative">
               <component :is="isBookmarked(website.id, website.title, title)
-                  ? HeartOff
-                  : Heart
+                ? HeartOff
+                : Heart
                 " @click="
                   () =>
                     saveBookMark(
@@ -92,8 +98,8 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="video in resourceData.videos" :key="video.id" class="relative">
               <component :is="isBookmarked(video.id, video.title, title)
-                  ? HeartOff
-                  : Heart
+                ? HeartOff
+                : Heart
                 " @click="
                   () =>
                     saveBookMark(
@@ -122,8 +128,8 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="playground in resourceData.playground" :key="playground.id" class="relative">
               <component :is="isBookmarked(playground.id, playground.title, title)
-                  ? HeartOff
-                  : Heart
+                ? HeartOff
+                : Heart
                 " @click="
                   () =>
                     saveBookMark(
@@ -165,8 +171,6 @@ const dict = ref({});
 const activeTab = ref('all'); // Change activeTab to match ElTabs expected value type
 const title = ref("");
 const resourceData = ref({});
-const selectedTitle = ref("");
-const selectedDescription = ref("");
 
 // Compute visibility conditions
 const hasWebsites = computed(() => (resourceData.value?.websites?.length || 0) > 0);
@@ -270,6 +274,8 @@ const fetchData = async () => {
 </script>
 
 <style scoped lang="scss">
+@import '../../../assets/resource.scss';
+
 :deep(.el-tabs__nav-wrap::after) {
   height: 1px;
 }
