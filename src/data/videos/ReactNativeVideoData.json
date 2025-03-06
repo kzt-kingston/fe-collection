@@ -1,32 +1,26 @@
 [
   {
+    "id": "6oFuwhIibo4",
+    "title": "What Is React Native & Why Is It So Popular?"
+  },
+  {
     "id": "sm5Y7Vtuihg",
-    "title": "React Native Full Course for Beginners",
-    "description": "An all-in-one tutorial covering over 4 hours of React Native code and instruction to help beginners learn the basics of mobile app development.",
-    "url": "https://www.youtube.com/watch?v=sm5Y7Vtuihg"
+    "title": "React Native Full Course for Beginners"
   },
   {
     "id": "0-S5a0eXPoc",
-    "title": "React Native Tutorial for Beginners - Build a React Native App",
-    "description": "A comprehensive tutorial guiding beginners through building a React Native app from scratch.",
-    "url": "https://www.youtube.com/watch?v=0-S5a0eXPoc"
+    "title": "React Native Tutorial for Beginners - Build a React Native App"
   },
   {
     "id": "ZBCUegTZF7M",
-    "title": "React Native Course for Beginners in 2024 | Build a Full Stack React Native App",
-    "description": "Master the foundations of React Native and build your first full-stack mobile app in this course tailored for beginners.",
-    "url": "https://www.youtube.com/watch?v=ZBCUegTZF7M"
+    "title": "React Native Course for Beginners in 2024 | Build a Full Stack React Native App"
   },
   {
     "id": "qSRrxpdMpVc",
-    "title": "React Native Tutorial for Beginners - Crash Course 2020",
-    "description": "A crash course introducing beginners to React Native, covering the basics needed to start building mobile apps.",
-    "url": "https://www.youtube.com/watch?v=qSRrxpdMpVc"
+    "title": "React Native Tutorial for Beginners - Crash Course 2020"
   },
   {
     "id": "Hp9sTsiTZ_I",
-    "title": "React Native for Beginners tutorial",
-    "description": "A step-by-step tutorial designed for beginners with no prior experience in mobile app development or React.",
-    "url": "https://www.youtube.com/watch?v=Hp9sTsiTZ_I"
+    "title": "React Native for Beginners tutorial"
   }
 ]

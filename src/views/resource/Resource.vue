@@ -1,6 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { ref, onMounted, computed, watch } from 'vue'; // Add watch
 import resourceTitles from './data.json';
 import { getDictionary } from '@/locale/dict';
@@ -12,17 +11,7 @@ import VideoCard from './components/VideoCard.vue';
 import PlaygroundCard from './components/PlaygroundCard.vue';
 import { debounce } from 'lodash'; // Add debounce import
 
-const selectedTitle = ref("");
-const selectedDescription = ref("");
-const openDialog = ref(false);
-const className = ref(null);
 const dict = ref({});
-const selectedResourceType = ref(""); // websites | videos | playground
-const hideResourceDetails = ref({
-  websites: false,
-  videos: false,
-  playground: false
-})
 const searchResult = ref(null);
 const activeTab = ref('all'); // Change activeTab to match ElTabs expected value type
 const inputData = ref(''); // Add missing ref
@@ -46,12 +35,12 @@ watch(() => inputData.value, (newValue) => {
 const bookmarks = ref([]);
 
 // Add bookmark methods
-const saveBookMark = (id, title, url, category, resourceType) => {
-  const bookmark = { id, title, url, category, resourceType };
+const saveBookMark = (id, title, url, resourceType) => {
+  const bookmark = { id, title, url, resourceType, category: "Searching Result" };
 
   // Check if bookmark already exists
   const index = bookmarks.value.findIndex(
-    (b) => b.id === id && b.title === title && b.category === category
+    (b) => b.id === id && b.title === title
   );
 
   if (index !== -1) {
@@ -78,12 +67,11 @@ const saveBookMark = (id, title, url, category, resourceType) => {
 };
 
 // Reactive check for bookmarked status
-const isBookmarked = (id, title, category) => {
+const isBookmarked = (id, title) => {
   return bookmarks.value.some(
     (bookmark) =>
       bookmark.id === id &&
-      bookmark.title === title &&
-      bookmark.category === category
+      bookmark.title === title
   );
 };
 
@@ -125,43 +113,8 @@ const totalCount = computed(() => {
   return total;
 });
 
-const checkAvailableData = (type) => {
-  const data = getData(selectedTitle.value, type);
-  if (data) {
-    return false;
-  }
-  return true;
-}
-
-const showHideResourceDetails = () => {
-  hideResourceDetails.value.websites = checkAvailableData('websites');
-  hideResourceDetails.value.videos = checkAvailableData('videos');
-  hideResourceDetails.value.playground = checkAvailableData('playground');
-}
-
-// show resource details
-const showResourceDetails = (title, cssClass, description) => {
-  // clear previous selected resource
-  selectedResourceType.value = "";
-  console.log('Selected title:', title);
-  console.log('Selected cssClass:', cssClass);
-  selectedTitle.value = title;
-  selectedDescription.value = description;
-
-  // check if data is available for each resource type
-  showHideResourceDetails();
-  console.log("showHideResourceDetails", hideResourceDetails.value);
-
-  openDialog.value = true;
-  className.value = cssClass + '_resource';
-}
-
-const showSelectedResource = (type) => {
-  console.log('Selected resource type:', type);
-  selectedResourceType.value = type;
-  emits("openNewTab", selectedTitle.value, type);
-  // close dialog
-  openDialog.value = false;
+const openNewResourceTab = (title) => {
+  emits("openNewTab", title);
 }
 
 const categories = [
@@ -256,10 +209,10 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">Websites</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="website in searchResult.websites" :key="website.id" class="relative">
-              <component :is="isBookmarked(website.id, website.title, selectedTitle) ? HeartOff : Heart"
-                @click="() => saveBookMark(website.id, website.title, website.url, selectedTitle, 'websites')"
+              <component :is="isBookmarked(website.id, website.title) ? HeartOff : Heart"
+                @click="() => saveBookMark(website.id, website.title, website.url, 'websites')"
                 class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(website.id, website.title, selectedTitle),
+                  'text-red-500': isBookmarked(website.id, website.title),
                 }" />
               <WebsiteCard :website="website" />
             </div>
@@ -270,10 +223,10 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">Videos</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="video in searchResult.videos" :key="video.id" class="relative">
-              <component :is="isBookmarked(video.id, video.title, selectedTitle) ? HeartOff : Heart"
-                @click="() => saveBookMark(video.id, video.title, `https://www.youtube.com/watch?v=${video.id}`, selectedTitle, 'videos')"
+              <component :is="isBookmarked(video.id, video.title) ? HeartOff : Heart"
+                @click="() => saveBookMark(video.id, video.title, `https://www.youtube.com/watch?v=${video.id}`, 'videos')"
                 class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(video.id, video.title, selectedTitle),
+                  'text-red-500': isBookmarked(video.id, video.title),
                 }" />
               <VideoCard :video="video" />
             </div>
@@ -284,10 +237,10 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">Playground</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="playground in searchResult.playground" :key="playground.id" class="relative">
-              <component :is="isBookmarked(playground.id, playground.title, selectedTitle) ? HeartOff : Heart"
-                @click="() => saveBookMark(playground.id, playground.title, playground.url, selectedTitle, 'playground')"
+              <component :is="isBookmarked(playground.id, playground.title) ? HeartOff : Heart"
+                @click="() => saveBookMark(playground.id, playground.title, playground.url, 'playground')"
                 class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(playground.id, playground.title, selectedTitle),
+                  'text-red-500': isBookmarked(playground.id, playground.title),
                 }" />
               <PlaygroundCard :playground="playground" />
             </div>
@@ -301,8 +254,7 @@ const clearSearch = () => {
       <h3 class="text-lg font-bold leading-6 mb-5">{{ category }}</h3>
       <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
         <div v-for="resource in resourceTitles.filter(r => r.category === category)" :key="resource.id">
-          <div @click="showResourceDetails(resource.title, resource.class, resource.description)"
-            class="cursor-pointer">
+          <div @click="openNewResourceTab(resource.title)" class="cursor-pointer">
             <div class="block h-[100px] text-md text-wrap font-bold p-6 shadow-md rounded-lg align-middle all-resource"
               :class="resource.class">
             </div>
@@ -315,77 +267,6 @@ const clearSearch = () => {
     </div>
 
   </div>
-
-  <TransitionRoot as="template" :show="openDialog">
-    <Dialog class="relative z-10" @close="openDialog = false">
-      <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
-        leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
-        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-      </TransitionChild>
-
-      <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div class="flex mt-20 justify-center p-4 text-center">
-          <TransitionChild as="template" enter="ease-out duration-300"
-            enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
-            leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
-            <DialogPanel
-              class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all w-full sm:w-full sm:max-w-xl md:max-w-4xl">
-              <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                <div class="grid">
-                  <div class="text-center">
-                    <!-- <DialogTitle as="h3" class="text-2xl font-bold leading-6 text-cyan-500 text-center mb-5">{{
-                      selectedTitle
-                      }}
-                    </DialogTitle> -->
-                    <!-- <div class="text-center text-md mb-5">{{ selectedDescription }}</div> -->
-                    <div class="block w-full h-[100px]" :class="className">
-                    </div>
-
-                    <div class="text-start text-md mt-5 mb-2 font-bold">{{ selectedTitle }}</div>
-
-                    <div class="text-start text-md mb-5">{{ selectedDescription }}</div>
-
-                    <div class="my-5">
-                      {{ dict.choose_resource }}
-                    </div>
-                    <div class="mb-10">
-                      <div class="grid grid-cols-2 gap-4">
-                        <div v-if="!hideResourceDetails.websites"
-                          class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
-                          @click="() => showSelectedResource('websites')">
-                          <img src="/websites.png" alt="websites" class="w-20 h-20 mx-auto mb-5">
-                          Websites
-                        </div>
-                        <div v-if="!hideResourceDetails.videos"
-                          class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
-                          @click="() => showSelectedResource('videos')">
-                          <img src="/videos.png" alt="videos" class="w-20 h-20 mx-auto mb-5">
-                          Videos
-                        </div>
-                        <div v-if="!hideResourceDetails.playground"
-                          class="bg-white shadow-md rounded-lg p-5 text-center hover:bg-cyan-500 cursor-pointer hover:text-white"
-                          @click="() => showSelectedResource('playground')">
-                          <img src="/playground.png" alt="playground" class="w-20 h-20 mx-auto mb-5">
-                          Playground
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                <button type="button"
-                  class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                  @click="openDialog = false" ref="cancelButtonRef">{{ dict.close }}</button>
-              </div>
-            </DialogPanel>
-          </TransitionChild>
-        </div>
-      </div>
-    </Dialog>
-  </TransitionRoot>
 
 </template>
 

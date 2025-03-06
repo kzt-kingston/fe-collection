@@ -173,15 +173,24 @@ export function searchForData(searchText) {
 }
 
 export default function getData(language, type) {
+  // if type is %, return all the data
+  if (type === "%") {
+    return {
+      websites: DATA_MAPPINGS.websites[language],
+      videos: DATA_MAPPINGS.videos[language],
+      playground: DATA_MAPPINGS.playground[language]
+    };
+  }
+
   const data = DATA_MAPPINGS[type]?.[language];
   if (!data) return null;
-  
+
   // Only combine data with icons for programming languages in websites section
   if (type === "websites" && ICON_PATHS[language]) {
     return combineData(data, ICON_PATHS[language]);
   }
 
   console.log("GetData: ", data);
-  
+
   return data;
 }
