@@ -8,6 +8,8 @@ import HTMLPlaygroundData from "@/data/playground/HTMLPlaygroundData.json";
 import CSSData from "@/data/websites/CSSData.json";
 import CSSVideoData from "@/data/videos/CSSVideoData.json";
 import CSSPlaygroundData from "@/data/playground/CSSPlaygroundData.json";
+import SASSData from "@/data/websites/SASSData.json";
+import SASSVideoData from "@/data/videos/SASSVideoData.json";
 import JSData from "@/data/websites/JSData.json";
 import JSVideoData from "@/data/videos/JSVideoData.json";
 import JSPlaygroundData from "@/data/playground/JSPlaygroundData.json";
@@ -41,6 +43,7 @@ import AIToolsData from "@/data/websites/AIToolsData.json";
 const ICON_PATHS = {
   HTML: "/public/resources/html.png",
   CSS: "/public/resources/css.png",
+  SASS: "/public/resources/sass.png",
   JavaScript: "/public/resources/js.png",
   TypeScript: "/public/resources/ts.png",
   Vue: "/public/resources/vue.png",
@@ -55,6 +58,7 @@ const DATA_MAPPINGS = {
   websites: {
     HTML: HTMLData,
     CSS: CSSData,
+    SASS: SASSData,
     JavaScript: JSData,
     TypeScript: TSData,
     Vue: VueData,
@@ -75,6 +79,7 @@ const DATA_MAPPINGS = {
   videos: {
     HTML: HTMLVideoData,
     CSS: CSSVideoData,
+    SASS: SASSVideoData,
     JavaScript: JSVideoData,
     TypeScript: TSVideoData,
     Vue: VueVideoData,
@@ -107,6 +112,7 @@ export function searchForData(searchText) {
     websites: [
       ...HTMLData,
       ...CSSData,
+      ...SASSData,
       ...JSData,
       ...TSData,
       ...VueData,
@@ -127,6 +133,7 @@ export function searchForData(searchText) {
     videos: [
       ...HTMLVideoData,
       ...CSSVideoData,
+      ...SASSVideoData,
       ...JSVideoData,
       ...TSVideoData,
       ...VueVideoData,

@@ -16,6 +16,15 @@
   background-color: #0c51f1;
 }
 
+.sass {
+  //background-color: #cd5c8f;
+  background: url("/resources/sass.png") no-repeat center;
+}
+
+.sass:hover {
+  background-color: #b84e7b;
+}
+
 .js {
   //background-color: #f7df1e;
   background: url("/resources/js.png") no-repeat center;
@@ -171,6 +180,12 @@
   background-color: #0c51f1;
 }
 
+.sass_resource {
+  //background-color: #cd5c8f;
+  background: url("/resources/sass.png") no-repeat center;
+  background-color: #b84e7b;
+}
+
 .js_resource {
   //background-color: #f7df1e;
   background: url("/resources/js.png") no-repeat center;
@@ -267,6 +282,10 @@
 
 .css_header {
   background-color: #0c51f1;
+}
+
+.sass_header {
+  background-color: #cd5c8f;
 }
 
 .javascript_header {

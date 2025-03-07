@@ -118,6 +118,7 @@ const openNewResourceTab = (title) => {
 }
 
 const categories = [
+  'Markup and Styling Languages',
   'Programming Languages',
   'Frameworks & Libraries',
   'Developer Tools',

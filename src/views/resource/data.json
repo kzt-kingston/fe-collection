@@ -3,15 +3,22 @@
     "id": 1,
     "title": "HTML",
     "class": "html",
-    "category": "Programming Languages",
+    "category": "Markup and Styling Languages",
     "description": "HTML (HyperText Markup Language) is the foundation of web development, used to structure content on the web. It defines elements like headings, paragraphs, links, images, and more. Every website is built using HTML, making it an essential skill for developers."
   },
   {
     "id": 2,
     "title": "CSS",
     "class": "css",
-    "category": "Programming Languages",
+    "category": "Markup and Styling Languages",
     "description": "CSS (Cascading Style Sheets) is a styling language used to design web pages. It controls colors, fonts, spacing, layouts, and responsiveness, allowing developers to create visually appealing and mobile-friendly websites. CSS frameworks like Bootstrap and Tailwind make styling even easier."
+  },
+  {
+    "id": 20,
+    "title": "SASS",
+    "class": "sass",
+    "category": "Markup and Styling Languages",
+    "description": "SASS (Syntactically Awesome Stylesheets) is a CSS preprocessor that extends the functionality of CSS with features like variables, nesting, and mixins. It helps developers write cleaner, more maintainable stylesheets and speeds up the styling process."
   },
   {
     "id": 3,
