@@ -46,6 +46,14 @@
                                     </span>
                                 </button>
                             </el-dropdown-item>
+                            <!-- Quiz -->
+                            <el-dropdown-item divided>
+                                <router-link to="/quiz" class="hover:text-red-500 transition-colors">
+                                    <span class="flex items-center text-sm">
+                                        <Puzzle class="mr-1" size="20" /> Quiz
+                                    </span>
+                                </router-link>
+                            </el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
                 </el-dropdown>
@@ -71,7 +79,7 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
-import { Music, House, Heart, ChevronDown, Image, MenuSquare } from 'lucide-vue-next';
+import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle } from 'lucide-vue-next';
 import Drawer from '@/components/Drawer.vue';
 import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
 

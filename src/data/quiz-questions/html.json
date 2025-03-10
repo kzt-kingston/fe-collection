@@ -1,0 +1,837 @@
+[
+  {
+    "question": "What is the purpose of the <!DOCTYPE> declaration in HTML?",
+    "options": [
+      "It is used to style the webpage.",
+      "It specifies the version of HTML used in the document.",
+      "It is a placeholder for comments.",
+      "It contains the metadata of the document."
+    ],
+    "answer": "It specifies the version of HTML used in the document."
+  },
+  {
+    "question": "Which HTML element is used for the largest heading?",
+    "options": ["<h1>", "<h6>", "<header>", "<title>"],
+    "answer": "<h1>"
+  },
+  {
+    "question": "What is the correct syntax for creating a hyperlink in HTML?",
+    "options": [
+      "<a href='url'>Link</a>",
+      "<link href='url'>Link</link>",
+      "<url src='url'>Link</url>",
+      "<hyperlink to='url'>Link</hyperlink>"
+    ],
+    "answer": "<a href='url'>Link</a>"
+  },
+  {
+    "question": "Which HTML element is used to embed an image?",
+    "options": ["<image>", "<img>", "<picture>", "<media>"],
+    "answer": "<img>"
+  },
+  {
+    "question": "What is the correct attribute to provide alternative text for images in HTML?",
+    "options": ["text", "alt", "src", "title"],
+    "answer": "alt"
+  },
+  {
+    "question": "Which tag is used for a horizontal line in HTML?",
+    "options": ["<hr>", "<br>", "<line>", "<rule>"],
+    "answer": "<hr>"
+  },
+  {
+    "question": "What is the proper way to specify a language for an HTML document?",
+    "options": [
+      "Set it in the <meta> tag.",
+      "Add the lang attribute in the <html> tag.",
+      "Declare it in the <body> tag.",
+      "Specify it inside a <script> block."
+    ],
+    "answer": "Add the lang attribute in the <html> tag."
+  },
+  {
+    "question": "Which attribute value is used to open a link in a new tab in HTML?",
+    "options": ["target=\"_blank\"", "target=\"new\"", "rel=\"external\"", "href=\"new\""],
+    "answer": "target=\"_blank\""
+  },
+  {
+    "question": "What does the <title> element specify in an HTML document?",
+    "options": [
+      "The main heading of the webpage.",
+      "The description of the webpage.",
+      "The text displayed in the browser's title bar.",
+      "The keywords for the webpage."
+    ],
+    "answer": "The text displayed in the browser's title bar."
+  },
+  {
+    "question": "What does the <meta charset=\"UTF-8\"> tag do?",
+    "options": [
+      "Sets the character encoding for the document.",
+      "Defines the viewport settings.",
+      "Links the HTML to a CSS file.",
+      "Specifies metadata for search engines."
+    ],
+    "answer": "Sets the character encoding for the document."
+  },
+  {
+    "question": "Which HTML tag is used to define an unordered list?",
+    "options": ["<ul>", "<ol>", "<li>", "<list>"],
+    "answer": "<ul>"
+  },
+  {
+    "question": "What does the 'action' attribute in a <form> tag specify?",
+    "options": [
+      "The URL where the form data should be sent.",
+      "The method used to encrypt the form.",
+      "The name of the form.",
+      "The type of form input."
+    ],
+    "answer": "The URL where the form data should be sent."
+  },
+  {
+    "question": "Which attribute is used to set a default value in an input field?",
+    "options": ["value", "placeholder", "name", "default"],
+    "answer": "value"
+  },
+  {
+    "question": "Which HTML tag is used to create a drop-down list?",
+    "options": ["<select>", "<option>", "<dropdown>", "<list>"],
+    "answer": "<select>"
+  },
+  {
+    "question": "What does the 'colspan' attribute in the <td> tag do?",
+    "options": [
+      "Merges two rows together.",
+      "Specifies the number of columns a cell should span.",
+      "Defines the width of the table cell.",
+      "Aligns the cell content to the center."
+    ],
+    "answer": "Specifies the number of columns a cell should span."
+  },
+  {
+    "question": "Which HTML element is used for inline styles?",
+    "options": ["style", "class", "css", "format"],
+    "answer": "style"
+  },
+  {
+    "question": "What is the purpose of the <noscript> tag in HTML?",
+    "options": [
+      "To execute JavaScript functions.",
+      "To provide an alternative for users with disabled JavaScript.",
+      "To add scripts directly to the document.",
+      "To optimize the script execution speed."
+    ],
+    "answer": "To provide an alternative for users with disabled JavaScript."
+  },
+  {
+    "question": "Which attribute is used to specify the URL of an iframe content?",
+    "options": ["src", "href", "content", "frame"],
+    "answer": "src"
+  },
+  {
+    "question": "Which HTML element is used to define a table header?",
+    "options": ["<th>", "<td>", "<tr>", "<thead>"],
+    "answer": "<th>"
+  },
+  {
+    "question": "What does the 'required' attribute do in an input field?",
+    "options": [
+      "Specifies a placeholder for the field.",
+      "Marks the input field as mandatory.",
+      "Sets the value of the field.",
+      "Defines the format of the field."
+    ],
+    "answer": "Marks the input field as mandatory."
+  },
+  {
+    "question": "What is the function of the <blockquote> tag?",
+    "options": [
+      "To define a large quote.",
+      "To highlight important text.",
+      "To add a short inline quote.",
+      "To create a tooltip."
+    ],
+    "answer": "To define a large quote."
+  },
+  {
+    "question": "Which HTML element is used to display a progress bar?",
+    "options": ["<progress>", "<meter>", "<bar>", "<load>"],
+    "answer": "<progress>"
+  },
+  {
+    "question": "What is the default method of a form submission?",
+    "options": ["GET", "POST", "PUT", "PATCH"],
+    "answer": "GET"
+  },
+  {
+    "question": "Which element is used for grouping options in a drop-down list?",
+    "options": ["<optgroup>", "<select>", "<list>", "<option>"],
+    "answer": "<optgroup>"
+  },
+  {
+    "question": "What does the <abbr> tag define?",
+    "options": [
+      "An abbreviation or acronym.",
+      "An anchor link.",
+      "A link to a script.",
+      "A blockquote."
+    ],
+    "answer": "An abbreviation or acronym."
+  },
+  {
+    "question": "Which attribute specifies the media type in the <link> tag?",
+    "options": ["rel", "type", "media", "target"],
+    "answer": "media"
+  },
+  {
+    "question": "What is the purpose of the <wbr> tag in HTML?",
+    "options": [
+      "Defines a possible line-break opportunity.",
+      "Creates a wrapping block element.",
+      "Adds a word-breaking rule in CSS.",
+      "Displays bold text in a responsive layout."
+    ],
+    "answer": "Defines a possible line-break opportunity."
+  },
+  {
+    "question": "Which HTML attribute is used to define inline CSS?",
+    "options": ["style", "css", "class", "inline"],
+    "answer": "style"
+  },
+  {
+    "question": "What is the function of the <label> element in a form?",
+    "options": [
+      "To define a label for an input element.",
+      "To create a placeholder for the input.",
+      "To highlight the form elements.",
+      "To add a description to the form."
+    ],
+    "answer": "To define a label for an input element."
+  },
+  {
+    "question": "Which attribute specifies a unique identifier for an element?",
+    "options": ["class", "id", "name", "key"],
+    "answer": "id"
+  },
+  {
+    "question": "What is the function of the <iframe> element in HTML?",
+    "options": [
+      "To insert a nested browsing context.",
+      "To define the footer of a webpage.",
+      "To import external stylesheets.",
+      "To create a responsive grid layout."
+    ],
+    "answer": "To insert a nested browsing context."
+  },
+  {
+    "question": "Which element is used to define a multi-line input field in a form?",
+    "options": ["<textarea>", "<input>", "<form>", "<field>"],
+    "answer": "<textarea>"
+  },
+  {
+    "question": "What is the purpose of the <legend> tag?",
+    "options": [
+      "To define a caption for a <fieldset> element.",
+      "To create a tooltip for an input field.",
+      "To add metadata for the document.",
+      "To specify an alternate style sheet."
+    ],
+    "answer": "To define a caption for a <fieldset> element."
+  },
+  {
+    "question": "Which attribute specifies whether an input field is read-only?",
+    "options": ["readonly", "disabled", "static", "locked"],
+    "answer": "readonly"
+  },
+  {
+    "question": "What is the purpose of the <time> element in HTML?",
+    "options": [
+      "To specify a time or date value.",
+      "To create a timeline for events.",
+      "To pause a script execution.",
+      "To include a timestamp in logs."
+    ],
+    "answer": "To specify a time or date value."
+  },
+  {
+    "question": "Which tag is used to group block elements for styling purposes?",
+    "options": ["<div>", "<span>", "<section>", "<article>"],
+    "answer": "<div>"
+  },
+  {
+    "question": "What does the 'autofocus' attribute do in an input field?",
+    "options": [
+      "Automatically highlights the field on page load.",
+      "Sets a default value for the field.",
+      "Validates the input value.",
+      "Defines the maximum input length."
+    ],
+    "answer": "Automatically highlights the field on page load."
+  },
+  {
+    "question": "What is the purpose of the <picture> tag in HTML?",
+    "options": [
+      "To provide multiple image formats for different devices.",
+      "To define an image map.",
+      "To embed a picture directly.",
+      "To specify an alternate text for images."
+    ],
+    "answer": "To provide multiple image formats for different devices."
+  },
+  {
+    "question": "Which attribute defines the relationship between a document and an external resource?",
+    "options": ["rel", "href", "link", "media"],
+    "answer": "rel"
+  },
+  {
+    "question": "What does the <code> tag represent in HTML?",
+    "options": [
+      "A block of programming code.",
+      "A special character or symbol.",
+      "A script file reference.",
+      "A generic inline container."
+    ],
+    "answer": "A block of programming code."
+  },
+  {
+    "question": "What is the role of the <section> element in HTML?",
+    "options": [
+      "To define a thematic grouping of content.",
+      "To add metadata to the document.",
+      "To create a drop-down list.",
+      "To link to an external style sheet."
+    ],
+    "answer": "To define a thematic grouping of content."
+  },
+  {
+    "question": "Which attribute specifies the text direction in an HTML document?",
+    "options": ["dir", "lang", "text-align", "direction"],
+    "answer": "dir"
+  },
+  {
+    "question": "What does the 'download' attribute in an <a> tag do?",
+    "options": [
+      "Indicates the resource will be downloaded when clicked.",
+      "Opens the linked resource in a new tab.",
+      "Links to an external style sheet.",
+      "Specifies the MIME type of the document."
+    ],
+    "answer": "Indicates the resource will be downloaded when clicked."
+  },
+  {
+    "question": "Which element is used to display a numbered list?",
+    "options": ["<ol>", "<ul>", "<li>", "<numlist>"],
+    "answer": "<ol>"
+  },
+  {
+    "question": "What is the correct way to add a background color to a table row?",
+    "options": [
+      "Using the 'style' attribute on the <tr> tag.",
+      "Adding a 'class' attribute to each cell.",
+      "Applying a background color to the <table> tag.",
+      "Using the <style> tag inside the table."
+    ],
+    "answer": "Using the 'style' attribute on the <tr> tag."
+  },
+  {
+    "question": "What is the purpose of the <ins> tag?",
+    "options": [
+      "To mark inserted text.",
+      "To underline text.",
+      "To highlight text.",
+      "To delete text."
+    ],
+    "answer": "To mark inserted text."
+  },
+  {
+    "question": "Which tag is used to display the navigation links on a webpage?",
+    "options": ["<nav>", "<menu>", "<aside>", "<links>"],
+    "answer": "<nav>"
+  },
+  {
+    "question": "What does the <kbd> tag represent?",
+    "options": [
+      "Keyboard input.",
+      "A clickable button.",
+      "An inline script.",
+      "A key reference."
+    ],
+    "answer": "Keyboard input."
+  },
+  {
+    "question": "What is the function of the 'name' attribute in an <input> tag?",
+    "options": [
+      "To identify the form control for server-side processing.",
+      "To set a placeholder for the field.",
+      "To specify the maximum input length.",
+      "To link a label to the input field."
+    ],
+    "answer": "To identify the form control for server-side processing."
+  },
+  {
+    "question": "Which tag is used to define a figure caption?",
+    "options": ["<figcaption>", "<caption>", "<title>", "<legend>"],
+    "answer": "<figcaption>"
+  },
+  {
+    "question": "Which HTML element is used to group related options in a dropdown list?",
+    "options": ["<optgroup>", "<group>", "<options>", "<fieldset>"],
+    "answer": "<optgroup>"
+  },
+  {
+    "question": "What is the function of the <sup> tag?",
+    "options": [
+      "Displays text as superscript.",
+      "Makes text bold.",
+      "Inserts a line break.",
+      "Creates subscript text."
+    ],
+    "answer": "Displays text as superscript."
+  },
+  {
+    "question": "What does the 'maxlength' attribute do in an <input> field?",
+    "options": [
+      "Limits the number of characters a user can enter.",
+      "Specifies the input type.",
+      "Defines the size of the input field.",
+      "Sets a placeholder value for the field."
+    ],
+    "answer": "Limits the number of characters a user can enter."
+  },
+  {
+    "question": "Which tag is used to add a title to a table?",
+    "options": ["<caption>", "<tabletitle>", "<title>", "<summary>"],
+    "answer": "<caption>"
+  },
+  {
+    "question": "What is the purpose of the <bdi> tag?",
+    "options": [
+      "To isolate text for bidirectional support.",
+      "To create bold inline text.",
+      "To add a break in text.",
+      "To indicate an abbreviation."
+    ],
+    "answer": "To isolate text for bidirectional support."
+  },
+  {
+    "question": "What is the <mark> tag used for?",
+    "options": [
+      "To highlight text.",
+      "To italicize text.",
+      "To add a hyperlink.",
+      "To define a footer."
+    ],
+    "answer": "To highlight text."
+  },
+  {
+    "question": "Which attribute in a script tag specifies the source of an external script file?",
+    "options": ["src", "href", "type", "link"],
+    "answer": "src"
+  },
+  {
+    "question": "What does the <datalist> element provide?",
+    "options": [
+      "A list of pre-defined options for an input field.",
+      "A data table structure.",
+      "A way to group fields in a form.",
+      "A method to attach external resources."
+    ],
+    "answer": "A list of pre-defined options for an input field."
+  },
+  {
+    "question": "Which element is used to define a self-contained content block in HTML?",
+    "options": ["<article>", "<section>", "<div>", "<aside>"],
+    "answer": "<article>"
+  },
+  {
+    "question": "What is the purpose of the 'async' attribute in a script tag?",
+    "options": [
+      "Executes the script asynchronously with other page components.",
+      "Preloads the script without execution.",
+      "Defines script execution order.",
+      "Runs the script only after the entire page loads."
+    ],
+    "answer": "Executes the script asynchronously with other page components."
+  },
+  {
+    "question": "What does the <small> tag define in HTML?",
+    "options": [
+      "Smaller, fine-print text.",
+      "Italicized text.",
+      "Text with a smaller font size.",
+      "Superscripted text."
+    ],
+    "answer": "Smaller, fine-print text."
+  },
+  {
+    "question": "How do you prevent users from resizing a <textarea> element?",
+    "options": [
+      "Using CSS: style=\"resize: none;\"",
+      "Using the noresize attribute",
+      "Using the fixed attribute",
+      "Setting the rows and cols attributes"
+    ],
+    "answer": "Using CSS: style=\"resize: none;\""
+  },
+  {
+    "question": "What is the purpose of the <address> tag in HTML?",
+    "options": [
+      "To define contact information for its nearest ancestor.",
+      "To specify an email address.",
+      "To add physical location details.",
+      "To link to a map."
+    ],
+    "answer": "To define contact information for its nearest ancestor."
+  },
+  {
+    "question": "Which element defines preformatted text in HTML?",
+    "options": ["<pre>", "<code>", "<format>", "<monospace>"],
+    "answer": "<pre>"
+  },
+  {
+    "question": "What does the <fieldset> element do in a form?",
+    "options": [
+      "Groups related input fields.",
+      "Creates a submit button.",
+      "Defines a placeholder.",
+      "Adds a dropdown list."
+    ],
+    "answer": "Groups related input fields."
+  },
+  {
+    "question": "What is the function of the <output> element?",
+    "options": [
+      "Represents the result of a calculation.",
+      "Displays input data.",
+      "Outputs plain text.",
+      "Executes a script."
+    ],
+    "answer": "Represents the result of a calculation."
+  },
+  {
+    "question": "Which HTML element represents emphasized text?",
+    "options": ["<em>", "<i>", "<b>", "<strong>"],
+    "answer": "<em>"
+  },
+  {
+    "question": "What does the 'spellcheck' attribute do in HTML?",
+    "options": [
+      "Indicates whether an element's text can be checked for spelling errors.",
+      "Adds auto-correct functionality.",
+      "Highlights grammar errors.",
+      "Defines input validation for text fields."
+    ],
+    "answer": "Indicates whether an element's text can be checked for spelling errors."
+  },
+  {
+    "question": "Which attribute is used to disable an HTML element?",
+    "options": ["disabled", "readonly", "inactive", "disable"],
+    "answer": "disabled"
+  },
+  {
+    "question": "What is the purpose of the <summary> tag in HTML?",
+    "options": [
+      "Defines a visible heading for a <details> element.",
+      "Summarizes the metadata of a document.",
+      "Provides a brief description for images.",
+      "Defines a summary table for data."
+    ],
+    "answer": "Defines a visible heading for a <details> element."
+  },
+  {
+    "question": "Which tag is used to define the main content of an HTML document?",
+    "options": ["<main>", "<section>", "<content>", "<body>"],
+    "answer": "<main>"
+  },
+  {
+    "question": "What is the <meter> tag used for in HTML?",
+    "options": [
+      "To display a scalar measurement within a known range.",
+      "To create a text input field.",
+      "To embed an external document.",
+      "To display an image."
+    ],
+    "answer": "To display a scalar measurement within a known range."
+  },
+  {
+    "question": "What is the default value of the 'type' attribute in the <button> tag?",
+    "options": ["submit", "button", "reset", "default"],
+    "answer": "submit"
+  },
+  {
+    "question": "What does the <del> tag represent in HTML?",
+    "options": [
+      "Deleted text.",
+      "Italicized text.",
+      "Underlined text.",
+      "Strikethrough text."
+    ],
+    "answer": "Deleted text."
+  },
+  {
+    "question": "What does the 'checked' attribute do for an input field?",
+    "options": [
+      "Pre-selects a checkbox or radio button.",
+      "Sets a default value for the field.",
+      "Limits input length.",
+      "Validates the input data."
+    ],
+    "answer": "Pre-selects a checkbox or radio button."
+  },
+  {
+    "question": "What is the purpose of the <base> tag in HTML?",
+    "options": [
+      "Specifies a default URL and target for all relative links.",
+      "Defines the base style for the document.",
+      "Sets a foundation for table structures.",
+      "Acts as the primary stylesheet link."
+    ],
+    "answer": "Specifies a default URL and target for all relative links."
+  },
+  {
+    "question": "What is the role of the 'placeholder' attribute in an input element?",
+    "options": [
+      "To specify a short hint describing the expected value.",
+      "To set a default value.",
+      "To define a label for the input.",
+      "To determine the input type."
+    ],
+    "answer": "To specify a short hint describing the expected value."
+  },
+  {
+    "question": "What does the <link> tag do in an HTML document?",
+    "options": [
+      "Links an external resource to the document.",
+      "Embeds an image in the document.",
+      "Creates an anchor link for navigation.",
+      "Defines the metadata of the document."
+    ],
+    "answer": "Links an external resource to the document."
+  },
+  {
+    "question": "What does the 'pattern' attribute specify in an input element?",
+    "options": [
+      "A regular expression for input validation.",
+      "The data format for the input.",
+      "The alignment of the input field.",
+      "A placeholder text format."
+    ],
+    "answer": "A regular expression for input validation."
+  },
+  {
+    "question": "Which tag is used to specify inline quotations in HTML?",
+    "options": ["<q>", "<quote>", "<inline>", "<blockquote>"],
+    "answer": "<q>"
+  },
+  {
+    "question": "What does the <fieldset> element do?",
+    "options": [
+      "Groups related input fields in a form.",
+      "Defines a section of a webpage.",
+      "Adds a description to an input field.",
+      "Creates a dropdown menu."
+    ],
+    "answer": "Groups related input fields in a form."
+  },
+  {
+    "question": "What does the 'defer' attribute do in a <script> tag?",
+    "options": [
+      "Ensures the script is executed only after the HTML is fully parsed.",
+      "Specifies the script is to be executed asynchronously.",
+      "Disables the script temporarily.",
+      "Loads the script before the document."
+    ],
+    "answer": "Ensures the script is executed only after the HTML is fully parsed."
+  },
+  {
+    "question": "Which tag is used to represent user-submitted text?",
+    "options": ["<output>", "<input>", "<textarea>", "<response>"],
+    "answer": "<textarea>"
+  },
+  {
+    "question": "What is the <dl> tag used for?",
+    "options": [
+      "To define a description list.",
+      "To create a dropdown list.",
+      "To display a definition list.",
+      "To display a directory list."
+    ],
+    "answer": "To define a description list."
+  },
+  {
+    "question": "What is the purpose of the 'contenteditable' attribute in HTML?",
+    "options": [
+      "Makes an element editable.",
+      "Validates input within an element.",
+      "Defines a script for editing content.",
+      "Hides editable content."
+    ],
+    "answer": "Makes an element editable."
+  },
+  {
+    "question": "What does the 'autoplay' attribute do for a media element?",
+    "options": [
+      "Starts playback of the media automatically.",
+      "Adds subtitles to the media.",
+      "Plays the media in a loop.",
+      "Links additional media resources."
+    ],
+    "answer": "Starts playback of the media automatically."
+  },
+  {
+    "question": "Which HTML element is used for captions in a table?",
+    "options": ["<caption>", "<figcaption>", "<thead>", "<footer>"],
+    "answer": "<caption>"
+  },
+  {
+    "question": "What is the function of the <s> tag?",
+    "options": [
+      "Represents text that is no longer accurate or relevant.",
+      "Creates italicized text.",
+      "Adds a subscript.",
+      "Highlights the text."
+    ],
+    "answer": "Represents text that is no longer accurate or relevant."
+  },
+  {
+    "question": "What does the <track> tag provide in a video or audio element?",
+    "options": [
+      "Subtitles, captions, or other text tracks.",
+      "A progress bar for playback.",
+      "Multiple media sources.",
+      "Auto-playing options."
+    ],
+    "answer": "Subtitles, captions, or other text tracks."
+  },
+  {
+    "question": "What is the purpose of the <details> tag?",
+    "options": [
+      "Creates a disclosure widget that users can toggle.",
+      "Displays a summary of the document.",
+      "Defines additional metadata for the page.",
+      "Hides confidential information."
+    ],
+    "answer": "Creates a disclosure widget that users can toggle."
+  },
+  {
+    "question": "What does the <cite> tag define in HTML?",
+    "options": [
+      "The title of a work being cited.",
+      "A hyperlink to a resource.",
+      "A block-level quote.",
+      "A section of code."
+    ],
+    "answer": "The title of a work being cited."
+  },
+  {
+    "question": "Which element is used to structure navigation links in HTML?",
+    "options": ["<nav>", "<ul>", "<menu>", "<links>"],
+    "answer": "<nav>"
+  },
+  {
+    "question": "Which tag is used for underlined text in modern HTML?",
+    "options": ["<u>", "<underline>", "<b>", "<ins>"],
+    "answer": "<u>"
+  },
+  {
+    "question": "What does the 'media' attribute in a <link> tag specify?",
+    "options": [
+      "The type of device the linked resource is optimized for.",
+      "The dimensions of the media resource.",
+      "The file format of the media.",
+      "The encoding type for the media."
+    ],
+    "answer": "The type of device the linked resource is optimized for."
+  },
+  {
+    "question": "What is the purpose of the <canvas> element in HTML?",
+    "options": [
+      "To draw graphics via JavaScript.",
+      "To display images only.",
+      "To create tables with borders.",
+      "To define a container for external applications."
+    ],
+    "answer": "To draw graphics via JavaScript."
+  },
+  {
+    "question": "Which HTML element is used to include mathematical expressions using MathML?",
+    "options": [
+      "<math>",
+      "<formula>",
+      "<equation>",
+      "<calc>"
+    ],
+    "answer": "<math>"
+  },
+  {
+    "question": "What is the purpose of the 'hidden' attribute in HTML?",
+    "options": [
+      "Hides an element from display while keeping it in the DOM.",
+      "Creates password fields with masked input.",
+      "Makes an element visible only on hover.",
+      "Prevents search engines from indexing the element."
+    ],
+    "answer": "Hides an element from display while keeping it in the DOM."
+  },
+  {
+    "question": "Which HTML element is used for highlighting search results?",
+    "options": [
+      "<mark>",
+      "<highlight>",
+      "<search>",
+      "<result>"
+    ],
+    "answer": "<mark>"
+  },
+  {
+    "question": "What does the 'enctype' attribute specify in a form?",
+    "options": [
+      "How form data should be encoded before sending to the server.",
+      "The character encoding of the form elements.",
+      "The encryption method for secure form submission.",
+      "The programming language used to process the form."
+    ],
+    "answer": "How form data should be encoded before sending to the server."
+  },
+  {
+    "question": "What is the purpose of the <ruby> element in HTML?",
+    "options": [
+      "To show pronunciation guides for East Asian languages.",
+      "To embed Ruby programming code.",
+      "To display text in a red color.",
+      "To mark text that should be displayed in a different font."
+    ],
+    "answer": "To show pronunciation guides for East Asian languages."
+  },
+  {
+    "question": "What does the 'srcset' attribute do in an <img> tag?",
+    "options": [
+      "Specifies multiple image sources for responsive design.",
+      "Sets the primary source of an image.",
+      "Defines a fallback image path.",
+      "Creates an image slideshow."
+    ],
+    "answer": "Specifies multiple image sources for responsive design."
+  },
+  {
+    "question": "Which attribute is used to specify an inline CSS style for an element?",
+    "options": [
+      "style",
+      "css",
+      "format",
+      "design"
+    ],
+    "answer": "style"
+  },
+  {
+    "question": "How do you add multiple audio sources to an <audio> element?",
+    "options": [
+      "By adding <source> elements inside it",
+      "Using the src attribute with comma-separated values",
+      "With the media attribute",
+      "Using the track attribute"
+    ],
+    "answer": "By adding <source> elements inside it"
+  }
+]
