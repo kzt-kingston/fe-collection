@@ -25,6 +25,13 @@
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>
+                            <el-dropdown-item>
+                                <router-link to="/account" class="hover:text-blue-500 transition-colors">
+                                    <span class="flex items-center text-sm">
+                                        <CircleUser class="mr-1" size="20" /> Account
+                                    </span>
+                                </router-link>
+                            </el-dropdown-item>
                             <el-dropdown-item @click="drawer = true">
                                 <span class="flex items-center text-sm">
                                     <Image class="mr-1" size="20" />Image Search
@@ -86,7 +93,7 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
-import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes } from 'lucide-vue-next';
+import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes, CircleUser } from 'lucide-vue-next';
 import Drawer from '@/components/Drawer.vue';
 import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
 

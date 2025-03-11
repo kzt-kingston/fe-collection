@@ -13,7 +13,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
 import { blurHashToDataURL } from './util/utils';
 
 const props = defineProps({

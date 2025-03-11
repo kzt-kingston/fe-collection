@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from 'vue';
+import { computed } from 'vue';
 import { downloadImage } from './util/utils';
 
 const props = defineProps({
