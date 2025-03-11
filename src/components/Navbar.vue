@@ -9,9 +9,9 @@
         <div class="flex justify-end p-5">
             <!-- Resource Menu -->
             <div class="flex items-center">
-                <router-link to="/resource"
+                <router-link to="/onboarding"
                     class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold">
-                    ResourceBase
+                    Start Here
                 </router-link>
             </div>
 
@@ -33,7 +33,7 @@
                             <el-dropdown-item divided>
                                 <router-link to="/bookmark" class="hover:text-red-500 transition-colors">
                                     <span class="flex items-center text-sm">
-                                        <Heart class="mr-1" size="20" /> Favourite Lists
+                                        <Heart class="mr-1" size="20" /> Bookmarks
                                     </span>
                                 </router-link>
                             </el-dropdown-item>
@@ -45,6 +45,21 @@
                                         <Music class="mr-1" size="20" /> Music Player
                                     </span>
                                 </button>
+                            </el-dropdown-item>
+                            <!-- Quiz -->
+                            <el-dropdown-item divided>
+                                <router-link to="/resource" class="hover:text-red-500 transition-colors">
+                                    <span class="flex items-center text-sm">
+                                        <Shapes class="mr-1" size="20" /> ResourceBase
+                                    </span>
+                                </router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <router-link to="/quiz" class="hover:text-red-500 transition-colors">
+                                    <span class="flex items-center text-sm">
+                                        <Puzzle class="mr-1" size="20" /> Quiz
+                                    </span>
+                                </router-link>
                             </el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
@@ -71,7 +86,7 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
-import { Music, House, Heart, ChevronDown, Image, MenuSquare } from 'lucide-vue-next';
+import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes } from 'lucide-vue-next';
 import Drawer from '@/components/Drawer.vue';
 import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
 

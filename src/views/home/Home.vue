@@ -2,14 +2,34 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { getDictionary } from '@/locale/dict';
-import { Heart } from 'lucide-vue-next';
+import { Heart, Download } from 'lucide-vue-next';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 
 const dict = ref({});
+const deferredPrompt = ref(null);
+const showInstallButton = ref(false);
+
+const installPWA = async () => {
+    if (deferredPrompt.value) {
+        (deferredPrompt.value).prompt();
+        const { outcome } = await (deferredPrompt.value).userChoice;
+        if (outcome === 'accepted') {
+            console.log('PWA installed');
+        }
+        deferredPrompt.value = null;
+        showInstallButton.value = false;
+    }
+};
 
 onMounted(() => {
     const lang = localStorage.getItem('lang') || 'en';
     dict.value = getDictionary(lang);
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault(); // Prevent automatic prompt
+        deferredPrompt.value = event;
+        showInstallButton.value = true; // Show custom install button
+    });
 });
 </script>
 <template>
@@ -31,7 +51,18 @@ onMounted(() => {
                 <img class="w-80 flex mx-auto" src="/logo.jpeg" alt="logo" />
             </div>
         </div>
-        <router-link to="/resource">
+
+        <!-- Install PWA -->
+        <!-- Show for installation of PWA if not installed yet -->
+        <div v-if="showInstallButton" class="flex items-center justify-center my-5">
+            <button @click="installPWA"
+                class="flex items-center gap-2 text-xs text-cyan-500 hover:text-cyan-600 p-2 border-solid border border-cyan-500 rounded-md">
+                Install App
+                <Download size="12" class="text-cyan-500 hover:text-cyan-600" />
+            </button>
+        </div>
+
+        <router-link to="/onboarding">
             <div class="flex items-center justify-center my-10">
 
                 <button class="bg-cyan-500 text-white font-bold rounded-md p-3 hover:bg-cyan-600 cursor-pointer w-4/5">

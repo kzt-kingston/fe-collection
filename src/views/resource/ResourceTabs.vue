@@ -6,17 +6,16 @@ import ResourceDetails from './components/ResourceDetails.vue';
 
 // Define tabs data and state
 const tabs = ref([
-    { id: '1', title: 'Choose Resource', resourceType: '' },
+    { id: '1', title: 'Choose Resource' },
 ]);
 const activeTab = ref(tabs.value[0].id);
 const tabsContainer = ref(null);
 
 // Add a new tab
-const addTab = (title, resourceType) => {
+const addTab = (title) => {
     const newTab = {
         id: String(tabs.value.length + 1),
         title: title,
-        resourceType: resourceType,
     };
     tabs.value.push(newTab);
     activeTab.value = newTab.id;
@@ -31,9 +30,9 @@ const removeTab = (tabId) => {
     }
 };
 
-const openNewTab = (title, resourceType) => {
-    console.log("Open new tab", title, resourceType);
-    addTab(title, resourceType);
+const openNewTab = (title) => {
+    console.log("Open new tab", title);
+    addTab(title);
 };
 
 // function to show the choose resource tab
@@ -73,7 +72,7 @@ watch(activeTab, async (newVal) => {
                     :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">
                     <img v-if="tab.id !== '1'" :src="'/resources/' + tab.title.toLowerCase() + '.png'"
                         class="h-4 w-4" />
-                    {{ tab.title + " " + tab.resourceType }}
+                    {{ tab.title }}
                     <button v-if="tab.id !== '1'" :id="tab.id" class="h-4 w-4 p-0 opacity-50 hover:opacity-100"
                         @click.stop="removeTab(tab.id)">
                         <X class="h-3 w-3" />
@@ -89,7 +88,7 @@ watch(activeTab, async (newVal) => {
                     <Resource v-on:open-new-tab="openNewTab" />
                 </div>
                 <div v-else>
-                    <ResourceDetails :title="tab.title" :resource-type="tab.resourceType" />
+                    <ResourceDetails :title="tab.title" />
                 </div>
             </div>
         </div>

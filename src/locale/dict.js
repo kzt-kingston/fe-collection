@@ -15,6 +15,8 @@ const multiLang = {
     scan_with_your: "Scan with your mobile banking app",
     no_playground: "No playground found",
     developed_by: "Developed by",
+    search_result: "Search Result",
+    search_resources: "Search Resources",
   },
   my: {
     a_place_where:
@@ -32,6 +34,8 @@ const multiLang = {
     scan_with_your: "သင့်ရဲ. ဖုန်း application ဖြင့် scan ဖတ်ပီးငွေလွှဲပါ",
     no_playground: "playground မရှိသေးပါ",
     developed_by: "Developed by",
+    search_result: "ရှာဖွေမှုရလဒ်",
+    search_resources: "resources များရှာဖွေပါ",
   },
 };
 

@@ -6,6 +6,8 @@ import About from '@/views/about/About.vue'
 import MusicPlayer from '@/views/music-player/MusicPlayer.vue'
 import SupportMe from '@/views/support-me/SupportMe.vue'
 import Bookmark from '@/views/bookmark/Bookmark.vue'
+import Quiz from '@/views/quiz/Quiz.vue'
+import Onboarding from '@/views/onboarding/Onboarding.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +41,16 @@ const router = createRouter({
       path: '/bookmark',
       name: 'Bookmark',
       component: Bookmark
+    },
+    {
+      path: '/quiz',
+      name: 'Quiz',
+      component: Quiz
+    },
+    {
+      path: '/onboarding',
+      name: 'Onboarding',
+      component: Onboarding
     }
   ]
 })

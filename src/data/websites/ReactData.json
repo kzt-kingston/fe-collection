@@ -64,5 +64,11 @@
     "title": "React Testing",
     "description": "Official website for Jest, a testing framework for React applications.",
     "url": "https://jestjs.io/"
+  },
+  {
+    "id": 12,
+    "title": "React Handbook",
+    "description": "A comprehensive guide to React. Modern approaches to architecture and feature development for production-ready React apps.",
+    "url": "https://reacthandbook.dev/"
   }
 ]

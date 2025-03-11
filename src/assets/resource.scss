@@ -16,6 +16,15 @@
   background-color: #0c51f1;
 }
 
+.sass {
+  //background-color: #cd5c8f;
+  background: url("/resources/sass.png") no-repeat center;
+}
+
+.sass:hover {
+  background-color: #b84e7b;
+}
+
 .js {
   //background-color: #f7df1e;
   background: url("/resources/js.png") no-repeat center;
@@ -52,6 +61,15 @@
   background-color: #1fcaf9;
 }
 
+.react-native {
+  //background-color: #61dafb;
+  background: url("/resources/react-native.png") no-repeat center;
+}
+
+.react-native:hover {
+  background-color: #1fcaf9;
+}
+
 .angular {
   //background-color: #dd0031;
   background: url("/resources/angularjs.png") no-repeat center;
@@ -59,6 +77,15 @@
 
 .angular:hover {
   background-color: #e23a5e;
+}
+
+.flutter {
+  //background-color: #02569b;
+  background: url("/resources/flutter.png") no-repeat center;
+}
+
+.flutter:hover {
+  background-color: #1fcaf9;
 }
 
 .git {
@@ -133,6 +160,14 @@
   background-color: #e7e7e7;
 }
 
+.ai-tools {
+  background: url("/resources/ai-tools.png") no-repeat center;
+}
+
+.ai-tools:hover {
+  background-color: #ff7f50;
+}
+
 .html_resource {
   //background-color: #e34c26;
   background: url("/resources/html.png") no-repeat center;
@@ -143,6 +178,12 @@
   //background-color: #2965f1;
   background: url("/resources/css.png") no-repeat center;
   background-color: #0c51f1;
+}
+
+.sass_resource {
+  //background-color: #cd5c8f;
+  background: url("/resources/sass.png") no-repeat center;
+  background-color: #b84e7b;
 }
 
 .js_resource {
@@ -168,9 +209,19 @@
   background-color: #1fcaf9;
 }
 
+.react-native_resource {
+  background: url("/resources/react-native.png") no-repeat center;
+  background-color: #1fcaf9;
+}
+
 .angular_resource {
   background: url("/resources/angularjs.png") no-repeat center;
   background-color: #e23a5e;
+}
+
+.flutter_resource {
+  background: url("/resources/flutter.png") no-repeat center;
+  background-color: #1fcaf9;
 }
 
 .git_resource {
@@ -218,4 +269,85 @@
   //background-color: #696969;
   background: url("/resources/others.png") no-repeat center;
   background-color: #e7e7e7;
+}
+
+.ai-tools_resource {
+  background: url("/resources/ai-tools.png") no-repeat center;
+  background-color: #ff7f50;
+}
+
+.html_header {
+  background-color: #e03409;
+}
+
+.css_header {
+  background-color: #0c51f1;
+}
+
+.sass_header {
+  background-color: #cd5c8f;
+}
+
+.javascript_header {
+  background-color: #f6da0a;
+}
+
+.typescript_header {
+  background-color: #186dc7;
+}
+
+.vue_header {
+  background-color: #28be7b;
+}
+
+.react_header {
+  background-color: #1fcaf9;
+}
+
+.reactnative_header {
+  background-color: #1fcaf9;
+}
+
+.angular_header {
+  background-color: #e23a5e;
+}
+
+.flutter_header {
+  background-color: #1fcaf9;
+}
+
+.git_header {
+  background-color: #c74321;
+}
+
+.freeicons_header {
+  background-color: #ffc700;
+}
+
+.freeimagesandvideos_header {
+  background-color: #1a7de6;
+}
+
+.freeuilibraries_header {
+  background-color: #3f92bc;
+}
+
+.premiumtemplates_header {
+  background-color: #e23a00;
+}
+
+.inspirationgalleries_header {
+  background-color: #7b25c7;
+}
+
+.animations_header {
+  background-color: #e01280;
+}
+
+.others_header {
+  background-color: #848282;
+}
+
+.aitools_header {
+  background-color: #ff7f50;
 }

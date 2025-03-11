@@ -3,15 +3,22 @@
     "id": 1,
     "title": "HTML",
     "class": "html",
-    "category": "Programming Languages",
+    "category": "Markup and Styling Languages",
     "description": "HTML (HyperText Markup Language) is the foundation of web development, used to structure content on the web. It defines elements like headings, paragraphs, links, images, and more. Every website is built using HTML, making it an essential skill for developers."
   },
   {
     "id": 2,
     "title": "CSS",
     "class": "css",
-    "category": "Programming Languages",
+    "category": "Markup and Styling Languages",
     "description": "CSS (Cascading Style Sheets) is a styling language used to design web pages. It controls colors, fonts, spacing, layouts, and responsiveness, allowing developers to create visually appealing and mobile-friendly websites. CSS frameworks like Bootstrap and Tailwind make styling even easier."
+  },
+  {
+    "id": 20,
+    "title": "SASS",
+    "class": "sass",
+    "category": "Markup and Styling Languages",
+    "description": "SASS (Syntactically Awesome Stylesheets) is a CSS preprocessor that extends the functionality of CSS with features like variables, nesting, and mixins. It helps developers write cleaner, more maintainable stylesheets and speeds up the styling process."
   },
   {
     "id": 3,
@@ -42,11 +49,25 @@
     "description": "React is a JavaScript library developed by Facebook for creating dynamic, component-based user interfaces. It improves performance using a virtual DOM and is widely used in single-page applications (SPAs) and mobile development with React Native."
   },
   {
+    "id": 17,
+    "title": "React Native",
+    "class": "react-native",
+    "category": "Frameworks & Libraries",
+    "description": "React Native is a popular framework for building native mobile applications using JavaScript and React. It allows developers to create cross-platform apps that run natively on iOS and Android using a single codebase, significantly reducing development time and maintenance costs."
+  },
+  {
     "id": 7,
     "title": "Angular",
     "class": "angular",
     "category": "Frameworks & Libraries",
     "description": "Angular is a powerful frontend framework developed by Google, used for building large-scale, enterprise-level applications. It offers features like two-way data binding, dependency injection, and built-in state management."
+  },
+  {
+    "id": 18,
+    "title": "Flutter",
+    "class": "flutter",
+    "category": "Frameworks & Libraries",
+    "description": "Flutter is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides rich customizable widgets, hot reload for fast development, and excellent performance."
   },
   {
     "id": 8,
@@ -103,5 +124,12 @@
     "class": "other",
     "category": "Miscellaneous",
     "description": "A collection of additional web development resources that don’t fit into other specific categories."
+  },
+  {
+    "id": 16,
+    "title": "AI Tools",
+    "class": "ai-tools",
+    "category": "Miscellaneous",
+    "description": "Artificial Intelligence (AI) tools and resources for developers and designers."
   }
 ]

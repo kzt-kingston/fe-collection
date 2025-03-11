@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Flutter Official Documentation",
+    "description": "Comprehensive guide and reference for Flutter development.",
+    "url": "https://flutter.dev/docs"
+  },
+  {
+    "id": 2,
+    "title": "Flutter Learn",
+    "description": "Official Flutter learning portal with tutorials and resources.",
+    "url": "https://flutter.dev/learn"
+  },
+  {
+    "id": 3,
+    "title": "Flutter & Dart - The Complete Guide [2023 Edition]",
+    "description": "A complete guide to the Flutter SDK & Flutter Framework.",
+    "url": "https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/"
+  },
+  {
+    "id": 4,
+    "title": "Flutter Apprentice",
+    "description": "A complete guide to building mobile apps with Flutter.",
+    "url": "https://www.raywenderlich.com/flutter"
+  },
+  {
+    "id": 5,
+    "title": "The Ultimate List Of Flutter Resources",
+    "description": "A comprehensive list of over 200 Flutter resources.",
+    "url": "https://wilsonwilson.dev/articles/flutter-resources"
+  }
+]

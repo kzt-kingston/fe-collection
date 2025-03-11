@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Learn SCSS (Sass Basics)",
+    "description": "Official documentation for learning SCSS (Sass) provided by the Sass team.",
+    "url": "https://sass-lang.com/guide"
+  },
+  {
+    "id": 2,
+    "title": "SASS(SCSS) Syntax Reference",
+    "description": "Detailed reference for SASS(SCSS) syntax on the official Sass documentation.",
+    "url": "https://sass-lang.com/documentation/syntax"
+  },
+  {
+    "id": 3,
+    "title": "SASS(SCSS) Functions Reference",
+    "description": "Comprehensive reference for SASS(SCSS) functions on the official Sass documentation.",
+    "url": "https://sass-lang.com/documentation/modules"
+  },
+  {
+    "id": 4,
+    "title": "SASS(SCSS) Mixins Guide",
+    "description": "A guide to using mixins in SASS(SCSS), provided by the Sass team.",
+    "url": "https://sass-lang.com/documentation/at-rules/mixin"
+  },
+  {
+    "id": 5,
+    "title": "SASS(SCSS) Variables Guide",
+    "description": "A guide to using variables in SASS(SCSS), provided by the Sass team.",
+    "url": "https://sass-lang.com/documentation/variables"
+  },
+  {
+    "id": 6,
+    "title": "SASS(SCSS) Nesting Guide",
+    "description": "A guide to nesting in SASS(SCSS), provided by the Sass team.",
+    "url": "https://sass-lang.com/documentation/style-rules#nesting"
+  },
+  {
+    "id": 7,
+    "title": "SASS(SCSS) Partials and Modules",
+    "description": "A guide to using partials and modules in SASS(SCSS), provided by the Sass team.",
+    "url": "https://sass-lang.com/documentation/at-rules/use"
+  },
+  {
+    "id": 8,
+    "title": "SASS(SCSS) Control Directives",
+    "description": "A guide to control directives like @if, @for, @each, and @while in SASS(SCSS).",
+    "url": "https://sass-lang.com/documentation/at-rules/control"
+  },
+  {
+    "id": 9,
+    "title": "SASS(SCSS) Interpolation",
+    "description": "A guide to using interpolation in SASS(SCSS), provided by the Sass team.",
+    "url": "https://sass-lang.com/documentation/interpolation"
+  },
+  {
+    "id": 10,
+    "title": "SASS(SCSS) Best Practices",
+    "description": "A collection of best practices for writing maintainable SASS(SCSS) code.",
+    "url": "https://sass-lang.com/guide"
+  },
+  {
+    "id": 11,
+    "title": "SASS(SCSS) Cheat Sheet",
+    "description": "A handy cheat sheet for SASS(SCSS) syntax and features.",
+    "url": "https://devhints.io/sass"
+  },
+  {
+    "id": 12,
+    "title": "SASS(SCSS) Playground",
+    "description": "An online playground to experiment with SASS(SCSS) code.",
+    "url": "https://www.sassmeister.com/"
+  },
+  {
+    "id": 13,
+    "title": "SASS(SCSS) Tutorial (w3schools)",
+    "description": "A beginner-friendly SASS(SCSS) tutorial provided by w3schools.",
+    "url": "https://www.w3schools.com/sass/"
+  },
+  {
+    "id": 14,
+    "title": "SASS(SCSS) vs CSS",
+    "description": "A comparison of SASS(SCSS) and CSS features and syntax.",
+    "url": "https://sass-lang.com/guide"
+  },
+  {
+    "id": 15,
+    "title": "SASS(SCSS) Frameworks",
+    "description": "A list of popular SASS(SCSS) frameworks and libraries.",
+    "url": "https://github.com/topics/sass-framework"
+  }
+]
