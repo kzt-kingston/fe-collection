@@ -7,7 +7,7 @@
     }"
   >
     <div v-if="loading" class="spline-loader">
-      Loading...
+      {{ loadingText }}
     </div>
     <!-- Adding a specific canvas for Spline to use -->
     <canvas ref="canvas" class="spline-canvas"></canvas>
@@ -33,6 +33,10 @@ const props = defineProps({
   height: {
     type: String,
     default: '500px'
+  },
+  loadingText: {
+    type: String,
+    default: 'Loading...'
   }
 });
 

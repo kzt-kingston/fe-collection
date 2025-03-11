@@ -62,7 +62,7 @@ onMounted(() => {
             </button>
         </div>
 
-        <router-link to="/resource">
+        <router-link to="/onboarding">
             <div class="flex items-center justify-center my-10">
 
                 <button class="bg-cyan-500 text-white font-bold rounded-md p-3 hover:bg-cyan-600 cursor-pointer w-4/5">
