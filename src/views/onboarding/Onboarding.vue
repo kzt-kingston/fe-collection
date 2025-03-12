@@ -1,6 +1,7 @@
 <script setup>
 import SplineViewer from '@/components/SplineViewer.vue';
 import { ref, onMounted } from 'vue';
+import { Puzzle, Shapes } from 'lucide-vue-next';
 
 const audio = new Audio('/sound-effects/robot initialize.mp3');
 
@@ -15,11 +16,20 @@ onMounted(() => {
 
 <template>
     <div class="onboarding-container">
-        <SplineViewer 
-            url="https://prod.spline.design/2p2V3R-GYEWxtFBR/scene.splinecode" 
-            height="600px" 
-            loadingText='Awaiting Initialization...'
-        />
+        <SplineViewer url="https://prod.spline.design/2p2V3R-GYEWxtFBR/scene.splinecode" height="300px"
+            loadingText='Awaiting Initialization...' />
+        <div class="flex justify-center mx-auto">
+            <router-link to="/resource">
+                <button class="flex bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded mr-2">
+                    <Shapes class="mr-1" size="20" />ResourceBase
+                </button>
+            </router-link>
+            <router-link to="/quiz">
+                <button class="flex bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
+                    <Puzzle class="mr-1" size="20" />Quiz
+                </button>
+            </router-link>
+        </div>
     </div>
 </template>
 
