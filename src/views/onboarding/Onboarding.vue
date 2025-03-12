@@ -35,6 +35,7 @@ onMounted(() => {
 
 <style scoped>
 .onboarding-container {
+    margin-top: 40px;
     position: relative;
 }
 

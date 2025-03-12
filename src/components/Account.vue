@@ -1,85 +1,29 @@
 <script setup>
-import { supabase } from '@/supabase'
-import { onMounted, ref, toRefs } from 'vue'
+import { onMounted, ref } from 'vue'
 import Avatar from '@/components/Avatar.vue'
-import { ElMessage } from 'element-plus'
+import { useAuthStore } from '@/stores/authStore'
+import { useUserStore } from '@/stores/userStore'
 
-const props = defineProps(['session'])
-const { session } = toRefs(props)
-
-const loading = ref(true)
+const authStore = useAuthStore()
+const userStore = useUserStore()
+const user = ref(authStore.user)
+const userProfile = ref({})
+const loading = ref(false)
 const username = ref('')
 const website = ref('')
 const avatar_url = ref('')
 
-onMounted(() => {
-    getProfile()
+onMounted(async() => {
+    userProfile.value = await userStore.getUserProfile()
+    username.value = userProfile.value.username;
+    website.value = userProfile.value.website;
+    avatar_url.value = userProfile.value.avatar_url;
 })
 
-async function getProfile() {
-    try {
-        loading.value = true
-        const { user } = session.value
-
-        const { data, error, status } = await supabase
-            .from('profiles')
-            .select(`username, website, avatar_url`)
-            .eq('id', user.id)
-            .single()
-
-        console.log("Data: ", data);
-        console.log("Error: ", error);
-        console.log("Status: ", status);
-        if (error && status !== 406) throw error
-
-        if (data) {
-            username.value = data.username
-            website.value = data.website
-            avatar_url.value = data.avatar_url
-        }
-    } catch (error) {
-        alert(error.message)
-    } finally {
-        loading.value = false
-    }
-}
-
 async function updateProfile() {
-    try {
-        loading.value = true
-        const { user } = session.value
-
-        const updates = {
-            id: user.id,
-            username: username.value,
-            website: website.value,
-            avatar_url: avatar_url.value,
-            updated_at: new Date(),
-        }
-
-        const { error } = await supabase.from('profiles').upsert(updates)
-
-        if (error) throw error
-
-        ElMessage.success('Profile updated successfully!')
-
-    } catch (error) {
-        ElMessage.error(error.message)
-    } finally {
-        loading.value = false
-    }
-}
-
-async function signOut() {
-    try {
-        loading.value = true
-        const { error } = await supabase.auth.signOut()
-        if (error) throw error
-    } catch (error) {
-        ElMessage.error(error.message)
-    } finally {
-        loading.value = false
-    }
+    loading.value = true
+    userStore.updateUserProfile(username.value, website.value, avatar_url.value);
+    loading.value = false
 }
 </script>
 
@@ -91,7 +35,7 @@ async function signOut() {
 
             <div class="space-y-2">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input id="email" type="text" :value="session.user.email" disabled
+                <input id="email" type="text" :value="user.email" disabled
                     class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-500" />
             </div>
 
@@ -116,7 +60,7 @@ async function signOut() {
             </div>
 
             <div class="border-t border-gray-200 pt-4">
-                <button type="button" @click="signOut" :disabled="loading"
+                <button type="button" @click="authStore.signOut" :disabled="loading"
                     class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md transition duration-150 ease-in-out">
                     Sign Out
                 </button>

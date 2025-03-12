@@ -1,27 +1,21 @@
 <script setup>
 import Layout from '@/layout/index.vue'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import Auth from './components/Auth.vue'
-import { supabase } from './supabase'
 import { useRoute } from 'vue-router'
+import { useAuthStore } from '@/stores/authStore'
 
-const session = ref()
 const route = useRoute()
+const authStore = useAuthStore()
 
 onMounted(() => {
-  supabase.auth.getSession().then(({ data }) => {
-    session.value = data.session
-  })
-
-  supabase.auth.onAuthStateChange((_, _session) => {
-    session.value = _session
-  })
+  authStore.initialize()
 })
 </script>
 
 <template>
   <Layout>
-    <router-view v-if="session" />
+    <router-view v-if="authStore.session" />
     <router-view v-else-if="route.path === '/'" />
     <Auth v-else />
   </Layout>

@@ -10,7 +10,7 @@
             <!-- Resource Menu -->
             <div class="flex items-center">
                 <router-link to="/onboarding"
-                    class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold">
+                    class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold border-2 border-cyan-500 px-2 py-1 rounded-md">
                     Start Here
                 </router-link>
             </div>
@@ -25,28 +25,28 @@
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>
-                            <el-dropdown-item>
-                                <router-link to="/account" class="hover:text-blue-500 transition-colors">
+                            <router-link to="/account" class="hover:text-blue-500 transition-colors">
+                                <el-dropdown-item>
                                     <span class="flex items-center text-sm">
                                         <CircleUser class="mr-1" size="20" /> Account
                                     </span>
-                                </router-link>
-                            </el-dropdown-item>
+                                </el-dropdown-item>
+                            </router-link>
                             <el-dropdown-item @click="drawer = true">
                                 <span class="flex items-center text-sm">
                                     <Image class="mr-1" size="20" />Image Search
                                 </span>
                             </el-dropdown-item>
-                            <el-dropdown-item divided>
-                                <router-link to="/bookmark" class="hover:text-red-500 transition-colors">
+                            <router-link to="/bookmark" class="hover:text-red-500 transition-colors">
+                                <el-dropdown-item divided>
                                     <span class="flex items-center text-sm">
                                         <Heart class="mr-1" size="20" /> Bookmarks
                                     </span>
-                                </router-link>
-                            </el-dropdown-item>
+                                </el-dropdown-item>
+                            </router-link>
                             <!-- Music -->
-                            <el-dropdown-item>
-                                <button aria-label="music-player" @click="$emit('toggleMusicPlayer')"
+                            <el-dropdown-item @click="$emit('toggleMusicPlayer')">
+                                <button aria-label="music-player"
                                     :class="props.activeMusicPlayer ? `text-cyan-400 hover:text-cyan-500 transition-colors` : `text-xs hover:text-cyan-500 transition-colors`">
                                     <span class="flex items-center text-sm">
                                         <Music class="mr-1" size="20" /> Music Player
@@ -54,20 +54,20 @@
                                 </button>
                             </el-dropdown-item>
                             <!-- Quiz -->
-                            <el-dropdown-item divided>
-                                <router-link to="/resource" class="hover:text-red-500 transition-colors">
+                            <router-link to="/resource" class="hover:text-red-500 transition-colors">
+                                <el-dropdown-item divided>
                                     <span class="flex items-center text-sm">
                                         <Shapes class="mr-1" size="20" /> ResourceBase
                                     </span>
-                                </router-link>
-                            </el-dropdown-item>
-                            <el-dropdown-item divided>
-                                <router-link to="/quiz" class="hover:text-red-500 transition-colors">
+                                </el-dropdown-item>
+                            </router-link>
+                            <router-link to="/quiz" class="hover:text-red-500 transition-colors">
+                                <el-dropdown-item divided>
                                     <span class="flex items-center text-sm">
                                         <Puzzle class="mr-1" size="20" /> Quiz
                                     </span>
-                                </router-link>
-                            </el-dropdown-item>
+                                </el-dropdown-item>
+                            </router-link>
                         </el-dropdown-menu>
                     </template>
                 </el-dropdown>
