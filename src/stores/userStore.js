@@ -47,8 +47,22 @@ export const useUserStore = defineStore("user", () => {
     }
   };
 
+  const downloadImage = async (path) => {
+    try {
+      const { data, error } = await supabase.storage
+        .from("avatars")
+        .download(path);
+      if (error) throw error;
+      return URL.createObjectURL(data);
+    } catch (error) {
+      console.error("Error downloading image: ", error.message);
+      ElMessage.error("Error downloading image");
+    }
+  };
+
   return {
     getUserProfile,
     updateUserProfile,
+    downloadImage,
   };
 });

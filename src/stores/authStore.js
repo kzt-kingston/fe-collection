@@ -22,6 +22,30 @@ export const useAuthStore = defineStore('auth', () => {
         });
     }
 
+    // Sign up with email and password
+    const signUp = async (email, password) => {
+        try {
+            console.log("Email: ", email);
+            console.log("Password: ", password);
+            const { user, session, error } = await supabase.auth.signUp({
+                email,
+                password
+            });
+
+            if (error) {
+                console.error('Error signing up:', error);
+                return;
+            }
+            ElMessage.success('Signed up successfully');
+            console.log('Signed up user:', user);
+            session.value = session;
+            user.value = user;
+        } catch (error) {
+            ElMessage.error('Error signing up');
+            console.error('Error signing up:', error);
+        }
+    }
+
     // Sign in with GitHub
     const signInWithGithub = async () => {
         try {
@@ -82,6 +106,7 @@ export const useAuthStore = defineStore('auth', () => {
         user,
         session,
         initialize,
+        signUp,
         signInWithGithub,
         signOut,
         getUserProfile

@@ -1,3 +1,52 @@
+<script setup>
+import { useRouter, useRoute } from 'vue-router'
+import { onMounted, onUpdated, ref } from 'vue'
+import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes, CircleUser } from 'lucide-vue-next';
+import Drawer from '@/components/Drawer.vue';
+import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
+import { useUserStore } from '@/stores/userStore';
+
+const props = defineProps({
+    activeMusicPlayer: {
+        type: Boolean,
+        default: false
+    }
+})
+const userStore = useUserStore()
+const userProfile = ref({})
+const router = useRouter()
+const route = useRoute()
+const emits = defineEmits(['toggleMusicPlayer']);
+const drawer = ref(false)
+
+// go back history
+const goBack = () => {
+    // router.go(-1)
+    router.push('/')
+}
+
+onMounted(async () => {
+    // check the local storage for the language and if not set yet, set it to 'en'
+    const lang = localStorage.getItem('lang')
+    if (!lang) {
+        localStorage.setItem('lang', 'en')
+    }
+    else {
+        // set the selected language in the dropdown
+        document.querySelector('select[name="language"]').value = lang
+    }
+})
+
+onUpdated(async() => {
+    userProfile.value = await userStore.getUserProfile()
+    console.log("Navbar user", userProfile.value)
+})
+
+const changeLang = (e) => {
+    localStorage.setItem('lang', e.target.value)
+    location.reload()
+}
+</script>
 <template>
     <div id="navbar" class="flex justify-between p-1">
         <div class="flex items-center">
@@ -25,13 +74,6 @@
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>
-                            <router-link to="/account" class="hover:text-blue-500 transition-colors">
-                                <el-dropdown-item>
-                                    <span class="flex items-center text-sm">
-                                        <CircleUser class="mr-1" size="20" /> Account
-                                    </span>
-                                </el-dropdown-item>
-                            </router-link>
                             <el-dropdown-item @click="drawer = true">
                                 <span class="flex items-center text-sm">
                                     <Image class="mr-1" size="20" />Image Search
@@ -72,6 +114,29 @@
                     </template>
                 </el-dropdown>
             </div>
+            <div class="flex items-center mx-2">|</div>
+            <div class="flex items-center">
+                <el-dropdown>
+                    <span class="text-xs flex items-center justify-center">
+                        <!-- circle avatar styel image -->
+                        <img v-if="userProfile?.avatar_url" :src="userStore.downloadImage" alt="avatar"
+                            class="w-6 h-6 rounded-full" />
+                        <CircleUser v-else size="20" class="text-cyan-500" />
+                        <ChevronDown size="13" />
+                    </span>
+                    <template #dropdown>
+                        <el-dropdown-menu>
+                            <router-link to="/account" class="hover:text-blue-500 transition-colors">
+                                <el-dropdown-item>
+                                    <span class="flex items-center text-sm">
+                                        <CircleUser class="mr-1" size="20" /> Account Settings
+                                    </span>
+                                </el-dropdown-item>
+                            </router-link>
+                        </el-dropdown-menu>
+                    </template>
+                </el-dropdown>
+            </div>
 
             <!-- line break -->
             <div class="flex items-center mx-2">|</div>
@@ -89,50 +154,6 @@
         <ImageSearch />
     </Drawer>
 </template>
-
-<script setup>
-import { useRouter, useRoute } from 'vue-router'
-import { onMounted, ref } from 'vue'
-import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes, CircleUser } from 'lucide-vue-next';
-import Drawer from '@/components/Drawer.vue';
-import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
-
-const props = defineProps({
-    activeMusicPlayer: {
-        type: Boolean,
-        default: false
-    }
-})
-
-const router = useRouter()
-const route = useRoute()
-const emits = defineEmits(['toggleMusicPlayer']);
-const drawer = ref(false)
-
-// go back history
-const goBack = () => {
-    // router.go(-1)
-    router.push('/')
-}
-
-onMounted(() => {
-    // check the local storage for the language and if not set yet, set it to 'en'
-    const lang = localStorage.getItem('lang')
-    if (!lang) {
-        localStorage.setItem('lang', 'en')
-    }
-    else {
-        // set the selected language in the dropdown
-        document.querySelector('select[name="language"]').value = lang
-
-    }
-})
-
-const changeLang = (e) => {
-    localStorage.setItem('lang', e.target.value)
-    location.reload()
-}
-</script>
 <style lang="scss" scoped>
 #navbar {
     // fixed top

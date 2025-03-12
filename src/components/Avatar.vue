@@ -2,6 +2,7 @@
 import { ref, toRefs, watchEffect } from 'vue'
 import { supabase } from '@/supabase'
 import { ElMessage } from 'element-plus'
+import { useUserStore } from '@/stores/userStore'
 
 const prop = defineProps(['path', 'size'])
 const { path, size } = toRefs(prop)
@@ -10,15 +11,10 @@ const emit = defineEmits(['upload', 'update:path'])
 const uploading = ref(false)
 const src = ref('')
 const files = ref()
+const userStore = useUserStore()
 
-const downloadImage = async () => {
-    try {
-        const { data, error } = await supabase.storage.from('avatars').download(path.value)
-        if (error) throw error
-        src.value = URL.createObjectURL(data)
-    } catch (error) {
-        console.error('Error downloading image: ', error.message)
-    }
+const loadImage = async () => {
+  src.value = await userStore.downloadImage(path.value)
 }
 
 const uploadAvatar = async (evt) => {
@@ -47,7 +43,9 @@ const uploadAvatar = async (evt) => {
 }
 
 watchEffect(() => {
-    if (path.value) downloadImage()
+    if (path.value) {
+        loadImage()
+    }
 })
 </script>
 
