@@ -4,7 +4,9 @@ import { onMounted, ref } from 'vue';
 import { getDictionary } from '@/locale/dict';
 import { Heart, Download } from 'lucide-vue-next';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
+import { useAuthStore } from '@/stores/authStore';
 
+const authStore = useAuthStore();
 const dict = ref({});
 const deferredPrompt = ref(null);
 const showInstallButton = ref(false);
@@ -62,7 +64,7 @@ onMounted(() => {
             </button>
         </div>
 
-        <router-link to="/onboarding">
+        <router-link :to="authStore.session ? '/onboarding' : '/register'">
             <div class="flex items-center justify-center my-10">
 
                 <button class="bg-cyan-500 text-white font-bold rounded-md p-3 hover:bg-cyan-600 cursor-pointer w-4/5">

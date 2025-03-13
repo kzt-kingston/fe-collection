@@ -1,19 +1,18 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
-import { onMounted, onUpdated, ref } from 'vue'
-import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes, CircleUser } from 'lucide-vue-next';
+import { onMounted, ref } from 'vue'
+import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes, CircleUser, CircleUserRound, LogOut } from 'lucide-vue-next';
 import Drawer from '@/components/Drawer.vue';
 import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
-import { useUserStore } from '@/stores/userStore';
+import { useAuthStore } from '@/stores/authStore'
 
+const authStore = useAuthStore()
 const props = defineProps({
     activeMusicPlayer: {
         type: Boolean,
         default: false
     }
 })
-const userStore = useUserStore()
-const userProfile = ref({})
 const router = useRouter()
 const route = useRoute()
 const emits = defineEmits(['toggleMusicPlayer']);
@@ -37,11 +36,6 @@ onMounted(async () => {
     }
 })
 
-onUpdated(async() => {
-    userProfile.value = await userStore.getUserProfile()
-    console.log("Navbar user", userProfile.value)
-})
-
 const changeLang = (e) => {
     localStorage.setItem('lang', e.target.value)
     location.reload()
@@ -58,15 +52,15 @@ const changeLang = (e) => {
         <div class="flex justify-end p-5">
             <!-- Resource Menu -->
             <div class="flex items-center">
-                <router-link to="/onboarding"
+                <router-link :to="authStore.session ? '/onboarding' : '/register'"
                     class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold border-2 border-cyan-500 px-2 py-1 rounded-md">
                     Start Here
                 </router-link>
             </div>
 
             <!-- AI Tools Drop Down -->
-            <div class="flex items-center mx-2">|</div>
-            <div class="flex items-center">
+            <div v-if="authStore.session" class="flex items-center mx-2">|</div>
+            <div v-if="authStore.session" class="flex items-center">
                 <el-dropdown>
                     <span class="text-xs flex items-center justify-center">
                         <MenuSquare size="20" class="text-orange-500" />
@@ -74,7 +68,14 @@ const changeLang = (e) => {
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>
-                            <el-dropdown-item @click="drawer = true">
+                            <router-link to="/account" class="hover:text-blue-500 transition-colors">
+                                <el-dropdown-item>
+                                    <span class="flex items-center text-sm">
+                                        <CircleUser class="mr-1" size="20" /> Account Settings
+                                    </span>
+                                </el-dropdown-item>
+                            </router-link>
+                            <el-dropdown-item @click="drawer = true" divided>
                                 <span class="flex items-center text-sm">
                                     <Image class="mr-1" size="20" />Image Search
                                 </span>
@@ -110,29 +111,11 @@ const changeLang = (e) => {
                                     </span>
                                 </el-dropdown-item>
                             </router-link>
-                        </el-dropdown-menu>
-                    </template>
-                </el-dropdown>
-            </div>
-            <div class="flex items-center mx-2">|</div>
-            <div class="flex items-center">
-                <el-dropdown>
-                    <span class="text-xs flex items-center justify-center">
-                        <!-- circle avatar styel image -->
-                        <img v-if="userProfile?.avatar_url" :src="userStore.downloadImage" alt="avatar"
-                            class="w-6 h-6 rounded-full" />
-                        <CircleUser v-else size="20" class="text-cyan-500" />
-                        <ChevronDown size="13" />
-                    </span>
-                    <template #dropdown>
-                        <el-dropdown-menu>
-                            <router-link to="/account" class="hover:text-blue-500 transition-colors">
-                                <el-dropdown-item>
-                                    <span class="flex items-center text-sm">
-                                        <CircleUser class="mr-1" size="20" /> Account Settings
-                                    </span>
-                                </el-dropdown-item>
-                            </router-link>
+                            <el-dropdown-item divided @click="authStore.signOut">
+                                <span class="flex items-center text-sm">
+                                    <LogOut class="mr-1" size="20" /> Sign Out
+                                </span>
+                            </el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
                 </el-dropdown>

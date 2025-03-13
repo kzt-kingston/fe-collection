@@ -66,6 +66,26 @@ export const useAuthStore = defineStore('auth', () => {
         }
     }
 
+    // Sign in with Google
+    const signInWithGoogle = async () => {
+        try {
+            const { data, error } = await supabase.auth.signInWithOAuth({
+                provider: 'google'
+            });
+
+            if (error) {
+                console.error('Error signing in with Google:', error);
+                return;
+            }
+            ElMessage.success('Signed in successfully');
+            console.log('Signed in user:', data);
+            session.value = data;
+        } catch (error) {
+            ElMessage.error('Error signing in with Google');
+            console.error('Error signing in with Google:', error);
+        }
+    }
+
     const signOut = async () => {
         try {
             const { error } = await supabase.auth.signOut();
@@ -108,6 +128,7 @@ export const useAuthStore = defineStore('auth', () => {
         initialize,
         signUp,
         signInWithGithub,
+        signInWithGoogle,
         signOut,
         getUserProfile
     };

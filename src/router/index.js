@@ -9,6 +9,7 @@ import Bookmark from '@/views/bookmark/Bookmark.vue'
 import Quiz from '@/views/quiz/Quiz.vue'
 import Onboarding from '@/views/onboarding/Onboarding.vue'
 import Account from '@/views/account/Account.vue'
+import Register from '@/views/register/Register.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -57,6 +58,11 @@ const router = createRouter({
       path: '/account',
       name: 'Account',
       component: Account
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
   ]
 })
