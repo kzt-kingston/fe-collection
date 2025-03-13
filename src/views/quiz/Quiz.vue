@@ -76,45 +76,34 @@ onErrorCaptured((e) => {
 
 <template>
   <div class="quiz-container max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-    <!-- <h1 class="text-3xl font-bold text-cyan-500 mb-8 text-center">Quiz</h1> -->
-    
     <!-- Error display -->
     <div v-if="error" class="error-container p-4 bg-red-100 text-red-700 rounded-md mb-6">
       {{ error }}
     </div>
-    
+
     <!-- Quiz Selection -->
-    <QuizSelection 
-      v-else-if="currentView === 'selection'" 
-      @select-quiz="startQuiz" 
-      @continue-quiz="continueQuiz"
-      :has-active-quiz="quizStore?.hasActiveQuiz || false"
-    />
-    
+    <QuizSelection v-else-if="currentView === 'selection'" @select-quiz="startQuiz" @continue-quiz="continueQuiz"
+      :has-active-quiz="quizStore?.hasActiveQuiz || false" />
+
     <!-- Quiz Questions -->
     <div v-else-if="currentView === 'quiz' && quizStore" class="quiz-questions">
-      <QuizProgress :percentage="progressPercentage" :current="quizStore.currentQuestionIndex + 1" :total="quizStore.totalQuestions" />
-      
-      <QuizQuestion 
-        :question="quizStore.currentQuestion"
-        :selected-answer="quizStore.currentAnswer"
-        @select-answer="quizStore.selectAnswer"
-        @next-question="quizStore.nextQuestion"
-        @previous-question="quizStore.previousQuestion"
-        :can-go-previous="quizStore.currentQuestionIndex > 0"
+      <!-- image of the quiz type -->
+      <img v-if="selectedQuizType" :src="`/resources/${selectedQuizType}.png`" :alt="`${selectedQuizType} Icon`"
+        class="w-14 h-14 inline-block mb-5" />
+
+      <QuizProgress :percentage="progressPercentage" :current="quizStore.currentQuestionIndex + 1"
+        :total="quizStore.totalQuestions" />
+
+      <QuizQuestion :question="quizStore.currentQuestion" :selected-answer="quizStore.currentAnswer"
+        @select-answer="quizStore.selectAnswer" @next-question="quizStore.nextQuestion"
+        @previous-question="quizStore.previousQuestion" :can-go-previous="quizStore.currentQuestionIndex > 0"
         :can-go-next="quizStore.currentQuestionIndex < quizStore.totalQuestions - 1"
-        :is-last-question="quizStore.currentQuestionIndex === quizStore.totalQuestions - 1"
-      />
+        :is-last-question="quizStore.currentQuestionIndex === quizStore.totalQuestions - 1" />
     </div>
-    
+
     <!-- Quiz Results -->
-    <QuizResults 
-      v-else-if="currentView === 'results' && quizStore" 
-      :score="quizStore.score"
-      :total="quizStore.totalQuestions"
-      :quiz-type="quizStore.quizType"
-      @restart="restartQuiz"
-    />
+    <QuizResults v-else-if="currentView === 'results' && quizStore" :score="quizStore.score"
+      :total="quizStore.totalQuestions" :quiz-type="quizStore.quizType" @restart="restartQuiz" />
   </div>
 </template>
 

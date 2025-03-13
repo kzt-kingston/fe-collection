@@ -81,7 +81,7 @@ const changeLang = (e) => {
                                 </span>
                             </el-dropdown-item>
                             <router-link to="/bookmark" class="hover:text-red-500 transition-colors">
-                                <el-dropdown-item divided>
+                                <el-dropdown-item>
                                     <span class="flex items-center text-sm">
                                         <Heart class="mr-1" size="20" /> Bookmarks
                                     </span>

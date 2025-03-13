@@ -16,6 +16,7 @@ export const useQuizStore = defineStore('quiz', () => {
   const currentQuestionIndex = ref(0);
   const isCompleted = ref(false);
   const storageKey = 'fe-collection-quiz-state';
+  const totalQuestionsAmount = 30;
   
   // Get all questions based on quiz type
   const getQuestionsByType = (type) => {
@@ -38,17 +39,17 @@ export const useQuizStore = defineStore('quiz', () => {
   };
   
   // Randomly select n questions from the questions array
-  const getRandomQuestions = (allQuestions, n = 30) => {
+  const getRandomQuestions = (allQuestions, n = totalQuestionsAmount) => {
     try {
       if (!allQuestions || !allQuestions.length) {
-        console.warn('No questions found to randomize');
+        console.warn("No questions found to randomize");
         return [];
       }
-      
+
       const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, Math.min(n, shuffled.length));
     } catch (error) {
-      console.error('Error randomizing questions:', error);
+      console.error("Error randomizing questions:", error);
       return allQuestions.slice(0, Math.min(n, allQuestions.length)); // Fallback to non-random if shuffle fails
     }
   };
@@ -57,7 +58,7 @@ export const useQuizStore = defineStore('quiz', () => {
   const initializeQuiz = (type) => {
     quizType.value = type;
     const allQuestions = getQuestionsByType(type);
-    questions.value = getRandomQuestions(allQuestions, 30);
+    questions.value = getRandomQuestions(allQuestions, totalQuestionsAmount);
     answers.value = Array(questions.value.length).fill(null);
     currentQuestionIndex.value = 0;
     isCompleted.value = false;

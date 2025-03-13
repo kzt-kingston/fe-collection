@@ -57,7 +57,6 @@ export const useAuthStore = defineStore('auth', () => {
                 console.error('Error signing in with GitHub:', error);
                 return;
             }
-            ElMessage.success('Signed in successfully');
             console.log('Signed in user:', data);
             session.value = data;
         } catch (error) {
@@ -77,7 +76,6 @@ export const useAuthStore = defineStore('auth', () => {
                 console.error('Error signing in with Google:', error);
                 return;
             }
-            ElMessage.success('Signed in successfully');
             console.log('Signed in user:', data);
             session.value = data;
         } catch (error) {
@@ -89,6 +87,8 @@ export const useAuthStore = defineStore('auth', () => {
     const signOut = async () => {
         try {
             const { error } = await supabase.auth.signOut();
+            user.value = null;
+            session.value = null;
 
             if (error) {
                 console.error('Error signing out:', error);
@@ -96,8 +96,6 @@ export const useAuthStore = defineStore('auth', () => {
             }
             ElMessage.success('Signed out successfully');
             console.log('Signed out user');
-            user.value = null;
-            session.value = null;
         } catch (error) {
             ElMessage.error('Error signing out');
             console.error('Error signing out:', error);

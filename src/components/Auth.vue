@@ -8,7 +8,7 @@ const authStore = useAuthStore()
 </script>
 
 <template>
-    <form class="flex flex-col items-center justify-center p-10" @submit.prevent>
+    <form class="flex flex-col items-center justify-center p-5" @submit.prevent>
         <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
             <h1 class="text-2xl font-bold text-center text-gray-800 mb-2">Sign In</h1>
             <!-- logo -->
