@@ -1,6 +1,6 @@
 <script setup>
 import SplineViewer from '@/components/SplineViewer.vue';
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import { Puzzle, Shapes } from 'lucide-vue-next';
 
 const audio = new Audio('/sound-effects/robot initialize.mp3');

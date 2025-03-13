@@ -5,11 +5,63 @@ import { getDictionary } from '@/locale/dict';
 import { Heart, Download } from 'lucide-vue-next';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 import { useAuthStore } from '@/stores/authStore';
+import ResourceCarousel from '@/components/ResourceCarousel.vue';
+import SplineViewer from '@/components/SplineViewer.vue';
 
 const authStore = useAuthStore();
 const dict = ref({});
 const deferredPrompt = ref(null);
 const showInstallButton = ref(false);
+const logos = [
+    {
+        id: 1,
+        name: "JavaScript",
+        src: "/resources/javascript-large.png",
+        alt: "JavaScript Logo",
+    },
+    {
+        id: 2,
+        name: "HTML",
+        src: "/resources/html-large.png",
+        alt: "HTML Logo",
+    },
+    {
+        id: 3,
+        name: "CSS",
+        src: "/resources/css-large.png",
+        alt: "CSS Logo",
+    },
+    {
+        id: 4,
+        name: "React",
+        src: "/resources/react-large.png",
+        alt: "React Logo",
+    },
+    {
+        id: 5,
+        name: "Angular",
+        src: "/resources/angular-large.png",
+        alt: "Angular Logo",
+    },
+    {
+        id: 6,
+        name: "Vue",
+        src: "/resources/vue-large.png",
+        alt: "Vue Logo",
+    },
+    {
+        id: 7,
+        name: "SASS",
+        src: "/resources/sass-large.png",
+        alt: "SASS Logo",
+    },
+    {
+        id: 8,
+        name: "TypeScript",
+        src: "/resources/typescript-large.png",
+        alt: "TypeScript Logo",
+    }
+]
 
 const installPWA = async () => {
     if (deferredPrompt.value) {
@@ -50,7 +102,9 @@ onMounted(() => {
                     Roadmap 🚀</a>
             </div>
             <div class="col-span-1 flex justify-center">
-                <img class="w-80 flex mx-auto" src="/logo.jpeg" alt="logo" />
+                <!-- <img class="w-80 flex mx-auto" src="/logo.jpeg" alt="logo" /> -->
+                <SplineViewer url="https://prod.spline.design/2p2V3R-GYEWxtFBR/scene.splinecode" height="300px"
+                    loadingText='Awaiting Initialization...' />
             </div>
         </div>
 
@@ -74,6 +128,12 @@ onMounted(() => {
                 </button>
             </div>
         </router-link>
+    </section>
+    <section id="resource-carousel" class="mt-10">
+        <!-- Resource Carousel -->
+        <ResourceCarousel :logos="logos" />
+    </section>
+    <section id="support-me">
         <!-- Support Me -->
         <DotLottieVue style="width:200px;" class="mx-auto" autoplay loop src="/lottie/buy-me-a-coffee.json" />
         <div class="flex items-center justify-center my-2">
