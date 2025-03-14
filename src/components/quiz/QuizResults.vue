@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue';
+import { useQuizStore } from '@/stores/quizStore';
 
 const props = defineProps({
   score: {
@@ -16,7 +17,13 @@ const props = defineProps({
   }
 });
 
+const quizStore = useQuizStore();
 const emit = defineEmits(['restart']);
+
+console.log("Wrong Answers:", quizStore.getWrongAnswersQuestions());
+console.log("Wrong Selected Answers:", quizStore.getWrongSelectedAnswers());
+
+let wrongSelectedAnswers = quizStore.getWrongSelectedAnswers();
 
 const percentage = computed(() => {
   return Math.round((props.score / props.total) * 100);
@@ -41,10 +48,15 @@ const quizTypeName = computed(() => {
 const restart = () => {
   emit('restart');
 };
+
+const wrongAnswers = computed(() => {
+  return quizStore.getWrongAnswersQuestions();
+});
 </script>
 
 <template>
   <div class="results-container text-center">
+    <h1 class="text-4xl font-bold text-gray-800 mb-5">Quiz Result</h1>
     <div class="emoji text-7xl mb-6">{{ performance.emoji }}</div>
     <h2 class="text-3xl font-bold text-cyan-500 mb-3">{{ performance.message }}</h2>
     <p class="text-xl mb-6">
@@ -79,6 +91,28 @@ const restart = () => {
         </div>
       </div>
     </div>
+
+    <!-- Show the results of Wrong Answers -->
+    <hr/>
+    <div v-if="wrongAnswers.length" class="wrong-answers-section mt-8 mb-8 text-left">
+      <h3 class="text-2xl font-bold text-gray-700 mb-4">Review Incorrect Answers</h3>
+      
+      <div v-for="(item, index) in wrongAnswers" :key="index" class="wrong-answer-item mb-6 bg-gray-50 p-4 rounded-lg">
+        <div class="question mb-2 font-medium">
+          <span class="text-gray-700">Q: {{ item.question }}</span>
+        </div>
+        
+        <div class="selected-answer mb-2 pl-4 border-l-4 border-red-400">
+          <span class="text-sm text-gray-500">Your answer:</span>
+          <span class="text-red-500 ml-2">{{ wrongSelectedAnswers[index] }}</span>
+        </div>
+        
+        <div class="correct-answer pl-4 border-l-4 border-green-400">
+          <span class="text-sm text-gray-500">Correct answer:</span>
+          <span class="text-green-500 ml-2">{{ item.answer }}</span>
+        </div>
+      </div>
+    </div>
     
     <button 
       @click="restart" 
@@ -92,5 +126,20 @@ const restart = () => {
 <style scoped>
 .score-display svg circle {
   transition: stroke-dasharray 1s ease-in-out;
+}
+
+.wrong-answers-section {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrong-answer-item {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.wrong-answer-item:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 </style>

@@ -145,6 +145,26 @@ export const useQuizStore = defineStore('quiz', () => {
       return acc;
     }, 0);
   });
+
+  // Get wrong answers questions
+  const getWrongAnswersQuestions = () => {
+    return answers.value.reduce((acc, answer, index) => {
+      if (answer !== null && questions.value[index].options[answer] !== questions.value[index].answer) {
+        return [...acc, questions.value[index]];
+      }
+      return acc;
+    }, []);
+  }
+
+  // getWrongSelectedAnswers
+  const getWrongSelectedAnswers = () => {
+    return answers.value.reduce((acc, answer, index) => {
+      if (answer !== null && questions.value[index].options[answer] !== questions.value[index].answer) {
+        return [...acc, questions.value[index].options[answer]];
+      }
+      return acc;
+    }, []);
+  }
   
   return {
     // State
@@ -169,5 +189,7 @@ export const useQuizStore = defineStore('quiz', () => {
     resetQuiz,
     saveToStorage,
     loadFromStorage,
+    getWrongAnswersQuestions,
+    getWrongSelectedAnswers,
   };
 });

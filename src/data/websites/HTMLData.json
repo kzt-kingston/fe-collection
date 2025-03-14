@@ -100,5 +100,726 @@
     "title": "HTTP Request Methods",
     "description": "HTTP request methods reference on w3schools.",
     "url": "https://www.w3schools.com/tags/ref_httpmethods.asp"
+  },
+  {
+    "id": 18,
+    "title": "HTML <!DOCTYPE> Declaration",
+    "description": "Describes the purpose of the <!DOCTYPE> declaration, which specifies the HTML version used in the document.",
+    "quiz-id": 1,
+    "url": "https://www.w3schools.com/tags/tag_doctype.asp"
+  },
+  {
+    "id": 19,
+    "title": "HTML <h1> Element",
+    "description": "Reference for the <h1> element used for the largest heading in HTML.",
+    "quiz-id": 2,
+    "url": "https://www.w3schools.com/tags/tag_h1.asp"
+  },
+  {
+    "id": 20,
+    "title": "HTML Hyperlink Syntax",
+    "description": "Shows the correct syntax for creating hyperlinks using the <a> tag in HTML.",
+    "quiz-id": 3,
+    "url": "https://www.w3schools.com/tags/tag_a.asp"
+  },
+  {
+    "id": 21,
+    "title": "HTML <img> Element",
+    "description": "Details the use of the <img> tag for embedding images in HTML.",
+    "quiz-id": 4,
+    "url": "https://www.w3schools.com/tags/tag_img.asp"
+  },
+  {
+    "id": 22,
+    "title": "HTML alt Attribute",
+    "description": "Explains the use of the 'alt' attribute for providing alternative text for images in HTML.",
+    "quiz-id": 5,
+    "url": "https://www.w3schools.com/tags/att_img_alt.asp"
+  },
+  {
+    "id": 23,
+    "title": "HTML <hr> Element",
+    "description": "Describes the <hr> tag used to insert horizontal lines in HTML documents.",
+    "quiz-id": 6,
+    "url": "https://www.w3schools.com/tags/tag_hr.asp"
+  },
+  {
+    "id": 24,
+    "title": "HTML lang Attribute",
+    "description": "Covers how to use the lang attribute in the <html> tag to specify the language.",
+    "quiz-id": 7,
+    "url": "https://www.w3schools.com/html/html_languages.asp"
+  },
+  {
+    "id": 25,
+    "title": "HTML target Attribute",
+    "description": "Explains the use of target=\"_blank\" to open links in a new tab.",
+    "quiz-id": 8,
+    "url": "https://www.w3schools.com/tags/att_a_target.asp"
+  },
+  {
+    "id": 26,
+    "title": "HTML <title> Element",
+    "description": "Describes how the <title> tag sets the text displayed in the browser's title bar.",
+    "quiz-id": 9,
+    "url": "https://www.w3schools.com/tags/tag_title.asp"
+  },
+  {
+    "id": 27,
+    "title": "HTML <meta> Charset",
+    "description": "Explains how the <meta charset='UTF-8'> tag sets the character encoding for an HTML document.",
+    "quiz-id": 10,
+    "url": "https://www.w3schools.com/tags/att_meta_charset.asp"
+  },
+  {
+    "id": 28,
+    "title": "HTML <ul> Element",
+    "description": "Covers the use of the <ul> tag to create unordered lists in HTML.",
+    "quiz-id": 11,
+    "url": "https://www.w3schools.com/tags/tag_ul.asp"
+  },
+  {
+    "id": 29,
+    "title": "HTML form action Attribute",
+    "description": "Describes how the action attribute in a form specifies the URL where form data is sent.",
+    "quiz-id": 12,
+    "url": "https://www.w3schools.com/tags/att_form_action.asp"
+  },
+  {
+    "id": 30,
+    "title": "HTML input value Attribute",
+    "description": "Explains the use of the 'value' attribute to set default values in input fields.",
+    "quiz-id": 13,
+    "url": "https://www.w3schools.com/tags/att_input_value.asp"
+  },
+  {
+    "id": 31,
+    "title": "HTML <select> Element",
+    "description": "Details the <select> tag used to create drop-down lists in HTML.",
+    "quiz-id": 14,
+    "url": "https://www.w3schools.com/tags/tag_select.asp"
+  },
+  {
+    "id": 32,
+    "title": "HTML colspan Attribute",
+    "description": "Explains how the colspan attribute specifies the number of columns a table cell should span.",
+    "quiz-id": 15,
+    "url": "https://www.w3schools.com/tags/att_td_colspan.asp"
+  },
+  {
+    "id": 33,
+    "title": "HTML style Attribute (Inline)",
+    "description": "Covers using the style attribute for applying inline CSS styles in HTML.",
+    "quiz-id": 16,
+    "url": "https://www.w3schools.com/html/html_styles.asp"
+  },
+  {
+    "id": 34,
+    "title": "HTML <noscript> Element",
+    "description": "Describes the purpose of the <noscript> tag, which provides alternatives for users with disabled JavaScript.",
+    "quiz-id": 17,
+    "url": "https://www.w3schools.com/tags/tag_noscript.asp"
+  },
+  {
+    "id": 35,
+    "title": "HTML <iframe> src Attribute",
+    "description": "Explains the use of the src attribute in the <iframe> tag to specify the content URL.",
+    "quiz-id": 18,
+    "url": "https://www.w3schools.com/tags/att_iframe_src.asp"
+  },
+  {
+    "id": 36,
+    "title": "HTML <th> Element",
+    "description": "Covers the use of the <th> tag to define table headers in HTML.",
+    "quiz-id": 19,
+    "url": "https://www.w3schools.com/tags/tag_th.asp"
+  },
+  {
+    "id": 37,
+    "title": "HTML required Attribute",
+    "description": "Explains the function of the required attribute to mark input fields as mandatory.",
+    "quiz-id": 20,
+    "url": "https://www.w3schools.com/tags/att_input_required.asp"
+  },
+  {
+    "id": 38,
+    "title": "HTML <blockquote> Element",
+    "description": "Describes the use of the <blockquote> tag for defining long quotations in HTML.",
+    "quiz-id": 21,
+    "url": "https://www.w3schools.com/tags/tag_blockquote.asp"
+  },
+  {
+    "id": 39,
+    "title": "HTML <progress> Element",
+    "description": "Covers the <progress> tag used to display progress bars in HTML.",
+    "quiz-id": 22,
+    "url": "https://www.w3schools.com/tags/tag_progress.asp"
+  },
+  {
+    "id": 40,
+    "title": "HTML form Method Attribute",
+    "description": "Explains that the default method for form submission in HTML is GET.",
+    "quiz-id": 23,
+    "url": "https://www.w3schools.com/tags/att_form_method.asp"
+  },
+  {
+    "id": 41,
+    "title": "HTML <optgroup> Element",
+    "description": "Describes the <optgroup> tag used for grouping options in a drop-down list.",
+    "quiz-id": 24,
+    "url": "https://www.w3schools.com/tags/tag_optgroup.asp"
+  },
+  {
+    "id": 42,
+    "title": "HTML <abbr> Element",
+    "description": "Covers the <abbr> tag used for abbreviations or acronyms in HTML.",
+    "quiz-id": 25,
+    "url": "https://www.w3schools.com/tags/tag_abbr.asp"
+  },
+  {
+    "id": 43,
+    "title": "HTML <link> media Attribute",
+    "description": "Explains the media attribute in the <link> tag, specifying the media type of the linked resource.",
+    "quiz-id": 26,
+    "url": "https://www.w3schools.com/tags/att_link_media.asp"
+  },
+  {
+    "id": 44,
+    "title": "HTML <wbr> Element",
+    "description": "Describes how the <wbr> tag defines a possible line-break opportunity in HTML.",
+    "quiz-id": 27,
+    "url": "https://www.w3schools.com/tags/tag_wbr.asp"
+  },
+  {
+    "id": 45,
+    "title": "HTML style Attribute",
+    "description": "Explains the use of the style attribute to define inline CSS styles in HTML.",
+    "quiz-id": 28,
+    "url": "https://www.w3schools.com/tags/att_global_style.asp"
+  },
+  {
+    "id": 46,
+    "title": "HTML <label> Element",
+    "description": "Covers the purpose of the <label> tag for associating text with form inputs.",
+    "quiz-id": 29,
+    "url": "https://www.w3schools.com/tags/tag_label.asp"
+  },
+  {
+    "id": 47,
+    "title": "HTML id Attribute",
+    "description": "Describes the id attribute used to assign unique identifiers to HTML elements.",
+    "quiz-id": 30,
+    "url": "https://www.w3schools.com/tags/att_global_id.asp"
+  },
+  {
+    "id": 48,
+    "title": "HTML <iframe> Element",
+    "description": "Explains how the <iframe> tag is used to embed a nested browsing context in HTML.",
+    "quiz-id": 31,
+    "url": "https://www.w3schools.com/tags/tag_iframe.asp"
+  },
+  {
+    "id": 49,
+    "title": "HTML <textarea> Element",
+    "description": "Covers the use of the <textarea> tag for creating multi-line input fields.",
+    "quiz-id": 32,
+    "url": "https://www.w3schools.com/tags/tag_textarea.asp"
+  },
+  {
+    "id": 50,
+    "title": "HTML <legend> Element",
+    "description": "Describes how the <legend> tag is used to define a caption for a <fieldset> element.",
+    "quiz-id": 33,
+    "url": "https://www.w3schools.com/tags/tag_legend.asp"
+  },
+  {
+    "id": 51,
+    "title": "HTML readonly Attribute",
+    "description": "Explains the readonly attribute, which specifies that an input field is read-only.",
+    "quiz-id": 34,
+    "url": "https://www.w3schools.com/tags/att_input_readonly.asp"
+  },
+  {
+    "id": 52,
+    "title": "HTML <time> Element",
+    "description": "Describes the use of the <time> tag for specifying time or date values in HTML.",
+    "quiz-id": 35,
+    "url": "https://www.w3schools.com/tags/tag_time.asp"
+  },
+  {
+    "id": 53,
+    "title": "HTML <div> Element",
+    "description": "Covers the use of the <div> tag for grouping block elements in HTML.",
+    "quiz-id": 36,
+    "url": "https://www.w3schools.com/tags/tag_div.asp"
+  },
+  {
+    "id": 54,
+    "title": "HTML autofocus Attribute",
+    "description": "Explains how the autofocus attribute automatically highlights an input field on page load.",
+    "quiz-id": 37,
+    "url": "https://www.w3schools.com/tags/att_input_autofocus.asp"
+  },
+  {
+    "id": 55,
+    "title": "HTML <picture> Element",
+    "description": "Describes the <picture> tag, used to provide multiple image formats for different devices.",
+    "quiz-id": 38,
+    "url": "https://www.w3schools.com/tags/tag_picture.asp"
+  },
+  {
+    "id": 56,
+    "title": "HTML rel Attribute",
+    "description": "Explains the rel attribute, which defines the relationship between the current document and the linked resource.",
+    "quiz-id": 39,
+    "url": "https://www.w3schools.com/tags/att_link_rel.asp"
+  },
+  {
+    "id": 57,
+    "title": "HTML <code> Element",
+    "description": "Describes the use of the <code> tag for representing a block of programming code in HTML.",
+    "quiz-id": 40,
+    "url": "https://www.w3schools.com/tags/tag_code.asp"
+  },
+  {
+    "id": 58,
+    "title": "HTML <section> Element",
+    "description": "Covers the use of the <section> tag for grouping thematic content in HTML.",
+    "quiz-id": 41,
+    "url": "https://www.w3schools.com/tags/tag_section.asp"
+  },
+  {
+    "id": 59,
+    "title": "HTML dir Attribute",
+    "description": "Explains the dir attribute used to specify the text direction of an element in HTML.",
+    "quiz-id": 42,
+    "url": "https://www.w3schools.com/tags/att_global_dir.asp"
+  },
+  {
+    "id": 60,
+    "title": "HTML download Attribute",
+    "description": "Describes how the download attribute indicates that the linked resource should be downloaded.",
+    "quiz-id": 43,
+    "url": "https://www.w3schools.com/tags/att_a_download.asp"
+  },
+  {
+    "id": 61,
+    "title": "HTML <ol> Element",
+    "description": "Covers the use of the <ol> tag for creating numbered lists in HTML.",
+    "quiz-id": 44,
+    "url": "https://www.w3schools.com/tags/tag_ol.asp"
+  },
+  {
+    "id": 62,
+    "title": "HTML Table Row Styling",
+    "description": "Explains how to use the style attribute on a <tr> tag to add a background color.",
+    "quiz-id": 45,
+    "url": "https://www.w3schools.com/html/html_tables.asp"
+  },
+  {
+    "id": 63,
+    "title": "HTML <ins> Element",
+    "description": "Describes the <ins> tag, which is used to mark inserted text in HTML.",
+    "quiz-id": 46,
+    "url": "https://www.w3schools.com/tags/tag_ins.asp"
+  },
+  {
+    "id": 64,
+    "title": "HTML <nav> Element",
+    "description": "Covers the <nav> tag used to display navigation links in HTML.",
+    "quiz-id": 47,
+    "url": "https://www.w3schools.com/tags/tag_nav.asp"
+  },
+  {
+    "id": 65,
+    "title": "HTML <kbd> Element",
+    "description": "Explains the <kbd> tag which represents keyboard input in HTML.",
+    "quiz-id": 48,
+    "url": "https://www.w3schools.com/tags/tag_kbd.asp"
+  },
+  {
+    "id": 66,
+    "title": "HTML name Attribute",
+    "description": "Describes the role of the name attribute in identifying form controls for server-side processing.",
+    "quiz-id": 49,
+    "url": "https://www.w3schools.com/tags/att_input_name.asp"
+  },
+  {
+    "id": 67,
+    "title": "HTML <figcaption> Element",
+    "description": "Covers the <figcaption> tag used to define a caption for a figure in HTML.",
+    "quiz-id": 50,
+    "url": "https://www.w3schools.com/tags/tag_figcaption.asp"
+  },
+  {
+    "id": 68,
+    "title": "HTML <optgroup> Element",
+    "description": "Explains the use of the <optgroup> tag for grouping options in a dropdown list.",
+    "quiz-id": 51,
+    "url": "https://www.w3schools.com/tags/tag_optgroup.asp"
+  },
+  {
+    "id": 69,
+    "title": "HTML <sup> Element",
+    "description": "Describes the <sup> tag used to display text as superscript in HTML.",
+    "quiz-id": 52,
+    "url": "https://www.w3schools.com/tags/tag_sup.asp"
+  },
+  {
+    "id": 70,
+    "title": "HTML maxlength Attribute",
+    "description": "Explains how the maxlength attribute limits the number of characters that can be entered in an input field.",
+    "quiz-id": 53,
+    "url": "https://www.w3schools.com/tags/att_input_maxlength.asp"
+  },
+  {
+    "id": 71,
+    "title": "HTML <caption> Element",
+    "description": "Covers the use of the <caption> tag for adding a title to a table in HTML.",
+    "quiz-id": 54,
+    "url": "https://www.w3schools.com/tags/tag_caption.asp"
+  },
+  {
+    "id": 72,
+    "title": "HTML <bdi> Element",
+    "description": "Describes the <bdi> tag used to isolate text for bidirectional support in HTML.",
+    "quiz-id": 55,
+    "url": "https://www.w3schools.com/tags/tag_bdi.asp"
+  },
+  {
+    "id": 73,
+    "title": "HTML <mark> Element",
+    "description": "Explains the <mark> tag used to highlight text in HTML.",
+    "quiz-id": 56,
+    "url": "https://www.w3schools.com/tags/tag_mark.asp"
+  },
+  {
+    "id": 74,
+    "title": "HTML <script> src Attribute",
+    "description": "Describes the use of the src attribute in the <script> tag to reference an external script file.",
+    "quiz-id": 57,
+    "url": "https://www.w3schools.com/tags/att_script_src.asp"
+  },
+  {
+    "id": 75,
+    "title": "HTML <datalist> Element",
+    "description": "Covers the <datalist> tag used to provide a list of predefined options for an input field in HTML.",
+    "quiz-id": 58,
+    "url": "https://www.w3schools.com/tags/tag_datalist.asp"
+  },
+  {
+    "id": 76,
+    "title": "HTML <article> Element",
+    "description": "Explains the use of the <article> tag for defining a self-contained content block in HTML.",
+    "quiz-id": 59,
+    "url": "https://www.w3schools.com/tags/tag_article.asp"
+  },
+  {
+    "id": 77,
+    "title": "HTML async Attribute",
+    "description": "Describes how the async attribute allows a script to be executed asynchronously with other page elements.",
+    "quiz-id": 60,
+    "url": "https://www.w3schools.com/tags/att_script_async.asp"
+  },
+  {
+    "id": 78,
+    "title": "HTML <small> Element",
+    "description": "Covers the use of the <small> tag to define smaller, fine-print text in HTML.",
+    "quiz-id": 61,
+    "url": "https://www.w3schools.com/tags/tag_small.asp"
+  },
+  {
+    "id": 79,
+    "title": "HTML <textarea> Resize Property",
+    "description": "Explains how to prevent a textarea from being resized using CSS (resize: none;).",
+    "quiz-id": 62,
+    "url": "https://www.w3schools.com/css/css3_pr_resize.asp"
+  },
+  {
+    "id": 80,
+    "title": "HTML <address> Element",
+    "description": "Describes the <address> tag, used for defining contact information in HTML.",
+    "quiz-id": 63,
+    "url": "https://www.w3schools.com/tags/tag_address.asp"
+  },
+  {
+    "id": 81,
+    "title": "HTML <pre> Element",
+    "description": "Covers the use of the <pre> tag for defining preformatted text in HTML.",
+    "quiz-id": 64,
+    "url": "https://www.w3schools.com/tags/tag_pre.asp"
+  },
+  {
+    "id": 82,
+    "title": "HTML <fieldset> Element",
+    "description": "Explains the use of the <fieldset> tag to group related input fields in an HTML form.",
+    "quiz-id": 65,
+    "url": "https://www.w3schools.com/tags/tag_fieldset.asp"
+  },
+  {
+    "id": 83,
+    "title": "HTML <output> Element",
+    "description": "Describes how the <output> tag represents the result of a calculation in HTML.",
+    "quiz-id": 66,
+    "url": "https://www.w3schools.com/tags/tag_output.asp"
+  },
+  {
+    "id": 84,
+    "title": "HTML <em> Element",
+    "description": "Covers the use of the <em> tag for emphasizing text in HTML.",
+    "quiz-id": 67,
+    "url": "https://www.w3schools.com/tags/tag_em.asp"
+  },
+  {
+    "id": 85,
+    "title": "HTML spellcheck Attribute",
+    "description": "Explains the spellcheck attribute, which indicates whether the element's text should be checked for spelling errors.",
+    "quiz-id": 68,
+    "url": "https://www.w3schools.com/tags/att_global_spellcheck.asp"
+  },
+  {
+    "id": 86,
+    "title": "HTML disabled Attribute",
+    "description": "Describes the disabled attribute used to disable an HTML element.",
+    "quiz-id": 69,
+    "url": "https://www.w3schools.com/tags/att_global_disabled.asp"
+  },
+  {
+    "id": 87,
+    "title": "HTML <summary> Element",
+    "description": "Explains how the <summary> tag defines a visible heading for a <details> element in HTML.",
+    "quiz-id": 70,
+    "url": "https://www.w3schools.com/tags/tag_summary.asp"
+  },
+  {
+    "id": 88,
+    "title": "HTML <main> Element",
+    "description": "Covers the use of the <main> tag to define the main content of an HTML document.",
+    "quiz-id": 71,
+    "url": "https://www.w3schools.com/tags/tag_main.asp"
+  },
+  {
+    "id": 89,
+    "title": "HTML <meter> Element",
+    "description": "Describes the use of the <meter> tag for displaying scalar measurements within a known range in HTML.",
+    "quiz-id": 72,
+    "url": "https://www.w3schools.com/tags/tag_meter.asp"
+  },
+  {
+    "id": 90,
+    "title": "HTML <button> type Attribute",
+    "description": "Explains that the default type for a button in HTML is submit.",
+    "quiz-id": 73,
+    "url": "https://www.w3schools.com/tags/att_button_type.asp"
+  },
+  {
+    "id": 91,
+    "title": "HTML <del> Element",
+    "description": "Covers the use of the <del> tag to represent deleted text in HTML.",
+    "quiz-id": 74,
+    "url": "https://www.w3schools.com/tags/tag_del.asp"
+  },
+  {
+    "id": 92,
+    "title": "HTML checked Attribute",
+    "description": "Describes how the checked attribute pre-selects a checkbox or radio button in HTML.",
+    "quiz-id": 75,
+    "url": "https://www.w3schools.com/tags/att_input_checked.asp"
+  },
+  {
+    "id": 93,
+    "title": "HTML <base> Element",
+    "description": "Explains the use of the <base> tag, which specifies a default URL and target for all relative links in an HTML document.",
+    "quiz-id": 76,
+    "url": "https://www.w3schools.com/tags/tag_base.asp"
+  },
+  {
+    "id": 94,
+    "title": "HTML placeholder Attribute",
+    "description": "Describes the placeholder attribute used to provide a short hint for the expected value in an input field.",
+    "quiz-id": 77,
+    "url": "https://www.w3schools.com/tags/att_input_placeholder.asp"
+  },
+  {
+    "id": 95,
+    "title": "HTML <link> Element",
+    "description": "Covers the use of the <link> tag for linking external resources to an HTML document.",
+    "quiz-id": 78,
+    "url": "https://www.w3schools.com/tags/tag_link.asp"
+  },
+  {
+    "id": 96,
+    "title": "HTML pattern Attribute",
+    "description": "Explains the pattern attribute, which specifies a regular expression for input validation in HTML.",
+    "quiz-id": 79,
+    "url": "https://www.w3schools.com/tags/att_input_pattern.asp"
+  },
+  {
+    "id": 97,
+    "title": "HTML <q> Element",
+    "description": "Describes the <q> tag used for specifying inline quotations in HTML.",
+    "quiz-id": 80,
+    "url": "https://www.w3schools.com/tags/tag_q.asp"
+  },
+  {
+    "id": 98,
+    "title": "HTML <fieldset> Element",
+    "description": "Explains the role of the <fieldset> tag in grouping related input fields in a form.",
+    "quiz-id": 81,
+    "url": "https://www.w3schools.com/tags/tag_fieldset.asp"
+  },
+  {
+    "id": 99,
+    "title": "HTML defer Attribute",
+    "description": "Describes how the defer attribute ensures a script is executed only after the HTML document is fully parsed.",
+    "quiz-id": 82,
+    "url": "https://www.w3schools.com/tags/att_script_defer.asp"
+  },
+  {
+    "id": 100,
+    "title": "HTML <textarea> Element",
+    "description": "Covers the use of the <textarea> tag for representing user-submitted text.",
+    "quiz-id": 83,
+    "url": "https://www.w3schools.com/tags/tag_textarea.asp"
+  },
+  {
+    "id": 101,
+    "title": "HTML <dl> Element",
+    "description": "Explains the use of the <dl> tag to define a description list in HTML.",
+    "quiz-id": 84,
+    "url": "https://www.w3schools.com/tags/tag_dl.asp"
+  },
+  {
+    "id": 102,
+    "title": "HTML contenteditable Attribute",
+    "description": "Describes the contenteditable attribute which makes an element editable in HTML.",
+    "quiz-id": 85,
+    "url": "https://www.w3schools.com/tags/att_global_contenteditable.asp"
+  },
+  {
+    "id": 103,
+    "title": "HTML autoplay Attribute",
+    "description": "Covers the autoplay attribute, which starts playback of media automatically in HTML.",
+    "quiz-id": 86,
+    "url": "https://www.w3schools.com/tags/att_video_autoplay.asp"
+  },
+  {
+    "id": 104,
+    "title": "HTML <caption> Element",
+    "description": "Describes the use of the <caption> tag for adding captions to tables in HTML.",
+    "quiz-id": 87,
+    "url": "https://www.w3schools.com/tags/tag_caption.asp"
+  },
+  {
+    "id": 105,
+    "title": "HTML <s> Element",
+    "description": "Explains the use of the <s> tag to represent text that is no longer accurate or relevant in HTML.",
+    "quiz-id": 88,
+    "url": "https://www.w3schools.com/tags/tag_s.asp"
+  },
+  {
+    "id": 106,
+    "title": "HTML <track> Element",
+    "description": "Covers the use of the <track> tag for adding subtitles, captions, or other text tracks in HTML media elements.",
+    "quiz-id": 89,
+    "url": "https://www.w3schools.com/tags/tag_track.asp"
+  },
+  {
+    "id": 107,
+    "title": "HTML <details> Element",
+    "description": "Describes how the <details> tag creates a disclosure widget that users can toggle in HTML.",
+    "quiz-id": 90,
+    "url": "https://www.w3schools.com/tags/tag_details.asp"
+  },
+  {
+    "id": 108,
+    "title": "HTML <cite> Element",
+    "description": "Explains the use of the <cite> tag for defining the title of a work being cited in HTML.",
+    "quiz-id": 91,
+    "url": "https://www.w3schools.com/tags/tag_cite.asp"
+  },
+  {
+    "id": 109,
+    "title": "HTML <nav> Element",
+    "description": "Covers the <nav> tag used to structure navigation links in an HTML document.",
+    "quiz-id": 92,
+    "url": "https://www.w3schools.com/tags/tag_nav.asp"
+  },
+  {
+    "id": 110,
+    "title": "HTML <u> Element",
+    "description": "Describes the <u> tag used for underlined text in modern HTML.",
+    "quiz-id": 93,
+    "url": "https://www.w3schools.com/tags/tag_u.asp"
+  },
+  {
+    "id": 111,
+    "title": "HTML <link> media Attribute",
+    "description": "Explains the media attribute in a <link> tag, specifying the type of device the linked resource is optimized for.",
+    "quiz-id": 94,
+    "url": "https://www.w3schools.com/tags/att_link_media.asp"
+  },
+  {
+    "id": 112,
+    "title": "HTML <canvas> Element",
+    "description": "Covers the use of the <canvas> tag for drawing graphics via JavaScript in HTML.",
+    "quiz-id": 95,
+    "url": "https://www.w3schools.com/tags/tag_canvas.asp"
+  },
+  {
+    "id": 113,
+    "title": "HTML <math> Element",
+    "description": "Describes the <math> tag used for including mathematical expressions using MathML in HTML.",
+    "quiz-id": 96,
+    "url": "https://www.w3schools.com/tags/tag_math.asp"
+  },
+  {
+    "id": 114,
+    "title": "HTML hidden Attribute",
+    "description": "Explains the hidden attribute, which hides an element from display while keeping it in the DOM in HTML.",
+    "quiz-id": 97,
+    "url": "https://www.w3schools.com/tags/att_global_hidden.asp"
+  },
+  {
+    "id": 115,
+    "title": "HTML <mark> Element",
+    "description": "Describes the use of the <mark> tag for highlighting search results in HTML.",
+    "quiz-id": 98,
+    "url": "https://www.w3schools.com/tags/tag_mark.asp"
+  },
+  {
+    "id": 116,
+    "title": "HTML form enctype Attribute",
+    "description": "Explains the enctype attribute, which specifies how form data should be encoded before sending to the server.",
+    "quiz-id": 99,
+    "url": "https://www.w3schools.com/tags/att_form_enctype.asp"
+  },
+  {
+    "id": 117,
+    "title": "HTML <ruby> Element",
+    "description": "Covers the use of the <ruby> tag for showing pronunciation guides for East Asian languages in HTML.",
+    "quiz-id": 100,
+    "url": "https://www.w3schools.com/tags/tag_ruby.asp"
+  },
+  {
+    "id": 118,
+    "title": "HTML <source> srcset Attribute",
+    "description": "The srcset attribute specifies the URL of the image to use in different situations. This attribute is required when <source> is used in <picture>.",
+    "quiz-id": 101,
+    "url": "https://www.w3schools.com/TAGs/att_source_srcset.asp"
+  },
+  {
+    "id": 119,
+    "title": "HTML <style> Tag",
+    "description": "The <style> tag is used to define style information (CSS) for a document.",
+    "quiz-id": 102,
+    "url": "https://www.w3schools.com/tags/tag_style.asp"
+  },
+  {
+    "id": 120,
+    "title": "HTML <source> Tag",
+    "description": "The <source> tag is used to specify multiple media resources for media elements, such as <video>, <audio>, and <picture>.",
+    "quiz-id": 103,
+    "url": "https://www.w3schools.com/tags/tag_style.asp"
   }
 ]
