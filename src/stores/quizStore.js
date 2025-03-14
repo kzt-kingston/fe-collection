@@ -20,7 +20,7 @@ export const useQuizStore = defineStore('quiz', () => {
   const currentQuestionIndex = ref(0);
   const isCompleted = ref(false);
   const storageKey = 'fe-collection-quiz-state';
-  const totalQuestionsAmount = 5;
+  const totalQuestionsAmount = 30;
   
   // Get all questions based on quiz type
   const getQuestionsByType = (type) => {
