@@ -1,20 +1,24 @@
 [
   {
+    "id": 1,
     "question": "Which method is used to add an element to the end of an array?",
     "options": ["push()", "pop()", "append()", "concat()"],
     "answer": "push()"
   },
   {
+    "id": 2,
     "question": "What is the output of: console.log(typeof [])?",
     "options": ["object", "array", "undefined", "null"],
     "answer": "object"
   },
   {
+    "id": 3,
     "question": "How do you properly check if a variable is an array in JavaScript?",
     "options": ["Array.isArray(variable)", "variable.isArray()", "typeof variable === 'array'", "variable instanceof Array"],
     "answer": "Array.isArray(variable)"
   },
   {
+    "id": 4,
     "question": "What's the correct way to create a Promise?",
     "options": [
       "new Promise((resolve, reject) => {})",
@@ -25,6 +29,7 @@
     "answer": "new Promise((resolve, reject) => {})"
   },
   {
+    "id": 5,
     "question": "What does the 'async' keyword do when used before a function declaration?",
     "options": [
       "Makes the function return a Promise automatically",
@@ -35,6 +40,7 @@
     "answer": "Makes the function return a Promise automatically"
   },
   {
+    "id": 6,
     "question": "Which statement about the 'await' keyword is true?",
     "options": [
       "It can only be used inside an async function",
@@ -45,6 +51,7 @@
     "answer": "It can only be used inside an async function"
   },
   {
+    "id": 7,
     "question": "What's the purpose of the 'use strict' directive in JavaScript?",
     "options": [
       "Enables a stricter parsing and error handling",
@@ -55,6 +62,7 @@
     "answer": "Enables a stricter parsing and error handling"
   },
   {
+    "id": 8,
     "question": "How do you properly clone a JavaScript object?",
     "options": [
       "JSON.parse(JSON.stringify(obj))",
@@ -65,6 +73,7 @@
     "answer": "All of these have different use cases"
   },
   {
+    "id": 9,
     "question": "What does event.preventDefault() do?",
     "options": [
       "Stops the default behavior of an element",
@@ -75,6 +84,7 @@
     "answer": "Stops the default behavior of an element"
   },
   {
+    "id": 10,
     "question": "What's the difference between '==' and '===' operators?",
     "options": [
       "'===' compares both value and type, '==' only compares value",
@@ -85,6 +95,7 @@
     "answer": "'===' compares both value and type, '==' only compares value"
   },
   {
+    "id": 11,
     "question": "How do you handle errors in async/await functions?",
     "options": [
       "Using try/catch blocks",
@@ -95,16 +106,19 @@
     "answer": "Using try/catch blocks"
   },
   {
+    "id": 12,
     "question": "What is the output of: console.log(0.1 + 0.2 === 0.3)?",
     "options": ["false", "true", "undefined", "error"],
     "answer": "false"
   },
   {
+    "id": 13,
     "question": "Which method is used to remove the last element from an array?",
     "options": ["pop()", "push()", "shift()", "unshift()"],
     "answer": "pop()"
   },
   {
+    "id": 14,
     "question": "What is event bubbling in JavaScript?",
     "options": [
       "When an event triggered on a nested element propagates up through its ancestors",
@@ -115,6 +129,7 @@
     "answer": "When an event triggered on a nested element propagates up through its ancestors"
   },
   {
+    "id": 15,
     "question": "What's the purpose of the 'map' method on arrays?",
     "options": [
       "Creates a new array with the results of calling a function on every element",
@@ -125,6 +140,7 @@
     "answer": "Creates a new array with the results of calling a function on every element"
   },
   {
+    "id": 16,
     "question": "What is closure in JavaScript?",
     "options": [
       "A function that has access to variables from its outer scope even after the outer function has finished execution",
@@ -135,6 +151,7 @@
     "answer": "A function that has access to variables from its outer scope even after the outer function has finished execution"
   },
   {
+    "id": 17,
     "question": "What does JSON.stringify() do?",
     "options": [
       "Converts a JavaScript object to a JSON string",
@@ -145,6 +162,7 @@
     "answer": "Converts a JavaScript object to a JSON string"
   },
   {
+    "id": 18,
     "question": "What's the best way to check if a property exists in an object?",
     "options": [
       "Using the 'in' operator or hasOwnProperty()",
@@ -155,6 +173,7 @@
     "answer": "Using the 'in' operator or hasOwnProperty()"
   },
   {
+    "id": 19,
     "question": "What's the purpose of the 'reduce' method on arrays?",
     "options": [
       "Executes a reducer function on each element, resulting in a single output value",
@@ -165,6 +184,7 @@
     "answer": "Executes a reducer function on each element, resulting in a single output value"
   },
   {
+    "id": 20,
     "question": "What is the DOM in JavaScript?",
     "options": [
       "Document Object Model - a programming interface for web documents",
@@ -175,6 +195,7 @@
     "answer": "Document Object Model - a programming interface for web documents"
   },
   {
+    "id": 21,
     "question": "What's the purpose of the 'this' keyword in JavaScript?",
     "options": [
       "Refers to the object that is executing the current function",
@@ -185,6 +206,7 @@
     "answer": "Refers to the object that is executing the current function"
   },
   {
+    "id": 22,
     "question": "What are JavaScript Promises primarily used for?",
     "options": [
       "Handling asynchronous operations",
@@ -195,6 +217,7 @@
     "answer": "Handling asynchronous operations"
   },
   {
+    "id": 23,
     "question": "What does the JavaScript 'fetch' API return?",
     "options": [
       "A Promise",
@@ -205,6 +228,7 @@
     "answer": "A Promise"
   },
   {
+    "id": 24,
     "question": "What is a JavaScript generator function?",
     "options": [
       "A function that can be paused and resumed, yielding multiple values",
@@ -215,6 +239,7 @@
     "answer": "A function that can be paused and resumed, yielding multiple values"
   },
   {
+    "id": 25,
     "question": "What is event delegation in JavaScript?",
     "options": [
       "Adding an event listener to a parent element to handle events for children",
@@ -225,6 +250,7 @@
     "answer": "Adding an event listener to a parent element to handle events for children"
   },
   {
+    "id": 26,
     "question": "What does 'hoisting' mean in JavaScript?",
     "options": [
       "Variables and function declarations are moved to the top of their scope",
@@ -235,6 +261,7 @@
     "answer": "Variables and function declarations are moved to the top of their scope"
   },
   {
+    "id": 27,
     "question": "What is the purpose of the 'localStorage' object?",
     "options": [
       "Stores data with no expiration date in the browser",
@@ -245,6 +272,7 @@
     "answer": "Stores data with no expiration date in the browser"
   },
   {
+    "id": 28,
     "question": "What is the difference between 'let' and 'var' declarations?",
     "options": [
       "'let' has block scope, 'var' has function scope",
@@ -255,16 +283,29 @@
     "answer": "'let' has block scope, 'var' has function scope"
   },
   {
+    "id": 29,
     "question": "What is the output of: console.log([1, 2, 3] + [4, 5, 6])?",
-    "options": ["'1,2,34,5,6'", "'[1, 2, 3, 4, 5, 6]'", "Error", "[1, 2, 3, 4, 5, 6]"],
+    "options": [
+      "'1,2,34,5,6'",
+      "'[1, 2, 3, 4, 5, 6]'",
+      "Error",
+      "[1, 2, 3, 4, 5, 6]"
+    ],
     "answer": "'1,2,34,5,6'"
   },
   {
+    "id": 30,
     "question": "How do you access the first element of the array 'myArray'?",
-    "options": ["myArray[0]", "myArray(0)", "myArray.first()", "myArray.get(0)"],
+    "options": [
+      "myArray[0]",
+      "myArray(0)",
+      "myArray.first()",
+      "myArray.get(0)"
+    ],
     "answer": "myArray[0]"
   },
   {
+    "id": 31,
     "question": "What is a pure function in JavaScript?",
     "options": [
       "A function that always returns the same output for the same inputs and has no side effects",
@@ -275,6 +316,7 @@
     "answer": "A function that always returns the same output for the same inputs and has no side effects"
   },
   {
+    "id": 32,
     "question": "What is the purpose of 'symbol' primitive type in JavaScript?",
     "options": [
       "To create unique identifiers",
@@ -285,6 +327,7 @@
     "answer": "To create unique identifiers"
   },
   {
+    "id": 33,
     "question": "What is the spread operator (...) used for?",
     "options": [
       "All of these answers",
@@ -295,6 +338,7 @@
     "answer": "All of these answers"
   },
   {
+    "id": 34,
     "question": "What is a callback function?",
     "options": [
       "A function passed into another function as an argument to be executed later",
@@ -305,6 +349,7 @@
     "answer": "A function passed into another function as an argument to be executed later"
   },
   {
+    "id": 35,
     "question": "What does the 'Set' object in JavaScript do?",
     "options": [
       "Stores unique values of any type",
@@ -315,6 +360,7 @@
     "answer": "Stores unique values of any type"
   },
   {
+    "id": 36,
     "question": "How do you import a named export from a module?",
     "options": [
       "import { exportName } from './module';",
@@ -325,6 +371,7 @@
     "answer": "import { exportName } from './module';"
   },
   {
+    "id": 37,
     "question": "What's the purpose of WeakMap in JavaScript?",
     "options": [
       "Allows garbage collection of keys that are no longer referenced elsewhere",
@@ -335,6 +382,7 @@
     "answer": "Allows garbage collection of keys that are no longer referenced elsewhere"
   },
   {
+    "id": 38,
     "question": "What is the 'event loop' in JavaScript?",
     "options": [
       "Mechanism that handles asynchronous callbacks",
@@ -345,6 +393,7 @@
     "answer": "Mechanism that handles asynchronous callbacks"
   },
   {
+    "id": 39,
     "question": "What does 'MutationObserver' do?",
     "options": [
       "Observes changes in the DOM tree",
@@ -355,6 +404,7 @@
     "answer": "Observes changes in the DOM tree"
   },
   {
+    "id": 40,
     "question": "What does Object.freeze() do?",
     "options": [
       "Prevents adding, removing or changing object properties",
@@ -365,6 +415,7 @@
     "answer": "Prevents adding, removing or changing object properties"
   },
   {
+    "id": 41,
     "question": "What is the purpose of the 'bind' method?",
     "options": [
       "Creates a new function with 'this' set to the provided value",
@@ -375,6 +426,7 @@
     "answer": "Creates a new function with 'this' set to the provided value"
   },
   {
+    "id": 42,
     "question": "How do you check if a value is NaN?",
     "options": [
       "isNaN(value)",
@@ -385,6 +437,7 @@
     "answer": "isNaN(value)"
   },
   {
+    "id": 43,
     "question": "What is the purpose of the try...catch statement?",
     "options": [
       "To handle exceptions and continue script execution",
@@ -395,6 +448,7 @@
     "answer": "To handle exceptions and continue script execution"
   },
   {
+    "id": 44,
     "question": "What is the correct way to create a custom event?",
     "options": [
       "new CustomEvent('eventName', { detail: data })",
@@ -405,6 +459,7 @@
     "answer": "new CustomEvent('eventName', { detail: data })"
   },
   {
+    "id": 45,
     "question": "What's the difference between null and undefined?",
     "options": [
       "null is an assigned value representing no value, undefined is a variable declared but not assigned",
@@ -415,6 +470,7 @@
     "answer": "null is an assigned value representing no value, undefined is a variable declared but not assigned"
   },
   {
+    "id": 46,
     "question": "What is a JavaScript decorator?",
     "options": [
       "A function that modifies a class or class member",
@@ -425,6 +481,7 @@
     "answer": "A function that modifies a class or class member"
   },
   {
+    "id": 47,
     "question": "What does 'debouncing' mean in JavaScript?",
     "options": [
       "Limiting how often a function can be called in a given time period",
@@ -435,6 +492,7 @@
     "answer": "Limiting how often a function can be called in a given time period"
   },
   {
+    "id": 48,
     "question": "How do you properly check if a JavaScript object is empty?",
     "options": [
       "Object.keys(obj).length === 0",
@@ -445,6 +503,7 @@
     "answer": "Object.keys(obj).length === 0"
   },
   {
+    "id": 49,
     "question": "What is the purpose of the JavaScript 'proxy' object?",
     "options": [
       "To define custom behavior for fundamental operations on objects",
@@ -455,6 +514,7 @@
     "answer": "To define custom behavior for fundamental operations on objects"
   },
   {
+    "id": 50,
     "question": "What's the difference between 'defer' and 'async' script attributes?",
     "options": [
       "'defer' guarantees execution order and waits for HTML parsing, 'async' doesn't",
@@ -465,6 +525,7 @@
     "answer": "'defer' guarantees execution order and waits for HTML parsing, 'async' doesn't"
   },
   {
+    "id": 51,
     "question": "What is the purpose of the 'Optional Chaining' operator (?.) in JavaScript?",
     "options": [
       "Accesses object properties or calls functions without causing errors if references are nullish",
@@ -475,6 +536,7 @@
     "answer": "Accesses object properties or calls functions without causing errors if references are nullish"
   },
   {
+    "id": 52,
     "question": "What is the purpose of the Nullish Coalescing operator (??) in JavaScript?",
     "options": [
       "Returns the right-hand operand when the left-hand operand is null or undefined",
@@ -485,6 +547,7 @@
     "answer": "Returns the right-hand operand when the left-hand operand is null or undefined"
   },
   {
+    "id": 53,
     "question": "What is the difference between 'for...in' and 'for...of' loops?",
     "options": [
       "'for...in' iterates over object properties, 'for...of' iterates over iterable values",
@@ -495,6 +558,7 @@
     "answer": "'for...in' iterates over object properties, 'for...of' iterates over iterable values"
   },
   {
+    "id": 54,
     "question": "What is the purpose of the Array.prototype.flat() method?",
     "options": [
       "Creates a new array with sub-array elements concatenated to a specified depth",
@@ -505,21 +569,25 @@
     "answer": "Creates a new array with sub-array elements concatenated to a specified depth"
   },
   {
+    "id": 55,
     "question": "What will the expression '4' + 2 evaluate to in JavaScript?",
     "options": ["'42'", "6", "42", "NaN"],
     "answer": "'42'"
   },
   {
+    "id": 56,
     "question": "What will the expression 4 + '2' evaluate to in JavaScript?",
     "options": ["'42'", "6", "42", "NaN"],
     "answer": "'42'"
   },
   {
+    "id": 57,
     "question": "What will the expression 4 + +'2' evaluate to in JavaScript?",
     "options": ["6", "'42'", "42", "NaN"],
     "answer": "6"
   },
   {
+    "id": 58,
     "question": "What is the purpose of the 'globalThis' object?",
     "options": [
       "Provides a standard way to access the global this value across environments",
@@ -530,6 +598,7 @@
     "answer": "Provides a standard way to access the global this value across environments"
   },
   {
+    "id": 59,
     "question": "What is the correct way to check if an object implements a specific interface in TypeScript?",
     "options": [
       "Using type predicates or type assertions",
@@ -540,6 +609,7 @@
     "answer": "Using type predicates or type assertions"
   },
   {
+    "id": 60,
     "question": "What is a memory leak in JavaScript?",
     "options": [
       "When memory that is no longer needed is not released",
@@ -550,6 +620,7 @@
     "answer": "When memory that is no longer needed is not released"
   },
   {
+    "id": 61,
     "question": "What is the purpose of a service worker in JavaScript?",
     "options": [
       "Acts as a proxy between web apps and the network to enable offline functionality",
@@ -560,16 +631,19 @@
     "answer": "Acts as a proxy between web apps and the network to enable offline functionality"
   },
   {
+    "id": 62,
     "question": "Which method checks if at least one element in an array passes a test?",
     "options": ["some()", "one()", "any()", "contains()"],
     "answer": "some()"
   },
   {
+    "id": 63,
     "question": "Which method checks if all elements in an array pass a test?",
     "options": ["every()", "all()", "each()", "test()"],
     "answer": "every()"
   },
   {
+    "id": 64,
     "question": "What is the purpose of the Object.entries() method?",
     "options": [
       "Returns an array of a given object's own enumerable property [key, value] pairs",
@@ -580,6 +654,7 @@
     "answer": "Returns an array of a given object's own enumerable property [key, value] pairs"
   },
   {
+    "id": 65,
     "question": "What is the JavaScript Temporal API used for?",
     "options": [
       "A modern, more capable date and time API",
@@ -590,6 +665,7 @@
     "answer": "A modern, more capable date and time API"
   },
   {
+    "id": 66,
     "question": "What does the Array.prototype.flatMap() method do?",
     "options": [
       "Maps each element using a mapping function, then flattens the result into a new array",
@@ -600,6 +676,7 @@
     "answer": "Maps each element using a mapping function, then flattens the result into a new array"
   },
   {
+    "id": 67,
     "question": "What are Web Components?",
     "options": [
       "A set of technologies for creating reusable custom elements",
@@ -610,6 +687,7 @@
     "answer": "A set of technologies for creating reusable custom elements"
   },
   {
+    "id": 68,
     "question": "What is the purpose of the requestAnimationFrame() method?",
     "options": [
       "To execute code before the browser performs the next repaint",
@@ -620,6 +698,7 @@
     "answer": "To execute code before the browser performs the next repaint"
   },
   {
+    "id": 69,
     "question": "What's the purpose of the performance.now() method?",
     "options": [
       "Returns a high resolution timestamp in milliseconds",
@@ -630,6 +709,7 @@
     "answer": "Returns a high resolution timestamp in milliseconds"
   },
   {
+    "id": 70,
     "question": "What is JavaScript memoization?",
     "options": [
       "A technique that stores computed results to avoid redundant calculations",
@@ -640,6 +720,7 @@
     "answer": "A technique that stores computed results to avoid redundant calculations"
   },
   {
+    "id": 71,
     "question": "What is the purpose of using WebSockets?",
     "options": [
       "To provide full-duplex communication channels over a single TCP connection",
@@ -650,6 +731,7 @@
     "answer": "To provide full-duplex communication channels over a single TCP connection"
   },
   {
+    "id": 72,
     "question": "What is tree shaking in JavaScript?",
     "options": [
       "A technique to eliminate unused code in production bundles",
@@ -660,6 +742,7 @@
     "answer": "A technique to eliminate unused code in production bundles"
   },
   {
+    "id": 73,
     "question": "What is the purpose of the IntersectionObserver API?",
     "options": [
       "To detect when an element enters or exits the viewport",
@@ -670,6 +753,7 @@
     "answer": "To detect when an element enters or exits the viewport"
   },
   {
+    "id": 74,
     "question": "What is the main advantage of using a Map instead of an Object in JavaScript?",
     "options": [
       "Maps allow any type as keys and maintain insertion order",
@@ -680,6 +764,7 @@
     "answer": "Maps allow any type as keys and maintain insertion order"
   },
   {
+    "id": 75,
     "question": "What is the JavaScript module system designed for?",
     "options": [
       "To organize code into reusable, maintainable pieces with clear dependencies",
@@ -690,6 +775,7 @@
     "answer": "To organize code into reusable, maintainable pieces with clear dependencies"
   },
   {
+    "id": 76,
     "question": "What is the purpose of a Web Worker?",
     "options": [
       "To run JavaScript in a background thread separate from the main execution thread",
@@ -700,6 +786,7 @@
     "answer": "To run JavaScript in a background thread separate from the main execution thread"
   },
   {
+    "id": 77,
     "question": "What is event capturing in the DOM event flow?",
     "options": [
       "Events are first captured by the outermost element and propagated to the inner elements",
@@ -710,6 +797,7 @@
     "answer": "Events are first captured by the outermost element and propagated to the inner elements"
   },
   {
+    "id": 78,
     "question": "What is the primary purpose of Arrow Functions in JavaScript?",
     "options": [
       "To provide shorter syntax and lexically bind 'this'",
@@ -720,6 +808,7 @@
     "answer": "To provide shorter syntax and lexically bind 'this'"
   },
   {
+    "id": 79,
     "question": "What is the purpose of the Array.prototype.find() method?",
     "options": [
       "Returns the first element that satisfies a testing function",
@@ -730,6 +819,7 @@
     "answer": "Returns the first element that satisfies a testing function"
   },
   {
+    "id": 80,
     "question": "What is the correct way to import a default export from a module?",
     "options": [
       "import defaultExport from './module';",
@@ -740,6 +830,7 @@
     "answer": "import defaultExport from './module';"
   },
   {
+    "id": 81,
     "question": "What does the Object.seal() method do?",
     "options": [
       "Prevents adding or removing properties but allows modifying existing properties",
@@ -750,6 +841,7 @@
     "answer": "Prevents adding or removing properties but allows modifying existing properties"
   },
   {
+    "id": 82,
     "question": "What is a pure component in React?",
     "options": [
       "A component that only re-renders when its props or state change",
@@ -760,6 +852,7 @@
     "answer": "A component that only re-renders when its props or state change"
   },
   {
+    "id": 83,
     "question": "What is the purpose of the 'data-*' attributes in HTML?",
     "options": [
       "To store custom data private to the page or application",
@@ -770,6 +863,7 @@
     "answer": "To store custom data private to the page or application"
   },
   {
+    "id": 84,
     "question": "What is lazy loading in JavaScript?",
     "options": [
       "Loading resources only when needed, not in advance",
@@ -780,6 +874,7 @@
     "answer": "Loading resources only when needed, not in advance"
   },
   {
+    "id": 85,
     "question": "What is the purpose of the 'throttle' function in JavaScript?",
     "options": [
       "Limits how many times a function can be called in a given time period",
@@ -790,6 +885,7 @@
     "answer": "Limits how many times a function can be called in a given time period"
   },
   {
+    "id": 86,
     "question": "What is the difference between throttling and debouncing?",
     "options": [
       "Throttling limits execution rate, debouncing postpones execution until after a quiet period",
@@ -800,6 +896,7 @@
     "answer": "Throttling limits execution rate, debouncing postpones execution until after a quiet period"
   },
   {
+    "id": 87,
     "question": "What is a JavaScript polyfill?",
     "options": [
       "Code that provides modern functionality on older browsers that don't natively support it",
@@ -810,6 +907,7 @@
     "answer": "Code that provides modern functionality on older browsers that don't natively support it"
   },
   {
+    "id": 88,
     "question": "What is the purpose of the 'typeof' operator?",
     "options": [
       "Returns a string indicating the type of the operand",
@@ -820,6 +918,7 @@
     "answer": "Returns a string indicating the type of the operand"
   },
   {
+    "id": 89,
     "question": "What is the purpose of the 'instanceof' operator?",
     "options": [
       "Tests if an object has a prototype property of a constructor in its prototype chain",
@@ -830,6 +929,7 @@
     "answer": "Tests if an object has a prototype property of a constructor in its prototype chain"
   },
   {
+    "id": 90,
     "question": "What is the purpose of the 'sessionStorage' object?",
     "options": [
       "Stores data for only one session until the browser tab is closed",
@@ -840,6 +940,7 @@
     "answer": "Stores data for only one session until the browser tab is closed"
   },
   {
+    "id": 91,
     "question": "What is the JavaScript call stack?",
     "options": [
       "A mechanism for tracking function calls in a program",
@@ -850,6 +951,7 @@
     "answer": "A mechanism for tracking function calls in a program"
   },
   {
+    "id": 92,
     "question": "What is JavaScript currying?",
     "options": [
       "A technique of transforming functions that take multiple arguments into a sequence of functions",
@@ -860,6 +962,7 @@
     "answer": "A technique of transforming functions that take multiple arguments into a sequence of functions"
   },
   {
+    "id": 93,
     "question": "What are JavaScript getters and setters?",
     "options": [
       "Special methods that provide access to object properties",
@@ -870,6 +973,7 @@
     "answer": "Special methods that provide access to object properties"
   },
   {
+    "id": 94,
     "question": "What is the meaning of 'IIFE' in JavaScript?",
     "options": [
       "Immediately Invoked Function Expression",
@@ -880,6 +984,7 @@
     "answer": "Immediately Invoked Function Expression"
   },
   {
+    "id": 95,
     "question": "What is string interpolation in JavaScript?",
     "options": [
       "Embedding expressions within template literals using ${expression}",
@@ -890,6 +995,7 @@
     "answer": "Embedding expressions within template literals using ${expression}"
   },
   {
+    "id": 96,
     "question": "What is the purpose of the 'new' keyword in JavaScript?",
     "options": [
       "Creates an instance of a constructor function or class",
@@ -900,6 +1006,7 @@
     "answer": "Creates an instance of a constructor function or class"
   },
   {
+    "id": 97,
     "question": "What is the purpose of the 'super' keyword in a JavaScript class?",
     "options": [
       "Calls methods of the parent class",
@@ -910,6 +1017,7 @@
     "answer": "Calls methods of the parent class"
   },
   {
+    "id": 98,
     "question": "What is the fetch API's primary advantage over XMLHttpRequest?",
     "options": [
       "Promise-based interface and cleaner syntax",
@@ -920,6 +1028,7 @@
     "answer": "Promise-based interface and cleaner syntax"
   },
   {
+    "id": 99,
     "question": "What is recursion in JavaScript?",
     "options": [
       "When a function calls itself directly or indirectly",
@@ -930,6 +1039,7 @@
     "answer": "When a function calls itself directly or indirectly"
   },
   {
+    "id": 100,
     "question": "What is 'this' value in a regular JavaScript function called with 'new'?",
     "options": [
       "The newly created object",

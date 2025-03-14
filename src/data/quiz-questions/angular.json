@@ -1,0 +1,1082 @@
+[
+  {
+    "id": 1,
+    "question": "What is Angular?",
+    "options": [
+      "A TypeScript-based front-end framework for building web applications",
+      "A CSS framework",
+      "A backend programming language",
+      "A testing library"
+    ],
+    "answer": "A TypeScript-based front-end framework for building web applications"
+  },
+  {
+    "id": 2,
+    "question": "Which language is Angular primarily written in?",
+    "options": ["TypeScript", "JavaScript", "Python", "Java"],
+    "answer": "TypeScript"
+  },
+  {
+    "id": 3,
+    "question": "What is a component in Angular?",
+    "options": [
+      "A building block that controls a portion of the UI and encapsulates logic, template, and styles",
+      "A service for HTTP calls",
+      "A module for routing",
+      "A directive for styling elements"
+    ],
+    "answer": "A building block that controls a portion of the UI and encapsulates logic, template, and styles"
+  },
+  {
+    "id": 4,
+    "question": "What is the purpose of an Angular module (NgModule)?",
+    "options": [
+      "To organize related components, directives, pipes, and services into cohesive blocks",
+      "To handle HTTP requests",
+      "To style components globally",
+      "To create animations"
+    ],
+    "answer": "To organize related components, directives, pipes, and services into cohesive blocks"
+  },
+  {
+    "id": 5,
+    "question": "How do you bootstrap an Angular application?",
+    "options": [
+      "Using the bootstrapModule() method in main.ts",
+      "By directly invoking a component's constructor",
+      "By calling new AngularApp()",
+      "By using the ngServe command"
+    ],
+    "answer": "Using the bootstrapModule() method in main.ts"
+  },
+  {
+    "id": 6,
+    "question": "What is Angular CLI used for?",
+    "options": [
+      "To generate, build, test, and maintain Angular applications",
+      "To manage state in Angular applications",
+      "To style Angular components",
+      "To perform server-side rendering only"
+    ],
+    "answer": "To generate, build, test, and maintain Angular applications"
+  },
+  {
+    "id": 7,
+    "question": "Which decorator is used to define an Angular component?",
+    "options": ["@Component", "@Directive", "@Injectable", "@NgModule"],
+    "answer": "@Component"
+  },
+  {
+    "id": 8,
+    "question": "What file contains the main application module in a typical Angular project?",
+    "options": ["app.module.ts", "main.ts", "angular.json", "app.component.ts"],
+    "answer": "app.module.ts"
+  },
+  {
+    "id": 9,
+    "question": "How do you bind data from a component to its template in Angular?",
+    "options": [
+      "Using interpolation ({{ }})",
+      "Using v-bind",
+      "Using JSX",
+      "Using mustache tags (<%%>)"
+    ],
+    "answer": "Using interpolation ({{ }})"
+  },
+  {
+    "id": 10,
+    "question": "What is property binding in Angular?",
+    "options": [
+      "A way to bind data from the component to an element's property",
+      "A method to style elements dynamically",
+      "A technique to bind events",
+      "A form of two-way data binding"
+    ],
+    "answer": "A way to bind data from the component to an element's property"
+  },
+  {
+    "id": 11,
+    "question": "How do you handle user events (like clicks) in Angular templates?",
+    "options": [
+      "Using event binding with parentheses, e.g., (click)=\"doSomething()\"",
+      "Using square brackets, e.g., [click]=\"doSomething()\"",
+      "Using double curly braces, e.g., {{click: doSomething()}}",
+      "Angular does not support event binding"
+    ],
+    "answer": "Using event binding with parentheses, e.g., (click)=\"doSomething()\""
+  },
+  {
+    "id": 12,
+    "question": "What is two-way data binding in Angular and which directive is used for it?",
+    "options": [
+      "It synchronizes data between the component and the view using [(ngModel)]",
+      "It binds events to properties using (ngModel)",
+      "It only works with services",
+      "It is not supported in Angular"
+    ],
+    "answer": "It synchronizes data between the component and the view using [(ngModel)]"
+  },
+  {
+    "id": 13,
+    "question": "What is dependency injection (DI) in Angular?",
+    "options": [
+      "A design pattern where a class receives its dependencies from external sources rather than creating them",
+      "A way to bind data from parent to child components",
+      "A method for creating components dynamically",
+      "A strategy for routing between modules"
+    ],
+    "answer": "A design pattern where a class receives its dependencies from external sources rather than creating them"
+  },
+  {
+    "id": 14,
+    "question": "Which decorator is used to mark a class as available for dependency injection?",
+    "options": ["@Injectable", "@Component", "@Directive", "@NgModule"],
+    "answer": "@Injectable"
+  },
+  {
+    "id": 15,
+    "question": "What is Angular’s Change Detection mechanism?",
+    "options": [
+      "A process that updates the view when component data changes",
+      "A tool for testing performance",
+      "A method for routing optimization",
+      "A way to manage animations"
+    ],
+    "answer": "A process that updates the view when component data changes"
+  },
+  {
+    "id": 16,
+    "question": "What is the purpose of the async pipe in Angular?",
+    "options": [
+      "To subscribe to an Observable or Promise directly in the template and display its result",
+      "To execute asynchronous functions",
+      "To delay component initialization",
+      "To optimize routing performance"
+    ],
+    "answer": "To subscribe to an Observable or Promise directly in the template and display its result"
+  },
+  {
+    "id": 17,
+    "question": "How do you define routes in an Angular application?",
+    "options": [
+      "By configuring an array of Route objects in the RouterModule",
+      "By using the Angular CLI exclusively",
+      "By adding route elements in index.html",
+      "By using service workers"
+    ],
+    "answer": "By configuring an array of Route objects in the RouterModule"
+  },
+  {
+    "id": 18,
+    "question": "What is Angular Universal?",
+    "options": [
+      "A tool for server-side rendering of Angular applications",
+      "A state management library",
+      "A testing framework for Angular",
+      "A CSS framework for Angular"
+    ],
+    "answer": "A tool for server-side rendering of Angular applications"
+  },
+  {
+    "id": 19,
+    "question": "What is a pipe in Angular?",
+    "options": [
+      "A way to transform data in templates",
+      "A method to inject services",
+      "A directive for event binding",
+      "A strategy for routing"
+    ],
+    "answer": "A way to transform data in templates"
+  },
+  {
+    "id": 20,
+    "question": "How do you create a custom pipe in Angular?",
+    "options": [
+      "By implementing the PipeTransform interface and decorating the class with @Pipe",
+      "By using the async pipe",
+      "By writing a custom directive",
+      "Custom pipes are not supported"
+    ],
+    "answer": "By implementing the PipeTransform interface and decorating the class with @Pipe"
+  },
+  {
+    "id": 21,
+    "question": "What is Angular Material?",
+    "options": [
+      "A UI component library based on Google’s Material Design for Angular applications",
+      "A backend framework",
+      "A testing tool for Angular",
+      "A state management library"
+    ],
+    "answer": "A UI component library based on Google’s Material Design for Angular applications"
+  },
+  {
+    "id": 22,
+    "question": "How do you handle form validation in Angular?",
+    "options": [
+      "Using Reactive Forms or Template-driven Forms along with built-in validators",
+      "By writing custom JavaScript validation only",
+      "By using jQuery validation plugins",
+      "Angular does not support form validation"
+    ],
+    "answer": "Using Reactive Forms or Template-driven Forms along with built-in validators"
+  },
+  {
+    "id": 23,
+    "question": "What is a Reactive Form in Angular?",
+    "options": [
+      "A form approach that uses a model-driven technique with explicit form control objects",
+      "A form that uses ngModel for binding",
+      "A form that only handles synchronous data",
+      "A form built with Angular Material exclusively"
+    ],
+    "answer": "A form approach that uses a model-driven technique with explicit form control objects"
+  },
+  {
+    "id": 24,
+    "question": "What is the purpose of the RouterOutlet directive in Angular?",
+    "options": [
+      "To act as a placeholder that Angular dynamically fills based on the current route",
+      "To style routed components",
+      "To define global components",
+      "To manage HTTP requests"
+    ],
+    "answer": "To act as a placeholder that Angular dynamically fills based on the current route"
+  },
+  {
+    "id": 25,
+    "question": "What is lazy loading in Angular?",
+    "options": [
+      "A technique to load feature modules only when needed, reducing initial bundle size",
+      "A method to delay component initialization",
+      "A strategy for caching API data",
+      "A tool for handling animations"
+    ],
+    "answer": "A technique to load feature modules only when needed, reducing initial bundle size"
+  },
+  {
+    "id": 26,
+    "question": "How do you implement lazy loading for modules in Angular?",
+    "options": [
+      "By using the loadChildren property in the route configuration",
+      "By using the async pipe in templates",
+      "By deferring HTTP requests",
+      "Lazy loading is not supported in Angular"
+    ],
+    "answer": "By using the loadChildren property in the route configuration"
+  },
+  {
+    "id": 27,
+    "question": "What is the role of interceptors in Angular?",
+    "options": [
+      "To intercept and handle HTTP requests and responses globally",
+      "To manage component lifecycle hooks",
+      "To provide dependency injection",
+      "To transform component templates"
+    ],
+    "answer": "To intercept and handle HTTP requests and responses globally"
+  },
+  {
+    "id": 28,
+    "question": "What is an Angular service?",
+    "options": [
+      "A class that encapsulates shared logic and data that can be injected into components",
+      "A component that renders UI",
+      "A directive for handling events",
+      "A module that defines routes"
+    ],
+    "answer": "A class that encapsulates shared logic and data that can be injected into components"
+  },
+  {
+    "id": 29,
+    "question": "How do you register a service in Angular?",
+    "options": [
+      "By adding it to the providers array in a module or using providedIn in @Injectable",
+      "By declaring it in the component’s metadata",
+      "By importing it in main.ts",
+      "By using the bootstrap method"
+    ],
+    "answer": "By adding it to the providers array in a module or using providedIn in @Injectable"
+  },
+  {
+    "id": 30,
+    "question": "What is the purpose of Angular’s Renderer2 service?",
+    "options": [
+      "To safely manipulate the DOM in a platform-independent way",
+      "To handle HTTP requests",
+      "To define component styles",
+      "To perform dependency injection"
+    ],
+    "answer": "To safely manipulate the DOM in a platform-independent way"
+  },
+  {
+    "id": 31,
+    "question": "What is the purpose of ChangeDetectionStrategy in Angular?",
+    "options": [
+      "To control how and when Angular checks for changes in components",
+      "To manage HTTP interceptors",
+      "To style components dynamically",
+      "To optimize routing performance"
+    ],
+    "answer": "To control how and when Angular checks for changes in components"
+  },
+  {
+    "id": 32,
+    "question": "How do you improve performance by controlling change detection in Angular?",
+    "options": [
+      "By setting ChangeDetectionStrategy.OnPush for components",
+      "By using ngModel exclusively",
+      "By removing dependency injection",
+      "By disabling HTTP requests"
+    ],
+    "answer": "By setting ChangeDetectionStrategy.OnPush for components"
+  },
+  {
+    "id": 33,
+    "question": "What is Angular’s Ivy?",
+    "options": [
+      "The latest rendering engine that improves bundle size and performance",
+      "A state management library",
+      "A tool for unit testing",
+      "A CSS preprocessor"
+    ],
+    "answer": "The latest rendering engine that improves bundle size and performance"
+  },
+  {
+    "id": 34,
+    "question": "How do you perform unit testing in Angular?",
+    "options": [
+      "Using Jasmine and Karma (or Jest) to write and run tests for components and services",
+      "By manually testing in the browser",
+      "By using Angular CLI’s build command exclusively",
+      "Unit testing is not supported in Angular"
+    ],
+    "answer": "Using Jasmine and Karma (or Jest) to write and run tests for components and services"
+  },
+  {
+    "id": 35,
+    "question": "What is end-to-end (E2E) testing in Angular typically performed with?",
+    "options": [
+      "Protractor or Cypress",
+      "Jasmine only",
+      "Karma exclusively",
+      "Mocha and Chai only"
+    ],
+    "answer": "Protractor or Cypress"
+  },
+  {
+    "id": 36,
+    "question": "What is Angular Universal used for?",
+    "options": [
+      "Server-side rendering of Angular applications for improved SEO and performance",
+      "Client-side state management",
+      "Creating mobile applications exclusively",
+      "Handling asynchronous data only"
+    ],
+    "answer": "Server-side rendering of Angular applications for improved SEO and performance"
+  },
+  {
+    "id": 37,
+    "question": "What is the purpose of the @ViewChild decorator in Angular?",
+    "options": [
+      "To get a reference to a child component, directive, or DOM element from the template",
+      "To inject a service",
+      "To define an input property",
+      "To configure routing"
+    ],
+    "answer": "To get a reference to a child component, directive, or DOM element from the template"
+  },
+  {
+    "id": 38,
+    "question": "How do you create a custom directive in Angular?",
+    "options": [
+      "By decorating a class with @Directive and implementing the desired behavior",
+      "By writing a custom pipe",
+      "By extending a component",
+      "Custom directives are not supported"
+    ],
+    "answer": "By decorating a class with @Directive and implementing the desired behavior"
+  },
+  {
+    "id": 39,
+    "question": "What is the purpose of the @Input decorator in Angular?",
+    "options": [
+      "To pass data from a parent component to a child component",
+      "To output events to a parent component",
+      "To declare local variables",
+      "To perform dependency injection"
+    ],
+    "answer": "To pass data from a parent component to a child component"
+  },
+  {
+    "id": 40,
+    "question": "What is the purpose of the @Output decorator in Angular?",
+    "options": [
+      "To emit events from a child component to its parent",
+      "To define an input property",
+      "To set default values for properties",
+      "To manage component lifecycle"
+    ],
+    "answer": "To emit events from a child component to its parent"
+  },
+  {
+    "id": 41,
+    "question": "How do you perform HTTP requests in Angular?",
+    "options": [
+      "By using the HttpClient service",
+      "By using jQuery AJAX",
+      "By directly accessing XMLHttpRequest",
+      "Angular does not support HTTP requests"
+    ],
+    "answer": "By using the HttpClient service"
+  },
+  {
+    "id": 42,
+    "question": "How do you handle HTTP errors in Angular?",
+    "options": [
+      "By using RxJS operators like catchError in HttpClient requests",
+      "By using try/catch blocks in components",
+      "By ignoring error responses",
+      "By using the async pipe exclusively"
+    ],
+    "answer": "By using RxJS operators like catchError in HttpClient requests"
+  },
+  {
+    "id": 43,
+    "question": "What is RxJS and why is it important in Angular?",
+    "options": [
+      "A library for reactive programming using Observables, essential for handling asynchronous operations in Angular",
+      "A state management tool",
+      "A CSS preprocessor",
+      "A routing library"
+    ],
+    "answer": "A library for reactive programming using Observables, essential for handling asynchronous operations in Angular"
+  },
+  {
+    "id": 44,
+    "question": "What is the purpose of the async pipe in Angular templates?",
+    "options": [
+      "To subscribe to an Observable or Promise and render its emitted value",
+      "To perform asynchronous computations",
+      "To create HTTP requests",
+      "To delay component initialization"
+    ],
+    "answer": "To subscribe to an Observable or Promise and render its emitted value"
+  },
+  {
+    "id": 45,
+    "question": "How do you define a route guard in Angular?",
+    "options": [
+      "By implementing interfaces like CanActivate in a service and using it in the route configuration",
+      "By adding a directive to the template",
+      "By using the async pipe",
+      "By modifying the router outlet"
+    ],
+    "answer": "By implementing interfaces like CanActivate in a service and using it in the route configuration"
+  },
+  {
+    "id": 46,
+    "question": "What is Ahead-of-Time (AOT) compilation in Angular?",
+    "options": [
+      "The process of compiling Angular templates during the build phase for faster rendering in production",
+      "A method of runtime compilation",
+      "A way to bundle CSS files",
+      "A testing technique"
+    ],
+    "answer": "The process of compiling Angular templates during the build phase for faster rendering in production"
+  },
+  {
+    "id": 47,
+    "question": "What is the purpose of Angular’s zone.js?",
+    "options": [
+      "To manage and detect asynchronous operations, triggering change detection",
+      "To provide routing functionality",
+      "To compile TypeScript code",
+      "To handle dependency injection"
+    ],
+    "answer": "To manage and detect asynchronous operations, triggering change detection"
+  },
+  {
+    "id": 48,
+    "question": "How do you update data-bound properties in Angular?",
+    "options": [
+      "By updating component properties, which automatically refresh the view through change detection",
+      "By directly modifying the DOM",
+      "By using jQuery",
+      "By reloading the entire application"
+    ],
+    "answer": "By updating component properties, which automatically refresh the view through change detection"
+  },
+  {
+    "id": 49,
+    "question": "What is a structural directive in Angular?",
+    "options": [
+      "A directive that changes the structure of the DOM (e.g., *ngIf, *ngFor)",
+      "A directive that applies CSS classes",
+      "A directive for binding events",
+      "A service for HTTP calls"
+    ],
+    "answer": "A directive that changes the structure of the DOM (e.g., *ngIf, *ngFor)"
+  },
+  {
+    "id": 50,
+    "question": "What is the role of <code>*ngFor</code> in Angular?",
+    "options": [
+      "To iterate over an array and render a template for each item",
+      "To conditionally display content",
+      "To bind a property value",
+      "To handle user events"
+    ],
+    "answer": "To iterate over an array and render a template for each item"
+  },
+  {
+    "id": 51,
+    "question": "What is Angular’s Ivy engine?",
+    "options": [
+      "A rendering engine that improves performance, reduces bundle sizes, and enhances type checking",
+      "A state management solution",
+      "A routing library",
+      "A testing framework"
+    ],
+    "answer": "A rendering engine that improves performance, reduces bundle sizes, and enhances type checking"
+  },
+  {
+    "id": 52,
+    "question": "How do you apply dynamic CSS classes in Angular?",
+    "options": [
+      "Using [ngClass] to bind an object, array, or expression to CSS classes",
+      "By using inline styles exclusively",
+      "By directly editing the DOM",
+      "Angular does not support dynamic classes"
+    ],
+    "answer": "Using [ngClass] to bind an object, array, or expression to CSS classes"
+  },
+  {
+    "id": 53,
+    "question": "How do you apply dynamic inline styles in Angular?",
+    "options": [
+      "Using [ngStyle] to bind an object of style properties",
+      "By using [ngClass] exclusively",
+      "By updating the style attribute with jQuery",
+      "Angular does not support dynamic inline styles"
+    ],
+    "answer": "Using [ngStyle] to bind an object of style properties"
+  },
+  {
+    "id": 54,
+    "question": "What is the purpose of the <code>async</code> keyword in Angular templates?",
+    "options": [
+      "It is used with the async pipe to handle Observables and Promises",
+      "It marks a component as asynchronous",
+      "It delays the execution of a function",
+      "Angular does not use the async keyword in templates"
+    ],
+    "answer": "It is used with the async pipe to handle Observables and Promises"
+  },
+  {
+    "id": 55,
+    "question": "How do you handle error messages in Angular forms?",
+    "options": [
+      "By using built-in validators and conditionally displaying error messages in the template",
+      "By using try/catch in the template",
+      "By calling alert() in the component",
+      "Angular forms do not support error handling"
+    ],
+    "answer": "By using built-in validators and conditionally displaying error messages in the template"
+  },
+  {
+    "id": 56,
+    "question": "What is the purpose of Angular’s HttpInterceptor?",
+    "options": [
+      "To intercept and modify HTTP requests and responses globally",
+      "To provide caching for HTTP requests",
+      "To transform component data",
+      "To manage routing"
+    ],
+    "answer": "To intercept and modify HTTP requests and responses globally"
+  },
+  {
+    "id": 57,
+    "question": "What is the role of environment.ts files in Angular?",
+    "options": [
+      "To store configuration settings that change based on the environment (development, production, etc.)",
+      "To manage global state",
+      "To compile TypeScript code",
+      "To handle dependency injection"
+    ],
+    "answer": "To store configuration settings that change based on the environment (development, production, etc.)"
+  },
+  {
+    "id": 58,
+    "question": "How do you perform end-to-end (E2E) testing in Angular?",
+    "options": [
+      "Using Protractor or Cypress to simulate user interactions and verify application behavior",
+      "By using Jasmine and Karma exclusively",
+      "By manually testing in the browser",
+      "E2E testing is not supported in Angular"
+    ],
+    "answer": "Using Protractor or Cypress to simulate user interactions and verify application behavior"
+  },
+  {
+    "id": 59,
+    "question": "What is a resolver in Angular routing?",
+    "options": [
+      "A service that pre-fetches data before navigating to a route",
+      "A guard that prevents navigation",
+      "A directive for dynamic styling",
+      "A module for managing global state"
+    ],
+    "answer": "A service that pre-fetches data before navigating to a route"
+  },
+  {
+    "id": 60,
+    "question": "How do you share data between sibling components in Angular?",
+    "options": [
+      "By using a shared service with RxJS Subjects or BehaviorSubjects",
+      "By using @Input and @Output exclusively",
+      "By directly modifying the DOM",
+      "By using Angular Router parameters only"
+    ],
+    "answer": "By using a shared service with RxJS Subjects or BehaviorSubjects"
+  },
+  {
+    "id": 61,
+    "question": "What is Angular’s dependency injection tree?",
+    "options": [
+      "A hierarchical injector system that provides dependencies at different levels (module, component, etc.)",
+      "A global variable registry",
+      "A method for compiling templates",
+      "A router configuration technique"
+    ],
+    "answer": "A hierarchical injector system that provides dependencies at different levels (module, component, etc.)"
+  },
+  {
+    "id": 62,
+    "question": "What is the role of the @HostListener decorator in Angular?",
+    "options": [
+      "To listen to events on the host element of a component or directive",
+      "To inject dependencies into a component",
+      "To define component inputs",
+      "To manage routing"
+    ],
+    "answer": "To listen to events on the host element of a component or directive"
+  },
+  {
+    "id": 63,
+    "question": "What is the purpose of the @HostBinding decorator in Angular?",
+    "options": [
+      "To bind a property of the host element to a property in the directive or component",
+      "To create an event emitter",
+      "To define a new directive",
+      "To handle HTTP requests"
+    ],
+    "answer": "To bind a property of the host element to a property in the directive or component"
+  },
+  {
+    "id": 64,
+    "question": "How do you handle animations in Angular?",
+    "options": [
+      "By using the Angular animations module and defining trigger, state, transition, and style",
+      "By using CSS animations exclusively",
+      "By using jQuery animations",
+      "Angular does not support animations"
+    ],
+    "answer": "By using the Angular animations module and defining trigger, state, transition, and style"
+  },
+  {
+    "id": 65,
+    "question": "What is the purpose of the BrowserAnimationsModule in Angular?",
+    "options": [
+      "To enable animation capabilities throughout the application",
+      "To handle HTTP requests",
+      "To provide routing services",
+      "To manage component state"
+    ],
+    "answer": "To enable animation capabilities throughout the application"
+  },
+  {
+    "id": 66,
+    "question": "What is the role of AOT (Ahead-of-Time) compilation in Angular?",
+    "options": [
+      "It compiles the Angular application during the build process for faster rendering and smaller bundle sizes",
+      "It delays compilation until runtime",
+      "It is used exclusively for testing",
+      "It optimizes CSS styles only"
+    ],
+    "answer": "It compiles the Angular application during the build process for faster rendering and smaller bundle sizes"
+  },
+  {
+    "id": 67,
+    "question": "What is the purpose of the ngOnInit lifecycle hook in Angular components?",
+    "options": [
+      "To perform initialization logic after the component’s data-bound properties have been set",
+      "To handle dependency injection",
+      "To define component styles",
+      "To update routing configuration"
+    ],
+    "answer": "To perform initialization logic after the component’s data-bound properties have been set"
+  },
+  {
+    "id": 68,
+    "question": "How do you destroy or clean up resources in an Angular component?",
+    "options": [
+      "By implementing the ngOnDestroy lifecycle hook",
+      "By using the async pipe exclusively",
+      "By calling the destroy() method on the component",
+      "Angular handles cleanup automatically without hooks"
+    ],
+    "answer": "By implementing the ngOnDestroy lifecycle hook"
+  },
+  {
+    "id": 69,
+    "question": "What is a structural directive in Angular?",
+    "options": [
+      "A directive that changes the structure of the DOM (e.g., *ngIf, *ngFor)",
+      "A directive that applies styles dynamically",
+      "A directive for binding events",
+      "A directive for dependency injection"
+    ],
+    "answer": "A directive that changes the structure of the DOM (e.g., *ngIf, *ngFor)"
+  },
+  {
+    "id": 70,
+    "question": "How do you pass data from a parent to a child component in Angular?",
+    "options": [
+      "Using property binding with the @Input decorator",
+      "Using event binding with the @Output decorator",
+      "By directly accessing the child component instance",
+      "By using Angular Router parameters"
+    ],
+    "answer": "Using property binding with the @Input decorator"
+  },
+  {
+    "id": 71,
+    "question": "What is the purpose of the @Output decorator in Angular?",
+    "options": [
+      "To allow a child component to emit events to its parent",
+      "To pass data from the parent to the child",
+      "To inject a service into a component",
+      "To define a component’s internal state"
+    ],
+    "answer": "To allow a child component to emit events to its parent"
+  },
+  {
+    "id": 72,
+    "question": "How do you create a custom event in Angular?",
+    "options": [
+      "By using an EventEmitter and the @Output decorator",
+      "By using the async pipe",
+      "By defining a custom pipe",
+      "By modifying the DOM directly"
+    ],
+    "answer": "By using an EventEmitter and the @Output decorator"
+  },
+  {
+    "id": 73,
+    "question": "What is the purpose of Angular’s FormsModule?",
+    "options": [
+      "To enable template-driven forms and two-way data binding with ngModel",
+      "To handle HTTP requests",
+      "To manage component animations",
+      "To provide routing capabilities"
+    ],
+    "answer": "To enable template-driven forms and two-way data binding with ngModel"
+  },
+  {
+    "id": 74,
+    "question": "What is the ReactiveFormsModule in Angular used for?",
+    "options": [
+      "To build reactive, model-driven forms with explicit form control objects",
+      "To handle dependency injection",
+      "To perform HTTP requests",
+      "To create custom directives"
+    ],
+    "answer": "To build reactive, model-driven forms with explicit form control objects"
+  },
+  {
+    "id": 75,
+    "question": "How do you add animations to route transitions in Angular?",
+    "options": [
+      "By defining animation triggers in the component and using the Angular animations module",
+      "By using [ngClass] exclusively",
+      "By updating the router configuration",
+      "Angular does not support route transition animations"
+    ],
+    "answer": "By defining animation triggers in the component and using the Angular animations module"
+  },
+  {
+    "id": 76,
+    "question": "What is the purpose of the Angular Router’s preload strategy?",
+    "options": [
+      "To preload lazy-loaded modules after the application has been bootstrapped",
+      "To delay module loading until a user action occurs",
+      "To cache HTTP responses",
+      "To bundle CSS files"
+    ],
+    "answer": "To preload lazy-loaded modules after the application has been bootstrapped"
+  },
+  {
+    "id": 77,
+    "question": "How can you optimize bundle size in Angular?",
+    "options": [
+      "By using lazy loading, AOT compilation, and tree shaking",
+      "By disabling the Angular CLI",
+      "By using inline styles exclusively",
+      "By avoiding the use of services"
+    ],
+    "answer": "By using lazy loading, AOT compilation, and tree shaking"
+  },
+  {
+    "id": 78,
+    "question": "What is Angular’s zone.js used for?",
+    "options": [
+      "To detect and trigger change detection for asynchronous operations",
+      "To handle routing",
+      "To provide dependency injection",
+      "To compile TypeScript code"
+    ],
+    "answer": "To detect and trigger change detection for asynchronous operations"
+  },
+  {
+    "id": 79,
+    "question": "What is the role of providers in an Angular module?",
+    "options": [
+      "To configure the injector with services and dependencies",
+      "To define components",
+      "To set up routing",
+      "To style the application"
+    ],
+    "answer": "To configure the injector with services and dependencies"
+  },
+  {
+    "id": 80,
+    "question": "How do you share data between non-related components in Angular?",
+    "options": [
+      "By using a shared service with an RxJS Subject or BehaviorSubject",
+      "By passing data through route parameters only",
+      "By using the @Input decorator exclusively",
+      "By directly accessing the DOM"
+    ],
+    "answer": "By using a shared service with an RxJS Subject or BehaviorSubject"
+  },
+  {
+    "id": 81,
+    "question": "What is the purpose of Angular’s async/await support in services?",
+    "options": [
+      "To write asynchronous code in a more readable, synchronous-like manner",
+      "To automatically handle change detection",
+      "To enable dependency injection",
+      "To compile templates faster"
+    ],
+    "answer": "To write asynchronous code in a more readable, synchronous-like manner"
+  },
+  {
+    "id": 82,
+    "question": "How do you implement route guards in Angular?",
+    "options": [
+      "By creating services that implement interfaces like CanActivate and applying them to routes",
+      "By using the async pipe in the template",
+      "By modifying the component’s lifecycle hooks",
+      "By using the ngIf directive on RouterOutlet"
+    ],
+    "answer": "By creating services that implement interfaces like CanActivate and applying them to routes"
+  },
+  {
+    "id": 83,
+    "question": "What is Angular’s ChangeDetectionStrategy.OnPush?",
+    "options": [
+      "A change detection strategy that checks for changes only when input references change",
+      "A strategy to disable change detection entirely",
+      "A method for binding events more efficiently",
+      "A built-in service for dependency injection"
+    ],
+    "answer": "A change detection strategy that checks for changes only when input references change"
+  },
+  {
+    "id": 84,
+    "question": "What is the purpose of the @NgModule decorator in Angular?",
+    "options": [
+      "To define an Angular module, including declarations, imports, providers, and bootstrap components",
+      "To create a component",
+      "To inject services into a component",
+      "To set up routing exclusively"
+    ],
+    "answer": "To define an Angular module, including declarations, imports, providers, and bootstrap components"
+  },
+  {
+    "id": 85,
+    "question": "What is a singleton service in Angular?",
+    "options": [
+      "A service that is provided at the root level and has a single instance throughout the application",
+      "A service that is instantiated for each component",
+      "A service that handles HTTP errors only",
+      "A service that is used exclusively in lazy-loaded modules"
+    ],
+    "answer": "A service that is provided at the root level and has a single instance throughout the application"
+  },
+  {
+    "id": 86,
+    "question": "How do you configure Angular’s production build?",
+    "options": [
+      "By running the Angular CLI command ng build --prod (or ng build with production configuration)",
+      "By setting production: true in app.module.ts",
+      "By using the async pipe in the main component",
+      "Production builds are automatically configured"
+    ],
+    "answer": "By running the Angular CLI command ng build --prod (or ng build with production configuration)"
+  },
+  {
+    "id": 87,
+    "question": "What is a resolver in Angular routing?",
+    "options": [
+      "A service that pre-fetches data before a route is activated",
+      "A service that guards routes",
+      "A module for handling animations",
+      "A directive for data binding"
+    ],
+    "answer": "A service that pre-fetches data before a route is activated"
+  },
+  {
+    "id": 88,
+    "question": "How do you implement internationalization (i18n) in Angular?",
+    "options": [
+      "By using Angular’s built-in i18n tools and translation files",
+      "By using jQuery plugins",
+      "By manually editing text in the templates",
+      "Internationalization is not supported in Angular"
+    ],
+    "answer": "By using Angular’s built-in i18n tools and translation files"
+  },
+  {
+    "id": 89,
+    "question": "What is the purpose of Angular’s RouterModule?",
+    "options": [
+      "To provide routing and navigation capabilities within an Angular application",
+      "To manage global state",
+      "To perform HTTP requests",
+      "To create reusable components"
+    ],
+    "answer": "To provide routing and navigation capabilities within an Angular application"
+  },
+  {
+    "id": 90,
+    "question": "How do you lazy-load an Angular module?",
+    "options": [
+      "By using the loadChildren property in the route configuration with dynamic import syntax",
+      "By importing the module in app.module.ts",
+      "By using the async pipe in the template",
+      "Lazy-loading is not supported in Angular"
+    ],
+    "answer": "By using the loadChildren property in the route configuration with dynamic import syntax"
+  },
+  {
+    "id": 91,
+    "question": "How do you provide a fallback UI during lazy loading of modules in Angular?",
+    "options": [
+      "By configuring a preloader strategy or using a loading component in the router-outlet",
+      "By writing inline styles",
+      "By disabling lazy loading",
+      "Angular does not support fallback UIs"
+    ],
+    "answer": "By configuring a preloader strategy or using a loading component in the router-outlet"
+  },
+  {
+    "id": 92,
+    "question": "What is the purpose of Angular’s Standalone Components (introduced in Angular 14+)?",
+    "options": [
+      "To simplify component declarations by eliminating the need for NgModules",
+      "To replace services entirely",
+      "To manage global state exclusively",
+      "To perform server-side rendering"
+    ],
+    "answer": "To simplify component declarations by eliminating the need for NgModules"
+  },
+  {
+    "id": 93,
+    "question": "How do you use Angular’s HttpClient to make a GET request?",
+    "options": [
+      "By injecting HttpClient into a service and calling httpClient.get(url)",
+      "By using jQuery AJAX",
+      "By creating a custom service without HttpClient",
+      "By using the async pipe exclusively"
+    ],
+    "answer": "By injecting HttpClient into a service and calling httpClient.get(url)"
+  },
+  {
+    "id": 94,
+    "question": "What is the purpose of the interceptors in Angular’s HttpClient?",
+    "options": [
+      "To modify or log HTTP requests and responses globally",
+      "To validate forms automatically",
+      "To update component state",
+      "To handle animations"
+    ],
+    "answer": "To modify or log HTTP requests and responses globally"
+  },
+  {
+    "id": 95,
+    "question": "What is Angular’s TestBed used for?",
+    "options": [
+      "To configure and initialize the testing environment for Angular components and services",
+      "To compile TypeScript code",
+      "To manage routing during tests",
+      "To generate production builds"
+    ],
+    "answer": "To configure and initialize the testing environment for Angular components and services"
+  },
+  {
+    "id": 96,
+    "question": "How do you simulate user interactions in Angular unit tests?",
+    "options": [
+      "By using Angular’s testing utilities (e.g., dispatchEvent, fixture.detectChanges()) along with Jasmine or Jest",
+      "By using manual console logs",
+      "By modifying the DOM directly in the test",
+      "User interactions cannot be simulated in Angular tests"
+    ],
+    "answer": "By using Angular’s testing utilities (e.g., dispatchEvent, fixture.detectChanges()) along with Jasmine or Jest"
+  },
+  {
+    "id": 97,
+    "question": "What is the role of the Angular CLI’s ng update command?",
+    "options": [
+      "To update Angular dependencies and help migrate your application to newer versions",
+      "To compile templates for production",
+      "To run unit tests",
+      "To deploy the application"
+    ],
+    "answer": "To update Angular dependencies and help migrate your application to newer versions"
+  },
+  {
+    "id": 98,
+    "question": "How do you enable strict type checking in an Angular project?",
+    "options": [
+      "By enabling strict settings in tsconfig.json and angularCompilerOptions",
+      "By using ngModel exclusively",
+      "By disabling dependency injection",
+      "Strict type checking is enabled by default and cannot be configured"
+    ],
+    "answer": "By enabling strict settings in tsconfig.json and angularCompilerOptions"
+  },
+  {
+    "id": 99,
+    "question": "How do you integrate a third-party Angular library into your project?",
+    "options": [
+      "By installing it via npm/yarn and importing the module in your app.module.ts",
+      "By copying its source code into your project",
+      "By linking a CDN in index.html exclusively",
+      "Angular does not support third-party libraries"
+    ],
+    "answer": "By installing it via npm/yarn and importing the module in your app.module.ts"
+  },
+  {
+    "id": 100,
+    "question": "What are some best practices for building scalable Angular applications?",
+    "options": [
+      "Using modular architecture with lazy-loaded feature modules, leveraging DI, strict type checking, and effective state management",
+      "Writing all code in a single module",
+      "Avoiding the use of Angular CLI",
+      "Using inline styles exclusively in components"
+    ],
+    "answer": "Using modular architecture with lazy-loaded feature modules, leveraging DI, strict type checking, and effective state management"
+  }
+]

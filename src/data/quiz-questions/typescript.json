@@ -1,0 +1,1092 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary purpose of TypeScript in a real-world project?",
+    "options": [
+      "Enhance JavaScript with static type checking",
+      "Replace JavaScript entirely",
+      "Optimize CSS performance",
+      "Improve HTML semantics"
+    ],
+    "answer": "Enhance JavaScript with static type checking"
+  },
+  {
+    "id": 2,
+    "question": "How do you declare a variable with an explicit type in TypeScript?",
+    "options": [
+      "let x: number = 5;",
+      "var x = 5;",
+      "x: number = 5;",
+      "let x = number(5);"
+    ],
+    "answer": "let x: number = 5;"
+  },
+  {
+    "id": 3,
+    "question": "Which file extension is used for TypeScript source files?",
+    "options": [".ts", ".tsx", ".js", ".typescript"],
+    "answer": ".ts"
+  },
+  {
+    "id": 4,
+    "question": "What is an interface in TypeScript used for?",
+    "options": [
+      "To define contracts within your code",
+      "To implement inheritance between classes",
+      "To declare variables",
+      "To create modules"
+    ],
+    "answer": "To define contracts within your code"
+  },
+  {
+    "id": 5,
+    "question": "How does TypeScript improve maintainability in large projects?",
+    "options": [
+      "By adding static type checking and compile-time error detection",
+      "By automatically optimizing runtime performance",
+      "By removing the need for version control",
+      "By replacing JavaScript with a new syntax"
+    ],
+    "answer": "By adding static type checking and compile-time error detection"
+  },
+  {
+    "id": 6,
+    "question": "What is a union type in TypeScript?",
+    "options": [
+      "A type that allows a variable to be one of several types",
+      "A type that combines multiple objects",
+      "A type used only in function parameters",
+      "A type that infers all possible types"
+    ],
+    "answer": "A type that allows a variable to be one of several types"
+  },
+  {
+    "id": 7,
+    "question": "How do you denote an optional property in a TypeScript interface?",
+    "options": [
+      "By appending a '?' to the property name",
+      "By setting the property value to null",
+      "By using the 'optional' keyword",
+      "By declaring it outside the interface"
+    ],
+    "answer": "By appending a '?' to the property name"
+  },
+  {
+    "id": 8,
+    "question": "What is type inference in TypeScript?",
+    "options": [
+      "Automatically determining a variable's type based on its value",
+      "Manually assigning a type to a variable",
+      "Inferring function return types only",
+      "A way to bypass type checking"
+    ],
+    "answer": "Automatically determining a variable's type based on its value"
+  },
+  {
+    "id": 9,
+    "question": "Which utility type would you use to make all properties of an interface optional?",
+    "options": ["Partial<T>", "Required<T>", "Readonly<T>", "Pick<T, K>"],
+    "answer": "Partial<T>"
+  },
+  {
+    "id": 10,
+    "question": "What is the difference between the 'unknown' and 'any' types in TypeScript?",
+    "options": [
+      "unknown is type-safe, any bypasses type checking",
+      "any is preferred for safety, unknown is not type checked",
+      "Both are identical",
+      "unknown can only be used for objects"
+    ],
+    "answer": "unknown is type-safe, any bypasses type checking"
+  },
+  {
+    "id": 11,
+    "question": "How do generics improve reusability in TypeScript functions?",
+    "options": [
+      "By allowing functions to operate on a variety of types",
+      "By removing the need for parameters",
+      "By automatically converting types at runtime",
+      "By enforcing a single type across the entire application"
+    ],
+    "answer": "By allowing functions to operate on a variety of types"
+  },
+  {
+    "id": 12,
+    "question": "What does the 'readonly' modifier do when applied to a property?",
+    "options": [
+      "Prevents the property from being reassigned after initialization",
+      "Makes the property private",
+      "Automatically converts the property to a constant value",
+      "Enables runtime type checking for the property"
+    ],
+    "answer": "Prevents the property from being reassigned after initialization"
+  },
+  {
+    "id": 13,
+    "question": "What is the purpose of type guards in TypeScript?",
+    "options": [
+      "To narrow down the type of a variable at runtime",
+      "To enforce strict equality between types",
+      "To convert one type to another",
+      "To declare global variables"
+    ],
+    "answer": "To narrow down the type of a variable at runtime"
+  },
+  {
+    "id": 14,
+    "question": "How do you declare a function that returns a Promise of a specific type?",
+    "options": [
+      "function fetchData(): Promise<string> { ... }",
+      "function fetchData(): string => Promise { ... }",
+      "function fetchData(): Promise = 'string' { ... }",
+      "function fetchData(): string { ... }"
+    ],
+    "answer": "function fetchData(): Promise<string> { ... }"
+  },
+  {
+    "id": 15,
+    "question": "What is the use of the 'as' keyword in TypeScript?",
+    "options": [
+      "To perform type assertions",
+      "To declare variables",
+      "To create interfaces",
+      "To import modules"
+    ],
+    "answer": "To perform type assertions"
+  },
+  {
+    "id": 16,
+    "question": "Which file is used to configure TypeScript compiler options?",
+    "options": [
+      "tsconfig.json",
+      "package.json",
+      "typescript.config",
+      "tsc.config"
+    ],
+    "answer": "tsconfig.json"
+  },
+  {
+    "id": 17,
+    "question": "What does enabling 'strict' mode in TypeScript do?",
+    "options": [
+      "Enforces stricter type checking and more rigorous compiler checks",
+      "Disables all type checking",
+      "Optimizes runtime performance",
+      "Automatically fixes type errors"
+    ],
+    "answer": "Enforces stricter type checking and more rigorous compiler checks"
+  },
+  {
+    "id": 18,
+    "question": "How can TypeScript help prevent runtime errors in production?",
+    "options": [
+      "By catching errors at compile time through static analysis",
+      "By running code faster",
+      "By eliminating the need for unit tests",
+      "By automatically debugging code"
+    ],
+    "answer": "By catching errors at compile time through static analysis"
+  },
+  {
+    "id": 19,
+    "question": "What is the purpose of enums in TypeScript?",
+    "options": [
+      "To define a set of named constants",
+      "To create classes with multiple instances",
+      "To perform mathematical operations",
+      "To manage asynchronous operations"
+    ],
+    "answer": "To define a set of named constants"
+  },
+  {
+    "id": 20,
+    "question": "How do you define a tuple type in TypeScript?",
+    "options": [
+      "[string, number]",
+      "Tuple<string, number>",
+      "Array<string | number>",
+      "list<string, number>"
+    ],
+    "answer": "[string, number]"
+  },
+  {
+    "id": 21,
+    "question": "What is the use of the 'never' type in TypeScript?",
+    "options": [
+      "To indicate a value that never occurs",
+      "To represent null values",
+      "To serve as a placeholder for any type",
+      "To declare variables that can be reassigned"
+    ],
+    "answer": "To indicate a value that never occurs"
+  },
+  {
+    "id": 22,
+    "question": "How do you extend an interface in TypeScript?",
+    "options": [
+      "interface B extends A { ... }",
+      "interface B implements A { ... }",
+      "interface B = A { ... }",
+      "interface B : A { ... }"
+    ],
+    "answer": "interface B extends A { ... }"
+  },
+  {
+    "id": 23,
+    "question": "What is a key difference between interface and type alias in TypeScript?",
+    "options": [
+      "Interfaces can be extended or merged, while type aliases cannot be merged",
+      "Type aliases are only used for functions",
+      "Interfaces do not support generics",
+      "There is no difference; they are completely interchangeable"
+    ],
+    "answer": "Interfaces can be extended or merged, while type aliases cannot be merged"
+  },
+  {
+    "id": 24,
+    "question": "How can you enforce immutability for an object in TypeScript?",
+    "options": [
+      "By using the 'readonly' modifier on properties",
+      "By using the 'const' keyword for the object variable only",
+      "By converting the object to JSON",
+      "By using a type assertion"
+    ],
+    "answer": "By using the 'readonly' modifier on properties"
+  },
+  {
+    "id": 25,
+    "question": "What does the utility type 'Partial<T>' do?",
+    "options": [
+      "Makes all properties in T optional",
+      "Makes all properties in T required",
+      "Converts T into a union type",
+      "Extracts only the function properties from T"
+    ],
+    "answer": "Makes all properties in T optional"
+  },
+  {
+    "id": 26,
+    "question": "How do you declare a class in TypeScript?",
+    "options": [
+      "class MyClass { constructor() { } }",
+      "function MyClass() { }",
+      "MyClass class { }",
+      "declare class MyClass { }"
+    ],
+    "answer": "class MyClass { constructor() { } }"
+  },
+  {
+    "id": 27,
+    "question": "What are decorators in TypeScript and how are they used in real-world projects?",
+    "options": [
+      "They add metadata to classes or methods and are used for dependency injection or logging",
+      "They compile TypeScript code to JavaScript",
+      "They perform runtime type checking",
+      "They are used to style user interfaces"
+    ],
+    "answer": "They add metadata to classes or methods and are used for dependency injection or logging"
+  },
+  {
+    "id": 28,
+    "question": "What is a namespace in TypeScript?",
+    "options": [
+      "A way to organize code within a single global scope",
+      "A module loader",
+      "A replacement for classes",
+      "A tool for styling components"
+    ],
+    "answer": "A way to organize code within a single global scope"
+  },
+  {
+    "id": 29,
+    "question": "How do you import and export modules in TypeScript?",
+    "options": [
+      "Using ES6 module syntax: import/export",
+      "Using CommonJS require statements exclusively",
+      "Using the 'namespace' keyword",
+      "Modules are not supported in TypeScript"
+    ],
+    "answer": "Using ES6 module syntax: import/export"
+  },
+  {
+    "id": 30,
+    "question": "What is an ambient declaration in TypeScript?",
+    "options": [
+      "A declaration that tells the compiler about the existence of variables or modules without defining them",
+      "A variable declared with var",
+      "A module that exports multiple types",
+      "A class with no constructor"
+    ],
+    "answer": "A declaration that tells the compiler about the existence of variables or modules without defining them"
+  },
+  {
+    "id": 31,
+    "question": "What is the role of declaration files (with the .d.ts extension) in TypeScript?",
+    "options": [
+      "They provide type information about an API that is written in JavaScript",
+      "They contain executable code",
+      "They are used for styling",
+      "They are configuration files for the compiler"
+    ],
+    "answer": "They provide type information about an API that is written in JavaScript"
+  },
+  {
+    "id": 32,
+    "question": "How can TypeScript be integrated into an existing JavaScript project?",
+    "options": [
+      "By gradually renaming .js files to .ts and adding type annotations",
+      "By rewriting the entire codebase from scratch",
+      "By only using TypeScript for unit tests",
+      "Integration is not possible"
+    ],
+    "answer": "By gradually renaming .js files to .ts and adding type annotations"
+  },
+  {
+    "id": 33,
+    "question": "What are intersection types in TypeScript?",
+    "options": [
+      "Types that combine multiple types into one",
+      "Types that are exclusive to classes",
+      "Types that are used for arrays only",
+      "Types that represent union of two types"
+    ],
+    "answer": "Types that combine multiple types into one"
+  },
+  {
+    "id": 34,
+    "question": "How does TypeScript handle null and undefined values?",
+    "options": [
+      "It enforces explicit checks when the strictNullChecks flag is enabled",
+      "It treats them as the same value",
+      "It automatically converts them to false",
+      "It ignores them completely"
+    ],
+    "answer": "It enforces explicit checks when the strictNullChecks flag is enabled"
+  },
+  {
+    "id": 35,
+    "question": "What is the purpose of the 'Record<K, T>' utility type in TypeScript?",
+    "options": [
+      "It constructs an object type whose property keys are K and values are T",
+      "It creates an array of type T",
+      "It records runtime errors",
+      "It merges two types into one"
+    ],
+    "answer": "It constructs an object type whose property keys are K and values are T"
+  },
+  {
+    "id": 36,
+    "question": "How can you use conditional types in TypeScript?",
+    "options": [
+      "Using a syntax similar to ternary expressions (T extends U ? X : Y)",
+      "By writing if-else statements",
+      "By using switch-case statements",
+      "Conditional types are not supported"
+    ],
+    "answer": "Using a syntax similar to ternary expressions (T extends U ? X : Y)"
+  },
+  {
+    "id": 37,
+    "question": "What does the 'Exclude<T, U>' utility type do?",
+    "options": [
+      "It constructs a type by excluding from T those types that are assignable to U",
+      "It excludes all functions from T",
+      "It converts T into a union type",
+      "It creates an intersection type of T and U"
+    ],
+    "answer": "It constructs a type by excluding from T those types that are assignable to U"
+  },
+  {
+    "id": 38,
+    "question": "What does the 'Extract<T, U>' utility type do?",
+    "options": [
+      "It constructs a type by extracting from T those types that are assignable to U",
+      "It extracts string types from T",
+      "It removes null and undefined from T",
+      "It merges T and U"
+    ],
+    "answer": "It constructs a type by extracting from T those types that are assignable to U"
+  },
+  {
+    "id": 39,
+    "question": "How can you ensure that a function parameter is a valid key of an object in TypeScript?",
+    "options": [
+      "Using the 'keyof' operator",
+      "By using generics only",
+      "By using the 'in' operator",
+      "This is not possible in TypeScript"
+    ],
+    "answer": "Using the 'keyof' operator"
+  },
+  {
+    "id": 40,
+    "question": "How do you define an asynchronous function using async/await in TypeScript?",
+    "options": [
+      "async function fetchData(): Promise<void> { ... }",
+      "function fetchData(): void { await ... }",
+      "async function fetchData() { return await ... }",
+      "function fetchData() { async await ... }"
+    ],
+    "answer": "async function fetchData(): Promise<void> { ... }"
+  },
+  {
+    "id": 41,
+    "question": "How can TypeScript improve collaboration in large teams?",
+    "options": [
+      "By providing clear contracts and auto-completion via static types",
+      "By eliminating the need for code reviews",
+      "By automatically merging pull requests",
+      "By replacing documentation"
+    ],
+    "answer": "By providing clear contracts and auto-completion via static types"
+  },
+  {
+    "id": 42,
+    "question": "How do you perform type assertion in TypeScript?",
+    "options": [
+      "Using the 'as' keyword, e.g., value as string",
+      "Using the equals sign, e.g., value = string",
+      "Using the 'assert' function",
+      "Using a type guard function"
+    ],
+    "answer": "Using the 'as' keyword, e.g., value as string"
+  },
+  {
+    "id": 43,
+    "question": "What is a discriminated union in TypeScript?",
+    "options": [
+      "A union type that uses a common literal property to differentiate between its members",
+      "A union of numeric types only",
+      "A union that has been filtered by type guards",
+      "A type that discriminates between classes and interfaces"
+    ],
+    "answer": "A union type that uses a common literal property to differentiate between its members"
+  },
+  {
+    "id": 44,
+    "question": "How do you define a function type in TypeScript?",
+    "options": [
+      "type Fn = (param: number) => string;",
+      "function Fn(param: number): string;",
+      "interface Fn { (param: number): string; }",
+      "Both A and C are valid"
+    ],
+    "answer": "Both A and C are valid"
+  },
+  {
+    "id": 45,
+    "question": "What is the purpose of the 'Omit<T, K>' utility type?",
+    "options": [
+      "It constructs a type by picking all properties from T and then removing K",
+      "It makes all properties optional",
+      "It creates a union of T and K",
+      "It merges two types"
+    ],
+    "answer": "It constructs a type by picking all properties from T and then removing K"
+  },
+  {
+    "id": 46,
+    "question": "How do you specify default parameter values in a TypeScript function?",
+    "options": [
+      "function greet(name: string = 'Guest') { ... }",
+      "function greet(name: string default 'Guest') { ... }",
+      "function greet(name = 'Guest'): string { ... }",
+      "Default parameters are not supported"
+    ],
+    "answer": "function greet(name: string = 'Guest') { ... }"
+  },
+  {
+    "id": 47,
+    "question": "How does TypeScript support JSX in React projects?",
+    "options": [
+      "By using the .tsx file extension and appropriate compiler options",
+      "By converting JSX to plain HTML automatically",
+      "TypeScript does not support JSX",
+      "By using a separate transpiler"
+    ],
+    "answer": "By using the .tsx file extension and appropriate compiler options"
+  },
+  {
+    "id": 48,
+    "question": "What is the purpose of the 'NonNullable<T>' utility type?",
+    "options": [
+      "It excludes null and undefined from T",
+      "It makes T non-modifiable",
+      "It converts T to a boolean",
+      "It infers the non-null type of T"
+    ],
+    "answer": "It excludes null and undefined from T"
+  },
+  {
+    "id": 49,
+    "question": "How can you create a type that represents the keys of an object in TypeScript?",
+    "options": [
+      "Using the 'keyof' operator",
+      "Using a union type",
+      "Using generics",
+      "Using the 'typeof' operator"
+    ],
+    "answer": "Using the 'keyof' operator"
+  },
+  {
+    "id": 50,
+    "question": "What is the significance of the 'this' parameter in TypeScript functions?",
+    "options": [
+      "It allows you to explicitly type the 'this' context of a function",
+      "It is used to bind event handlers",
+      "It is automatically inferred and cannot be changed",
+      "It is only used in class methods"
+    ],
+    "answer": "It allows you to explicitly type the 'this' context of a function"
+  },
+  {
+    "id": 51,
+    "question": "How do you declare a promise that resolves to a specific type in TypeScript?",
+    "options": [
+      "function getData(): Promise<number> { ... }",
+      "function getData(): number => Promise { ... }",
+      "Promise<number> getData() { ... }",
+      "getData(): number"
+    ],
+    "answer": "function getData(): Promise<number> { ... }"
+  },
+  {
+    "id": 52,
+    "question": "What is the benefit of using 'const' in conjunction with types in TypeScript?",
+    "options": [
+      "It creates immutable variables that can also be used in type inference",
+      "It converts variables into strings",
+      "It bypasses type checking",
+      "It allows dynamic type reassignment"
+    ],
+    "answer": "It creates immutable variables that can also be used in type inference"
+  },
+  {
+    "id": 53,
+    "question": "How do you create a mapped type in TypeScript?",
+    "options": [
+      "Using the syntax: { [P in K]: T }",
+      "Using a for loop",
+      "By declaring an interface",
+      "Mapped types are not supported"
+    ],
+    "answer": "Using the syntax: { [P in K]: T }"
+  },
+  {
+    "id": 54,
+    "question": "What are the benefits of using TypeScript in a Node.js project?",
+    "options": [
+      "Improved code quality, better refactoring, and enhanced IDE support",
+      "Elimination of asynchronous programming",
+      "Automatic deployment",
+      "Built-in HTTP server functionality"
+    ],
+    "answer": "Improved code quality, better refactoring, and enhanced IDE support"
+  },
+  {
+    "id": 55,
+    "question": "How can TypeScript assist with refactoring large codebases?",
+    "options": [
+      "By providing compile-time error checks and precise type information",
+      "By automatically updating all dependencies",
+      "By enforcing runtime validations",
+      "By generating documentation automatically"
+    ],
+    "answer": "By providing compile-time error checks and precise type information"
+  },
+  {
+    "id": 56,
+    "question": "What is a key difference between an interface and a class in TypeScript?",
+    "options": [
+      "Interfaces only describe shapes; classes provide implementation details",
+      "Classes cannot be extended",
+      "Interfaces support constructors",
+      "There is no difference"
+    ],
+    "answer": "Interfaces only describe shapes; classes provide implementation details"
+  },
+  {
+    "id": 57,
+    "question": "How do you declare an abstract class in TypeScript?",
+    "options": [
+      "abstract class MyBase { ... }",
+      "class MyBase abstract { ... }",
+      "interface MyBase { ... }",
+      "abstract MyBase() { ... }"
+    ],
+    "answer": "abstract class MyBase { ... }"
+  },
+  {
+    "id": 58,
+    "question": "What is the purpose of a constructor in a TypeScript class?",
+    "options": [
+      "To initialize the class properties when an object is created",
+      "To declare class methods",
+      "To enforce type checking",
+      "To implement inheritance"
+    ],
+    "answer": "To initialize the class properties when an object is created"
+  },
+  {
+    "id": 59,
+    "question": "How do you implement inheritance in TypeScript classes?",
+    "options": [
+      "Using the 'extends' keyword",
+      "Using the 'implements' keyword",
+      "Using a constructor",
+      "Inheritance is not supported"
+    ],
+    "answer": "Using the 'extends' keyword"
+  },
+  {
+    "id": 60,
+    "question": "What is the purpose of calling 'super()' in a TypeScript class constructor?",
+    "options": [
+      "To call the constructor of the base class",
+      "To bind methods to the current class",
+      "To enable static type checking",
+      "To define a new interface"
+    ],
+    "answer": "To call the constructor of the base class"
+  },
+  {
+    "id": 61,
+    "question": "How does TypeScript support asynchronous error handling?",
+    "options": [
+      "By combining async/await with try/catch blocks",
+      "By using callback functions exclusively",
+      "By eliminating errors at runtime",
+      "By using synchronous code only"
+    ],
+    "answer": "By combining async/await with try/catch blocks"
+  },
+  {
+    "id": 62,
+    "question": "What role does 'Promise.all' play in TypeScript asynchronous operations?",
+    "options": [
+      "It allows running multiple promises in parallel and returns when all are resolved",
+      "It converts promises to synchronous calls",
+      "It handles errors globally",
+      "It is used to chain promises sequentially"
+    ],
+    "answer": "It allows running multiple promises in parallel and returns when all are resolved"
+  },
+  {
+    "id": 63,
+    "question": "How do you define a read-only array in TypeScript?",
+    "options": [
+      "Using the 'readonly' modifier, e.g., readonly number[]",
+      "By using const with the array",
+      "By freezing the array at runtime",
+      "Read-only arrays are not supported"
+    ],
+    "answer": "Using the 'readonly' modifier, e.g., readonly number[]"
+  },
+  {
+    "id": 64,
+    "question": "What does the 'Array<T>' type notation represent in TypeScript?",
+    "options": [
+      "An array of elements of type T",
+      "A tuple with fixed types",
+      "A union type of T and any",
+      "An interface for objects"
+    ],
+    "answer": "An array of elements of type T"
+  },
+  {
+    "id": 65,
+    "question": "How do you specify a function parameter that can accept multiple types?",
+    "options": [
+      "By using a union type (e.g., string | number)",
+      "By using the any type",
+      "By overloading the function",
+      "By using generics only"
+    ],
+    "answer": "By using a union type (e.g., string | number)"
+  },
+  {
+    "id": 66,
+    "question": "What does the pattern 'interface Mergeable { merge(other: Mergeable): Mergeable }' enable in TypeScript?",
+    "options": [
+      "It standardizes a merge operation across different classes",
+      "It automatically merges two objects",
+      "It creates a union type",
+      "It defines a constructor signature"
+    ],
+    "answer": "It standardizes a merge operation across different classes"
+  },
+  {
+    "id": 67,
+    "question": "How do you declare a function that accepts a variable number of arguments in TypeScript?",
+    "options": [
+      "function concat(...items: string[]): string { ... }",
+      "function concat(items: string[]): string { ... }",
+      "function concat(...items): string { ... }",
+      "function concat(items...: string[]): string { ... }"
+    ],
+    "answer": "function concat(...items: string[]): string { ... }"
+  },
+  {
+    "id": 68,
+    "question": "How can TypeScript enforce consistent API responses in a real-world project?",
+    "options": [
+      "By defining interfaces for API response objects",
+      "By using runtime checks only",
+      "By relying on JavaScript's dynamic types",
+      "By using CSS modules"
+    ],
+    "answer": "By defining interfaces for API response objects"
+  },
+  {
+    "id": 69,
+    "question": "What is the purpose of the 'infer' keyword in conditional types?",
+    "options": [
+      "To deduce a type within a conditional type expression",
+      "To declare an interface",
+      "To import a type from a module",
+      "To enforce type checking at runtime"
+    ],
+    "answer": "To deduce a type within a conditional type expression"
+  },
+  {
+    "id": 70,
+    "question": "How do you extract the return type of a function in TypeScript?",
+    "options": [
+      "Using the 'ReturnType<T>' utility type",
+      "By calling the function",
+      "Using the 'typeof' operator",
+      "By manually annotating the type"
+    ],
+    "answer": "Using the 'ReturnType<T>' utility type"
+  },
+  {
+    "id": 71,
+    "question": "What does the 'ReturnType<T>' utility type do?",
+    "options": [
+      "It obtains the return type of a function type T",
+      "It converts a function into a promise",
+      "It extracts the parameter types of T",
+      "It infers the type of an object's properties"
+    ],
+    "answer": "It obtains the return type of a function type T"
+  },
+  {
+    "id": 72,
+    "question": "How can you declare a union type that only accepts specific string literals?",
+    "options": [
+      "type Direction = 'north' | 'south' | 'east' | 'west';",
+      "type Direction = string;",
+      "interface Direction { north: string; }",
+      "enum Direction { north, south, east, west }"
+    ],
+    "answer": "type Direction = 'north' | 'south' | 'east' | 'west';"
+  },
+  {
+    "id": 73,
+    "question": "How do you declare a type that represents a callback function in TypeScript?",
+    "options": [
+      "type Callback = (error: Error | null, result?: any) => void;",
+      "function Callback() { }",
+      "interface Callback { new(): void; }",
+      "declare function Callback(): void;"
+    ],
+    "answer": "type Callback = (error: Error | null, result?: any) => void;"
+  },
+  {
+    "id": 74,
+    "question": "What is a common use case for generics in real-world TypeScript projects?",
+    "options": [
+      "Creating reusable functions and classes that work with multiple types",
+      "Defining fixed types for every variable",
+      "Avoiding type checking",
+      "Restricting functions to a single type"
+    ],
+    "answer": "Creating reusable functions and classes that work with multiple types"
+  },
+  {
+    "id": 75,
+    "question": "How do you ensure type safety when working with external APIs in TypeScript?",
+    "options": [
+      "By writing interfaces for the API response data",
+      "By using the any type everywhere",
+      "By disabling strict mode",
+      "By relying solely on runtime error handling"
+    ],
+    "answer": "By writing interfaces for the API response data"
+  },
+  {
+    "id": 76,
+    "question": "What is type narrowing in TypeScript?",
+    "options": [
+      "The process of refining a union type to a more specific type using type guards",
+      "Reducing the size of your codebase",
+      "Converting types into strings",
+      "Merging two types together"
+    ],
+    "answer": "The process of refining a union type to a more specific type using type guards"
+  },
+  {
+    "id": 77,
+    "question": "How do you declare an interface for a complex object with nested properties?",
+    "options": [
+      "By nesting interfaces within one another",
+      "By using union types exclusively",
+      "By declaring a class",
+      "By using the 'any' type for nested properties"
+    ],
+    "answer": "By nesting interfaces within one another"
+  },
+  {
+    "id": 78,
+    "question": "What are utility types in TypeScript and why are they useful?",
+    "options": [
+      "They are built-in types that help manipulate and transform existing types",
+      "They optimize runtime performance",
+      "They are used for styling components",
+      "They provide runtime type checking"
+    ],
+    "answer": "They are built-in types that help manipulate and transform existing types"
+  },
+  {
+    "id": 79,
+    "question": "How can you create a type that makes all properties of an interface required?",
+    "options": [
+      "Using the 'Required<T>' utility type",
+      "Using the 'Partial<T>' utility type",
+      "Using the 'Readonly<T>' utility type",
+      "By manually annotating each property"
+    ],
+    "answer": "Using the 'Required<T>' utility type"
+  },
+  {
+    "id": 80,
+    "question": "What is the purpose of the 'Pick<T, K>' utility type?",
+    "options": [
+      "It creates a new type by selecting a subset of properties from T",
+      "It merges two types together",
+      "It makes all properties of T optional",
+      "It excludes properties from T"
+    ],
+    "answer": "It creates a new type by selecting a subset of properties from T"
+  },
+  {
+    "id": 81,
+    "question": "How can you define a custom type guard in TypeScript?",
+    "options": [
+      "By writing a function that returns a type predicate",
+      "By using a type assertion",
+      "By overloading a function",
+      "By declaring an interface"
+    ],
+    "answer": "By writing a function that returns a type predicate"
+  },
+  {
+    "id": 82,
+    "question": "How do you handle errors when using asynchronous functions in TypeScript?",
+    "options": [
+      "Using try/catch blocks within async functions",
+      "Using the any type for errors",
+      "Errors are not handled in TypeScript",
+      "By disabling strict mode"
+    ],
+    "answer": "Using try/catch blocks within async functions"
+  },
+  {
+    "id": 83,
+    "question": "What is the significance of using types for Redux actions in a TypeScript project?",
+    "options": [
+      "It ensures that actions adhere to a consistent structure and payload",
+      "It removes the need for reducers",
+      "It forces synchronous operations",
+      "It is not beneficial in Redux"
+    ],
+    "answer": "It ensures that actions adhere to a consistent structure and payload"
+  },
+  {
+    "id": 84,
+    "question": "How can TypeScript enhance code quality in a React project?",
+    "options": [
+      "By providing strong typing for props, state, and component interfaces",
+      "By replacing JSX with plain HTML",
+      "By eliminating the need for components",
+      "By automatically generating CSS"
+    ],
+    "answer": "By providing strong typing for props, state, and component interfaces"
+  },
+  {
+    "id": 85,
+    "question": "What does the 'tsc' command do in a TypeScript project?",
+    "options": [
+      "Compiles TypeScript code into JavaScript",
+      "Runs unit tests",
+      "Bundles modules for deployment",
+      "Starts a development server"
+    ],
+    "answer": "Compiles TypeScript code into JavaScript"
+  },
+  {
+    "id": 86,
+    "question": "How do you set up a TypeScript project with a build process using webpack?",
+    "options": [
+      "By configuring webpack with ts-loader or awesome-typescript-loader",
+      "By using only Babel",
+      "Webpack cannot be used with TypeScript",
+      "By using the 'tsc' command exclusively"
+    ],
+    "answer": "By configuring webpack with ts-loader or awesome-typescript-loader"
+  },
+  {
+    "id": 87,
+    "question": "How does TypeScript improve IntelliSense and developer productivity in editors like VSCode?",
+    "options": [
+      "By providing accurate type definitions and auto-completion",
+      "By running code faster",
+      "By auto-formatting HTML only",
+      "By replacing the need for debugging"
+    ],
+    "answer": "By providing accurate type definitions and auto-completion"
+  },
+  {
+    "id": 88,
+    "question": "What is declaration merging in TypeScript?",
+    "options": [
+      "The process where multiple declarations for the same identifier are merged into a single definition",
+      "Combining two separate projects",
+      "Merging two JSON files",
+      "A runtime feature for merging objects"
+    ],
+    "answer": "The process where multiple declarations for the same identifier are merged into a single definition"
+  },
+  {
+    "id": 89,
+    "question": "How do you extend a third-party library's types in TypeScript?",
+    "options": [
+      "By creating a .d.ts file with module augmentation",
+      "By rewriting the library",
+      "By using the any type",
+      "By disabling type checking for that module"
+    ],
+    "answer": "By creating a .d.ts file with module augmentation"
+  },
+  {
+    "id": 90,
+    "question": "What is the benefit of using the 'strictNullChecks' flag in TypeScript?",
+    "options": [
+      "It forces explicit handling of null and undefined values, reducing runtime errors",
+      "It disables type checking for null values",
+      "It optimizes code performance",
+      "It is only used for debugging"
+    ],
+    "answer": "It forces explicit handling of null and undefined values, reducing runtime errors"
+  },
+  {
+    "id": 91,
+    "question": "How do you handle complex union types in TypeScript?",
+    "options": [
+      "By using type guards and discriminated unions",
+      "By converting them to any",
+      "By ignoring type errors",
+      "By splitting them into multiple files"
+    ],
+    "answer": "By using type guards and discriminated unions"
+  },
+  {
+    "id": 92,
+    "question": "What is the purpose of the 'keyof' operator in TypeScript?",
+    "options": [
+      "It produces a union of string literal types representing the keys of a given type",
+      "It converts an object to an array",
+      "It infers the type of a function's return value",
+      "It merges two types"
+    ],
+    "answer": "It produces a union of string literal types representing the keys of a given type"
+  },
+  {
+    "id": 93,
+    "question": "How can TypeScript be used to enforce API contracts in a microservices architecture?",
+    "options": [
+      "By defining interfaces and types for request and response payloads",
+      "By using runtime JSON schemas only",
+      "By ignoring types in inter-service communication",
+      "By hardcoding all API responses"
+    ],
+    "answer": "By defining interfaces and types for request and response payloads"
+  },
+  {
+    "id": 94,
+    "question": "What is a common challenge when migrating a large JavaScript codebase to TypeScript?",
+    "options": [
+      "Gradually adding type annotations while ensuring backward compatibility",
+      "Automatically converting all code without issues",
+      "Rewriting the entire codebase overnight",
+      "Eliminating all third-party libraries"
+    ],
+    "answer": "Gradually adding type annotations while ensuring backward compatibility"
+  },
+  {
+    "id": 95,
+    "question": "How does TypeScript support integration with existing JavaScript libraries?",
+    "options": [
+      "By using declaration files (.d.ts) to provide type definitions for those libraries",
+      "By rewriting the libraries in TypeScript",
+      "By using a special import syntax",
+      "By disabling type checking for those modules"
+    ],
+    "answer": "By using declaration files (.d.ts) to provide type definitions for those libraries"
+  },
+  {
+    "id": 96,
+    "question": "What is the significance of using decorators in Angular projects with TypeScript?",
+    "options": [
+      "They add metadata to classes and enable Angular’s dependency injection and component configuration",
+      "They optimize runtime performance",
+      "They replace the need for services",
+      "They are used only for styling"
+    ],
+    "answer": "They add metadata to classes and enable Angular’s dependency injection and component configuration"
+  },
+  {
+    "id": 97,
+    "question": "How do you declare a module in TypeScript for a custom package?",
+    "options": [
+      "By creating a .d.ts file with a 'declare module' statement",
+      "By using the 'module.exports' syntax",
+      "By renaming files with a .mod extension",
+      "Modules are declared automatically"
+    ],
+    "answer": "By creating a .d.ts file with a 'declare module' statement"
+  },
+  {
+    "id": 98,
+    "question": "What are ambient modules in TypeScript?",
+    "options": [
+      "Modules that describe the shape of non-TypeScript modules",
+      "Modules that are loaded at runtime",
+      "Modules written in JavaScript that cannot be typed",
+      "Modules that require special bundlers"
+    ],
+    "answer": "Modules that describe the shape of non-TypeScript modules"
+  },
+  {
+    "id": 99,
+    "question": "How does TypeScript's type system help prevent common runtime errors?",
+    "options": [
+      "By catching errors at compile time through static type checking",
+      "By automatically correcting errors at runtime",
+      "By replacing error handling code",
+      "By disabling JavaScript's dynamic features"
+    ],
+    "answer": "By catching errors at compile time through static type checking"
+  },
+  {
+    "id": 100,
+    "question": "What is the advantage of using TypeScript with modern frameworks like React or Angular in production environments?",
+    "options": [
+      "Improved code quality, maintainability, and developer productivity due to static typing and tooling support",
+      "Faster network speeds",
+      "Automatic deployment and scaling",
+      "Elimination of the need for component libraries"
+    ],
+    "answer": "Improved code quality, maintainability, and developer productivity due to static typing and tooling support"
+  }
+]

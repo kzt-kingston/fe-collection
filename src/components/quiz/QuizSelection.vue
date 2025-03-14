@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue';
-
 const props = defineProps({
   hasActiveQuiz: {
     type: Boolean,
@@ -28,6 +26,30 @@ const quizTypes = [
     name: 'JavaScript',
     description: 'Assess your JavaScript skills with questions on syntax, functions, and core concepts.',
     icon: '/resources/javascript.png'
+  },
+  {
+    id: 'typescript',
+    name: 'TypeScript',
+    description: 'Test your TypeScript knowledge with questions on types, interfaces, and advanced features.',
+    icon: '/resources/typescript.png'
+  },
+  {
+    id: 'react',
+    name: 'React',
+    description: 'Evaluate your understanding of React components, hooks, and state management.',
+    icon: '/resources/react.png'
+  },
+  {
+    id: 'vue',
+    name: 'Vue',
+    description: 'Check your knowledge of Vue components, directives, and reactivity system.',
+    icon: '/resources/vue.png'
+  },
+  {
+    id: 'angular',
+    name: 'Angular',
+    description: 'Challenge yourself with questions on Angular components, services, and routing.',
+    icon: '/resources/angular.png'
   }
 ];
 

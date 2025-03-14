@@ -5,6 +5,10 @@ import { ref, computed } from 'vue';
 import htmlQuestions from '@/data/quiz-questions/html.json';
 import cssQuestions from '@/data/quiz-questions/css.json';
 import javascriptQuestions from '@/data/quiz-questions/javascript.json';
+import typescriptQuestions from '@/data/quiz-questions/typescript.json';
+import reactQuestions from '@/data/quiz-questions/react.json';
+import vueQuestions from '@/data/quiz-questions/vue.json';
+import angularQuestions from '@/data/quiz-questions/angular.json';
 
 export const useQuizStore = defineStore('quiz', () => {
   console.log('Initializing quiz store'); // Debug log
@@ -16,7 +20,7 @@ export const useQuizStore = defineStore('quiz', () => {
   const currentQuestionIndex = ref(0);
   const isCompleted = ref(false);
   const storageKey = 'fe-collection-quiz-state';
-  const totalQuestionsAmount = 30;
+  const totalQuestionsAmount = 5;
   
   // Get all questions based on quiz type
   const getQuestionsByType = (type) => {
@@ -28,6 +32,14 @@ export const useQuizStore = defineStore('quiz', () => {
           return cssQuestions;
         case 'javascript':
           return javascriptQuestions;
+        case 'typescript':
+          return typescriptQuestions;
+        case 'react':
+          return reactQuestions;
+        case 'vue':
+          return vueQuestions;
+        case 'angular':
+          return angularQuestions;
         default:
           console.warn(`Unknown quiz type: ${type}`);
           return [];

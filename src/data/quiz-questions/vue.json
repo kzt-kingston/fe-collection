@@ -1,0 +1,1057 @@
+[
+  {
+    "id": 1,
+    "question": "What is Vue 3?",
+    "options": [
+      "A progressive JavaScript framework for building user interfaces",
+      "A backend server framework",
+      "A CSS preprocessor",
+      "A testing library"
+    ],
+    "answer": "A progressive JavaScript framework for building user interfaces"
+  },
+  {
+    "id": 2,
+    "question": "Which API is newly introduced in Vue 3 for component logic?",
+    "options": ["Composition API", "Options API", "Render API", "Service API"],
+    "answer": "Composition API"
+  },
+  {
+    "id": 3,
+    "question": "What is the purpose of the Composition API in Vue 3?",
+    "options": [
+      "To better organize and reuse logic inside and between components",
+      "To style components with CSS",
+      "To handle routing",
+      "To create custom directives"
+    ],
+    "answer": "To better organize and reuse logic inside and between components"
+  },
+  {
+    "id": 4,
+    "question": "How do you create a reactive state using the Composition API?",
+    "options": [
+      "Using the ref() function",
+      "Using the reactive() function",
+      "Both A and B",
+      "Using computed()"
+    ],
+    "answer": "Both A and B"
+  },
+  {
+    "id": 5,
+    "question": "What is the purpose of the reactive() function in Vue 3?",
+    "options": [
+      "To make an object reactive so its properties are tracked",
+      "To create computed properties",
+      "To define component props",
+      "To mount a component"
+    ],
+    "answer": "To make an object reactive so its properties are tracked"
+  },
+  {
+    "id": 6,
+    "question": "How do you define a computed property using Vue 3's Composition API?",
+    "options": [
+      "Using the computed() function",
+      "Using the ref() function",
+      "Using the watch() function",
+      "By directly returning a function in setup()"
+    ],
+    "answer": "Using the computed() function"
+  },
+  {
+    "id": 7,
+    "question": "What is the role of the setup() function in a Vue 3 component?",
+    "options": [
+      "It is the entry point for Composition API logic and is called before the component is created",
+      "It registers global components",
+      "It handles routing",
+      "It compiles templates into render functions"
+    ],
+    "answer": "It is the entry point for Composition API logic and is called before the component is created"
+  },
+  {
+    "id": 8,
+    "question": "How can you watch a reactive property or computed value in Vue 3?",
+    "options": [
+      "Using the watch() function",
+      "Using the ref() function",
+      "Using the reactive() function",
+      "Using v-on directive"
+    ],
+    "answer": "Using the watch() function"
+  },
+  {
+    "id": 9,
+    "question": "Which directive is used to bind an element's attribute to an expression in Vue 3?",
+    "options": ["v-bind", "v-model", "v-if", "v-for"],
+    "answer": "v-bind"
+  },
+  {
+    "id": 10,
+    "question": "What is v-model used for in Vue 3?",
+    "options": [
+      "Creating two-way data bindings on form inputs and components",
+      "Conditionally rendering elements",
+      "Looping over arrays",
+      "Binding CSS classes"
+    ],
+    "answer": "Creating two-way data bindings on form inputs and components"
+  },
+  {
+    "id": 11,
+    "question": "How do you conditionally render an element in Vue 3?",
+    "options": ["Using v-if", "Using v-for", "Using v-bind", "Using v-model"],
+    "answer": "Using v-if"
+  },
+  {
+    "id": 12,
+    "question": "Which directive is used for rendering lists in Vue 3?",
+    "options": ["v-for", "v-if", "v-bind", "v-model"],
+    "answer": "v-for"
+  },
+  {
+    "id": 13,
+    "question": "How can you handle user events (like clicks) in Vue 3 templates?",
+    "options": ["Using v-on", "Using v-bind", "Using v-for", "Using v-model"],
+    "answer": "Using v-on"
+  },
+  {
+    "id": 14,
+    "question": "What is the shorthand syntax for v-bind in Vue 3?",
+    "options": [":", "@", "#", "~"],
+    "answer": ":"
+  },
+  {
+    "id": 15,
+    "question": "What is the shorthand syntax for v-on in Vue 3?",
+    "options": ["@", ":", "$", "!"],
+    "answer": "@"
+  },
+  {
+    "id": 16,
+    "question": "How do you define a prop in a Vue 3 component using the Options API?",
+    "options": [
+      "By adding a props property in the component’s options",
+      "By using the setup() function exclusively",
+      "By creating a reactive() object",
+      "By using v-bind"
+    ],
+    "answer": "By adding a props property in the component’s options"
+  },
+  {
+    "id": 17,
+    "question": "How can Vue 3 improve performance over Vue 2?",
+    "options": [
+      "Through a rewritten Virtual DOM and optimized reactivity system",
+      "By removing support for computed properties",
+      "By using jQuery internally",
+      "By enforcing strict CSS rules"
+    ],
+    "answer": "Through a rewritten Virtual DOM and optimized reactivity system"
+  },
+  {
+    "id": 18,
+    "question": "What are single-file components (SFCs) in Vue 3?",
+    "options": [
+      "Components defined in a single .vue file that encapsulates template, script, and style",
+      "Components written only in JavaScript files",
+      "Components that can only be used once per application",
+      "Components defined in HTML files only"
+    ],
+    "answer": "Components defined in a single .vue file that encapsulates template, script, and style"
+  },
+  {
+    "id": 19,
+    "question": "Which tool is commonly used to compile Vue single-file components?",
+    "options": ["Vue CLI or Vite", "Webpack only", "Babel exclusively", "Gulp"],
+    "answer": "Vue CLI or Vite"
+  },
+  {
+    "id": 20,
+    "question": "What is the purpose of the <code>v-slot</code> directive in Vue 3?",
+    "options": [
+      "To define scoped slots for passing dynamic content to child components",
+      "To bind data to an element",
+      "To conditionally render elements",
+      "To loop through arrays"
+    ],
+    "answer": "To define scoped slots for passing dynamic content to child components"
+  },
+  {
+    "id": 21,
+    "question": "What is a directive in Vue 3?",
+    "options": [
+      "A special token in the markup that tells the library to do something to a DOM element",
+      "A method to style components",
+      "A built-in function for data fetching",
+      "A component lifecycle hook"
+    ],
+    "answer": "A special token in the markup that tells the library to do something to a DOM element"
+  },
+  {
+    "id": 22,
+    "question": "How do you create a custom directive in Vue 3?",
+    "options": [
+      "By using app.directive() during application setup",
+      "By writing a computed property",
+      "By defining a mixin",
+      "By extending a component"
+    ],
+    "answer": "By using app.directive() during application setup"
+  },
+  {
+    "id": 23,
+    "question": "What is the purpose of the <code>teleport</code> component in Vue 3?",
+    "options": [
+      "To render content into a different part of the DOM outside the component hierarchy",
+      "To lazy load components",
+      "To create reusable mixins",
+      "To optimize computed properties"
+    ],
+    "answer": "To render content into a different part of the DOM outside the component hierarchy"
+  },
+  {
+    "id": 24,
+    "question": "How do you manage global state in a Vue 3 application?",
+    "options": [
+      "By using Vuex or the new Composition API with provide/inject",
+      "By using only local component state",
+      "By storing data in the browser's local storage exclusively",
+      "By using React Context"
+    ],
+    "answer": "By using Vuex or the new Composition API with provide/inject"
+  },
+  {
+    "id": 25,
+    "question": "What is Vue Router used for?",
+    "options": [
+      "Managing client-side routing for single-page applications",
+      "Handling API requests",
+      "Styling components",
+      "Managing state"
+    ],
+    "answer": "Managing client-side routing for single-page applications"
+  },
+  {
+    "id": 26,
+    "question": "How do you define routes using Vue Router?",
+    "options": [
+      "By creating an array of route objects and passing it to createRouter()",
+      "By directly editing the index.html file",
+      "By using a v-for loop in the template",
+      "By using global state variables"
+    ],
+    "answer": "By creating an array of route objects and passing it to createRouter()"
+  },
+  {
+    "id": 27,
+    "question": "What is the purpose of <code>createApp()</code> in Vue 3?",
+    "options": [
+      "To initialize and mount a Vue application",
+      "To create a new component instance",
+      "To define a custom directive",
+      "To compile templates"
+    ],
+    "answer": "To initialize and mount a Vue application"
+  },
+  {
+    "id": 28,
+    "question": "How can you share logic between Vue 3 components using the Composition API?",
+    "options": [
+      "By extracting reusable functions (composables) that can be imported in setup()",
+      "By creating mixins in the Options API",
+      "By using global event buses",
+      "By duplicating code in each component"
+    ],
+    "answer": "By extracting reusable functions (composables) that can be imported in setup()"
+  },
+  {
+    "id": 29,
+    "question": "What is the <code>defineComponent()</code> function used for in Vue 3?",
+    "options": [
+      "To provide better type inference and define a component",
+      "To compile CSS styles",
+      "To create a directive",
+      "To initialize the application"
+    ],
+    "answer": "To provide better type inference and define a component"
+  },
+  {
+    "id": 30,
+    "question": "What is the role of <code>watchEffect()</code> in Vue 3?",
+    "options": [
+      "It automatically tracks reactive dependencies and re-runs when they change",
+      "It creates a computed property",
+      "It updates the Virtual DOM",
+      "It defines a component's props"
+    ],
+    "answer": "It automatically tracks reactive dependencies and re-runs when they change"
+  },
+  {
+    "id": 31,
+    "question": "How do you register a global component in Vue 3?",
+    "options": [
+      "By using app.component('ComponentName', Component)",
+      "By importing it in every file",
+      "By declaring it in the template",
+      "By using v-for"
+    ],
+    "answer": "By using app.component('ComponentName', Component)"
+  },
+  {
+    "id": 32,
+    "question": "What are mixins in Vue 3?",
+    "options": [
+      "Reusable pieces of functionality that can be merged into components",
+      "Directives for styling elements",
+      "A method for routing",
+      "A way to store state globally"
+    ],
+    "answer": "Reusable pieces of functionality that can be merged into components"
+  },
+  {
+    "id": 33,
+    "question": "How can you perform asynchronous operations in Vue 3 components?",
+    "options": [
+      "By using async functions within the setup() function or lifecycle hooks",
+      "By using synchronous XMLHttpRequest",
+      "By using jQuery AJAX exclusively",
+      "By blocking the main thread"
+    ],
+    "answer": "By using async functions within the setup() function or lifecycle hooks"
+  },
+  {
+    "id": 34,
+    "question": "What is the role of lifecycle hooks in Vue 3?",
+    "options": [
+      "They allow you to perform actions at specific stages of a component’s lifecycle",
+      "They define the component’s template",
+      "They manage routing",
+      "They update the CSS styles"
+    ],
+    "answer": "They allow you to perform actions at specific stages of a component’s lifecycle"
+  },
+  {
+    "id": 35,
+    "question": "Which lifecycle hook in Vue 3 is equivalent to mounted() in Vue 2?",
+    "options": ["onMounted()", "onCreated()", "onUpdated()", "onBeforeMount()"],
+    "answer": "onMounted()"
+  },
+  {
+    "id": 36,
+    "question": "What is the purpose of the <code>provide</code> and <code>inject</code> API in Vue 3?",
+    "options": [
+      "To share data between components without prop drilling",
+      "To bind event listeners",
+      "To style components globally",
+      "To define reactive state within a component"
+    ],
+    "answer": "To share data between components without prop drilling"
+  },
+  {
+    "id": 37,
+    "question": "How do you create a computed property using the Options API in Vue 3?",
+    "options": [
+      "By adding a computed property in the component’s options",
+      "By using the setup() function exclusively",
+      "By using v-for",
+      "By using a directive"
+    ],
+    "answer": "By adding a computed property in the component’s options"
+  },
+  {
+    "id": 38,
+    "question": "What is the benefit of using Single-File Components (SFCs) in Vue 3?",
+    "options": [
+      "They encapsulate template, logic, and styles in one file for better organization",
+      "They allow inline JavaScript only",
+      "They eliminate the need for CSS",
+      "They improve the performance of API calls"
+    ],
+    "answer": "They encapsulate template, logic, and styles in one file for better organization"
+  },
+  {
+    "id": 39,
+    "question": "What is the purpose of the <code>emit</code> function in Vue 3?",
+    "options": [
+      "To send custom events from a child component to its parent",
+      "To update the reactive state directly",
+      "To bind props to a component",
+      "To define lifecycle hooks"
+    ],
+    "answer": "To send custom events from a child component to its parent"
+  },
+  {
+    "id": 40,
+    "question": "How do you listen to an emitted event in a parent component in Vue 3?",
+    "options": [
+      "By using v-on to bind an event handler to the custom event",
+      "By using v-bind",
+      "By using v-model",
+      "By calling watch() on the event"
+    ],
+    "answer": "By using v-on to bind an event handler to the custom event"
+  },
+  {
+    "id": 41,
+    "question": "How do you handle dynamic class binding in Vue 3?",
+    "options": [
+      "Using v-bind:class with an object or array syntax",
+      "By hardcoding class names in the template",
+      "Using v-for to loop over class names",
+      "Using the style attribute only"
+    ],
+    "answer": "Using v-bind:class with an object or array syntax"
+  },
+  {
+    "id": 42,
+    "question": "How do you bind inline styles dynamically in Vue 3?",
+    "options": [
+      "Using v-bind:style with an object containing camelCased CSS properties",
+      "By linking an external stylesheet only",
+      "By using the class attribute",
+      "Inline styles cannot be dynamic"
+    ],
+    "answer": "Using v-bind:style with an object containing camelCased CSS properties"
+  },
+  {
+    "id": 43,
+    "question": "What is a slot in Vue 3?",
+    "options": [
+      "A placeholder in a component where content can be injected from the parent",
+      "A method for updating state",
+      "A directive for conditional rendering",
+      "A lifecycle hook"
+    ],
+    "answer": "A placeholder in a component where content can be injected from the parent"
+  },
+  {
+    "id": 44,
+    "question": "How do you define a named slot in a Vue 3 component?",
+    "options": [
+      "Using the <code>v-slot:name</code> syntax in the template",
+      "By setting a prop called 'slotName'",
+      "Using a computed property",
+      "By using the setup() function exclusively"
+    ],
+    "answer": "Using the v-slot:name syntax in the template"
+  },
+  {
+    "id": 45,
+    "question": "What is the purpose of the <code>keep-alive</code> component in Vue 3?",
+    "options": [
+      "To cache inactive component instances and preserve their state",
+      "To permanently mount all components",
+      "To delay component rendering",
+      "To manage global state"
+    ],
+    "answer": "To cache inactive component instances and preserve their state"
+  },
+  {
+    "id": 46,
+    "question": "How do you perform conditional rendering of components in Vue 3?",
+    "options": [
+      "Using v-if and v-else directives",
+      "Using v-for",
+      "Using v-bind only",
+      "By dynamically changing the component name"
+    ],
+    "answer": "Using v-if and v-else directives"
+  },
+  {
+    "id": 47,
+    "question": "What is the role of the <code>transition</code> component in Vue 3?",
+    "options": [
+      "To apply transition effects to elements or components when they enter or leave the DOM",
+      "To manage component state",
+      "To handle form validation",
+      "To bind event listeners"
+    ],
+    "answer": "To apply transition effects to elements or components when they enter or leave the DOM"
+  },
+  {
+    "id": 48,
+    "question": "How do you customize transition classes in Vue 3?",
+    "options": [
+      "By using the <code>name</code> attribute on the transition component",
+      "By editing the global CSS",
+      "By using inline styles only",
+      "By modifying the Virtual DOM directly"
+    ],
+    "answer": "By using the name attribute on the transition component"
+  },
+  {
+    "id": 49,
+    "question": "How do you mount a Vue 3 application to a DOM element?",
+    "options": [
+      "By calling app.mount('#app') after creating the app with createApp()",
+      "By calling new Vue() and passing a selector",
+      "By using the v-mount directive",
+      "By importing Vue from 'vue/dist/vue.esm.js'"
+    ],
+    "answer": "By calling app.mount('#app') after creating the app with createApp()"
+  },
+  {
+    "id": 50,
+    "question": "What is the purpose of the <code>emits</code> option in a Vue 3 component?",
+    "options": [
+      "To declare the custom events that a component can emit",
+      "To define props for the component",
+      "To manage component state",
+      "To import external modules"
+    ],
+    "answer": "To declare the custom events that a component can emit"
+  },
+  {
+    "id": 51,
+    "question": "How do you validate props in Vue 3?",
+    "options": [
+      "By adding a props option with type, required, and default properties",
+      "By using v-bind on the template",
+      "By calling a custom validator in setup()",
+      "Prop validation is not supported in Vue 3"
+    ],
+    "answer": "By adding a props option with type, required, and default properties"
+  },
+  {
+    "id": 52,
+    "question": "What is a mixin in Vue 3 and how is it used?",
+    "options": [
+      "A reusable piece of code that can be merged into components to share common functionality",
+      "A method for dynamic component loading",
+      "A function to create reactive state",
+      "A directive for handling events"
+    ],
+    "answer": "A reusable piece of code that can be merged into components to share common functionality"
+  },
+  {
+    "id": 53,
+    "question": "How can you access the global properties in a Vue 3 application?",
+    "options": [
+      "Using app.config.globalProperties",
+      "Using this.$root only",
+      "By importing them from Vuex",
+      "Global properties are not accessible in Vue 3"
+    ],
+    "answer": "Using app.config.globalProperties"
+  },
+  {
+    "id": 54,
+    "question": "What is the role of <code>defineAsyncComponent()</code> in Vue 3?",
+    "options": [
+      "To define a component that is loaded asynchronously for code splitting",
+      "To create a synchronous component",
+      "To define computed properties",
+      "To register global directives"
+    ],
+    "answer": "To define a component that is loaded asynchronously for code splitting"
+  },
+  {
+    "id": 55,
+    "question": "How do you handle errors in asynchronous components in Vue 3?",
+    "options": [
+      "By using errorCaptured or a custom error handler on the async component",
+      "By using try/catch in the template",
+      "By relying on the browser's default error handling",
+      "Errors in asynchronous components cannot be handled"
+    ],
+    "answer": "By using errorCaptured or a custom error handler on the async component"
+  },
+  {
+    "id": 56,
+    "question": "How do you update reactive data in Vue 3?",
+    "options": [
+      "By directly assigning a new value to a ref or property of a reactive object",
+      "By calling this.setState()",
+      "By mutating the DOM directly",
+      "By using computed properties exclusively"
+    ],
+    "answer": "By directly assigning a new value to a ref or property of a reactive object"
+  },
+  {
+    "id": 57,
+    "question": "What is the purpose of <code>shallowReactive()</code> in Vue 3?",
+    "options": [
+      "To create a reactive object that tracks only its root properties and not nested objects",
+      "To create a non-reactive object",
+      "To define a computed property",
+      "To optimize component rendering"
+    ],
+    "answer": "To create a reactive object that tracks only its root properties and not nested objects"
+  },
+  {
+    "id": 58,
+    "question": "What is the difference between ref() and reactive() in Vue 3?",
+    "options": [
+      "ref() creates a reactive primitive or object wrapped in a value property, while reactive() makes an entire object reactive",
+      "They are exactly the same",
+      "ref() is used only in class components",
+      "reactive() cannot be used with objects"
+    ],
+    "answer": "ref() creates a reactive primitive or object wrapped in a value property, while reactive() makes an entire object reactive"
+  },
+  {
+    "id": 59,
+    "question": "How do you expose component data when using the Composition API?",
+    "options": [
+      "By returning the reactive data and functions from the setup() function",
+      "By assigning them to this.data",
+      "By using the data() option exclusively",
+      "By exporting them from the component file"
+    ],
+    "answer": "By returning the reactive data and functions from the setup() function"
+  },
+  {
+    "id": 60,
+    "question": "How can you integrate third-party libraries with Vue 3?",
+    "options": [
+      "By installing them via npm/yarn and importing them in your components or plugins",
+      "By copying their code into your component files",
+      "By using inline script tags in the template",
+      "Third-party libraries cannot be used with Vue 3"
+    ],
+    "answer": "By installing them via npm/yarn and importing them in your components or plugins"
+  },
+  {
+    "id": 61,
+    "question": "What is the purpose of Vue DevTools?",
+    "options": [
+      "To inspect and debug Vue component hierarchies, state, and events",
+      "To compile Vue applications",
+      "To generate API documentation automatically",
+      "To manage routing"
+    ],
+    "answer": "To inspect and debug Vue component hierarchies, state, and events"
+  },
+  {
+    "id": 62,
+    "question": "How do you define a custom filter in Vue 3?",
+    "options": [
+      "Filters have been deprecated in Vue 3; you should use methods or computed properties instead",
+      "By adding a filters object in the component options",
+      "By using the v-filter directive",
+      "By registering a global mixin"
+    ],
+    "answer": "Filters have been deprecated in Vue 3; you should use methods or computed properties instead"
+  },
+  {
+    "id": 63,
+    "question": "How can you integrate TypeScript in a Vue 3 project?",
+    "options": [
+      "By using Vue CLI or Vite with TypeScript templates and adding type annotations in components",
+      "By converting .vue files to .ts files exclusively",
+      "By using JavaScript only",
+      "TypeScript is not supported in Vue 3"
+    ],
+    "answer": "By using Vue CLI or Vite with TypeScript templates and adding type annotations in components"
+  },
+  {
+    "id": 64,
+    "question": "What is the purpose of <code>defineProps()</code> in Vue 3 with the Composition API (in SFCs)?",
+    "options": [
+      "To declare and type-check props in a <script setup> block",
+      "To define computed properties",
+      "To create a new reactive object",
+      "To register global components"
+    ],
+    "answer": "To declare and type-check props in a <script setup> block"
+  },
+  {
+    "id": 65,
+    "question": "What is the role of <code>defineEmits()</code> in Vue 3 with the Composition API?",
+    "options": [
+      "To declare the events that a component can emit in a <script setup> block",
+      "To define component props",
+      "To manage component state",
+      "To create computed properties"
+    ],
+    "answer": "To declare the events that a component can emit in a <script setup> block"
+  },
+  {
+    "id": 66,
+    "question": "How can you conditionally apply CSS classes in Vue 3?",
+    "options": [
+      "Using v-bind:class with an object or array syntax",
+      "By using v-if on the style attribute",
+      "By creating separate components for each style",
+      "By using inline CSS exclusively"
+    ],
+    "answer": "Using v-bind:class with an object or array syntax"
+  },
+  {
+    "id": 67,
+    "question": "How do you perform two-way binding on form inputs in Vue 3?",
+    "options": [
+      "Using v-model",
+      "Using v-bind only",
+      "Using v-on:input only",
+      "Two-way binding is not supported in Vue 3"
+    ],
+    "answer": "Using v-model"
+  },
+  {
+    "id": 68,
+    "question": "What is the purpose of <code>nextTick()</code> in Vue 3?",
+    "options": [
+      "To execute code after the DOM has been updated",
+      "To delay component mounting",
+      "To force a re-render",
+      "To register global event listeners"
+    ],
+    "answer": "To execute code after the DOM has been updated"
+  },
+  {
+    "id": 69,
+    "question": "How do you share reusable logic between components without mixins in Vue 3?",
+    "options": [
+      "By using composable functions (composables) with the Composition API",
+      "By using global variables",
+      "By duplicating code in every component",
+      "By using render functions"
+    ],
+    "answer": "By using composable functions (composables) with the Composition API"
+  },
+  {
+    "id": 70,
+    "question": "What are portals used for in Vue 3?",
+    "options": [
+      "To render a component’s template in a different part of the DOM",
+      "To bind event listeners globally",
+      "To manage state between components",
+      "To handle asynchronous data fetching"
+    ],
+    "answer": "To render a component’s template in a different part of the DOM"
+  },
+  {
+    "id": 71,
+    "question": "How do you create a plugin in Vue 3?",
+    "options": [
+      "By exporting an object with an install() method that receives the app instance",
+      "By writing a mixin and adding it to every component",
+      "By using the plugin() method on the component",
+      "Plugins are not supported in Vue 3"
+    ],
+    "answer": "By exporting an object with an install() method that receives the app instance"
+  },
+  {
+    "id": 72,
+    "question": "What is the role of the <code>Suspense</code> component in Vue 3?",
+    "options": [
+      "To handle asynchronous components and show a fallback while loading",
+      "To delay rendering of all components",
+      "To provide error boundaries for components",
+      "To manage global state"
+    ],
+    "answer": "To handle asynchronous components and show a fallback while loading"
+  },
+  {
+    "id": 73,
+    "question": "How do you lazy-load a component in Vue 3?",
+    "options": [
+      "By using defineAsyncComponent()",
+      "By using v-if to conditionally render it",
+      "By using the v-lazy directive",
+      "By setting the component's lazy property to true"
+    ],
+    "answer": "By using defineAsyncComponent()"
+  },
+  {
+    "id": 74,
+    "question": "What is the role of <code>expose()</code> in a Vue 3 <script setup> block?",
+    "options": [
+      "To expose specific properties or methods to the parent component",
+      "To define reactive state",
+      "To import global components",
+      "To register plugins"
+    ],
+    "answer": "To expose specific properties or methods to the parent component"
+  },
+  {
+    "id": 75,
+    "question": "How do you conditionally render a component in Vue 3?",
+    "options": [
+      "Using v-if and v-else directives",
+      "Using v-for exclusively",
+      "By modifying the component's reactive state in mounted()",
+      "By using v-model"
+    ],
+    "answer": "Using v-if and v-else directives"
+  },
+  {
+    "id": 76,
+    "question": "What is a watcher in Vue 3?",
+    "options": [
+      "A function that observes changes in reactive data and runs a callback",
+      "A computed property",
+      "A directive for handling events",
+      "A method to bind CSS classes"
+    ],
+    "answer": "A function that observes changes in reactive data and runs a callback"
+  },
+  {
+    "id": 77,
+    "question": "How do you create a deep watcher in Vue 3?",
+    "options": [
+      "By setting the deep option to true in the watch() function",
+      "By using reactive() on the watched property",
+      "By using a computed property instead",
+      "Deep watchers are not supported in Vue 3"
+    ],
+    "answer": "By setting the deep option to true in the watch() function"
+  },
+  {
+    "id": 78,
+    "question": "How can you improve the performance of a large Vue 3 application?",
+    "options": [
+      "By using lazy loading, code splitting, and optimizing reactive updates",
+      "By using only global variables",
+      "By disabling reactivity",
+      "By writing all logic in the template"
+    ],
+    "answer": "By using lazy loading, code splitting, and optimizing reactive updates"
+  },
+  {
+    "id": 79,
+    "question": "What is the role of the <code>beforeMount</code> lifecycle hook in Vue 3?",
+    "options": [
+      "It runs before the component is mounted to the DOM",
+      "It runs after the component is unmounted",
+      "It runs during data fetching only",
+      "It replaces the setup() function"
+    ],
+    "answer": "It runs before the component is mounted to the DOM"
+  },
+  {
+    "id": 80,
+    "question": "How do you update a reactive array in Vue 3?",
+    "options": [
+      "By using methods like push(), pop(), or by reassigning the array with a new one",
+      "By directly modifying the DOM",
+      "By using v-bind on the array",
+      "By calling update() on the array"
+    ],
+    "answer": "By using methods like push(), pop(), or by reassigning the array with a new one"
+  },
+  {
+    "id": 81,
+    "question": "What is the purpose of Vue 3’s new reactivity system based on Proxies?",
+    "options": [
+      "To track changes more efficiently and enable better performance",
+      "To replace the need for components",
+      "To simplify CSS management",
+      "To enable server-side rendering exclusively"
+    ],
+    "answer": "To track changes more efficiently and enable better performance"
+  },
+  {
+    "id": 82,
+    "question": "How can you conditionally apply inline styles in Vue 3?",
+    "options": [
+      "By binding an object to the style attribute using v-bind:style",
+      "By writing multiple CSS classes",
+      "By using the v-if directive on style tags",
+      "Inline styles cannot be conditional"
+    ],
+    "answer": "By binding an object to the style attribute using v-bind:style"
+  },
+  {
+    "id": 83,
+    "question": "How do you register a global directive in Vue 3?",
+    "options": [
+      "By calling app.directive() with the directive name and definition",
+      "By including it in the component's directives option",
+      "By using v-directive in the template",
+      "Global directives are registered automatically"
+    ],
+    "answer": "By calling app.directive() with the directive name and definition"
+  },
+  {
+    "id": 84,
+    "question": "What is the use of the <code>onUnmounted()</code> hook in Vue 3?",
+    "options": [
+      "To perform cleanup operations when a component is unmounted",
+      "To fetch data when a component is mounted",
+      "To define component props",
+      "To initialize reactive state"
+    ],
+    "answer": "To perform cleanup operations when a component is unmounted"
+  },
+  {
+    "id": 85,
+    "question": "How do you integrate a Vue 3 component with a REST API?",
+    "options": [
+      "By using lifecycle hooks or the setup() function with async/await to fetch data",
+      "By binding API calls directly in the template",
+      "By using v-model on the API endpoint",
+      "By using Vue Router exclusively"
+    ],
+    "answer": "By using lifecycle hooks or the setup() function with async/await to fetch data"
+  },
+  {
+    "id": 86,
+    "question": "What is the difference between <code>onMounted()</code> and <code>onBeforeMount()</code> in Vue 3?",
+    "options": [
+      "onBeforeMount() runs just before mounting, while onMounted() runs after the component is mounted",
+      "They run at the same time",
+      "onMounted() is only for reactive state initialization",
+      "onBeforeMount() is deprecated in Vue 3"
+    ],
+    "answer": "onBeforeMount() runs just before mounting, while onMounted() runs after the component is mounted"
+  },
+  {
+    "id": 87,
+    "question": "How do you use the <code>emit</code> function with TypeScript in Vue 3?",
+    "options": [
+      "By defining the emits option and using defineEmits() in <script setup>",
+      "By importing emit from Vuex",
+      "By using v-bind on the event",
+      "TypeScript is not supported with emit"
+    ],
+    "answer": "By defining the emits option and using defineEmits() in <script setup>"
+  },
+  {
+    "id": 88,
+    "question": "What is the purpose of using <code>shallowRef()</code> in Vue 3?",
+    "options": [
+      "To create a ref that tracks only its own value and not nested properties",
+      "To make a ref non-reactive",
+      "To create a deep reactive object",
+      "To replace reactive()"
+    ],
+    "answer": "To create a ref that tracks only its own value and not nested properties"
+  },
+  {
+    "id": 89,
+    "question": "How do you perform cleanup of side effects in Vue 3 when using watch()?",
+    "options": [
+      "By returning a cleanup function from the watch() callback",
+      "By calling unwatch() manually inside setup()",
+      "By using onUnmounted() exclusively",
+      "Cleanup is automatic and requires no code"
+    ],
+    "answer": "By returning a cleanup function from the watch() callback"
+  },
+  {
+    "id": 90,
+    "question": "What is the use of <code>markRaw()</code> in Vue 3?",
+    "options": [
+      "To mark an object so that it should not be made reactive",
+      "To create a reactive copy of an object",
+      "To force reactivity on a primitive value",
+      "To perform deep cloning of objects"
+    ],
+    "answer": "To mark an object so that it should not be made reactive"
+  },
+  {
+    "id": 91,
+    "question": "How do you create a custom composable function in Vue 3?",
+    "options": [
+      "By defining a function that uses reactive APIs (e.g., ref, reactive, watch) and returns the desired properties",
+      "By creating a global mixin",
+      "By using the computed property exclusively",
+      "Custom composables are not supported in Vue 3"
+    ],
+    "answer": "By defining a function that uses reactive APIs (e.g., ref, reactive, watch) and returns the desired properties"
+  },
+  {
+    "id": 92,
+    "question": "What is the purpose of using <code>toRefs()</code> in Vue 3?",
+    "options": [
+      "To convert a reactive object’s properties into refs, preserving reactivity when destructuring",
+      "To convert refs into reactive objects",
+      "To clone a reactive object",
+      "To merge multiple reactive objects"
+    ],
+    "answer": "To convert a reactive object’s properties into refs, preserving reactivity when destructuring"
+  },
+  {
+    "id": 93,
+    "question": "How do you handle component errors globally in a Vue 3 application?",
+    "options": [
+      "By using the errorHandler option in app.config",
+      "By wrapping every component in try/catch blocks",
+      "By using v-if to check for errors in the template",
+      "By disabling reactivity on errors"
+    ],
+    "answer": "By using the errorHandler option in app.config"
+  },
+  {
+    "id": 94,
+    "question": "What is the purpose of <code>createSSRApp()</code> in Vue 3?",
+    "options": [
+      "To create an application instance optimized for server-side rendering",
+      "To enable client-side routing",
+      "To automatically hydrate the client app",
+      "To manage global state"
+    ],
+    "answer": "To create an application instance optimized for server-side rendering"
+  },
+  {
+    "id": 95,
+    "question": "How can you share a global mixin in Vue 3?",
+    "options": [
+      "By calling app.mixin() with the mixin object during app initialization",
+      "By importing the mixin in every component",
+      "By declaring the mixin in the template",
+      "Global mixins are not supported in Vue 3"
+    ],
+    "answer": "By calling app.mixin() with the mixin object during app initialization"
+  },
+  {
+    "id": 96,
+    "question": "How do you integrate CSS frameworks like Tailwind CSS in a Vue 3 project?",
+    "options": [
+      "By installing the framework via npm/yarn and including its CSS in your main entry file",
+      "By rewriting all styles as inline styles",
+      "By using a Vue-specific version of the framework exclusively",
+      "By copying the CSS files into every component"
+    ],
+    "answer": "By installing the framework via npm/yarn and including its CSS in your main entry file"
+  },
+  {
+    "id": 97,
+    "question": "What is the purpose of the <code>computed</code> property in Vue 3?",
+    "options": [
+      "To cache computed values based on reactive dependencies",
+      "To define component methods",
+      "To directly update reactive state",
+      "To handle events"
+    ],
+    "answer": "To cache computed values based on reactive dependencies"
+  },
+  {
+    "id": 98,
+    "question": "How do you bind a component’s class and style dynamically in Vue 3?",
+    "options": [
+      "By using v-bind:class and v-bind:style with objects or arrays",
+      "By using static attributes only",
+      "By using inline JavaScript in the template",
+      "By using computed properties exclusively"
+    ],
+    "answer": "By using v-bind:class and v-bind:style with objects or arrays"
+  },
+  {
+    "id": 99,
+    "question": "What is the role of <code>h()</code> in Vue 3?",
+    "options": [
+      "It is a helper function to create VNodes when writing render functions",
+      "It binds event handlers",
+      "It creates reactive state",
+      "It styles components"
+    ],
+    "answer": "It is a helper function to create VNodes when writing render functions"
+  },
+  {
+    "id": 100,
+    "question": "What are some best practices for building scalable Vue 3 applications?",
+    "options": [
+      "Using the Composition API for logic reuse, splitting code via lazy loading, and maintaining modular architecture",
+      "Writing all code in a single file",
+      "Avoiding the use of plugins and external libraries",
+      "Hardcoding configuration settings in each component"
+    ],
+    "answer": "Using the Composition API for logic reuse, splitting code via lazy loading, and maintaining modular architecture"
+  }
+]
