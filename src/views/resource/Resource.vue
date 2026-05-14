@@ -1,14 +1,17 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { ref, onMounted, computed, watch } from 'vue'; // Add watch
+import { ref, onMounted, computed, watch } from 'vue';
 import resourceTitles from './data.json';
 import { getDictionary } from '@/locale/dict';
 import getData, { searchForData } from '@/util/getData';
-import { ElInput, ElNotification, ElTabs, ElTabPane } from 'element-plus'; // Add ElTabs imports
-import { Search, Heart, HeartOff, X } from 'lucide-vue-next'; // Add X icon import
+import { ElInput, ElTabs, ElTabPane } from 'element-plus';
+import { Search, Heart, HeartOff, X } from 'lucide-vue-next';
 import WebsiteCard from './components/WebsiteCard.vue';
 import VideoCard from './components/VideoCard.vue';
-import { debounce } from 'lodash'; // Add debounce import
+import { debounce } from 'lodash';
+import { useBookmarkStore } from '@/stores/bookmarkStore';
+
+const bookmarkStore = useBookmarkStore();
 
 const dict = ref({});
 const searchResult = ref(null);
@@ -22,7 +25,6 @@ const debouncedSearch = debounce((searchText) => {
     return;
   }
   searchResult.value = searchForData(searchText);
-  console.log('Search result:', searchResult.value);
 }, 300);
 
 // Watch for input changes
@@ -30,56 +32,14 @@ watch(() => inputData.value, (newValue) => {
   debouncedSearch(newValue);
 });
 
-// Add bookmarks state
-const bookmarks = ref([]);
+const saveBookMark = (id, title, url, resourceType) =>
+  bookmarkStore.toggle({ id, title, url, resourceType, category: 'Searching Result' });
 
-// Add bookmark methods
-const saveBookMark = (id, title, url, resourceType) => {
-  const bookmark = { id, title, url, resourceType, category: "Searching Result" };
-
-  // Check if bookmark already exists
-  const index = bookmarks.value.findIndex(
-    (b) => b.id === id && b.title === title
-  );
-
-  if (index !== -1) {
-    // Remove from bookmarks
-    bookmarks.value.splice(index, 1);
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks.value));
-    ElNotification({
-      title: "Bookmark Removed",
-      message: "Bookmark removed successfully",
-      type: "info",
-      duration: 1000,
-    });
-  } else {
-    // Add to bookmarks
-    bookmarks.value.push(bookmark);
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks.value));
-    ElNotification({
-      title: "Bookmark Saved",
-      message: "Bookmark saved successfully",
-      type: "success",
-      duration: 1000,
-    });
-  }
-};
-
-// Reactive check for bookmarked status
-const isBookmarked = (id, title) => {
-  return bookmarks.value.some(
-    (bookmark) =>
-      bookmark.id === id &&
-      bookmark.title === title
-  );
-};
+const isBookmarked = (id, title) => bookmarkStore.isBookmarked(id, title);
 
 onMounted(() => {
   const lang = localStorage.getItem('lang') || 'en';
   dict.value = getDictionary(lang);
-  // Load bookmarks from localStorage
-  bookmarks.value = JSON.parse(localStorage.getItem("bookmarks")) || [];
-  // Perform initial search if there's any input value
   if (inputData.value) {
     debouncedSearch(inputData.value);
   }
@@ -89,22 +49,9 @@ onMounted(() => {
 const hasWebsites = computed(() => (searchResult.value?.websites?.length || 0) > 0);
 const hasVideos = computed(() => (searchResult.value?.videos?.length || 0) > 0);
 
-// Add computed properties for counts
-const websitesCount = computed(() => {
-  console.log('Websites length:', searchResult.value?.websites?.length);
-  return searchResult.value?.websites?.length || 0;
-});
-
-const videosCount = computed(() => {
-  console.log('Videos length:', searchResult.value?.videos?.length);
-  return searchResult.value?.videos?.length || 0;
-});
-
-const totalCount = computed(() => {
-  const total = websitesCount.value + videosCount.value;
-  console.log('Total count:', total);
-  return total;
-});
+const websitesCount = computed(() => searchResult.value?.websites?.length || 0);
+const videosCount = computed(() => searchResult.value?.videos?.length || 0);
+const totalCount = computed(() => websitesCount.value + videosCount.value);
 
 const openNewResourceTab = (title) => {
   emits("openNewTab", title);

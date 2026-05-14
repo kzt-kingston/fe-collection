@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { storeToRefs } from 'pinia'
 import { Search, ExternalLink, HeartOff, Globe, Video } from 'lucide-vue-next'
 import { ElNotification } from 'element-plus';
-
-const searchTerm = ref('')
-const selectedCategory = ref(null)
+import { useBookmarkStore } from '@/stores/bookmarkStore';
 
 interface Bookmark {
     id: number;
@@ -14,15 +13,15 @@ interface Bookmark {
     resourceType: string;
 }
 
-// get all bookmarks from local storage
-const getBookmarks = (): Bookmark[] => {
-    const bookmarks = localStorage.getItem("bookmarks");
-    return bookmarks ? JSON.parse(bookmarks) : [];
-};
+const bookmarkStore = useBookmarkStore();
+const { bookmarks } = storeToRefs(bookmarkStore) as unknown as { bookmarks: { value: Bookmark[] } };
 
-const bookmarks = ref<Bookmark[]>(getBookmarks());
+const searchTerm = ref('')
+const selectedCategory = ref<string | null>(null)
 
-const categories = Array.from(new Set(bookmarks.value.map(b => b.category)))
+const categories = computed(() =>
+    Array.from(new Set(bookmarks.value.map(b => b.category)))
+)
 
 const filteredBookmarks = computed(() =>
     bookmarks.value.filter(bookmark =>
@@ -31,18 +30,8 @@ const filteredBookmarks = computed(() =>
     )
 )
 
-const removeBookmark = (id: number, title: string, url: string, category: string) => {
-    const index = bookmarks.value.findIndex(b => b.id === id && b.title === title && b.category === category)
-    if (index !== -1) {
-        bookmarks.value.splice(index, 1)
-        localStorage.setItem('bookmarks', JSON.stringify(bookmarks.value))
-        ElNotification({
-            title: 'Bookmark Removed',
-            message: 'Bookmark removed successfully',
-            type: 'info',
-            duration: 1000
-        })
-    }
+const removeBookmark = (id: number, title: string, _url: string, category: string) => {
+    bookmarkStore.remove(id, title, category)
 }
 
 const clearCategory = () => {
@@ -51,10 +40,8 @@ const clearCategory = () => {
 
 const selectCategory = (category: string) => {
     selectedCategory.value = category
-    console.log(selectedCategory.value)
 }
 
-// export bookmarks from local storage and download as JSON file
 const exportBookmarks = () => {
     const data = JSON.stringify(bookmarks.value)
     const blob = new Blob([data], { type: 'application/json' })
@@ -66,7 +53,6 @@ const exportBookmarks = () => {
     URL.revokeObjectURL(url)
 }
 
-// import bookmarks from JSON file and save to local storage as bookmarks
 const importBookmarks = (file: any) => {
     if (file.raw.type !== 'application/json') {
         ElNotification({
@@ -82,8 +68,7 @@ const importBookmarks = (file: any) => {
     reader.onload = () => {
         const data = reader.result as string
         const importedBookmarks = JSON.parse(data) as Bookmark[]
-        localStorage.setItem('bookmarks', JSON.stringify(importedBookmarks))
-        bookmarks.value = importedBookmarks
+        bookmarkStore.replaceAll(importedBookmarks)
         ElNotification({
             title: 'Bookmarks Imported',
             message: 'Bookmarks imported successfully',
@@ -94,10 +79,8 @@ const importBookmarks = (file: any) => {
     reader.readAsText(file?.raw as Blob)
 }
 
-// clear all bookmarks from local storage and bookmarks ref
 const clearBookmarks = () => {
-    bookmarks.value = []
-    localStorage.removeItem('bookmarks')
+    bookmarkStore.clear()
     ElNotification({
         title: 'Bookmarks Cleared',
         message: 'Bookmarks cleared successfully',

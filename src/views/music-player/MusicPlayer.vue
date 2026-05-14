@@ -231,7 +231,6 @@ const getTrackName = (track) => {
 }
 
 const init = () => {
-  console.log("Tracks:", tracks);
   currentTrack.value = tracks[0].path;
   currentTrackName.value = tracks[0].name;
   audioRef.value = new Audio(currentTrack.value)

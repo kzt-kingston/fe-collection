@@ -20,9 +20,6 @@ const props = defineProps({
 const quizStore = useQuizStore();
 const emit = defineEmits(['restart']);
 
-console.log("Wrong Answers:", quizStore.getWrongAnswersQuestions());
-console.log("Wrong Selected Answers:", quizStore.getWrongSelectedAnswers());
-
 let wrongSelectedAnswers = quizStore.getWrongSelectedAnswers();
 
 const percentage = computed(() => {

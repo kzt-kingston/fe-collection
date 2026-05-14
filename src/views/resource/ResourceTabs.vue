@@ -31,7 +31,6 @@ const removeTab = (tabId) => {
 };
 
 const openNewTab = (title) => {
-    console.log("Open new tab", title);
     addTab(title);
 };
 

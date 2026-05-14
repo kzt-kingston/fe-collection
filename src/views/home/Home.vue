@@ -63,10 +63,7 @@ const logos = [
 const installPWA = async () => {
     if (deferredPrompt.value) {
         (deferredPrompt.value).prompt();
-        const { outcome } = await (deferredPrompt.value).userChoice;
-        if (outcome === 'accepted') {
-            console.log('PWA installed');
-        }
+        await (deferredPrompt.value).userChoice;
         deferredPrompt.value = null;
         showInstallButton.value = false;
     }

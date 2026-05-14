@@ -119,11 +119,13 @@ import getData from "@/util/getData";
 import { onMounted, ref, computed } from "vue";
 import { getDictionary } from "@/locale/dict";
 import { Heart, HeartOff } from "lucide-vue-next";
-import { ElNotification } from "element-plus";
 import { ElTabs } from "element-plus";
 import WebsiteCard from "./WebsiteCard.vue";
 import VideoCard from "./VideoCard.vue";
 import resourceTitles from '../data.json';
+import { useBookmarkStore } from '@/stores/bookmarkStore';
+
+const bookmarkStore = useBookmarkStore();
 
 const dict = ref({});
 const activeTab = ref('all'); // Change activeTab to match ElTabs expected value type
@@ -134,69 +136,15 @@ const resourceData = ref({});
 const hasWebsites = computed(() => (resourceData.value?.websites?.length || 0) > 0);
 const hasVideos = computed(() => (resourceData.value?.videos?.length || 0) > 0);
 
-// Add computed properties for counts
-const websitesCount = computed(() => {
-  console.log('Websites length:', resourceData.value?.websites?.length);
-  return resourceData.value?.websites?.length || 0;
-});
+const websitesCount = computed(() => resourceData.value?.websites?.length || 0);
+const videosCount = computed(() => resourceData.value?.videos?.length || 0);
+const totalCount = computed(() => websitesCount.value + videosCount.value);
 
-const videosCount = computed(() => {
-  console.log('Videos length:', resourceData.value?.videos?.length);
-  return resourceData.value?.videos?.length || 0;
-});
+const saveBookMark = (id, title, url, category, resourceType) =>
+  bookmarkStore.toggle({ id, title, url, category, resourceType });
 
-const totalCount = computed(() => {
-  const total = websitesCount.value + videosCount.value;
-  console.log('Total count:', total);
-  return total;
-});
-
-// Add bookmarks state
-const bookmarks = ref([]);
-
-// Add bookmark methods
-const saveBookMark = (id, title, url, category, resourceType) => {
-  const bookmark = { id, title, url, category, resourceType };
-
-  console.log("Bookmark:", bookmark);
-
-  // Check if bookmark already exists
-  const index = bookmarks.value.findIndex(
-    (b) => b.id === id && b.title === title && b.category === category
-  );
-
-  if (index !== -1) {
-    // Remove from bookmarks
-    bookmarks.value.splice(index, 1);
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks.value));
-    ElNotification({
-      title: "Bookmark Removed",
-      message: "Bookmark removed successfully",
-      type: "info",
-      duration: 1000,
-    });
-  } else {
-    // Add to bookmarks
-    bookmarks.value.push(bookmark);
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks.value));
-    ElNotification({
-      title: "Bookmark Saved",
-      message: "Bookmark saved successfully",
-      type: "success",
-      duration: 1000,
-    });
-  }
-};
-
-// Reactive check for bookmarked status
-const isBookmarked = (id, title, category) => {
-  return bookmarks.value.some(
-    (bookmark) =>
-      bookmark.id === id &&
-      bookmark.title === title &&
-      bookmark.category === category
-  );
-};
+const isBookmarked = (id, title, category) =>
+  bookmarkStore.isBookmarked(id, title, category);
 
 const props = defineProps({
   title: {
@@ -207,7 +155,6 @@ const props = defineProps({
 });
 
 onMounted(async () => {
-  bookmarks.value = JSON.parse(localStorage.getItem("bookmarks")) || [];
   title.value = props.title;
   await fetchData();
   const lang = localStorage.getItem("lang") || "en";
@@ -217,9 +164,8 @@ onMounted(async () => {
 const fetchData = async () => {
   try {
     const data = await getData(title.value, "%");
-    console.log("Resource data:", data);
     resourceData.value = data;
-  } catch {
+  } catch (error) {
     console.error("Error fetching data:", error);
   }
 };

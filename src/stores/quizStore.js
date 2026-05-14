@@ -11,8 +11,6 @@ import vueQuestions from '@/data/quiz-questions/vue.json';
 import angularQuestions from '@/data/quiz-questions/angular.json';
 
 export const useQuizStore = defineStore('quiz', () => {
-  console.log('Initializing quiz store'); // Debug log
-  
   // State
   const quizType = ref(null);
   const questions = ref([]);

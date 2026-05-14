@@ -50,7 +50,6 @@ onMounted(() => {
 });
 
 const search = (text) => {
-    console.log('Searching for:', text);
     if (worker.value) {
         worker.value.postMessage({ text });
     }
