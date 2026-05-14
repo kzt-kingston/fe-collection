@@ -4,7 +4,6 @@ import Home from '@/views/home/Home.vue'
 import Resource from '@/views/resource/ResourceTabs.vue'
 import About from '@/views/about/About.vue'
 import MusicPlayer from '@/views/music-player/MusicPlayer.vue'
-import SupportMe from '@/views/support-me/SupportMe.vue'
 import Bookmark from '@/views/bookmark/Bookmark.vue'
 import Quiz from '@/views/quiz/Quiz.vue'
 import Onboarding from '@/views/onboarding/Onboarding.vue'
@@ -33,11 +32,6 @@ const router = createRouter({
       path: '/music-player',
       name: 'MusicPlayer',
       component: MusicPlayer
-    },
-    {
-      path: '/support-me',
-      name: 'SupportMe',
-      component: SupportMe
     },
     {
       path: '/bookmark',

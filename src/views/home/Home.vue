@@ -2,13 +2,10 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { getDictionary } from '@/locale/dict';
-import { Heart, Download } from 'lucide-vue-next';
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
-import { useAuthStore } from '@/stores/authStore';
+import { Download } from 'lucide-vue-next';
 import ResourceCarousel from '@/components/ResourceCarousel.vue';
 import SplineViewer from '@/components/SplineViewer.vue';
 
-const authStore = useAuthStore();
 const dict = ref({});
 const deferredPrompt = ref(null);
 const showInstallButton = ref(false);
@@ -133,23 +130,12 @@ onMounted(() => {
         <!-- Resource Carousel -->
         <ResourceCarousel :logos="logos" />
     </section>
-    <section id="support-me">
-        <!-- Support Me -->
-        <DotLottieVue style="width:200px;" class="mx-auto" autoplay loop src="/lottie/buy-me-a-coffee.json" />
-        <div class="flex items-center justify-center my-2">
-            <router-link to="/support-me"
-                class="flex items-center gap-2 text-xs text-cyan-500 hover:text-cyan-600 p-2 border-solid border border-cyan-500 rounded-md">
-                {{ dict.support_me_by }}
-                <Heart size="15" class="text-red-500 hover:text-red-600" />
-            </router-link>
-        </div>
-        <!-- Developed By -->
-        <div class="text-center text-xs text-gray-500 mt-5">
-            <a href="https://kyawkingston.vercel.app" target="_blank" rel="noopener noreferrer">
-                Developed by Kyaw Zin Thet
-            </a>
-        </div>
-    </section>
+    <!-- Developed By -->
+    <div class="text-center text-xs text-gray-500 mt-10">
+        <a href="https://kyawkingston.vercel.app" target="_blank" rel="noopener noreferrer">
+            Developed by Kyaw Zin Thet
+        </a>
+    </div>
 </template>
 <style lang="scss" scoped>
 .lottie {

@@ -1,35 +1,55 @@
-# frontend-collection
+# Frontend Collection
 
-This template should help get you started developing with Vue 3 in Vite.
+A curated collection of frontend learning resources — websites, video tutorials, and quiz questions across HTML, CSS, SASS, JavaScript, TypeScript, Vue, React, React Native, Angular, Flutter, Git, and more.
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue 3** (Composition API, `<script setup>`) + **Vite**
+- **Pinia** for state, **Vue Router 4** for routing
+- **Element Plus** + **Tailwind CSS** + **SASS** for UI
+- **Supabase** for auth and user profiles
+- Installable as a **PWA** (`vite-plugin-pwa`)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Getting Started
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+Set up `.env` from `.env.example` if you want to enable Supabase auth:
 
-```sh
-npm run build
+```
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Scripts
 
-```sh
-npm run lint
+| Command           | Purpose                                              |
+| ----------------- | ---------------------------------------------------- |
+| `npm run dev`     | Vite dev server with HMR                             |
+| `npm run build`   | Production build (strips `console.*`)                |
+| `npm run preview` | Serve the production build locally                   |
+| `npm run lint`    | ESLint with `--fix` (Vue + Prettier config)          |
+| `npm run format`  | Prettier write across `src/`                         |
+
+## Project Structure
+
 ```
+src/
+├── components/    # Shared UI (Navbar, Drawer, Auth, Quiz, AI/ImageSearch, …)
+├── views/         # Route-level pages (Home, Resource, Quiz, Bookmark, …)
+├── data/          # Static JSON: websites/, videos/, quiz-questions/
+├── stores/        # Pinia stores (auth, quiz, user)
+├── router/        # Vue Router definitions
+├── util/          # getData.js — central reader for data/*.json
+├── locale/        # English + Burmese dictionary
+└── supabase.js    # Supabase client singleton
+```
+
+The `@/` alias maps to `./src/`.
+
+## Recommended IDE
+
+[VSCode](https://code.visualstudio.com/) with the [Vue (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension. Disable Vetur if installed.

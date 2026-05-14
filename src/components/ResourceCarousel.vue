@@ -2,11 +2,10 @@
     <div>
         <p class="text-center font-semibold">You can find and learn many different resources and improve your skills by answering Quiz!</p>
         <div class="flex mx-auto items-center justify-center">
-            <div class="relative w-full max-w-4xl overflow-hidden" @mouseenter="pauseAutoRotate"
-                @mouseleave="resumeAutoRotate">
+            <div class="relative w-full max-w-4xl overflow-hidden">
                 <div class="flex items-center justify-center h-64 md:h-80">
                     <TransitionGroup name="carousel" tag="div" class="flex items-center justify-center w-full">
-                        <div v-for="logo in visibleLogos" :key="`${logo.id}-${logo.position}`" :class="cn(
+                        <div v-for="logo in visibleLogos" :key="logo.id" :class="cn(
                         'transition-all duration-700 ease-in-out transform px-2 md:px-4',
                         logo.position === 'center' ? 'scale-100 z-10' :
                             logo.position === 'left' ? 'scale-75 opacity-70 -translate-x-4' :
@@ -42,7 +41,6 @@ const props = defineProps({
 const currentIndex = ref(0);
 const logoCount = computed(() => props.logos.length);
 let interval = null;
-let isPaused = ref(false);
 
 const visibleLogos = computed(() => {
     const prevIndex = (currentIndex.value - 1 + logoCount.value) % logoCount.value;
@@ -55,20 +53,9 @@ const visibleLogos = computed(() => {
     ];
 });
 
-// Keep automatic rotation functionality but remove user controls
-const pauseAutoRotate = () => {
-    isPaused.value = true;
-};
-
-const resumeAutoRotate = () => {
-    isPaused.value = false;
-};
-
 onMounted(() => {
     interval = setInterval(() => {
-        if (!isPaused.value) {
-            currentIndex.value = (currentIndex.value + 1) % logoCount.value;
-        }
+        currentIndex.value = (currentIndex.value + 1) % logoCount.value;
     }, props.autoRotateInterval);
 });
 

@@ -19,7 +19,7 @@ Supabase credentials are required for auth and profile features (see `.env.examp
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_ANON_KEY`
 
-Without these, the app builds but the auth gate in `App.vue` blocks every route except `/` and `/support-me`.
+Without these, the app builds but the auth gate in `App.vue` blocks every route except `/`.
 
 ## Architecture
 
@@ -30,7 +30,6 @@ Vue 3 (Composition API, `<script setup>`) + Vite + Pinia + Vue Router 4. UI uses
 [src/App.vue](src/App.vue) is the single auth gate — not the router. Logic:
 
 - `/` → always public (Home)
-- `/support-me` → always public
 - any other route → renders `<Auth />` (login screen) unless `authStore.session` is truthy
 
 This means **adding a new public route requires editing `App.vue`**, not just [src/router/index.js](src/router/index.js). Route definitions carry no meta/guards.

@@ -20,7 +20,6 @@ import Layout from '@/layout/index.vue'
     <!-- Auth gate (disabled):
     <router-view v-if="authStore.session" />
     <router-view v-else-if="route.path === '/'" />
-    <router-view v-else-if="route.path === '/support-me'" />
     <Auth v-else />
     -->
   </Layout>
