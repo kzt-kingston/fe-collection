@@ -30,11 +30,6 @@ const router = createRouter({
       name: 'Quiz',
       component: () => import('@/views/quiz/Quiz.vue'),
     },
-    {
-      path: '/onboarding',
-      name: 'Onboarding',
-      component: () => import('@/views/onboarding/Onboarding.vue'),
-    },
   ],
 })
 

@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import { Search } from 'lucide-vue-next';
 
 const searchText = ref('');
 

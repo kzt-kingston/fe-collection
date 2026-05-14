@@ -13,7 +13,7 @@ const props = defineProps({
 })
 const router = useRouter()
 const route = useRoute()
-const emits = defineEmits(['toggleMusicPlayer']);
+defineEmits(['toggleMusicPlayer']);
 const drawer = ref(false)
 
 // go back history
@@ -50,7 +50,7 @@ const changeLang = (e) => {
         <div class="flex justify-end p-5">
             <!-- Resource Menu -->
             <div class="flex items-center">
-                <router-link to="/onboarding"
+                <router-link to="/resource"
                     class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold border-2 border-cyan-500 px-2 py-1 rounded-md">
                     Start Here
                 </router-link>

@@ -33,18 +33,18 @@ import AnimationsData from "@/data/websites/AnimationsData.json";
 import OtherData from "@/data/websites/OtherData.json";
 import AIToolsData from "@/data/websites/AIToolsData.json";
 
-const REGISTRY = [
-  { name: "HTML", icon: "/public/resources/html.png", websites: HTMLData, videos: HTMLVideoData },
-  { name: "CSS", icon: "/public/resources/css.png", websites: CSSData, videos: CSSVideoData },
-  { name: "SASS", icon: "/public/resources/sass.png", websites: SASSData, videos: SASSVideoData },
-  { name: "JavaScript", icon: "/public/resources/js.png", websites: JSData, videos: JSVideoData },
-  { name: "TypeScript", icon: "/public/resources/ts.png", websites: TSData, videos: TSVideoData },
-  { name: "Vue", icon: "/public/resources/vue.png", websites: VueData, videos: VueVideoData },
-  { name: "React", icon: "/public/resources/react.png", websites: ReactData, videos: ReactVideoData },
-  { name: "React Native", icon: "/public/resources/react-native.png", websites: ReactNativeData, videos: ReactNativeVideoData },
-  { name: "Angular", icon: "/public/resources/angular.png", websites: AngularData, videos: AngularVideoData },
-  { name: "Flutter", icon: "/public/resources/flutter.png", websites: FlutterData, videos: FlutterVideoData },
-  { name: "Git", icon: "/public/resources/git.png", websites: GitData, videos: GitVideoData },
+export const REGISTRY = [
+  { name: "HTML", websites: HTMLData, videos: HTMLVideoData },
+  { name: "CSS", websites: CSSData, videos: CSSVideoData },
+  { name: "SASS", websites: SASSData, videos: SASSVideoData },
+  { name: "JavaScript", websites: JSData, videos: JSVideoData },
+  { name: "TypeScript", websites: TSData, videos: TSVideoData },
+  { name: "Vue", websites: VueData, videos: VueVideoData },
+  { name: "React", websites: ReactData, videos: ReactVideoData },
+  { name: "React Native", websites: ReactNativeData, videos: ReactNativeVideoData },
+  { name: "Angular", websites: AngularData, videos: AngularVideoData },
+  { name: "Flutter", websites: FlutterData, videos: FlutterVideoData },
+  { name: "Git", websites: GitData, videos: GitVideoData },
   { name: "Free Icons", websites: FreeIconsData },
   { name: "Free Images and Videos", websites: FreeImgVdoData },
   { name: "Free UI Libraries", websites: FreeTemplatesData },
@@ -64,11 +64,6 @@ const DATA_MAPPINGS = {
   websites: byName("websites"),
   videos: byName("videos"),
 };
-
-const ICON_PATHS = byName("icon");
-
-const combineData = (data, iconPath) =>
-  data.map((item) => ({ ...item, icon: iconPath + item.icon }));
 
 export function searchForData(searchText) {
   const needle = searchText.toLowerCase();
@@ -96,12 +91,5 @@ export default function getData(language, type) {
     };
   }
 
-  const data = DATA_MAPPINGS[type]?.[language];
-  if (!data) return null;
-
-  if (type === "websites" && ICON_PATHS[language]) {
-    return combineData(data, ICON_PATHS[language]);
-  }
-
-  return data;
+  return DATA_MAPPINGS[type]?.[language] ?? null;
 }

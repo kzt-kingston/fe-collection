@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   hasActiveQuiz: {
     type: Boolean,
     default: false

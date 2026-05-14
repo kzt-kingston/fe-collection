@@ -1,23 +1,15 @@
-<script setup lang="ts">
+<script setup>
 import { ref, computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { Search, ExternalLink, HeartOff, Globe, Video } from 'lucide-vue-next'
 import { ElNotification } from 'element-plus';
 import { useBookmarkStore } from '@/stores/bookmarkStore';
 
-interface Bookmark {
-    id: number;
-    title: string;
-    url: string;
-    category: string;
-    resourceType: string;
-}
-
 const bookmarkStore = useBookmarkStore();
-const { bookmarks } = storeToRefs(bookmarkStore) as unknown as { bookmarks: { value: Bookmark[] } };
+const { bookmarks } = storeToRefs(bookmarkStore);
 
 const searchTerm = ref('')
-const selectedCategory = ref<string | null>(null)
+const selectedCategory = ref(null)
 
 const categories = computed(() =>
     Array.from(new Set(bookmarks.value.map(b => b.category)))
@@ -30,7 +22,7 @@ const filteredBookmarks = computed(() =>
     )
 )
 
-const removeBookmark = (id: number, title: string, _url: string, category: string) => {
+const removeBookmark = (id, title, _url, category) => {
     bookmarkStore.remove(id, title, category)
 }
 
@@ -38,7 +30,7 @@ const clearCategory = () => {
     selectedCategory.value = null
 }
 
-const selectCategory = (category: string) => {
+const selectCategory = (category) => {
     selectedCategory.value = category
 }
 
@@ -53,7 +45,7 @@ const exportBookmarks = () => {
     URL.revokeObjectURL(url)
 }
 
-const importBookmarks = (file: any) => {
+const importBookmarks = (file) => {
     if (file.raw.type !== 'application/json') {
         ElNotification({
             title: 'Invalid File Type',
@@ -66,8 +58,7 @@ const importBookmarks = (file: any) => {
 
     const reader = new FileReader()
     reader.onload = () => {
-        const data = reader.result as string
-        const importedBookmarks = JSON.parse(data) as Bookmark[]
+        const importedBookmarks = JSON.parse(reader.result)
         bookmarkStore.replaceAll(importedBookmarks)
         ElNotification({
             title: 'Bookmarks Imported',
@@ -76,7 +67,7 @@ const importBookmarks = (file: any) => {
             duration: 1000
         })
     }
-    reader.readAsText(file?.raw as Blob)
+    reader.readAsText(file?.raw)
 }
 
 const clearBookmarks = () => {

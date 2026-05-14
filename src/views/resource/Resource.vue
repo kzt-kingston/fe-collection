@@ -3,7 +3,7 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import resourceTitles from './data.json';
 import { getDictionary } from '@/locale/dict';
-import getData, { searchForData } from '@/util/getData';
+import { searchForData } from '@/util/getData';
 import { ElInput, ElTabs, ElTabPane } from 'element-plus';
 import { Search, Heart, HeartOff, X } from 'lucide-vue-next';
 import WebsiteCard from './components/WebsiteCard.vue';

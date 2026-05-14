@@ -17,6 +17,7 @@ Open the URL Vite prints (usually <http://localhost:5173>).
 
 - `npm run lint` — must pass.
 - `npm run format` — keeps things consistent.
+- `npm test` — must pass.
 - `npm run build` — sanity-check the production bundle.
 
 ## Adding catalog content

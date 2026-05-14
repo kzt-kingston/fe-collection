@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch, nextTick } from 'vue';
-import { LayoutDashboard, Plus, X } from 'lucide-vue-next';
+import { LayoutDashboard, X } from 'lucide-vue-next';
 import Resource from './Resource.vue';
 import ResourceDetails from './components/ResourceDetails.vue';
 

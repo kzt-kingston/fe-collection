@@ -4,7 +4,7 @@
     </el-drawer>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { ref, watch } from 'vue'
 
 const props = defineProps({
@@ -22,16 +22,16 @@ const props = defineProps({
     }
 })
 
+const emit = defineEmits(['update:drawer'])
+
 const drawer = ref(props.drawer)
 
 watch(() => props.drawer, (newVal) => {
     drawer.value = newVal
 })
 
-const updateDrawer = (value: boolean) => {
+const updateDrawer = (value) => {
     drawer.value = value
     emit('update:drawer', value)
 }
-
-const emit = defineEmits(['update:drawer'])
 </script>

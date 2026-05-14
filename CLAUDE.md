@@ -9,8 +9,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run preview` — serve the production build locally
 - `npm run lint` — ESLint with `--fix` over `.vue/.js/.jsx/.cjs/.mjs` (uses `@vue/eslint-config-prettier` via `@rushstack/eslint-patch`)
 - `npm run format` — Prettier write across `src/`
+- `npm test` — Vitest single-pass run (CI mode). `npm run test:watch` for watch mode.
 
-There is no test runner configured. `src/util/__tests__/` exists but is empty.
+Tests live in `src/**/__tests__/*.test.js`. Vitest uses `happy-dom` (configured in [vite.config.js](vite.config.js)).
 
 The app needs no backend or environment variables — it's fully client-side.
 

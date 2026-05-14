@@ -15,7 +15,7 @@
 <script setup>
 import { blurHashToDataURL } from './util/utils';
 
-const props = defineProps({
+defineProps({
     images: Array,
     setCurrentImage: Function
 });

@@ -127,9 +127,16 @@ import { useBookmarkStore } from '@/stores/bookmarkStore';
 
 const bookmarkStore = useBookmarkStore();
 
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+    default: "",
+  }
+});
+
 const dict = ref({});
 const activeTab = ref('all'); // Change activeTab to match ElTabs expected value type
-const title = ref("");
 const resourceData = ref({});
 
 // Compute visibility conditions
@@ -146,16 +153,7 @@ const saveBookMark = (id, title, url, category, resourceType) =>
 const isBookmarked = (id, title, category) =>
   bookmarkStore.isBookmarked(id, title, category);
 
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-    default: "",
-  }
-});
-
 onMounted(async () => {
-  title.value = props.title;
   await fetchData();
   const lang = localStorage.getItem("lang") || "en";
   dict.value = getDictionary(lang);
@@ -163,7 +161,7 @@ onMounted(async () => {
 
 const fetchData = async () => {
   try {
-    const data = await getData(title.value, "%");
+    const data = await getData(props.title, "%");
     resourceData.value = data;
   } catch (error) {
     console.error("Error fetching data:", error);

@@ -29,6 +29,8 @@ That's it — no environment variables, no API keys, nothing to configure.
 | `npm run preview` | Serve the production build locally                   |
 | `npm run lint`    | ESLint with `--fix` (Vue + Prettier config)          |
 | `npm run format`  | Prettier write across `src/`                         |
+| `npm test`        | Run Vitest unit tests (single pass)                  |
+| `npm run test:watch` | Vitest in watch mode                              |
 
 ## Project Structure
 
