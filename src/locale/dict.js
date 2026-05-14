@@ -1,7 +1,7 @@
 const multiLang = {
   en: {
     a_place_where:
-      "A place where you can learn and explore all the resources, cheat sheets, videos, playground, tips and tricks about frontend in one place!",
+      "A place where you can learn and explore all the resources, cheat sheets, videos, tips and tricks about frontend in one place!",
     start_expore: "Start Learn & Explore",
     support_me_by: "Support Me!",
     visit_website: "Visit Website",
@@ -13,14 +13,13 @@ const multiLang = {
     your_donation_helps:
       "Your donation helps us make a difference. Choose your preferred payment methods below.",
     scan_with_your: "Scan with your mobile banking app",
-    no_playground: "No playground found",
     developed_by: "Developed by",
     search_result: "Search Result",
     search_resources: "Search Resources",
   },
   my: {
     a_place_where:
-      "Frontend နဲ.ပတ်သတ်တဲ့စာတွေ၊ video တွေ၊ code practice လုပ်ဖို. playground၊ အကူညီစာမျက်နှာများ၊ အကြံပြုချက်များ စတာတွေကို တစ်နေရာထဲမှာအားလုံးကို အလွယ်တကူနဲ့လေ.လာလို.ရအောင်လို. စု၀ေးပေးထားတဲ့ learning platform လေးတစ်ခုပါ!",
+      "Frontend နဲ.ပတ်သတ်တဲ့စာတွေ၊ video တွေ၊ အကူညီစာမျက်နှာများ၊ အကြံပြုချက်များ စတာတွေကို တစ်နေရာထဲမှာအားလုံးကို အလွယ်တကူနဲ့လေ.လာလို.ရအောင်လို. စု၀ေးပေးထားတဲ့ learning platform လေးတစ်ခုပါ!",
     start_expore: "စတင်၍ လေ့လာပါ",
     support_me_by: "Support လုပ်ရန်!",
     visit_website: "ဝဘ်ဆိုဒ်သို့ သွားရောက်ကြည့်ရှုပါ",
@@ -32,7 +31,6 @@ const multiLang = {
     your_donation_helps:
       "သင့်ရဲ.အလှူငွေက ကျွန်တော်တို.ခုလို project တွေဆက်ရေးနိုင်ဖို.အတွက်အကျိုးပြုစေပါတယ်, လှူလိုပါက ငွေလွှဲမှုနည်းများကို အောက်မှာ ရွေးချယ်ပါ",
     scan_with_your: "သင့်ရဲ. ဖုန်း application ဖြင့် scan ဖတ်ပီးငွေလွှဲပါ",
-    no_playground: "playground မရှိသေးပါ",
     developed_by: "Developed by",
     search_result: "ရှာဖွေမှုရလဒ်",
     search_resources: "resources များရှာဖွေပါ",

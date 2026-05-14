@@ -52,15 +52,15 @@ const changeLang = (e) => {
         <div class="flex justify-end p-5">
             <!-- Resource Menu -->
             <div class="flex items-center">
-                <router-link :to="authStore.session ? '/onboarding' : '/register'"
+                <router-link to="/onboarding"
                     class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold border-2 border-cyan-500 px-2 py-1 rounded-md">
                     Start Here
                 </router-link>
             </div>
 
             <!-- AI Tools Drop Down -->
-            <div v-if="authStore.session" class="flex items-center mx-2">|</div>
-            <div v-if="authStore.session" class="flex items-center">
+            <div class="flex items-center mx-2">|</div>
+            <div class="flex items-center">
                 <el-dropdown>
                     <span class="text-xs flex items-center justify-center">
                         <MenuSquare size="20" class="text-orange-500" />
@@ -68,14 +68,7 @@ const changeLang = (e) => {
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>
-                            <router-link to="/account" class="hover:text-blue-500 transition-colors">
-                                <el-dropdown-item>
-                                    <span class="flex items-center text-sm">
-                                        <CircleUser class="mr-1" size="20" /> Account Settings
-                                    </span>
-                                </el-dropdown-item>
-                            </router-link>
-                            <el-dropdown-item @click="drawer = true" divided>
+                            <el-dropdown-item @click="drawer = true">
                                 <span class="flex items-center text-sm">
                                     <Image class="mr-1" size="20" />Image Search
                                 </span>

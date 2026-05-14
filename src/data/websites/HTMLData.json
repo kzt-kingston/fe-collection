@@ -109,13 +109,6 @@
     "url": "https://www.w3schools.com/tags/tag_doctype.asp"
   },
   {
-    "id": 19,
-    "title": "HTML <h1> Element",
-    "description": "Reference for the <h1> element used for the largest heading in HTML.",
-    "quiz-id": 2,
-    "url": "https://www.w3schools.com/tags/tag_h1.asp"
-  },
-  {
     "id": 20,
     "title": "HTML Hyperlink Syntax",
     "description": "Shows the correct syntax for creating hyperlinks using the <a> tag in HTML.",
@@ -142,13 +135,6 @@
     "description": "Describes the <hr> tag used to insert horizontal lines in HTML documents.",
     "quiz-id": 6,
     "url": "https://www.w3schools.com/tags/tag_hr.asp"
-  },
-  {
-    "id": 24,
-    "title": "HTML lang Attribute",
-    "description": "Covers how to use the lang attribute in the <html> tag to specify the language.",
-    "quiz-id": 7,
-    "url": "https://www.w3schools.com/html/html_languages.asp"
   },
   {
     "id": 25,
@@ -529,13 +515,6 @@
     "url": "https://www.w3schools.com/tags/tag_small.asp"
   },
   {
-    "id": 79,
-    "title": "HTML <textarea> Resize Property",
-    "description": "Explains how to prevent a textarea from being resized using CSS (resize: none;).",
-    "quiz-id": 62,
-    "url": "https://www.w3schools.com/css/css3_pr_resize.asp"
-  },
-  {
     "id": 80,
     "title": "HTML <address> Element",
     "description": "Describes the <address> tag, used for defining contact information in HTML.",
@@ -576,13 +555,6 @@
     "description": "Explains the spellcheck attribute, which indicates whether the element's text should be checked for spelling errors.",
     "quiz-id": 68,
     "url": "https://www.w3schools.com/tags/att_global_spellcheck.asp"
-  },
-  {
-    "id": 86,
-    "title": "HTML disabled Attribute",
-    "description": "Describes the disabled attribute used to disable an HTML element.",
-    "quiz-id": 69,
-    "url": "https://www.w3schools.com/tags/att_global_disabled.asp"
   },
   {
     "id": 87,
@@ -765,13 +737,6 @@
     "description": "Covers the use of the <canvas> tag for drawing graphics via JavaScript in HTML.",
     "quiz-id": 95,
     "url": "https://www.w3schools.com/tags/tag_canvas.asp"
-  },
-  {
-    "id": 113,
-    "title": "HTML <math> Element",
-    "description": "Describes the <math> tag used for including mathematical expressions using MathML in HTML.",
-    "quiz-id": 96,
-    "url": "https://www.w3schools.com/tags/tag_math.asp"
   },
   {
     "id": 114,

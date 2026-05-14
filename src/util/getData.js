@@ -4,24 +4,18 @@
 */
 import HTMLData from "@/data/websites/HTMLData.json";
 import HTMLVideoData from "@/data/videos/HTMLVideoData.json";
-import HTMLPlaygroundData from "@/data/playground/HTMLPlaygroundData.json";
 import CSSData from "@/data/websites/CSSData.json";
 import CSSVideoData from "@/data/videos/CSSVideoData.json";
-import CSSPlaygroundData from "@/data/playground/CSSPlaygroundData.json";
 import SASSData from "@/data/websites/SASSData.json";
 import SASSVideoData from "@/data/videos/SASSVideoData.json";
 import JSData from "@/data/websites/JSData.json";
 import JSVideoData from "@/data/videos/JSVideoData.json";
-import JSPlaygroundData from "@/data/playground/JSPlaygroundData.json";
 import TSData from "@/data/websites/TSData.json";
 import TSVideoData from "@/data/videos/TSVideoData.json";
-import TSPlaygroundData from "@/data/playground/TSPlaygroundData.json";
 import VueData from "@/data/websites/VueData.json";
 import VueVideoData from "@/data/videos/VueVideoData.json";
-import VuePlaygroundData from "@/data/playground/VuePlaygroundData.json";
 import ReactData from "@/data/websites/ReactData.json";
 import ReactVideoData from "@/data/videos/ReactVideoData.json";
-import ReactPlaygroundData from "@/data/playground/ReactPlaygroundData.json";
 import ReactNativeData from "@/data/websites/ReactNativeData.json";
 import ReactNativeVideoData from "@/data/videos/ReactNativeVideoData.json";
 import AngularData from "@/data/websites/AngularData.json";
@@ -88,14 +82,6 @@ const DATA_MAPPINGS = {
     Angular: AngularVideoData,
     Flutter: FlutterVideoData,
     Git: GitVideoData
-  },
-  playground: {
-    HTML: HTMLPlaygroundData,
-    CSS: CSSPlaygroundData,
-    JavaScript: JSPlaygroundData,
-    TypeScript: TSPlaygroundData,
-    Vue: VuePlaygroundData,
-    React: ReactPlaygroundData
   }
 };
 
@@ -142,14 +128,6 @@ export function searchForData(searchText) {
       ...AngularVideoData,
       ...FlutterVideoData,
       ...GitVideoData
-    ],
-    playground: [
-      ...HTMLPlaygroundData,
-      ...CSSPlaygroundData,
-      ...JSPlaygroundData,
-      ...TSPlaygroundData,
-      ...VuePlaygroundData,
-      ...ReactPlaygroundData
     ]
   }
 
@@ -161,20 +139,14 @@ export function searchForData(searchText) {
     item.description.toLowerCase().includes(searchText_lower)
   );
   
-  const searchVideosData = data.videos.filter((item) => 
+  const searchVideosData = data.videos.filter((item) =>
     item.title.toLowerCase().includes(searchText_lower)
-  );
-  
-  const searchPlaygroundData = data.playground.filter((item) => 
-    item.title.toLowerCase().includes(searchText_lower) || 
-    item.description.toLowerCase().includes(searchText_lower)
   );
 
   // combine all the search results
   const searchResults = {
     websites: searchWebsitesData,
-    videos: searchVideosData,
-    playground: searchPlaygroundData
+    videos: searchVideosData
   }
   return searchResults;
 }
@@ -184,8 +156,7 @@ export default function getData(language, type) {
   if (type === "%") {
     return {
       websites: DATA_MAPPINGS.websites[language],
-      videos: DATA_MAPPINGS.videos[language],
-      playground: DATA_MAPPINGS.playground[language]
+      videos: DATA_MAPPINGS.videos[language]
     };
   }
 

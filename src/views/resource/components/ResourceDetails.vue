@@ -48,18 +48,6 @@
                 </span>
               </template>
             </el-tab-pane>
-
-            <el-tab-pane v-if="hasPlayground" name="playground">
-              <template #label>
-                <span class="flex items-center gap-2">
-                  Playground
-                  <span
-                    class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
-                    {{ playgroundCount }}
-                  </span>
-                </span>
-              </template>
-            </el-tab-pane>
           </el-tabs>
         </div>
 
@@ -121,35 +109,6 @@
           </div>
         </div>
 
-        <div v-if="
-          hasPlayground && (activeTab === 'playground' || activeTab === 'all')
-        " class="mb-5">
-          <h2 class="text-2xl font-semibold mb-4">Playground</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div v-for="playground in resourceData.playground" :key="playground.id" class="relative">
-              <component :is="isBookmarked(playground.id, playground.title, title)
-                ? HeartOff
-                : Heart
-                " @click="
-                  () =>
-                    saveBookMark(
-                      playground.id,
-                      playground.title,
-                      playground.url,
-                      title,
-                      'playground'
-                    )
-                " class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(
-                    playground.id,
-                    playground.title,
-                    title
-                  ),
-                }" />
-              <PlaygroundCard :playground="playground" />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -164,7 +123,6 @@ import { ElNotification } from "element-plus";
 import { ElTabs } from "element-plus";
 import WebsiteCard from "./WebsiteCard.vue";
 import VideoCard from "./VideoCard.vue";
-import PlaygroundCard from "./PlaygroundCard.vue";
 import resourceTitles from '../data.json';
 
 const dict = ref({});
@@ -175,7 +133,6 @@ const resourceData = ref({});
 // Compute visibility conditions
 const hasWebsites = computed(() => (resourceData.value?.websites?.length || 0) > 0);
 const hasVideos = computed(() => (resourceData.value?.videos?.length || 0) > 0);
-const hasPlayground = computed(() => (resourceData.value?.playground?.length || 0) > 0);
 
 // Add computed properties for counts
 const websitesCount = computed(() => {
@@ -188,13 +145,8 @@ const videosCount = computed(() => {
   return resourceData.value?.videos?.length || 0;
 });
 
-const playgroundCount = computed(() => {
-  console.log('Playground length:', resourceData.value?.playground?.length);
-  return resourceData.value?.playground?.length || 0;
-});
-
 const totalCount = computed(() => {
-  const total = websitesCount.value + videosCount.value + playgroundCount.value;
+  const total = websitesCount.value + videosCount.value;
   console.log('Total count:', total);
   return total;
 });

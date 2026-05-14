@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { Search, ExternalLink, HeartOff, Globe, Video, Code } from 'lucide-vue-next'
+import { Search, ExternalLink, HeartOff, Globe, Video } from 'lucide-vue-next'
 import { ElNotification } from 'element-plus';
 
 const searchTerm = ref('')
@@ -170,7 +170,6 @@ const clearBookmarks = () => {
                                     <span class="flex items-center text-gray-400">
                                         <Globe class="w-4" v-if="bookmark.resourceType === 'websites'" />
                                         <Video class="w-4" v-else-if="bookmark.resourceType === 'videos'" />
-                                        <Code class="w-4" v-else-if="bookmark.resourceType === 'playground'" />
                                         <span v-else class="text-xs">[Website]</span>
                                     </span>
                                     <span class="text-gray-500 text-sm">{{ bookmark.category }}</span>
