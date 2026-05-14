@@ -1,12 +1,10 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
-import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes, CircleUser, CircleUserRound, LogOut } from 'lucide-vue-next';
+import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes } from 'lucide-vue-next';
 import Drawer from '@/components/Drawer.vue';
 import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
-import { useAuthStore } from '@/stores/authStore'
 
-const authStore = useAuthStore()
 const props = defineProps({
     activeMusicPlayer: {
         type: Boolean,
@@ -104,11 +102,6 @@ const changeLang = (e) => {
                                     </span>
                                 </el-dropdown-item>
                             </router-link>
-                            <el-dropdown-item divided @click="authStore.signOut">
-                                <span class="flex items-center text-sm">
-                                    <LogOut class="mr-1" size="20" /> Sign Out
-                                </span>
-                            </el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
                 </el-dropdown>

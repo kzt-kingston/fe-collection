@@ -1,13 +1,12 @@
 # Frontend Collection
 
-A curated collection of frontend learning resources — websites, video tutorials, and quiz questions across HTML, CSS, SASS, JavaScript, TypeScript, Vue, React, React Native, Angular, Flutter, Git, and more.
+A curated, fully client-side collection of frontend learning resources — websites, video tutorials, and quiz questions across HTML, CSS, SASS, JavaScript, TypeScript, Vue, React, React Native, Angular, Flutter, Git, and more. No backend, no sign-in, no tracking.
 
 ## Tech Stack
 
 - **Vue 3** (Composition API, `<script setup>`) + **Vite**
 - **Pinia** for state, **Vue Router 4** for routing
 - **Element Plus** + **Tailwind CSS** + **SASS** for UI
-- **Supabase** for auth and user profiles
 - Installable as a **PWA** (`vite-plugin-pwa`)
 
 ## Getting Started
@@ -17,12 +16,7 @@ npm install
 npm run dev
 ```
 
-Set up `.env` from `.env.example` if you want to enable Supabase auth:
-
-```
-VITE_SUPABASE_URL=...
-VITE_SUPABASE_ANON_KEY=...
-```
+That's it — no environment variables, no API keys, nothing to configure.
 
 ## Scripts
 
@@ -38,18 +32,21 @@ VITE_SUPABASE_ANON_KEY=...
 
 ```
 src/
-├── components/    # Shared UI (Navbar, Drawer, Auth, Quiz, AI/ImageSearch, …)
+├── components/    # Shared UI (Navbar, Drawer, Quiz, AI/ImageSearch, …)
 ├── views/         # Route-level pages (Home, Resource, Quiz, Bookmark, …)
 ├── data/          # Static JSON: websites/, videos/, quiz-questions/
-├── stores/        # Pinia stores (auth, quiz, user)
+├── stores/        # Pinia stores (quizStore)
 ├── router/        # Vue Router definitions
 ├── util/          # getData.js — central reader for data/*.json
-├── locale/        # English + Burmese dictionary
-└── supabase.js    # Supabase client singleton
+└── locale/        # English + Burmese dictionary
 ```
 
-The `@/` alias maps to `./src/`.
+The `@/` alias maps to `./src/`. Bookmarks and quiz progress are persisted in `localStorage` only.
 
 ## Recommended IDE
 
 [VSCode](https://code.visualstudio.com/) with the [Vue (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension. Disable Vetur if installed.
+
+## License
+
+MIT — see [LICENSE](LICENSE) if included, or feel free to use freely.

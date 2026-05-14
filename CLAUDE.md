@@ -12,33 +12,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 There is no test runner configured. `src/util/__tests__/` exists but is empty.
 
-## Environment
-
-Supabase credentials are required for auth and profile features (see `.env.example`):
-
-- `VITE_SUPABASE_URL`
-- `VITE_SUPABASE_ANON_KEY`
-
-Without these, the app builds but the auth gate in `App.vue` blocks every route except `/`.
+The app needs no backend or environment variables — it's fully client-side.
 
 ## Architecture
 
 Vue 3 (Composition API, `<script setup>`) + Vite + Pinia + Vue Router 4. UI uses Element Plus alongside Tailwind CSS and SASS. The `@/` alias resolves to `./src/` (configured in both `vite.config.js` and `jsconfig.json`).
-
-### Auth-gated routing
-
-[src/App.vue](src/App.vue) is the single auth gate — not the router. Logic:
-
-- `/` → always public (Home)
-- any other route → renders `<Auth />` (login screen) unless `authStore.session` is truthy
-
-This means **adding a new public route requires editing `App.vue`**, not just [src/router/index.js](src/router/index.js). Route definitions carry no meta/guards.
-
-Session is hydrated in `App.vue`'s `onMounted` via `authStore.initialize()`, which calls `supabase.auth.getSession()` and subscribes to `onAuthStateChange`.
-
-### Supabase integration
-
-[src/supabase.js](src/supabase.js) exports a singleton client. Auth state lives in [src/stores/authStore.js](src/stores/authStore.js) (email/password, GitHub OAuth, Google OAuth, sign-out, profile fetch from a `profiles` table). User-facing errors/success flow through Element Plus's `ElMessage`.
 
 ### Data layer — static JSON, not an API
 
@@ -48,7 +26,7 @@ The "frontend collection" content (curated websites, video tutorials, quiz quest
 - `data/videos/*.json` — video tutorial lists
 - `data/quiz-questions/*.json` — quiz banks per language
 
-All reads go through [src/util/getData.js](src/util/getData.js), which:
+All resource/video reads go through [src/util/getData.js](src/util/getData.js), which:
 
 1. Statically imports every JSON file at the top.
 2. Exposes `getData(language, type)` keyed off `DATA_MAPPINGS` (with `type === "%"` returning all buckets for a language).
@@ -57,9 +35,11 @@ All reads go through [src/util/getData.js](src/util/getData.js), which:
 
 **Adding a new language or category** means: drop the JSON, add an import, add an entry to `DATA_MAPPINGS` (and `ICON_PATHS` if applicable), and add the spread in `searchForData`. Forgetting any of these silently drops the data.
 
+Quiz questions are loaded directly by [src/stores/quizStore.js](src/stores/quizStore.js) (separate from `getData.js`) and quiz progress is persisted to `localStorage`. Bookmarks are also `localStorage`-only.
+
 ### Stores
 
-Pinia stores in [src/stores/](src/stores/) — `authStore`, `quizStore`, `userStore`. All use the setup-function (composition) style: `defineStore('name', () => {...})`.
+Single Pinia store in [src/stores/](src/stores/): `quizStore` — manages quiz state, question randomization, and `localStorage` persistence under the key `fe-collection-quiz-state`.
 
 ### Layout
 

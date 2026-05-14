@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
 import Home from '@/views/home/Home.vue'
 import Resource from '@/views/resource/ResourceTabs.vue'
 import About from '@/views/about/About.vue'
@@ -7,8 +6,6 @@ import MusicPlayer from '@/views/music-player/MusicPlayer.vue'
 import Bookmark from '@/views/bookmark/Bookmark.vue'
 import Quiz from '@/views/quiz/Quiz.vue'
 import Onboarding from '@/views/onboarding/Onboarding.vue'
-import Account from '@/views/account/Account.vue'
-import Register from '@/views/register/Register.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,16 +44,6 @@ const router = createRouter({
       path: '/onboarding',
       name: 'Onboarding',
       component: Onboarding
-    },
-    {
-      path: '/account',
-      name: 'Account',
-      component: Account
-    },
-    {
-      path: '/register',
-      name: 'Register',
-      component: Register
     }
   ]
 })
