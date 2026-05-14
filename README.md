@@ -2,6 +2,8 @@
 
 A curated, fully client-side collection of frontend learning resources — websites, video tutorials, and quiz questions across HTML, CSS, SASS, JavaScript, TypeScript, Vue, React, React Native, Angular, Flutter, Git, and more. No backend, no sign-in, no tracking.
 
+<img width="941" height="844" alt="image" src="https://github.com/user-attachments/assets/44ddba67-b31e-4f66-aa98-c57fd38ab2df" />
+
 ## Tech Stack
 
 - **Vue 3** (Composition API, `<script setup>`) + **Vite**
