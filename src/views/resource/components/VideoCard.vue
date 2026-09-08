@@ -24,24 +24,26 @@ const openVideo = ref(false);
         </div>
 
         <!-- Video Modal -->
-        <div v-if="openVideo" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-            <div class="relative w-full max-w-4xl mx-4">
-                <button @click="openVideo = false" class="absolute -top-10 right-0 text-white hover:text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                <div class="relative pt-[56.25%]">
-                    <iframe 
-                        :src="`https://www.youtube.com/embed/${video.id}?autoplay=1`"
-                        class="absolute top-0 left-0 w-full h-full"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+        <Teleport to="body">
+            <div v-if="openVideo" class="fixed inset-0 z-[1100] flex items-center justify-center bg-black bg-opacity-75">
+                <div class="relative w-full max-w-4xl mx-4">
+                    <button @click="openVideo = false" class="absolute -top-10 right-0 text-white hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="relative pt-[56.25%]">
+                        <iframe 
+                            :src="`https://www.youtube.com/embed/${video.id}?autoplay=1`"
+                            class="absolute top-0 left-0 w-full h-full"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Teleport>
         <h3 class="text-lg font-semibold">{{ video.title }}</h3>
         <a :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank"
             class="text-blue-500 hover:underline flex items-center">

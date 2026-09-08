@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch, nextTick } from 'vue';
-import { LayoutDashboard, X } from 'lucide-vue-next';
+import { X } from 'lucide-vue-next';
 import Resource from './Resource.vue';
 import ResourceDetails from './components/ResourceDetails.vue';
 
@@ -34,19 +34,12 @@ const openNewTab = (title) => {
     addTab(title);
 };
 
-// function to show the choose resource tab
-const showChooseResourceTab = () => {
-    activeTab.value = '1';
-    // go back to the top of the page
-    window.scrollTo(0, 0);
-};
-
 watch(activeTab, async (newVal) => {
     await nextTick();
     const container = tabsContainer.value;
     const tabEl = container?.querySelector(`[data-tab-id="${newVal}"]`);
     if (tabEl) {
-        tabEl.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+        tabEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
     }
     window.scrollTo(0, 0);
 });
@@ -54,35 +47,29 @@ watch(activeTab, async (newVal) => {
 
 <template>
     <div id="resource-tabs" class="w-full mx-auto">
-        <!-- Choose Resource button to show the resources back -->
-        <div class="flex justify-end mb-5">
-            <button type="button" name="Choose Resource" @click="showChooseResourceTab"
-                class="fixed z-50 top-[80px] items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-800">
-                <LayoutDashboard class="h-4 w-4" />
-            </button>
-        </div>
-        <div id="tab-container" ref="tabsContainer"
-            class="flex items-center bg-background border rounded-t-lg overflow-x-scroll">
-
-            <!-- Tabs -->
-            <div class="h-10 bg-transparent flex">
-                <div v-for="tab in tabs" :key="tab.id" :data-tab-id="tab.id"
-                    class="relative flex items-center text-sm font-medium gap-2 px-4 py-2 whitespace-nowrap rounded-t-lg cursor-pointer"
-                    :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">
-                    <img v-if="tab.id !== '1'" :src="'/resources/' + tab.title.toLowerCase() + '.png'"
-                        class="h-4 w-4" />
-                    {{ tab.title }}
-                    <button v-if="tab.id !== '1'" :id="tab.id" class="h-4 w-4 p-0 opacity-50 hover:opacity-100"
-                        @click.stop="removeTab(tab.id)">
-                        <X class="h-3 w-3" />
-                        <span class="sr-only">Close tab</span>
-                    </button>
+        <div class="tab-bar-sticky sticky top-24 z-40 bg-white md:top-20 md:-mt-5">
+            <div id="tab-container" class="bg-white border rounded-t-lg">
+                <div ref="tabsContainer" class="flex h-10 overflow-x-auto">
+                    <div class="flex h-10 min-w-max pr-3">
+                        <div v-for="tab in tabs" :key="tab.id" :data-tab-id="tab.id"
+                            class="relative flex h-full shrink-0 items-center text-sm font-medium gap-2 px-4 whitespace-nowrap rounded-t-lg cursor-pointer"
+                            :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">
+                            <img v-if="tab.id !== '1'" :src="'/resources/' + tab.title.toLowerCase() + '.png'"
+                                class="h-4 w-4 shrink-0" />
+                            {{ tab.title }}
+                            <button v-if="tab.id !== '1'" :id="tab.id" class="h-4 w-4 p-0 opacity-50 hover:opacity-100"
+                                @click.stop="removeTab(tab.id)">
+                                <X class="h-3 w-3" />
+                                <span class="sr-only">Close tab</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div v-if="tabs.length > 0">
             <div v-for="tab in tabs" :key="tab.id" v-show="tab.id === activeTab"
-                class="border-x border-b rounded-b-lg p-4 bg-background">
+                class="border-x border-b rounded-b-lg p-4 bg-white">
                 <div v-if="tab.id === '1'">
                     <Resource v-on:open-new-tab="openNewTab" />
                 </div>
@@ -91,15 +78,15 @@ watch(activeTab, async (newVal) => {
                 </div>
             </div>
         </div>
-        <div v-else class="text-center p-4 border-x border-b rounded-b-lg bg-background">
+        <div v-else class="text-center p-4 border-x border-b rounded-b-lg bg-white">
             No tabs open. Click the plus icon to add a new tab.
         </div>
     </div>
 </template>
 
 <style scoped>
-.bg-muted {
-    background-color: #f1f1f1;
-    /* Example muted background color */
+.tab-bar-sticky {
+    /* Cover the gap between the navbar and the tab bar while scrolling */
+    box-shadow: 0 -24px 0 0 #fff;
 }
 </style>

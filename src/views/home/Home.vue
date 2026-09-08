@@ -129,7 +129,7 @@ onMounted(() => {
     </section>
     <!-- Developed By -->
     <div class="text-center text-xs text-gray-500 mt-10">
-        <a href="https://kyawkingston.vercel.app" target="_blank" rel="noopener noreferrer">
+        <a href="https://kyawzinthet.tech" target="_blank" rel="noopener noreferrer">
             Developed by Kyaw Zin Thet
         </a>
     </div>
