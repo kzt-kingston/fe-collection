@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Nuxt",
+    "description": "The official Nuxt homepage — the Vue framework for server-side rendering and full-stack apps.",
+    "url": "https://nuxt.com/"
+  },
+  {
+    "id": 2,
+    "title": "Nuxt Documentation",
+    "description": "Official Nuxt docs for routing, data fetching, modules, and Nitro.",
+    "url": "https://nuxt.com/docs/getting-started/introduction"
+  },
+  {
+    "id": 3,
+    "title": "Nuxt Installation",
+    "description": "Create a new Nuxt project with the official CLI and recommended setup.",
+    "url": "https://nuxt.com/docs/getting-started/installation"
+  },
+  {
+    "id": 4,
+    "title": "Nuxt Modules",
+    "description": "Directory of official and community modules for UI, CMS, auth, and more.",
+    "url": "https://nuxt.com/modules"
+  },
+  {
+    "id": 5,
+    "title": "Nuxt Content",
+    "description": "File-based CMS for Markdown, YAML, and JSON with Vue components in Markdown.",
+    "url": "https://content.nuxt.com/"
+  },
+  {
+    "id": 6,
+    "title": "Nuxt UI",
+    "description": "Official UI library for Nuxt and Vue, built on Reka UI and Tailwind CSS.",
+    "url": "https://ui.nuxt.com/"
+  },
+  {
+    "id": 7,
+    "title": "NuxtHub",
+    "description": "Full-stack Nuxt on Cloudflare: database, blob storage, KV, and deploy tooling.",
+    "url": "https://hub.nuxt.com/"
+  },
+  {
+    "id": 8,
+    "title": "Nuxt GitHub",
+    "description": "Source code, issues, and releases for the Nuxt framework.",
+    "url": "https://github.com/nuxt/nuxt"
+  },
+  {
+    "id": 9,
+    "title": "Nuxt Examples",
+    "description": "Official examples covering routing, data fetching, and server routes.",
+    "url": "https://nuxt.com/docs/examples/hello-world"
+  },
+  {
+    "id": 10,
+    "title": "Nuxt Testing",
+    "description": "Official guide to unit and end-to-end testing with @nuxt/test-utils.",
+    "url": "https://nuxt.com/docs/getting-started/testing"
+  },
+  {
+    "id": 11,
+    "title": "Nitro",
+    "description": "The server engine behind Nuxt — deploy the same app to Node, serverless, and the edge.",
+    "url": "https://nitro.build/"
+  },
+  {
+    "id": 12,
+    "title": "Nuxt Templates",
+    "description": "Starter templates for landing pages, docs, dashboards, and SaaS.",
+    "url": "https://nuxt.com/templates"
+  }
+]

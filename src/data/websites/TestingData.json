@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Vitest",
+    "description": "Fast unit-test framework powered by Vite, with Jest-compatible APIs.",
+    "url": "https://vitest.dev/"
+  },
+  {
+    "id": 2,
+    "title": "Vitest Browser Mode",
+    "description": "Run component tests in a real browser with Playwright or WebdriverIO.",
+    "url": "https://vitest.dev/guide/browser/"
+  },
+  {
+    "id": 3,
+    "title": "Playwright",
+    "description": "End-to-end testing for Chromium, Firefox, and WebKit from a single API.",
+    "url": "https://playwright.dev/"
+  },
+  {
+    "id": 4,
+    "title": "Playwright Best Practices",
+    "description": "Official guidance on locators, assertions, and reliable e2e tests.",
+    "url": "https://playwright.dev/docs/best-practices"
+  },
+  {
+    "id": 5,
+    "title": "Cypress",
+    "description": "In-browser end-to-end testing with time-travel debugging.",
+    "url": "https://www.cypress.io/"
+  },
+  {
+    "id": 6,
+    "title": "Testing Library",
+    "description": "Test UI the way users interact with it — queries, events, and framework adapters.",
+    "url": "https://testing-library.com/"
+  },
+  {
+    "id": 7,
+    "title": "Jest",
+    "description": "JavaScript test runner with mocking, snapshots, and coverage built in.",
+    "url": "https://jestjs.io/"
+  },
+  {
+    "id": 8,
+    "title": "Mock Service Worker",
+    "description": "API mocking by intercepting requests at the network level, in the browser and Node.",
+    "url": "https://mswjs.io/"
+  },
+  {
+    "id": 9,
+    "title": "Vue Test Utils",
+    "description": "Official unit-testing utility library for Vue 3 components.",
+    "url": "https://test-utils.vuejs.org/"
+  },
+  {
+    "id": 10,
+    "title": "Testing Playground",
+    "description": "Interactive sandbox for finding the right Testing Library queries.",
+    "url": "https://testing-playground.com/"
+  }
+]

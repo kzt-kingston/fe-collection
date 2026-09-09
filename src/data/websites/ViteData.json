@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Vite",
+    "description": "Official Vite homepage — next-generation frontend tooling.",
+    "url": "https://vite.dev/"
+  },
+  {
+    "id": 2,
+    "title": "Getting Started",
+    "description": "Scaffold a Vite project and run the dev server in minutes.",
+    "url": "https://vite.dev/guide/"
+  },
+  {
+    "id": 3,
+    "title": "Vite Features",
+    "description": "HMR, TypeScript, CSS, static assets, JSON, WebAssembly, and more.",
+    "url": "https://vite.dev/guide/features"
+  },
+  {
+    "id": 4,
+    "title": "Configuring Vite",
+    "description": "Official config reference for server, build, preview, and plugins.",
+    "url": "https://vite.dev/config/"
+  },
+  {
+    "id": 5,
+    "title": "Plugins",
+    "description": "Using and writing Vite plugins, plus official plugin-vue and plugin-react.",
+    "url": "https://vite.dev/plugins/"
+  },
+  {
+    "id": 6,
+    "title": "Vite Plugin Registry",
+    "description": "Searchable directory of plugins for Vite, Rolldown, and Rollup.",
+    "url": "https://registry.vite.dev/"
+  },
+  {
+    "id": 7,
+    "title": "Rolldown",
+    "description": "The Rust bundler Vite 8 uses for both the optimizer and production builds.",
+    "url": "https://rolldown.rs/"
+  },
+  {
+    "id": 8,
+    "title": "Vite 8 Announcement",
+    "description": "Release notes for Vite 8 and the switch to Rolldown.",
+    "url": "https://vite.dev/blog/announcing-vite8"
+  },
+  {
+    "id": 9,
+    "title": "Migration Guide",
+    "description": "Breaking changes and upgrade steps between Vite major versions.",
+    "url": "https://vite.dev/guide/migration"
+  },
+  {
+    "id": 10,
+    "title": "Vite GitHub",
+    "description": "Source code, issues, and releases for Vite.",
+    "url": "https://github.com/vitejs/vite"
+  },
+  {
+    "id": 11,
+    "title": "Awesome Vite",
+    "description": "Curated list of Vite plugins, templates, and resources.",
+    "url": "https://github.com/vitejs/awesome-vite"
+  }
+]

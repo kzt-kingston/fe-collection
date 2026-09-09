@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Tailwind CSS",
+    "description": "Official Tailwind CSS homepage — utility-first CSS for modern UIs.",
+    "url": "https://tailwindcss.com/"
+  },
+  {
+    "id": 2,
+    "title": "Tailwind CSS Documentation",
+    "description": "Official docs for installation, utilities, theming, and configuration.",
+    "url": "https://tailwindcss.com/docs"
+  },
+  {
+    "id": 3,
+    "title": "Installation",
+    "description": "Get Tailwind running with Vite, PostCSS, or the CLI.",
+    "url": "https://tailwindcss.com/docs/installation"
+  },
+  {
+    "id": 4,
+    "title": "Tailwind Play",
+    "description": "Official browser playground for prototyping Tailwind markup with no local setup.",
+    "url": "https://play.tailwindcss.com/"
+  },
+  {
+    "id": 5,
+    "title": "Editor Setup",
+    "description": "IntelliSense, linting, and Prettier class sorting for VS Code, Cursor, and Zed.",
+    "url": "https://tailwindcss.com/docs/editor-setup"
+  },
+  {
+    "id": 6,
+    "title": "Prettier Plugin",
+    "description": "Official Prettier plugin that sorts Tailwind classes in the recommended order.",
+    "url": "https://github.com/tailwindlabs/prettier-plugin-tailwindcss"
+  },
+  {
+    "id": 7,
+    "title": "Tailwind CSS v4",
+    "description": "Announcement of Tailwind v4: CSS-first config, Vite plugin, and Lightning CSS.",
+    "url": "https://tailwindcss.com/blog/tailwindcss-v4"
+  },
+  {
+    "id": 8,
+    "title": "Styling with Utility Classes",
+    "description": "How Tailwind’s utility-first workflow works — composing classes instead of writing custom CSS.",
+    "url": "https://tailwindcss.com/docs/styling-with-utility-classes"
+  },
+  {
+    "id": 9,
+    "title": "Tailwind GitHub",
+    "description": "Source code, issues, and releases for Tailwind CSS.",
+    "url": "https://github.com/tailwindlabs/tailwindcss"
+  },
+  {
+    "id": 10,
+    "title": "Tailwind Cheat Sheet",
+    "description": "Searchable cheat sheet of Tailwind utility classes.",
+    "url": "https://nerdcave.com/tailwind-cheat-sheet"
+  },
+  {
+    "id": 11,
+    "title": "Upgrade Guide",
+    "description": "Official guide for migrating existing projects to the latest Tailwind CSS.",
+    "url": "https://tailwindcss.com/docs/upgrade-guide"
+  }
+]

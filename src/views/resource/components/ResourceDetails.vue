@@ -113,9 +113,18 @@ const websitesCount = computed(() => resourceData.value?.websites?.length || 0);
 const videosCount = computed(() => resourceData.value?.videos?.length || 0);
 const totalCount = computed(() => websitesCount.value + videosCount.value);
 
-const DARK_TEXT_HEADERS = new Set(['javascript', 'react', 'reactnative', 'flutter', 'freeicons']);
+const DARK_TEXT_HEADERS = new Set([
+  'javascript',
+  'react',
+  'reactnative',
+  'flutter',
+  'freeicons',
+  'nuxt',
+  'tailwind',
+  'testing',
+]);
 
-const headerKey = computed(() => props.title.replace(/\s+/g, '').toLowerCase());
+const headerKey = computed(() => props.title.replace(/[^a-z0-9]/gi, '').toLowerCase());
 
 const headerClass = computed(() => {
   const text = DARK_TEXT_HEADERS.has(headerKey.value) ? 'text-gray-900' : 'text-white';

@@ -25,6 +25,14 @@
   background-color: #b84e7b;
 }
 
+.tailwind {
+  background: url("/resources/tailwind.png") no-repeat center;
+}
+
+.tailwind:hover {
+  background-color: #38bdf8;
+}
+
 .js {
   //background-color: #f7df1e;
   background: url("/resources/js.png") no-repeat center;
@@ -52,6 +60,14 @@
   background-color: #28be7b;
 }
 
+.nuxt {
+  background: url("/resources/nuxt.png") no-repeat center;
+}
+
+.nuxt:hover {
+  background-color: #00dc82;
+}
+
 .react {
   //background-color: #61dafb;
   background: url("/resources/react.png") no-repeat center;
@@ -59,6 +75,14 @@
 
 .react:hover {
   background-color: #1fcaf9;
+}
+
+.nextjs {
+  background: url("/resources/next.js.png") no-repeat center;
+}
+
+.nextjs:hover {
+  background-color: #000000;
 }
 
 .react-native {
@@ -97,6 +121,22 @@
   background-color: #c74321;
 }
 
+.vite {
+  background: url("/resources/vite.png") no-repeat center;
+}
+
+.vite:hover {
+  background-color: #646cff;
+}
+
+.testing {
+  background: url("/resources/testing.png") no-repeat center;
+}
+
+.testing:hover {
+  background-color: #eab308;
+}
+
 .free-icons {
   //background-color: #ffd700;
   background: url("/resources/free-icons.png") no-repeat center;
@@ -104,6 +144,14 @@
 
 .free-icons:hover {
   background-color: #ffc700;
+}
+
+.fonts {
+  background: url("/resources/fonts.png") no-repeat center;
+}
+
+.fonts:hover {
+  background-color: #a16207;
 }
 
 .free-img-vdo {
@@ -186,6 +234,11 @@
   background-color: #b84e7b;
 }
 
+.tailwind_resource {
+  background: url("/resources/tailwind.png") no-repeat center;
+  background-color: #38bdf8;
+}
+
 .js_resource {
   //background-color: #f7df1e;
   background: url("/resources/js.png") no-repeat center;
@@ -204,9 +257,19 @@
   background-color: #28be7b;
 }
 
+.nuxt_resource {
+  background: url("/resources/nuxt.png") no-repeat center;
+  background-color: #00dc82;
+}
+
 .react_resource {
   background: url("/resources/react.png") no-repeat center;
   background-color: #1fcaf9;
+}
+
+.nextjs_resource {
+  background: url("/resources/next.js.png") no-repeat center;
+  background-color: #000000;
 }
 
 .react-native_resource {
@@ -230,9 +293,24 @@
   background-color: #c74321;
 }
 
+.vite_resource {
+  background: url("/resources/vite.png") no-repeat center;
+  background-color: #646cff;
+}
+
+.testing_resource {
+  background: url("/resources/testing.png") no-repeat center;
+  background-color: #eab308;
+}
+
 .free-icons_resource {
   background: url("/resources/free-icons.png") no-repeat center;
   background-color: #ffc700;
+}
+
+.fonts_resource {
+  background: url("/resources/fonts.png") no-repeat center;
+  background-color: #a16207;
 }
 
 .free-img-vdo_resource {
@@ -288,6 +366,10 @@
   background-color: #cd5c8f;
 }
 
+.tailwind_header {
+  background-color: #38bdf8;
+}
+
 .javascript_header {
   background-color: #f6da0a;
 }
@@ -300,8 +382,16 @@
   background-color: #28be7b;
 }
 
+.nuxt_header {
+  background-color: #00dc82;
+}
+
 .react_header {
   background-color: #1fcaf9;
+}
+
+.nextjs_header {
+  background-color: #000000;
 }
 
 .reactnative_header {
@@ -320,8 +410,20 @@
   background-color: #c74321;
 }
 
+.vite_header {
+  background-color: #646cff;
+}
+
+.testing_header {
+  background-color: #eab308;
+}
+
 .freeicons_header {
   background-color: #ffc700;
+}
+
+.fonts_header {
+  background-color: #a16207;
 }
 
 .freeimagesandvideos_header {

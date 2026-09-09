@@ -36,18 +36,6 @@
     "url": "https://www.w3schools.com/react/default.asp"
   },
   {
-    "id": 7,
-    "title": "Next.js",
-    "description": "The React framework for production — App Router, Server Components, and full-stack features.",
-    "url": "https://nextjs.org/docs"
-  },
-  {
-    "id": 8,
-    "title": "Vite",
-    "description": "The recommended build tool for new client-side React apps.",
-    "url": "https://vite.dev/guide/"
-  },
-  {
     "id": 9,
     "title": "React Router",
     "description": "The standard routing library for React applications.",

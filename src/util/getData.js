@@ -8,14 +8,20 @@ import CSSData from "@/data/websites/CSSData.json";
 import CSSVideoData from "@/data/videos/CSSVideoData.json";
 import SASSData from "@/data/websites/SASSData.json";
 import SASSVideoData from "@/data/videos/SASSVideoData.json";
+import TailwindData from "@/data/websites/TailwindData.json";
+import TailwindVideoData from "@/data/videos/TailwindVideoData.json";
 import JSData from "@/data/websites/JSData.json";
 import JSVideoData from "@/data/videos/JSVideoData.json";
 import TSData from "@/data/websites/TSData.json";
 import TSVideoData from "@/data/videos/TSVideoData.json";
 import VueData from "@/data/websites/VueData.json";
 import VueVideoData from "@/data/videos/VueVideoData.json";
+import NuxtData from "@/data/websites/NuxtData.json";
+import NuxtVideoData from "@/data/videos/NuxtVideoData.json";
 import ReactData from "@/data/websites/ReactData.json";
 import ReactVideoData from "@/data/videos/ReactVideoData.json";
+import NextData from "@/data/websites/NextData.json";
+import NextVideoData from "@/data/videos/NextVideoData.json";
 import ReactNativeData from "@/data/websites/ReactNativeData.json";
 import ReactNativeVideoData from "@/data/videos/ReactNativeVideoData.json";
 import AngularData from "@/data/websites/AngularData.json";
@@ -24,7 +30,13 @@ import FlutterData from "@/data/websites/FlutterData.json";
 import FlutterVideoData from "@/data/videos/FlutterVideoData.json";
 import GitData from "@/data/websites/GitData.json";
 import GitVideoData from "@/data/videos/GitVideoData.json";
+import ViteData from "@/data/websites/ViteData.json";
+import ViteVideoData from "@/data/videos/ViteVideoData.json";
+import TestingData from "@/data/websites/TestingData.json";
+import TestingVideoData from "@/data/videos/TestingVideoData.json";
 import FreeIconsData from "@/data/websites/FreeIconsData.json";
+import FontsData from "@/data/websites/FontsData.json";
+import FontsVideoData from "@/data/videos/FontsVideoData.json";
 import FreeImgVdoData from "@/data/websites/FreeImgAndVdoData.json";
 import FreeTemplatesData from "@/data/websites/FreeTemplatesData.json";
 import PremiumTemplatesData from "@/data/websites/PremiumTemplatesData.json";
@@ -38,15 +50,21 @@ export const REGISTRY = [
   { name: "HTML", websites: HTMLData, videos: HTMLVideoData },
   { name: "CSS", websites: CSSData, videos: CSSVideoData },
   { name: "SASS", websites: SASSData, videos: SASSVideoData },
+  { name: "Tailwind", websites: TailwindData, videos: TailwindVideoData },
   { name: "JavaScript", websites: JSData, videos: JSVideoData },
   { name: "TypeScript", websites: TSData, videos: TSVideoData },
   { name: "Vue", websites: VueData, videos: VueVideoData },
+  { name: "Nuxt", websites: NuxtData, videos: NuxtVideoData },
   { name: "React", websites: ReactData, videos: ReactVideoData },
+  { name: "Next.js", websites: NextData, videos: NextVideoData },
   { name: "React Native", websites: ReactNativeData, videos: ReactNativeVideoData },
   { name: "Angular", websites: AngularData, videos: AngularVideoData },
   { name: "Flutter", websites: FlutterData, videos: FlutterVideoData },
   { name: "Git", websites: GitData, videos: GitVideoData },
+  { name: "Vite", websites: ViteData, videos: ViteVideoData },
+  { name: "Testing", websites: TestingData, videos: TestingVideoData },
   { name: "Free Icons", websites: FreeIconsData },
+  { name: "Fonts", websites: FontsData, videos: FontsVideoData },
   { name: "Free Images and Videos", websites: FreeImgVdoData },
   { name: "Free UI Libraries", websites: FreeTemplatesData },
   { name: "Premium Templates", websites: PremiumTemplatesData },

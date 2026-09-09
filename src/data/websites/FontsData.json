@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Google Fonts",
+    "description": "The largest free library of open-source fonts, with embed code and variable-font support.",
+    "url": "https://fonts.google.com/"
+  },
+  {
+    "id": 2,
+    "title": "Fontsource",
+    "description": "Self-host open-source fonts as npm packages instead of loading them from a CDN.",
+    "url": "https://fontsource.org/"
+  },
+  {
+    "id": 3,
+    "title": "Bunny Fonts",
+    "description": "A privacy-first drop-in alternative to Google Fonts, with a compatible API.",
+    "url": "https://fonts.bunny.net/"
+  },
+  {
+    "id": 4,
+    "title": "Fontshare",
+    "description": "A free font service from Indian Type Foundry with quality families for product UI and branding.",
+    "url": "https://www.fontshare.com/"
+  },
+  {
+    "id": 5,
+    "title": "Font Squirrel",
+    "description": "Hand-picked free fonts with commercial licenses, plus a @font-face generator.",
+    "url": "https://www.fontsquirrel.com/"
+  },
+  {
+    "id": 6,
+    "title": "Modern Font Stacks",
+    "description": "System font stacks that look great without web-font downloads or layout shift.",
+    "url": "https://modernfontstacks.com/"
+  },
+  {
+    "id": 7,
+    "title": "Fontpair",
+    "description": "Curated type pairings so you can combine headings and body fonts quickly.",
+    "url": "https://www.fontpair.co/"
+  },
+  {
+    "id": 8,
+    "title": "Typewolf",
+    "description": "Typography inspiration: what’s trending, what’s overused, and how sites pair type.",
+    "url": "https://www.typewolf.com/"
+  },
+  {
+    "id": 9,
+    "title": "Capsize",
+    "description": "Trim extra space above and below text using real font metrics so type lines up like other UI.",
+    "url": "https://seek-oss.github.io/capsize/"
+  },
+  {
+    "id": 10,
+    "title": "Utopia Fluid Type",
+    "description": "A fluid type-scale calculator that generates clamp()-based CSS for responsive typography.",
+    "url": "https://utopia.fyi/type/calculator/"
+  },
+  {
+    "id": 11,
+    "title": "Brick",
+    "description": "A lightweight, privacy-friendly webfont CDN with a small curated catalog.",
+    "url": "https://brick.im/"
+  }
+]

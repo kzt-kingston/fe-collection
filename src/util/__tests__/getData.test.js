@@ -25,6 +25,13 @@ describe("REGISTRY", () => {
       expect(names).toContain(lang);
     }
   });
+
+  it("includes the new frontend topic tiles", () => {
+    const names = REGISTRY.map((e) => e.name);
+    for (const topic of ["Fonts", "Next.js", "Nuxt", "Tailwind", "Vite", "Testing"]) {
+      expect(names).toContain(topic);
+    }
+  });
 });
 
 describe("getData(language, type)", () => {

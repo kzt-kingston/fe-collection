@@ -21,6 +21,13 @@
     "description": "SASS (Syntactically Awesome Stylesheets) is a CSS preprocessor that extends the functionality of CSS with features like variables, nesting, and mixins. It helps developers write cleaner, more maintainable stylesheets and speeds up the styling process."
   },
   {
+    "id": 21,
+    "title": "Tailwind",
+    "class": "tailwind",
+    "category": "Markup and Styling Languages",
+    "description": "Tailwind CSS is a utility-first CSS framework for building modern interfaces without leaving your markup. Classes like flex, pt-4, and text-center compose into custom designs, and v4 ships a Vite plugin with CSS-first configuration."
+  },
+  {
     "id": 3,
     "title": "JavaScript",
     "class": "js",
@@ -42,11 +49,25 @@
     "description": "Vue.js is a lightweight JavaScript framework for building modern web applications. It is known for its simplicity, reactive data binding, and easy integration. Vue is perfect for both small projects and enterprise-level applications."
   },
   {
+    "id": 22,
+    "title": "Nuxt",
+    "class": "nuxt",
+    "category": "Frameworks & Libraries",
+    "description": "Nuxt is the Vue meta-framework for server-side rendering, file-based routing, and full-stack apps. It sits on Nitro so the same project can deploy to Node, serverless, and the edge, with a large module ecosystem for UI, CMS, and hosting."
+  },
+  {
     "id": 6,
     "title": "React",
     "class": "react",
     "category": "Frameworks & Libraries",
     "description": "React is a JavaScript library developed by Facebook for creating dynamic, component-based user interfaces. It improves performance using a virtual DOM and is widely used in single-page applications (SPAs) and mobile development with React Native."
+  },
+  {
+    "id": 23,
+    "title": "Next.js",
+    "class": "nextjs",
+    "category": "Frameworks & Libraries",
+    "description": "Next.js is the React framework for production. The App Router, Server Components, and Server Actions let you build full-stack apps with file-based routing, streaming, and first-class deployment on Vercel or any Node host."
   },
   {
     "id": 17,
@@ -77,11 +98,32 @@
     "description": "Git is a version control system that allows developers to track code changes, collaborate with teams, and manage different versions of a project. It’s essential for working in teams and using platforms like GitHub, GitLab, and Bitbucket."
   },
   {
+    "id": 24,
+    "title": "Vite",
+    "class": "vite",
+    "category": "Developer Tools",
+    "description": "Vite is the default frontend build tool for new Vue, React, and vanilla JS apps. Instant dev-server startup, Hot Module Replacement, and a Rolldown-powered production build make it the toolchain most modern frontend projects start with."
+  },
+  {
+    "id": 25,
+    "title": "Testing",
+    "class": "testing",
+    "category": "Developer Tools",
+    "description": "Frontend testing tools for unit, component, and end-to-end coverage: Vitest, Playwright, Cypress, Testing Library, Jest, and Mock Service Worker. Catch regressions before users do."
+  },
+  {
     "id": 9,
     "title": "Free Icons",
     "class": "free-icons",
     "category": "Design Resources",
     "description": "A collection of free icons that can enhance user interfaces. Icons are commonly used in web and app design to improve navigation, create visual hierarchy, and make interfaces more user-friendly."
+  },
+  {
+    "id": 26,
+    "title": "Fonts",
+    "class": "fonts",
+    "category": "Design Resources",
+    "description": "Typefaces, pairings, and self-hosting tools for the web: Google Fonts, Fontsource, Bunny Fonts, system stacks, and fluid type scales. Pair with CSS so text is readable, licensed, and fast."
   },
   {
     "id": 10,

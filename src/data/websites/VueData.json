@@ -54,12 +54,6 @@
     "url": "https://pinia.vuejs.org/"
   },
   {
-    "id": 10,
-    "title": "Nuxt",
-    "description": "The Vue meta-framework for server-side rendering, file-based routing, and full-stack apps.",
-    "url": "https://nuxt.com/"
-  },
-  {
     "id": 11,
     "title": "VueUse",
     "description": "A collection of essential Vue Composition API utilities.",

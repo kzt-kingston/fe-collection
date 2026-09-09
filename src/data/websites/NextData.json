@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Next.js",
+    "description": "The official Next.js homepage — the React framework for production apps.",
+    "url": "https://nextjs.org/"
+  },
+  {
+    "id": 2,
+    "title": "Next.js Documentation",
+    "description": "Official docs covering the App Router, rendering, data fetching, and deployment.",
+    "url": "https://nextjs.org/docs"
+  },
+  {
+    "id": 3,
+    "title": "Learn Next.js",
+    "description": "Free interactive course: build a full-stack dashboard with the App Router.",
+    "url": "https://nextjs.org/learn"
+  },
+  {
+    "id": 4,
+    "title": "App Router",
+    "description": "Guides for file-based routing, layouts, Server Components, and Server Actions.",
+    "url": "https://nextjs.org/docs/app"
+  },
+  {
+    "id": 5,
+    "title": "Next.js API Reference",
+    "description": "Reference for Next.js APIs, file conventions, CLI, and configuration.",
+    "url": "https://nextjs.org/docs/app/api-reference"
+  },
+  {
+    "id": 6,
+    "title": "Next.js Examples",
+    "description": "Official starter examples from the Next.js GitHub repository.",
+    "url": "https://github.com/vercel/next.js/tree/canary/examples"
+  },
+  {
+    "id": 7,
+    "title": "Next.js GitHub",
+    "description": "Source code, issues, and releases for the Next.js framework.",
+    "url": "https://github.com/vercel/next.js"
+  },
+  {
+    "id": 8,
+    "title": "Vercel",
+    "description": "The platform behind Next.js — deploy, preview, and host full-stack apps.",
+    "url": "https://vercel.com/"
+  },
+  {
+    "id": 9,
+    "title": "Next.js Templates",
+    "description": "Official and community templates for dashboards, commerce, blogs, and SaaS.",
+    "url": "https://vercel.com/templates/next.js"
+  },
+  {
+    "id": 10,
+    "title": "Next.js Blog",
+    "description": "Release notes, RFCs, and deep dives from the Next.js team.",
+    "url": "https://nextjs.org/blog"
+  },
+  {
+    "id": 11,
+    "title": "Building APIs with Next.js",
+    "description": "Official guide to Route Handlers, Web APIs, and when to use a dedicated API layer.",
+    "url": "https://nextjs.org/blog/building-apis-with-nextjs"
+  },
+  {
+    "id": 12,
+    "title": "Create Next App",
+    "description": "CLI docs for scaffolding a new Next.js project.",
+    "url": "https://nextjs.org/docs/app/api-reference/cli/create-next-app"
+  }
+]
