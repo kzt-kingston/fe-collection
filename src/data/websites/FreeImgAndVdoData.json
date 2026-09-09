@@ -25,9 +25,9 @@
   },
   {
     "id": 5,
-    "title": "Burst",
-    "description": "Free stock photos and images for websites and commercial use, provided by Shopify.",
-    "url": "https://burst.shopify.com/"
+    "title": "Shopify Stock Photos",
+    "description": "Free stock photos for websites and commercial use, provided by Shopify (formerly Burst).",
+    "url": "https://www.shopify.com/stock-photos"
   },
   {
     "id": 6,
@@ -94,5 +94,23 @@
     "title": "Adobe Stock",
     "description": "High-quality stock images, graphics, and videos integrated with Adobe Creative Cloud.",
     "url": "https://stock.adobe.com/"
+  },
+  {
+    "id": 17,
+    "title": "Lorem Picsum",
+    "description": "Easy placeholder photos powered by Unsplash — useful for mockups and prototypes.",
+    "url": "https://picsum.photos/"
+  },
+  {
+    "id": 18,
+    "title": "Openverse",
+    "description": "Search openly licensed images and audio from Creative Commons and public-domain sources.",
+    "url": "https://openverse.org/"
+  },
+  {
+    "id": 19,
+    "title": "unDraw",
+    "description": "Free, customizable SVG illustrations for landing pages and product UI.",
+    "url": "https://undraw.co/"
   }
 ]

@@ -34,5 +34,29 @@
     "title": "CalltoInspiration",
     "description": "A gallery of web design inspiration.",
     "url": "https://calltoinspiration.com/"
+  },
+  {
+    "id": 7,
+    "title": "Recent (formerly Godly)",
+    "description": "A curated collection of well-designed websites, updated regularly.",
+    "url": "https://recent.design/"
+  },
+  {
+    "id": 8,
+    "title": "Land-book",
+    "description": "A gallery of landing-page designs for product and marketing inspiration.",
+    "url": "https://land-book.com/"
+  },
+  {
+    "id": 9,
+    "title": "Lapa Ninja",
+    "description": "The best landing-page design inspiration from around the web.",
+    "url": "https://www.lapa.ninja/"
+  },
+  {
+    "id": 10,
+    "title": "Mobbin",
+    "description": "A library of real mobile and web app UI screenshots for product inspiration.",
+    "url": "https://mobbin.com/"
   }
 ]

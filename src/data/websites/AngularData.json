@@ -1,62 +1,74 @@
 [
   {
     "id": 1,
-    "title": "Angular",
-    "description": "Official Angular website.",
-    "url": "https://v17.angular.io/docs"
+    "title": "Angular Official Website",
+    "description": "Official Angular documentation at angular.dev — the current home for modern Angular.",
+    "url": "https://angular.dev/"
   },
   {
     "id": 2,
-    "title": "Learn Angular (w3schools)",
-    "description": "A comprehensive guide to learning Angular provided by w3schools.",
-    "url": "https://www.w3schools.com/angular/default.asp"
+    "title": "Angular Essentials",
+    "description": "Official essentials covering standalone components, signals, and the modern template syntax.",
+    "url": "https://angular.dev/essentials"
   },
   {
     "id": 3,
-    "title": "Angular Official Link",
-    "description": "Official Angular cheat sheet.",
-    "url": "https://angular.io/docs/ts/latest/cheatsheet/"
+    "title": "Angular Tutorials",
+    "description": "Official hands-on tutorials for building Angular applications.",
+    "url": "https://angular.dev/tutorials"
   },
   {
     "id": 4,
     "title": "Angular API Reference",
-    "description": "Official API reference for Angular.",
-    "url": "https://angular.io/api"
+    "description": "Official API reference for the Angular framework.",
+    "url": "https://angular.dev/api"
   },
   {
     "id": 5,
-    "title": "Angular Observables and Promises",
-    "description": "Guide to using observables and promises in Angular.",
-    "url": "https://angular.io/guide/observables"
+    "title": "Angular Signals",
+    "description": "Official guide to signals, the default reactivity model in modern Angular.",
+    "url": "https://angular.dev/guide/signals"
   },
   {
     "id": 6,
     "title": "Angular Dependency Injection",
-    "description": "Guide to using dependency injection in Angular.",
-    "url": "https://angular.io/guide/dependency-injection"
+    "description": "Official guide to dependency injection in Angular.",
+    "url": "https://angular.dev/guide/di"
   },
   {
     "id": 7,
     "title": "Angular Routing",
-    "description": "Guide to using the router in Angular.",
-    "url": "https://angular.io/guide/router"
+    "description": "Official guide to the Angular router, lazy loading, and guards.",
+    "url": "https://angular.dev/guide/routing"
   },
   {
     "id": 8,
     "title": "Angular Forms",
-    "description": "Guide to using forms in Angular.",
-    "url": "https://angular.io/guide/forms"
+    "description": "Official guide to template-driven, reactive, and signal-based forms.",
+    "url": "https://angular.dev/guide/forms"
   },
   {
     "id": 9,
-    "title": "Angular HTTP Requests",
-    "description": "Guide to making HTTP requests in Angular.",
-    "url": "https://angular.io/guide/http"
+    "title": "Angular HTTP",
+    "description": "Official guide to HttpClient, interceptors, and resource APIs.",
+    "url": "https://angular.dev/guide/http"
   },
   {
     "id": 10,
     "title": "Angular Testing",
-    "description": "Guide to testing Angular applications.",
-    "url": "https://angular.io/guide/testing"
+    "description": "Official guide to unit and end-to-end testing in Angular.",
+    "url": "https://angular.dev/guide/testing"
+  },
+  {
+    "id": 11,
+    "title": "Angular Material",
+    "description": "Google's Material Design component library for Angular.",
+    "url": "https://material.angular.dev/"
+  },
+  {
+    "id": 12,
+    "title": "RxJS Documentation",
+    "description": "Official RxJS docs — still useful for streams that sit alongside Angular signals.",
+    "url": "https://rxjs.dev/"
   }
 ]

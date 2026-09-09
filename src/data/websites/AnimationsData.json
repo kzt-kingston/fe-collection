@@ -1,56 +1,62 @@
 [
   {
     "id": 1,
-    "title": "CSS Animation Cheat Sheet",
-    "description": "A comprehensive guide to CSS animations and their properties.",
+    "title": "CSS Animation Almanac",
+    "description": "A comprehensive CSS-Tricks guide to the animation property and related techniques.",
     "url": "https://css-tricks.com/almanac/properties/a/animation/"
   },
   {
     "id": 2,
-    "title": "CSS and JavaScript animation performance",
-    "description": "Best practices for optimizing CSS and JavaScript animations for performance.",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance"
+    "title": "Web Animation Performance (MDN)",
+    "description": "Best practices for keeping CSS and JavaScript animations smooth.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Animation_performance_and_frame_rate"
   },
   {
     "id": 3,
-    "title": "GreenSock Animation Platform",
-    "description": "Powerful JavaScript animation library for HTML5, WebGL, and other platforms.",
-    "url": "https://greensock.com/docs/"
+    "title": "GSAP Documentation",
+    "description": "GreenSock (GSAP) — the standard JavaScript animation library for the web.",
+    "url": "https://gsap.com/docs/v3/"
   },
   {
     "id": 4,
-    "title": "Animate.css Cheat Sheet",
-    "description": "A collection of ready-to-use CSS animations.",
-    "url": "https://daneden.github.io/animate.css/"
+    "title": "Animate.css",
+    "description": "A ready-to-use library of cross-browser CSS animations.",
+    "url": "https://animate.style/"
   },
   {
     "id": 5,
-    "title": "Anime.js Cheat Sheet",
-    "description": "A lightweight JavaScript animation library.",
+    "title": "Anime.js",
+    "description": "A lightweight JavaScript animation library with a simple API.",
     "url": "https://animejs.com/documentation/"
   },
   {
     "id": 6,
-    "title": "Lottie Animation Library",
-    "description": "Render After Effects animations natively on the web.",
-    "url": "https://lottiefiles.com/docs/"
+    "title": "Motion",
+    "description": "The animation library formerly known as Framer Motion — for React, JS, and Vue.",
+    "url": "https://motion.dev/"
   },
   {
     "id": 7,
-    "title": "Three.js Animation Guide",
-    "description": "Animation guide for Three.js, a JavaScript library for creating 3D content.",
-    "url": "https://threejs.org/docs/#manual/introduction/Animation"
+    "title": "LottieFiles",
+    "description": "Render After Effects animations as Lottie JSON on the web and in apps.",
+    "url": "https://lottiefiles.com/"
   },
   {
     "id": 8,
-    "title": "WebGL Animation Tutorial",
-    "description": "Tutorial on creating 3D animations using WebGL.",
-    "url": "https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_animations"
+    "title": "Three.js Animation Guide",
+    "description": "Official Three.js guide to the animation system for 3D scenes.",
+    "url": "https://threejs.org/docs/#manual/en/introduction/Animation-system"
   },
   {
     "id": 9,
     "title": "SVG Animation Tutorial",
-    "description": "Tutorial on creating animations with SVG (Scalable Vector Graphics).",
+    "description": "W3Schools tutorial on creating animations with SVG.",
     "url": "https://www.w3schools.com/graphics/svg_animation.asp"
+  },
+  {
+    "id": 10,
+    "title": "Web Animations API (MDN)",
+    "description": "Official MDN guide to the Web Animations API for JavaScript-driven animation.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API"
   }
 ]

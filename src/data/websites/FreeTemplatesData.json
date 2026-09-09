@@ -87,7 +87,7 @@
     "id": 15,
     "title": "PrimeVue",
     "description": "Rich UI components for Vue.js applications.",
-    "url": "https://www.primefaces.org/primevue/"
+    "url": "https://primevue.dev/"
   },
   {
     "id": 16,
@@ -115,20 +115,38 @@
   },
   {
     "id": 20,
-    "title": "ShadCN",
-    "description": "Beautifully designed and accessible React components built with Radix UI and Tailwind CSS.",
+    "title": "shadcn/ui",
+    "description": "Copy-and-paste React components built with Radix UI and Tailwind CSS.",
     "url": "https://ui.shadcn.com/"
   },
   {
     "id": 21,
-    "title": "Element Plus",
-    "description": "A Vue 3 UI library with elegant and feature-rich components.",
-    "url": "https://element-plus.org/"
+    "title": "Vant",
+    "description": "A lightweight mobile UI library for Vue.js.",
+    "url": "https://vant-ui.github.io/vant/"
   },
   {
     "id": 22,
-    "title": "Vant",
-    "description": "A lightweight and high-performance mobile UI library for Vue.js.",
-    "url": "https://vant-ui.github.io/vant/"
+    "title": "HeroUI",
+    "description": "Beautiful React UI library (formerly NextUI) with Tailwind variants.",
+    "url": "https://heroui.com/"
+  },
+  {
+    "id": 23,
+    "title": "Nuxt UI",
+    "description": "Official UI library for Nuxt and Vue, built on Reka UI and Tailwind CSS.",
+    "url": "https://ui.nuxt.com/"
+  },
+  {
+    "id": 24,
+    "title": "Angular Material",
+    "description": "Material Design components for Angular applications.",
+    "url": "https://material.angular.dev/"
+  },
+  {
+    "id": 25,
+    "title": "Base UI",
+    "description": "Unstyled, accessible React components from the team behind Radix and MUI.",
+    "url": "https://base-ui.com/"
   }
 ]

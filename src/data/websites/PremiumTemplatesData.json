@@ -28,5 +28,23 @@
     "title": "UI8",
     "description": "Curated design resources for startups, agencies, and designers.",
     "url": "https://ui8.net/"
+  },
+  {
+    "id": 6,
+    "title": "Tailwind UI",
+    "description": "Official premium Tailwind CSS components and templates from the Tailwind team.",
+    "url": "https://tailwindui.com/"
+  },
+  {
+    "id": 7,
+    "title": "Creative Tim",
+    "description": "Premium UI kits and dashboards for Bootstrap, React, Vue, Angular, and Tailwind.",
+    "url": "https://www.creative-tim.com/"
+  },
+  {
+    "id": 8,
+    "title": "Untitled UI",
+    "description": "A large Figma and React UI kit with modern dashboard and marketing components.",
+    "url": "https://www.untitledui.com/"
   }
 ]

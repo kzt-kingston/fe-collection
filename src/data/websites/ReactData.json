@@ -1,74 +1,110 @@
 [
   {
     "id": 1,
-    "title": "React",
-    "description": "Official React website.",
+    "title": "React Official Website",
+    "description": "The official React documentation for React 19 — Learn, Reference, and Community.",
     "url": "https://react.dev/"
   },
   {
     "id": 2,
+    "title": "React Learn",
+    "description": "Official React learning path: components, state, hooks, and effects.",
+    "url": "https://react.dev/learn"
+  },
+  {
+    "id": 3,
+    "title": "React API Reference",
+    "description": "Official reference for React APIs, hooks, and components.",
+    "url": "https://react.dev/reference/react"
+  },
+  {
+    "id": 4,
+    "title": "React Hooks Reference",
+    "description": "Official reference for every built-in React hook.",
+    "url": "https://react.dev/reference/react/hooks"
+  },
+  {
+    "id": 5,
+    "title": "Passing Data with Context",
+    "description": "Official guide to React Context for sharing data across the tree.",
+    "url": "https://react.dev/learn/passing-data-deeply-with-context"
+  },
+  {
+    "id": 6,
     "title": "Learn React (w3schools)",
     "description": "A comprehensive guide to learning React provided by w3schools.",
     "url": "https://www.w3schools.com/react/default.asp"
   },
   {
-    "id": 3,
-    "title": "React Cheat Sheet",
+    "id": 7,
+    "title": "Next.js",
+    "description": "The React framework for production — App Router, Server Components, and full-stack features.",
+    "url": "https://nextjs.org/docs"
+  },
+  {
+    "id": 8,
+    "title": "Vite",
+    "description": "The recommended build tool for new client-side React apps.",
+    "url": "https://vite.dev/guide/"
+  },
+  {
+    "id": 9,
+    "title": "React Router",
+    "description": "The standard routing library for React applications.",
+    "url": "https://reactrouter.com/"
+  },
+  {
+    "id": 10,
+    "title": "TanStack Query",
+    "description": "Powerful asynchronous state management for fetching, caching, and updating server data.",
+    "url": "https://tanstack.com/query/latest"
+  },
+  {
+    "id": 11,
+    "title": "Zustand",
+    "description": "A small, fast state-management library for React.",
+    "url": "https://zustand.docs.pmnd.rs/"
+  },
+  {
+    "id": 12,
+    "title": "Redux",
+    "description": "Predictable state container; still widely used, especially with Redux Toolkit.",
+    "url": "https://redux.js.org/"
+  },
+  {
+    "id": 13,
+    "title": "React Testing Library",
+    "description": "The recommended way to test React components by user behavior.",
+    "url": "https://testing-library.com/docs/react-testing-library/intro/"
+  },
+  {
+    "id": 14,
+    "title": "Jest",
+    "description": "A JavaScript test runner commonly used with React.",
+    "url": "https://jestjs.io/"
+  },
+  {
+    "id": 15,
+    "title": "React Handbook",
+    "description": "A modern guide to architecture and feature development for production React apps.",
+    "url": "https://reacthandbook.dev/"
+  },
+  {
+    "id": 16,
+    "title": "React Cheat Sheet (reactcheatsheet.com)",
     "description": "A cheat sheet for React with essential concepts and examples.",
     "url": "https://reactcheatsheet.com/"
   },
   {
-    "id": 4,
-    "title": "React Cheat Sheet (devhints)",
-    "description": "React cheat sheet on devhints.",
-    "url": "https://devhints.io/react"
+    "id": 17,
+    "title": "React Cheat Sheet",
+    "description": "A concise React syntax and hooks cheat sheet.",
+    "url": "https://quickref.me/react"
   },
   {
-    "id": 5,
-    "title": "React API Reference",
-    "description": "Official API reference for React.",
-    "url": "https://reactjs.org/docs/react-api.html"
-  },
-  {
-    "id": 6,
-    "title": "React Hooks",
-    "description": "Official guide to using hooks in React.",
-    "url": "https://reactjs.org/docs/hooks-intro.html"
-  },
-  {
-    "id": 7,
-    "title": "React Context",
-    "description": "Official guide to using context in React.",
-    "url": "https://reactjs.org/docs/context.html"
-  },
-  {
-    "id": 8,
-    "title": "React Router",
-    "description": "Official website for React Router, a library for routing in React applications.",
-    "url": "https://reactrouter.com/"
-  },
-  {
-    "id": 9,
-    "title": "React Redux",
-    "description": "Official website for React Redux, a library for managing state in React applications.",
-    "url": "https://redux.js.org/"
-  },
-  {
-    "id": 10,
-    "title": "React Redux Cheat Sheet (devhints)",
-    "description": "Redux cheat sheet on devhints.",
-    "url": "https://devhints.io/redux"
-  },
-  {
-    "id": 11,
-    "title": "React Testing",
-    "description": "Official website for Jest, a testing framework for React applications.",
-    "url": "https://jestjs.io/"
-  },
-  {
-    "id": 12,
-    "title": "React Handbook",
-    "description": "A comprehensive guide to React. Modern approaches to architecture and feature development for production-ready React apps.",
-    "url": "https://reacthandbook.dev/"
+    "id": 18,
+    "title": "Redux Cheat Sheet",
+    "description": "A concise Redux and Redux Toolkit cheat sheet.",
+    "url": "https://quickref.me/redux"
   }
 ]

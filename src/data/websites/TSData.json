@@ -1,62 +1,80 @@
 [
   {
     "id": 1,
-    "title": "TypeScript",
-    "description": "Official TypeScript website.",
+    "title": "TypeScript Official Website",
+    "description": "The official TypeScript homepage, playground, and documentation hub.",
     "url": "https://www.typescriptlang.org/"
   },
   {
     "id": 2,
+    "title": "The TypeScript Handbook",
+    "description": "Official handbook covering the modern TypeScript type system from the ground up.",
+    "url": "https://www.typescriptlang.org/docs/handbook/intro.html"
+  },
+  {
+    "id": 3,
+    "title": "TypeScript in 5 Minutes",
+    "description": "A short official tour of TypeScript for JavaScript programmers.",
+    "url": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+  },
+  {
+    "id": 4,
+    "title": "TypeScript Playground",
+    "description": "Try TypeScript in the browser and share compiler settings with a link.",
+    "url": "https://www.typescriptlang.org/play"
+  },
+  {
+    "id": 5,
     "title": "Learn TypeScript (w3schools)",
     "description": "A comprehensive guide to learning TypeScript provided by w3schools.",
     "url": "https://www.w3schools.com/typescript/index.php"
   },
   {
-    "id": 3,
-    "title": "TypeScript Official Link",
-    "description": "Official TypeScript handbook - TypeScript in 5 minutes.",
-    "url": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
-  },
-  {
-    "id": 4,
-    "title": "TypeScript Cheat Sheet",
-    "description": "Cheat sheet for TypeScript syntax and usage.",
+    "id": 6,
+    "title": "TypeScript Cheat Sheets",
+    "description": "Official printable cheat sheets for types, control flow, and more.",
     "url": "https://www.typescriptlang.org/cheatsheets/"
   },
   {
-    "id": 6,
-    "title": "TypeScript Compiler Options",
-    "description": "Guide to TypeScript compiler options.",
-    "url": "https://www.typescriptlang.org/docs/handbook/compiler-options.html"
-  },
-  {
     "id": 7,
-    "title": "TypeScript Generics",
-    "description": "Official guide to using generics in TypeScript.",
-    "url": "https://www.typescriptlang.org/docs/handbook/generics.html"
+    "title": "TSConfig Reference",
+    "description": "Every TypeScript compiler option explained, with recommended starting configs.",
+    "url": "https://www.typescriptlang.org/tsconfig"
   },
   {
     "id": 8,
-    "title": "TypeScript Interfaces",
-    "description": "Official guide to using interfaces in TypeScript.",
-    "url": "https://www.typescriptlang.org/docs/handbook/interfaces.html"
+    "title": "TypeScript Generics",
+    "description": "Official handbook chapter on generics and type parameters.",
+    "url": "https://www.typescriptlang.org/docs/handbook/2/generics.html"
   },
   {
     "id": 9,
-    "title": "TypeScript Classes",
-    "description": "Official guide to using classes in TypeScript.",
-    "url": "https://www.typescriptlang.org/docs/handbook/classes.html"
+    "title": "TypeScript Object Types",
+    "description": "Official handbook chapter on object types, interfaces, and type aliases.",
+    "url": "https://www.typescriptlang.org/docs/handbook/2/objects.html"
   },
   {
     "id": 10,
-    "title": "TypeScript Modules",
-    "description": "Official guide to using modules in TypeScript.",
-    "url": "https://www.typescriptlang.org/docs/handbook/modules.html"
+    "title": "TypeScript Classes",
+    "description": "Official handbook chapter on classes, members, and heritage.",
+    "url": "https://www.typescriptlang.org/docs/handbook/2/classes.html"
   },
   {
     "id": 11,
+    "title": "TypeScript Modules",
+    "description": "Official handbook chapter on ES modules in TypeScript.",
+    "url": "https://www.typescriptlang.org/docs/handbook/2/modules.html"
+  },
+  {
+    "id": 12,
     "title": "TypeScript Decorators",
-    "description": "Official guide to using decorators in TypeScript.",
+    "description": "Official guide to TypeScript decorators (legacy and Stage 3).",
     "url": "https://www.typescriptlang.org/docs/handbook/decorators.html"
+  },
+  {
+    "id": 13,
+    "title": "Total TypeScript Beginner's Tutorial",
+    "description": "Matt Pocock's free interactive TypeScript tutorial for JavaScript developers.",
+    "url": "https://www.totaltypescript.com/tutorials/beginners-typescript"
   }
 ]

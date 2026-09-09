@@ -1,5 +1,29 @@
 [
   {
+    "id": 121,
+    "title": "MDN HTML Documentation",
+    "description": "The definitive HTML reference and guides from MDN Web Docs.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+  },
+  {
+    "id": 122,
+    "title": "Learn HTML (web.dev)",
+    "description": "Google's structured course on modern, semantic, accessible HTML.",
+    "url": "https://web.dev/learn/html/"
+  },
+  {
+    "id": 123,
+    "title": "HTML Living Standard",
+    "description": "The official WHATWG HTML specification — the current standard for HTML.",
+    "url": "https://html.spec.whatwg.org/multipage/"
+  },
+  {
+    "id": 124,
+    "title": "W3C Markup Validator",
+    "description": "Check HTML documents for syntax and accessibility issues.",
+    "url": "https://validator.w3.org/"
+  },
+  {
     "id": 1,
     "title": "Learn HTML (w3schools)",
     "description": "A comprehensive guide to learning HTML provided by w3schools.",
@@ -9,13 +33,13 @@
     "id": 2,
     "title": "HTML Element Reference",
     "description": "Detailed reference for HTML elements on MDN.",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"
   },
   {
     "id": 3,
     "title": "HTML Cheat Sheet (Geeks for geeks)",
     "description": "A basic guide to HTML by Geeks for Geeks.",
-    "url": "https://www.geeksforgeeks.org/html-cheat-sheet-a-basic-guide-to-html/"
+    "url": "https://www.geeksforgeeks.org/html/html-cheat-sheet/"
   },
   {
     "id": 4,

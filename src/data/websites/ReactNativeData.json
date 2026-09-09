@@ -1,74 +1,92 @@
 [
   {
     "id": 1,
-    "title": "React Native",
-    "description": "Official website for React Native.",
+    "title": "React Native Official Website",
+    "description": "Official React Native documentation and getting-started guides.",
     "url": "https://reactnative.dev/"
   },
   {
     "id": 2,
     "title": "React Native Getting Started",
-    "description": "Beginner-friendly guide on how to start building apps with React Native.",
+    "description": "Official guide to setting up a React Native environment.",
     "url": "https://reactnative.dev/docs/getting-started"
   },
   {
     "id": 3,
-    "title": "React Native Express",
-    "description": "An interactive guide to React Native covering all the essential concepts.",
-    "url": "https://www.reactnative.express/"
+    "title": "Expo Docs",
+    "description": "The recommended way to start React Native apps — Expo SDK, EAS, and Expo Router.",
+    "url": "https://docs.expo.dev/"
   },
   {
     "id": 4,
-    "title": "React.js vs React Native – What's the Difference? (freeCodeCamp)",
+    "title": "Expo Router",
+    "description": "File-based routing for React Native and Expo apps.",
+    "url": "https://docs.expo.dev/router/introduction/"
+  },
+  {
+    "id": 5,
+    "title": "React Native Express",
+    "description": "An interactive guide to React Native covering the essential concepts.",
+    "url": "https://www.reactnative.express/"
+  },
+  {
+    "id": 6,
+    "title": "React.js vs React Native (freeCodeCamp)",
     "description": "Article explaining the differences between React.js and React Native.",
     "url": "https://www.freecodecamp.org/news/react-js-vs-react-native-whats-the-difference/"
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "React Native Styling",
     "description": "Official guide to styling in React Native.",
     "url": "https://reactnative.dev/docs/style"
   },
   {
-    "id": 6,
-    "title": "React Native Navigation",
-    "description": "Guide to using navigation in React Native apps.",
+    "id": 8,
+    "title": "React Navigation",
+    "description": "The most widely used navigation library for React Native.",
     "url": "https://reactnavigation.org/"
   },
   {
-    "id": 7,
+    "id": 9,
+    "title": "NativeWind",
+    "description": "Use Tailwind CSS class names to style React Native components.",
+    "url": "https://www.nativewind.dev/"
+  },
+  {
+    "id": 10,
     "title": "React Native Gesture Handler",
-    "description": "Library for handling touch gestures in React Native apps.",
+    "description": "Library for native-driven touch gestures in React Native.",
     "url": "https://docs.swmansion.com/react-native-gesture-handler/"
   },
   {
-    "id": 8,
-    "title": "React Native Performance Optimization",
-    "description": "Guide to improving performance in React Native apps.",
+    "id": 11,
+    "title": "React Native Reanimated",
+    "description": "Advanced animation library that runs on the UI thread.",
+    "url": "https://docs.swmansion.com/react-native-reanimated/"
+  },
+  {
+    "id": 12,
+    "title": "React Native Performance",
+    "description": "Official guide to profiling and improving React Native performance.",
     "url": "https://reactnative.dev/docs/performance"
   },
   {
-    "id": 9,
+    "id": 13,
     "title": "React Native Firebase",
     "description": "Official Firebase integration for React Native.",
     "url": "https://rnfirebase.io/"
   },
   {
-    "id": 10,
+    "id": 14,
     "title": "React Native Paper",
-    "description": "Material Design library for React Native apps.",
+    "description": "Material Design component library for React Native.",
     "url": "https://reactnativepaper.com/"
   },
   {
-    "id": 11,
-    "title": "React Native Reanimated",
-    "description": "Advanced animation library for React Native.",
-    "url": "https://docs.swmansion.com/react-native-reanimated/"
-  },
-  {
-    "id": 12,
+    "id": 15,
     "title": "React Native Testing Library",
-    "description": "Guide to testing React Native apps using the Testing Library.",
-    "url": "https://callstack.github.io/react-native-testing-library/"
+    "description": "Testing Library helpers for React Native apps.",
+    "url": "https://oss.callstack.com/react-native-testing-library/"
   }
 ]

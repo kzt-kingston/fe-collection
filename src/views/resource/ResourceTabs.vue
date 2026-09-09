@@ -38,8 +38,16 @@ watch(activeTab, async (newVal) => {
     await nextTick();
     const container = tabsContainer.value;
     const tabEl = container?.querySelector(`[data-tab-id="${newVal}"]`);
-    if (tabEl) {
-        tabEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    if (container && tabEl) {
+        const tabLeft = tabEl.offsetLeft;
+        const tabRight = tabLeft + tabEl.offsetWidth;
+        const viewLeft = container.scrollLeft;
+        const viewRight = viewLeft + container.clientWidth;
+        if (tabLeft < viewLeft) {
+            container.scrollTo({ left: tabLeft, behavior: 'smooth' });
+        } else if (tabRight > viewRight) {
+            container.scrollTo({ left: tabRight - container.clientWidth, behavior: 'smooth' });
+        }
     }
     window.scrollTo(0, 0);
 });
@@ -49,8 +57,8 @@ watch(activeTab, async (newVal) => {
     <div id="resource-tabs" class="w-full mx-auto">
         <div class="tab-bar-sticky sticky top-24 z-40 bg-white md:top-20 md:-mt-5">
             <div id="tab-container" class="bg-white border rounded-t-lg">
-                <div ref="tabsContainer" class="flex h-10 overflow-x-auto">
-                    <div class="flex h-10 min-w-max pr-3">
+                <div ref="tabsContainer" class="flex items-center overflow-x-auto overflow-y-hidden">
+                    <div class="flex h-10 min-w-max items-center pr-3">
                         <div v-for="tab in tabs" :key="tab.id" :data-tab-id="tab.id"
                             class="relative flex h-full shrink-0 items-center text-sm font-medium gap-2 px-4 whitespace-nowrap rounded-t-lg cursor-pointer"
                             :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">

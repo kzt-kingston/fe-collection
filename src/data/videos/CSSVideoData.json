@@ -1,19 +1,23 @@
 [
   {
+    "id": "OEV8gMkCHXQ",
+    "title": "CSS in 100 Seconds"
+  },
+  {
     "id": "OXGznpKZ_sA",
     "title": "CSS Tutorial – Full Course for Beginners"
   },
   {
     "id": "wRNinF7YQqQ",
-    "title": "Learn CSS in 1 hour 🎨"
+    "title": "Learn CSS in 1 hour"
+  },
+  {
+    "id": "rg7Fvvl3taU",
+    "title": "Learn CSS Grid the easy way"
   },
   {
     "id": "1PnVor36_40",
     "title": "Learn CSS in 20 Minutes"
-  },
-  {
-    "id": "Z4pCqK-V_Wo",
-    "title": "CSS in 5 minutes"
   },
   {
     "id": "SgmNxE9lWcY",
@@ -28,15 +32,19 @@
     "title": "Top 10 Advanced CSS Responsive Design Concepts You Should Know"
   },
   {
-    "id": "PL3Odw-k8W4",
-    "title": "These CSS PRO Tips & Tricks Will Blow Your Mind!"
-  },
-  {
     "id": "ieTHC78giGQ",
     "title": "CSS Full Course - Includes Flexbox and CSS Grid Tutorials"
   },
   {
     "id": "dIUOWdwwZBw",
     "title": "Learn CSS ::before and ::after in 4 Minutes"
+  },
+  {
+    "id": "PL3Odw-k8W4",
+    "title": "These CSS PRO Tips & Tricks Will Blow Your Mind!"
+  },
+  {
+    "id": "Z4pCqK-V_Wo",
+    "title": "CSS in 5 minutes"
   }
 ]

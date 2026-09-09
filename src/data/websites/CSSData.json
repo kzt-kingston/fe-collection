@@ -7,54 +7,72 @@
   },
   {
     "id": 2,
-    "title": "CSS Selectors Reference",
-    "description": "Detailed reference for CSS selectors on MDN.",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
+    "title": "Learn CSS (web.dev)",
+    "description": "Google's modern CSS course covering cascade, layout, color, and responsive design.",
+    "url": "https://web.dev/learn/css/"
   },
   {
     "id": 3,
-    "title": "CSS Properties Reference",
+    "title": "MDN CSS Documentation",
+    "description": "The definitive CSS reference, guides, and tutorials from MDN Web Docs.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+  },
+  {
+    "id": 4,
+    "title": "CSS Selectors Reference (MDN)",
+    "description": "Detailed reference for CSS selectors on MDN.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors"
+  },
+  {
+    "id": 5,
+    "title": "CSS Properties Reference (MDN)",
     "description": "Comprehensive reference for CSS properties on MDN.",
     "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
   },
   {
-    "id": 4,
-    "title": "CSS Selectors Reference (w3schools)",
-    "description": "CSS selectors reference provided by w3schools.",
-    "url": "https://www.w3schools.com/cssref/css_selectors.asp"
-  },
-  {
-    "id": 5,
-    "title": "Reference",
-    "description": "CSS reference on w3schools.",
-    "url": "https://www.w3schools.com/cssref/index.php"
-  },
-  {
     "id": 6,
-    "title": "Browser Support",
-    "description": "CSS3 browser support information on w3schools.",
-    "url": "https://www.w3schools.com/cssref/css3_browsersupport.php"
+    "title": "CSS Tricks Almanac",
+    "description": "A practical encyclopedia of CSS properties, selectors, and techniques.",
+    "url": "https://css-tricks.com/almanac/"
   },
   {
     "id": 7,
-    "title": "Selectors",
-    "description": "CSS selectors reference on w3schools.",
-    "url": "https://www.w3schools.com/cssref/css_selectors.php"
+    "title": "Can I use",
+    "description": "Browser support tables for CSS, HTML, and JavaScript features.",
+    "url": "https://caniuse.com/"
   },
   {
     "id": 8,
-    "title": "Functions",
+    "title": "Flexbox Froggy",
+    "description": "A game that teaches CSS Flexbox by positioning frogs on lily pads.",
+    "url": "https://flexboxfroggy.com/"
+  },
+  {
+    "id": 9,
+    "title": "Grid Garden",
+    "description": "A game that teaches CSS Grid by watering a carrot garden.",
+    "url": "https://cssgridgarden.com/"
+  },
+  {
+    "id": 10,
+    "title": "CSS Selectors Reference (w3schools)",
+    "description": "CSS selectors reference provided by w3schools.",
+    "url": "https://www.w3schools.com/cssref/css_selectors.php"
+  },
+  {
+    "id": 11,
+    "title": "CSS Reference (w3schools)",
+    "description": "Full CSS property and function reference on w3schools.",
+    "url": "https://www.w3schools.com/cssref/index.php"
+  },
+  {
+    "id": 12,
+    "title": "CSS Functions (w3schools)",
     "description": "CSS functions reference on w3schools.",
     "url": "https://www.w3schools.com/cssref/css_functions.php"
   },
   {
-    "id": 9,
-    "title": "CSS Aural Reference",
-    "description": "CSS aural reference on w3schools.",
-    "url": "https://www.w3schools.com/cssref/css_ref_aural.php"
-  },
-  {
-    "id": 10,
+    "id": 13,
     "title": "Web Safe Fonts",
     "description": "Web safe fonts reference on w3schools.",
     "url": "https://www.w3schools.com/cssref/css_websafe_fonts.php"

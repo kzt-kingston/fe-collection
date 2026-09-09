@@ -1,26 +1,50 @@
 [
   {
     "id": 1,
-    "title": "Git Cheatsheet",
-    "description": "Official Git cheat sheet with common commands and usage examples.",
-    "url": "https://education.github.com/git-cheat-sheet-education.pdf"
+    "title": "Official Git Documentation",
+    "description": "Official Git documentation, Pro Git book, and videos.",
+    "url": "https://git-scm.com/doc"
   },
   {
     "id": 2,
     "title": "Git Commands Reference",
-    "description": "Comprehensive reference for Git commands.",
+    "description": "Comprehensive reference for every Git command.",
     "url": "https://git-scm.com/docs"
   },
   {
     "id": 3,
-    "title": "Git Workflow",
-    "description": "Guide to basic branching and merging in Git.",
+    "title": "Git Branching and Merging",
+    "description": "Official Pro Git chapter on basic branching and merging.",
     "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"
   },
   {
     "id": 4,
-    "title": "Official Git Documentation",
-    "description": "Official Git documentation with detailed information on commands and usage.",
-    "url": "https://git-scm.com/doc"
+    "title": "Git Cheat Sheet (GitHub Education)",
+    "description": "Official GitHub Education cheat sheet with common commands.",
+    "url": "https://education.github.com/git-cheat-sheet-education.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Learn Git Branching",
+    "description": "An interactive visual sandbox for learning Git branching, rebasing, and remotes.",
+    "url": "https://learngitbranching.js.org/"
+  },
+  {
+    "id": 6,
+    "title": "Oh Shit, Git!?!",
+    "description": "A practical guide to undoing mistakes in Git.",
+    "url": "https://ohshitgit.com/"
+  },
+  {
+    "id": 7,
+    "title": "GitHub Docs",
+    "description": "Official GitHub documentation for repos, pull requests, Actions, and more.",
+    "url": "https://docs.github.com/en"
+  },
+  {
+    "id": 8,
+    "title": "GitHub Skills",
+    "description": "Interactive GitHub courses that teach Git and GitHub in your own repository.",
+    "url": "https://skills.github.com/"
   }
 ]

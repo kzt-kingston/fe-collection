@@ -39,7 +39,7 @@
     "id": 7,
     "title": "v0 Dev by Vercel - AI",
     "description": "V0.dev (often referred to simply as 'v0') is an AI-powered generative user interface (UI) tool developed by Vercel, the company behind Next.js.",
-    "url": "https://v0.dev/"
+    "url": "https://v0.app/"
   },
   {
     "id": 8,
@@ -56,13 +56,43 @@
   {
     "id": 10,
     "title": "QWEN Chat - AI",
-    "description": "Qwen Chat is a large language model developed by Alibaba Cloud, designed to engage in natural and fluent conversations with users. It can answer questions, provide information, generate text, and assist with various tasks across multiple languages. As part of the Qwen series, Qwen Chat aims to offer a versatile and interactive experience, making it suitable for applications such as customer service, virtual assistants, content creation, and more.",
-    "url": "https://chat.qwenlm.ai/"
+    "description": "Qwen Chat is a large language model from Alibaba Cloud for conversation, coding, and content generation across multiple languages.",
+    "url": "https://chat.qwen.ai/"
   },
   {
     "id": 11,
     "title": "Grok - AI",
-    "description": "I'm Grok, created by xAI. I'm an AI designed to help users like you get straightforward, honest answers to almost any question. I aim to be as truthful as possible, often giving perspectives that cut through the noise.",
+    "description": "Grok is xAI's assistant for straightforward answers, coding help, and current events.",
     "url": "https://grok.com/"
+  },
+  {
+    "id": 12,
+    "title": "Cursor - AI",
+    "description": "An AI-first code editor built on VS Code, with agentic coding, multi-file edits, and inline chat.",
+    "url": "https://cursor.com/"
+  },
+  {
+    "id": 13,
+    "title": "Perplexity - AI",
+    "description": "An AI answer engine that cites sources for research, coding questions, and current information.",
+    "url": "https://www.perplexity.ai/"
+  },
+  {
+    "id": 14,
+    "title": "Lovable - AI",
+    "description": "An AI builder that turns prompts into full-stack web apps you can edit and ship.",
+    "url": "https://lovable.dev/"
+  },
+  {
+    "id": 15,
+    "title": "Bolt.new - AI",
+    "description": "StackBlitz's AI app builder that scaffolds and runs full-stack projects in the browser.",
+    "url": "https://bolt.new/"
+  },
+  {
+    "id": 16,
+    "title": "Windsurf - AI",
+    "description": "Codeium's AI-powered IDE with cascade agents for multi-step coding tasks.",
+    "url": "https://windsurf.com/"
   }
 ]

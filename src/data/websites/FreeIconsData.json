@@ -94,5 +94,29 @@
     "title": "Noun Project",
     "description": "Icons for everything, providing free and premium icons.",
     "url": "https://thenounproject.com/"
+  },
+  {
+    "id": 17,
+    "title": "Lucide",
+    "description": "The community-maintained successor to Feather — clean, consistent open-source icons.",
+    "url": "https://lucide.dev/"
+  },
+  {
+    "id": 18,
+    "title": "Phosphor Icons",
+    "description": "A flexible icon family with multiple weights for interfaces and diagrams.",
+    "url": "https://phosphoricons.com/"
+  },
+  {
+    "id": 19,
+    "title": "Tabler Icons",
+    "description": "Over 5,000 free MIT-licensed SVG icons in a consistent outline style.",
+    "url": "https://tabler.io/icons"
+  },
+  {
+    "id": 20,
+    "title": "Iconify",
+    "description": "One icon framework that searches 200,000+ icons from the most popular sets.",
+    "url": "https://iconify.design/"
   }
 ]
