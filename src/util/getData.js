@@ -30,6 +30,7 @@ import FreeTemplatesData from "@/data/websites/FreeTemplatesData.json";
 import PremiumTemplatesData from "@/data/websites/PremiumTemplatesData.json";
 import InspirationGalleriesData from "@/data/websites/InspirationGalleriesData.json";
 import AnimationsData from "@/data/websites/AnimationsData.json";
+import AnimationsVideoData from "@/data/videos/AnimationsVideoData.json";
 import OtherData from "@/data/websites/OtherData.json";
 import AIToolsData from "@/data/websites/AIToolsData.json";
 
@@ -50,7 +51,7 @@ export const REGISTRY = [
   { name: "Free UI Libraries", websites: FreeTemplatesData },
   { name: "Premium Templates", websites: PremiumTemplatesData },
   { name: "Inspiration Galleries", websites: InspirationGalleriesData },
-  { name: "Animations", websites: AnimationsData },
+  { name: "Animations", websites: AnimationsData, videos: AnimationsVideoData },
   { name: "Others", websites: OtherData },
   { name: "AI Tools", websites: AIToolsData },
 ];

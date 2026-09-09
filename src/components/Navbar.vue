@@ -48,16 +48,18 @@ const changeLang = (e) => {
             </button>
         </div>
         <div class="flex justify-end p-5">
-            <!-- Resource Menu -->
-            <div class="flex items-center">
-                <router-link to="/resource"
-                    class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold border-2 border-cyan-500 px-2 py-1 rounded-md">
-                    Start Here
-                </router-link>
-            </div>
+            <!-- Resource Menu — landing page only -->
+            <template v-if="route.name === 'Home'">
+                <div class="flex items-center">
+                    <router-link to="/resource"
+                        class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold border-2 border-cyan-500 px-2 py-1 rounded-md">
+                        Start Here
+                    </router-link>
+                </div>
+                <div class="flex items-center mx-2">|</div>
+            </template>
 
             <!-- AI Tools Drop Down -->
-            <div class="flex items-center mx-2">|</div>
             <div class="flex items-center">
                 <el-dropdown>
                     <span class="text-xs flex items-center justify-center">

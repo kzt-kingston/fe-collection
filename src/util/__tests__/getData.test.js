@@ -46,6 +46,16 @@ describe("getData(language, type)", () => {
     expect(data.length).toBeGreaterThan(0);
   });
 
+  it("returns videos for the Animations category", () => {
+    const data = getData("Animations", "videos");
+    expect(Array.isArray(data)).toBe(true);
+    expect(data.length).toBeGreaterThan(0);
+    for (const video of data) {
+      expect(video).toHaveProperty("id");
+      expect(video).toHaveProperty("title");
+    }
+  });
+
   it("returns null for an unknown language", () => {
     expect(getData("Klingon", "websites")).toBeNull();
   });
