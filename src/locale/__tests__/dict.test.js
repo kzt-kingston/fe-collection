@@ -7,6 +7,7 @@ describe("getDictionary", () => {
     const dict = getDictionary("en");
     expect(dict.start_here).toBe("Start Here");
     expect(dict.visit_website).toBe("Visit Website");
+    expect(dict.voice_heading).toBe("Developer Voice");
   });
 
   it("returns Myanmar strings for my", () => {

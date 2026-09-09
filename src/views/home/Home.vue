@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { onMounted, ref } from 'vue';
-import { Download } from 'lucide-vue-next';
+import { Download, Quote } from 'lucide-vue-next';
 import ResourceCarousel from '@/components/ResourceCarousel.vue';
 import SplineViewer from '@/components/SplineViewer.vue';
 import { useLocale } from '@/locale/useLocale';
@@ -119,6 +119,24 @@ onMounted(() => {
                 </button>
             </div>
         </router-link>
+    </section>
+    <section id="developer-voice" class="max-w-4xl mx-auto mt-6">
+        <div class="rounded-xl border border-cyan-200 bg-cyan-50/50 px-6 py-8 md:px-10 text-left">
+            <div class="flex items-center gap-2 text-cyan-600 mb-3">
+                <Quote size="16" aria-hidden="true" />
+                <p class="text-xs font-semibold tracking-widest uppercase">{{ dict.voice_heading }}</p>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-5 leading-snug">{{ dict.voice_title }}</h2>
+            <div class="space-y-3 text-base leading-relaxed text-gray-700">
+                <p>
+                    {{ dict.voice_greeting }}<a class="text-cyan-500 hover:text-cyan-600 font-medium"
+                        href="https://kyawzinthet.tech" target="_blank"
+                        rel="noopener noreferrer">{{ dict.voice_name }}</a>{{ dict.voice_welcome }}
+                </p>
+                <p>{{ dict.voice_p1 }}</p>
+                <p>{{ dict.voice_p2 }}</p>
+            </div>
+        </div>
     </section>
     <section id="resource-carousel" class="mt-10">
         <!-- Resource Carousel -->
