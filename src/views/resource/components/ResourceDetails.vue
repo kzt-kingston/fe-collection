@@ -5,7 +5,7 @@
       <div class="px-4">
         <div :class="headerClass">
           <div class="text-start text-lg mb-2 font-bold">{{ title }}</div>
-          <div class="text-start text-md mb-5">{{ resourceDescription }}</div>
+          <ExpandableDescription :sentences="resourceDescription" />
         </div>
         <div class="mb-8">
           <el-tabs v-model="activeTab" class="resource-el-tabs">
@@ -87,11 +87,13 @@ import { ElTabs } from "element-plus";
 import WebsiteCard from "./WebsiteCard.vue";
 import VideoCard from "./VideoCard.vue";
 import BookmarkToggle from "@/components/BookmarkToggle.vue";
+import ExpandableDescription from "./ExpandableDescription.vue";
 import resourceTitles from '../data.json';
 import { useBookmarkStore } from '@/stores/bookmarkStore';
 import { useLocale } from '@/locale/useLocale';
+import { getDescriptionSentences } from '../previewDescription';
 
-const { dict } = useLocale();
+const { dict, lang } = useLocale();
 const bookmarkStore = useBookmarkStore();
 
 const props = defineProps({
@@ -133,7 +135,7 @@ const headerClass = computed(() => {
 
 const resourceDescription = computed(() => {
   const match = resourceTitles.find((resource) => resource.title === props.title);
-  return match?.description || '';
+  return getDescriptionSentences(match, lang.value);
 });
 
 const saveBookMark = (id, title, url, category, resourceType) =>

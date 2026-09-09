@@ -82,6 +82,8 @@ const multiLang = {
     watch_on_youtube: "Watch on YouTube",
     close_tab: "Close tab",
     no_tabs_open: "No tabs open. Choose a resource to add a tab.",
+    see_more: "See more",
+    see_less: "See less",
     searching_result: "Searching Result",
 
     bookmarks_help:
@@ -232,6 +234,8 @@ const multiLang = {
     watch_on_youtube: "YouTube တွင် ကြည့်ရှုရန်",
     close_tab: "Tab ပိတ်ရန်",
     no_tabs_open: "ဖွင့်ထားသော Tab မရှိသေးပါ။ Resource တစ်ခုခုကို ရွေးချယ်ပြီး Tab အသစ် ဖွင့်နိုင်ပါသည်။",
+    see_more: "ပိုမိုကြည့်ရန်",
+    see_less: "လျှော့ပြရန်",
     searching_result: "ရှာဖွေမှုရလဒ်",
 
     bookmarks_help:

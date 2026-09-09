@@ -4,174 +4,549 @@
     "title": "HTML",
     "class": "html",
     "category": "Markup and Styling Languages",
-    "description": "HTML (HyperText Markup Language) is the foundation of web development, used to structure content on the web. It defines elements like headings, paragraphs, links, images, and more. Every website is built using HTML, making it an essential skill for developers."
+    "description": {
+      "en": [
+        "HTML (HyperText Markup Language) is the skeleton of every web page — it tells the browser what is a heading, paragraph, link, image, or form.",
+        "Every site you visit, from a blog to a banking app, is structured with HTML because the browser cannot show content without it.",
+        "You need to learn HTML first: you cannot style or script a page until you can structure it.",
+        "With HTML you build landing pages, forms, and accessible layouts that search engines and screen readers can understand.",
+        "It is the skill every frontend job listing expects, and the foundation for CSS, JavaScript, and any framework you learn next."
+      ],
+      "my": [
+        "HTML (HyperText Markup Language) သည် ဝဘ်စာမျက်နှာတိုင်းရဲ့ အခြေခံအဆောက်အအုံဖြစ်ပြီး heading၊ paragraph၊ link၊ ပုံနဲ့ form တွေကို browser က မှန်ကန်စွာ နားလည်ပြသနိုင်အောင် ဖွဲ့စည်းတည်ဆောက်ပေးပါတယ်။",
+        "ရိုးရိုး Blog ကနေစပြီး Banking App တွေအထိ သင်ဝင်ရောက်ကြည့်ရှုတဲ့ ဝဘ်ဆိုဒ်တိုင်းမှာ HTML ကို မဖြစ်မနေ အသုံးပြုထားတာကြောင့် HTML မပါဘဲ browser က မည်သည့် content ကိုမှ ဖော်ပြပေးနိုင်မှာ မဟုတ်ပါဘူး။",
+        "CSS နဲ့ JavaScript မလေ့လာခင် HTML ကို အရင်ဆုံး မဖြစ်မနေ လေ့လာရပါမယ် — စာမျက်နှာရဲ့ အခြေခံ structure ကို မတည်ဆောက်တတ်သေးရင် style ပြင်ဆင်တာနဲ့ script ရေးသားတာတွေ လုပ်ဆောင်နိုင်မှာ မဟုတ်လို့ ဖြစ်ပါတယ်။",
+        "HTML ကို ပိုင်နိုင်သွားရင် landing page တွေ၊ form တွေအပြင် search engine နဲ့ screen reader တွေ အလွယ်တကူ နားလည်နိုင်တဲ့ accessible layout တွေကို စနစ်တကျ တည်ဆောက်လာနိုင်မှာပါ။",
+        "Frontend အလုပ်ခေါ်စာတိုင်းမှာ HTML ကို အခြေခံအဖြစ် မဖြစ်မနေ တောင်းဆိုကြတာကြောင့် ၎င်းသည် CSS၊ JavaScript နဲ့ နောက်ထပ် framework တွေကို ဆက်လက်လေ့လာဖို့အတွက် မရှိမဖြစ် အရေးပါတဲ့ အခြေခံကျွမ်းကျင်မှု ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 2,
     "title": "CSS",
     "class": "css",
     "category": "Markup and Styling Languages",
-    "description": "CSS (Cascading Style Sheets) is a styling language used to design web pages. It controls colors, fonts, spacing, layouts, and responsiveness, allowing developers to create visually appealing and mobile-friendly websites. CSS frameworks like Bootstrap and Tailwind make styling even easier."
+    "description": {
+      "en": [
+        "CSS (Cascading Style Sheets) controls how a page looks: colors, fonts, spacing, layout, and how it adapts from phone to desktop.",
+        "Every polished website you admire uses CSS — or a tool that compiles to CSS — to turn raw HTML into a design people want to use.",
+        "You need CSS because users judge a product by how it looks and how easily they can scan it; a messy layout loses trust even if the logic is solid.",
+        "With CSS you build responsive grids, dark mode, animations, and reusable component styles across an app.",
+        "Frameworks like Tailwind and Bootstrap sit on top of CSS, so learning the core language makes those tools faster to pick up instead of a mystery."
+      ],
+      "my": [
+        "CSS (Cascading Style Sheets) သည် အရောင်၊ font၊ spacing၊ layout များနှင့် ဖုန်းမှသည် desktop အထိ မည်သည့် screen မှာမဆို လှပစွာ အံဝင်ခွင်ကျဖြစ်အောင် ထိန်းချုပ်ပေးတဲ့ styling ဘာသာစကား ဖြစ်ပါတယ်။",
+        "သင်မြင်တွေ့နေရတဲ့ ခေတ်မီဆန်းသစ်တဲ့ ဝဘ်ဆိုဒ်တိုင်းဟာ ရိုးရိုး HTML ဖွဲ့စည်းပုံကို လူကြိုက်များပြီး အသုံးပြုရလွယ်ကူတဲ့ UI ဒီဇိုင်းအဖြစ် ပြောင်းလဲပေးဖို့ CSS ကို အသုံးပြုကြပါတယ်။",
+        "Website ရဲ့ logic ကောင်းနေရင်တောင် layout မညီညာဘဲ ဒီဇိုင်းညံ့ဖျင်းနေရင် အသုံးပြုသူတွေရဲ့ ယုံကြည်မှု ကျဆင်းသွားနိုင်တာကြောင့် CSS ကို ကျွမ်းကျင်စွာ တတ်မြောက်ထားဖို့ အထူးလိုအပ်ပါတယ်။",
+        "CSS ဖြင့် responsive layout များ၊ dark mode၊ animation များနှင့် app တစ်ခုလုံးမှာ ပြန်လည်အသုံးပြုနိုင်တဲ့ component style တွေကို လွတ်လပ်စွာ တည်ဆောက်နိုင်ပါတယ်။",
+        "Tailwind နဲ့ Bootstrap လို ခေတ်စားတဲ့ framework တွေဟာလည်း CSS ပေါ်မှာ အခြေခံထားတာကြောင့် core CSS ကို ပိုင်နိုင်ထားရင် အဆိုပါ tool တွေကို ပိုမိုမြန်ဆန်လွယ်ကူစွာ နားလည်အသုံးချနိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 20,
     "title": "SASS",
     "class": "sass",
     "category": "Markup and Styling Languages",
-    "description": "SASS (Syntactically Awesome Stylesheets) is a CSS preprocessor that extends the functionality of CSS with features like variables, nesting, and mixins. It helps developers write cleaner, more maintainable stylesheets and speeds up the styling process."
+    "description": {
+      "en": [
+        "SASS is a CSS preprocessor that adds variables, nesting, mixins, and reusable functions so stylesheets stay organized as a project grows.",
+        "You still ship CSS to the browser, but you write a more powerful language that compiles down — a pattern many teams used before utility-first CSS became common.",
+        "Learn SASS when you join a codebase that already uses .scss files, or when you want shared design tokens instead of copy-pasted values.",
+        "It is especially useful in larger Vue, React, or Angular apps that keep component styles in SASS.",
+        "Understanding SASS also makes you faster at reading legacy styles and migrating them to newer approaches."
+      ],
+      "my": [
+        "SASS သည် variables၊ nesting၊ mixins နှင့် functions များ အသုံးပြုနိုင်အောင် စွမ်းဆောင်ပေးတဲ့ CSS preprocessor တစ်ခုဖြစ်ပြီး ပရောဂျက်ကြီးမားလာတဲ့အခါ stylesheet တွေကို စနစ်တကျ ထိန်းသိမ်းရလွယ်ကူစေပါတယ်။",
+        "Browser ပေါ်မှာ နောက်ဆုံး run တာက CSS အဖြစ် ပြောင်းလဲသွားမှာဖြစ်ပေမယ့် ရေးသားရာမှာတော့ ရိုးရိုး CSS ထက် ပိုမိုစွမ်းဆောင်ရည်မြင့်မားတဲ့ code တွေကို ရေးသားနိုင်စေပါတယ်။",
+        "အရောင်၊ typography နဲ့ spacing တန်ဖိုးတွေကို တစ်နေရာတည်းကနေ စနစ်တကျ စီမံခန့်ခွဲလိုတဲ့အခါ ဒါမှမဟုတ် .scss ဖိုင်တွေ အသုံးပြုထားတဲ့ လက်ရှိ project တွေမှာ ဝင်ရောက်လုပ်ကိုင်တဲ့အခါ SASS ကို လေ့လာထားသင့်ပါတယ်။",
+        "Component style တွေကို SASS ဖြင့် စနစ်တကျ ခွဲခြမ်းရေးသားထားတဲ့ Vue၊ React သို့မဟုတ် Angular app ကြီးတွေမှာ အထူးအသုံးဝင်ပါတယ်။",
+        "SASS ကို နားလည်ထားခြင်းဖြင့် လက်ရှိ လုပ်ငန်းခွင်သုံး codebase တွေကို ပိုမိုမြန်ဆန်စွာ ဖတ်ရှုပြင်ဆင်နိုင်သလို ခေတ်မီ styling စနစ်တွေဆီ ကူးပြောင်းရာမှာလည်း အထောက်အကူပြုစေပါတယ်။"
+      ]
+    }
   },
   {
     "id": 21,
     "title": "Tailwind",
     "class": "tailwind",
     "category": "Markup and Styling Languages",
-    "description": "Tailwind CSS is a utility-first CSS framework for building modern interfaces without leaving your markup. Classes like flex, pt-4, and text-center compose into custom designs, and v4 ships a Vite plugin with CSS-first configuration."
+    "description": {
+      "en": [
+        "Tailwind CSS is a utility-first framework: you compose designs with classes like flex, pt-4, and text-center in your markup instead of writing custom CSS for every component.",
+        "Modern Vue, React, and Next.js products use it because styles stay next to the UI and you iterate faster.",
+        "You should learn Tailwind because many job listings and open-source templates assume it, and it teaches real CSS (flexbox, spacing, responsive prefixes) while you build.",
+        "Version 4 ships a Vite plugin with CSS-first configuration, which is how most new frontend projects start.",
+        "Once you know Tailwind, you can ship consistent, responsive interfaces without maintaining a huge custom stylesheet."
+      ],
+      "my": [
+        "Tailwind CSS သည် utility-first CSS framework တစ်ခုဖြစ်ပြီး component တစ်ခုချင်းစီအတွက် CSS ဖိုင်သီးသန့် မရေးဘဲ flex၊ pt-4၊ text-center ကဲ့သို့သော class များကို HTML/markup ထဲမှာ တိုက်ရိုက်ပေါင်းစပ် အသုံးပြုနိုင်ပါတယ်။",
+        "ခေတ်မီ Vue၊ React နဲ့ Next.js ပရောဂျက်တွေမှာ UI နဲ့ styling ကို တစ်နေရာတည်းမှာ အမြန်ဆုံး ရေးသားပြင်ဆင်နိုင်တာကြောင့် Developer တွေကြား အလွန်ရေပန်းစားပါတယ်။",
+        "လက်ရှိ လုပ်ငန်းခွင် အလုပ်ခေါ်စာများနှင့် open-source template အများအပြားမှာ Tailwind ကို အဓိက သုံးစွဲနေကြပြီး ၎င်းကို လေ့လာရင်း flexbox၊ spacing နဲ့ responsive CSS အယူအဆတွေကိုပါ လက်တွေ့ကျကျ ကျွမ်းကျင်လာစေပါတယ်။",
+        "Tailwind v4 မှာ Vite plugin နဲ့ CSS-first configuration ပါဝင်လာတာကြောင့် ခေတ်မီ frontend project အသစ်အများစုမှာ ပုံသေ toolchain အဖြစ် စတင်အသုံးပြုနေကြပါပြီ။",
+        "Tailwind ကို ပိုင်နိုင်ပါက ရှုပ်ထွေးတဲ့ custom stylesheet ကြီးတွေကို ထိန်းသိမ်းစရာမလိုဘဲ သပ်ရပ်ပြီး responsive ဖြစ်တဲ့ UI တွေကို လျင်မြန်စွာ ဖန်တီးတည်ဆောက်နိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 3,
     "title": "JavaScript",
     "class": "js",
     "category": "Programming Languages",
-    "description": "JavaScript is a powerful programming language that enables interactive web experiences. It controls animations, dynamic content updates, form validation, and more. Popular JavaScript frameworks like React and Vue make web development more efficient."
+    "description": {
+      "en": [
+        "JavaScript is the language of the browser: it makes pages interactive with forms, menus, animations, and data fetched from APIs.",
+        "Every modern web app — and many mobile apps via React Native — is built with JavaScript or a language that compiles to it.",
+        "You need it because HTML and CSS alone cannot talk to servers, remember user input, or react to clicks in a meaningful way.",
+        "It is the gateway to Vue, React, Angular, and to Node.js on the backend.",
+        "Learning JavaScript well — functions, async, the DOM, and data structures — is the highest-leverage skill for a frontend career."
+      ],
+      "my": [
+        "JavaScript သည် browser ရဲ့ မရှိမဖြစ် programming ဘာသာစကားဖြစ်ပြီး form validation၊ dynamic menu၊ animation များနှင့် API မှ data ရယူပြသခြင်းတို့ဖြင့် ဝဘ်စာမျက်နှာကို interactive ဖြစ်အောင် ဖန်တီးပေးပါတယ်။",
+        "ယနေ့ခေတ် ခေတ်မီ ဝဘ်အက်ပ်တိုင်းအပြင် React Native ဖြင့် ရေးသားထားတဲ့ မိုဘိုင်းအက်ပ် အများအပြားဟာလည်း JavaScript ပေါ်မှာ အခြေခံ၍ တည်ဆောက်ထားကြတာ ဖြစ်ပါတယ်။",
+        "HTML နဲ့ CSS သက်သက်ဖြင့် server နှင့် ချိတ်ဆက်အလုပ်လုပ်ခြင်း၊ user input များကို စီမံခြင်းနှင့် logic ပိုင်းဆိုင်ရာ လုပ်ဆောင်ချက်များကို မလုပ်ဆောင်နိုင်တာကြောင့် JavaScript ကို မဖြစ်မနေ လေ့လာရပါမယ်။",
+        "၎င်းသည် Vue၊ React၊ Angular ကဲ့သို့သော frontend framework တွေအပြင် backend ဘက်ရှိ Node.js လောကသို့ ကူးပြောင်းဖို့အတွက် အဓိက သော့ချက်ဖြစ်ပါတယ်။",
+        "Functions၊ async/await၊ DOM manipulation နှင့် data structures တွေကို သေချာကျွမ်းကျင်အောင် လေ့လာခြင်းသည် frontend developer အသက်မွေးဝမ်းကြောင်းအတွက် တန်ဖိုးအရှိဆုံး ရင်းနှီးမြှုပ်နှံမှု ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 4,
     "title": "TypeScript",
     "class": "ts",
     "category": "Programming Languages",
-    "description": "TypeScript is an enhanced version of JavaScript that adds static typing, improving code quality and preventing errors. It’s widely used in large-scale applications and integrates seamlessly with JavaScript frameworks like Angular and React."
+    "description": {
+      "en": [
+        "TypeScript is JavaScript plus static types: you describe the shape of data and the compiler catches mistakes before the app runs.",
+        "Large teams use it in React, Vue, Angular, and Node projects because refactors stay safer and new teammates can hover a function to see what it expects.",
+        "Learn TypeScript if you want to work on production codebases — many companies now write new frontend in TypeScript by default.",
+        "A type is a contract between components, APIs, and teammates, so your intent is documented in the code.",
+        "Once you are comfortable, you will ship fewer runtime bugs and read other people's code faster."
+      ],
+      "my": [
+        "TypeScript သည် JavaScript အပေါ်တွင် static type စနစ် ထပ်မံထည့်သွင်းထားခြင်းဖြစ်ပြီး data ပုံစံများကို ကြိုတင်သတ်မှတ်နိုင်တာကြောင့် code မ run ခင် compile time မှာတင် error များကို ကြိုတင်ဖမ်းယူပေးနိုင်ပါတယ်။",
+        "React၊ Vue၊ Angular နှင့် Node.js ပရောဂျက်ကြီးများတွင် code ပြင်ဆင်ရလွယ်ကူပြီး developer အချင်းချင်း function တစ်ခုချင်းစီရဲ့ input/output ကို ရှင်းလင်းစွာ သိရှိနိုင်တာကြောင့် အသင်းလိုက် လုပ်ငန်းခွင်တွေမှာ မရှိမဖြစ် သုံးကြပါတယ်။",
+        "ကုမ္ပဏီအများစုသည် production project အသစ်များကို TypeScript ဖြင့် ပုံသေ ရေးသားလာကြတာကြောင့် professional developer တစ်ယောက်အဖြစ် ရပ်တည်လိုပါက TypeScript ကို မဖြစ်မနေ လေ့လာထားသင့်ပါတယ်။",
+        "Type တစ်ခုချင်းစီသည် component များ၊ API များနှင့် team အဖွဲ့သားများအကြား ရှင်းလင်းတဲ့ contract (သတ်မှတ်ချက်) တစ်ခုဖြစ်သဖြင့် code ၏ ရည်ရွယ်ချက်ကို အလိုအလျောက် document လုပ်ပေးပြီးသား ဖြစ်စေပါတယ်။",
+        "TypeScript ကို ပိုင်နိုင်ပါက runtime bug များကို သိသိသာသာ လျှော့ချနိုင်ပြီး အခြားသူများ ရေးထားသော code များကိုလည်း ပိုမိုလျင်မြန်စွာ နားလည်နိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 5,
     "title": "Vue",
     "class": "vue",
     "category": "Frameworks & Libraries",
-    "description": "Vue.js is a lightweight JavaScript framework for building modern web applications. It is known for its simplicity, reactive data binding, and easy integration. Vue is perfect for both small projects and enterprise-level applications."
+    "description": {
+      "en": [
+        "Vue.js is a progressive JavaScript framework for building user interfaces with reactive data and templates that feel close to HTML.",
+        "Teams use it for small widgets dropped into an existing site and for full single-page apps — and with Nuxt, for server-rendered products.",
+        "Learn Vue if you want a gentle path into component-based UI: the mental model is approachable, yet it scales to dashboards and design systems.",
+        "It is a strong choice for teams that value clear templates and a small, focused core API.",
+        "The ideas of components, props, and state also transfer to React and Angular, so Vue is a solid way into modern frontend."
+      ],
+      "my": [
+        "Vue.js သည် reactive data binding နှင့် HTML နှင့် နီးစပ်သော template syntax တို့ဖြင့် ခေတ်မီ UI များကို လွယ်ကူစွာ တည်ဆောက်နိုင်တဲ့ progressive JavaScript framework တစ်ခု ဖြစ်ပါတယ်။",
+        "ရှိပြီးသား ဝဘ်ဆိုဒ်ထဲ ထည့်သွင်းအသုံးပြုတဲ့ widget ငယ်လေးတွေကနေ Single Page Application (SPA) အပြည့်အစုံအထိ အသုံးပြုနိုင်ပြီး Nuxt နှင့် တွဲဖက်ပါက server-side rendered application တွေကိုပါ ဖန်တီးနိုင်ပါတယ်။",
+        "Component-based UI တည်ဆောက်ပုံကို အလွယ်ကူဆုံး စတင်လေ့လာလိုသူများအတွက် Vue သည် အကောင်းဆုံးဖြစ်ပြီး ရိုးရှင်းသော်လည်း dashboard များနှင့် design system ကြီးများအထိ စွမ်းဆောင်ရည်မြင့်စွာ အသုံးချနိုင်ပါတယ်။",
+        "ရှင်းလင်းတဲ့ template syntax နှင့် သေးငယ်ကျစ်လျစ်သော core API ကို နှစ်သက်တဲ့ developer များနှင့် engineering team များအတွက် ထိပ်တန်း ရွေးချယ်မှုတစ်ခု ဖြစ်ပါတယ်။",
+        "Vue တွင် သင်ယူခဲ့ရသော components၊ props နှင့် state management အယူအဆများသည် React နှင့် Angular တို့တွင်လည်း အလားတူ ပြန်လည်အသုံးချနိုင်တာကြောင့် modern frontend လောကသို့ ဝင်ရောက်ရန် အလွန်သင့်တော်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 22,
     "title": "Nuxt",
     "class": "nuxt",
     "category": "Frameworks & Libraries",
-    "description": "Nuxt is the Vue meta-framework for server-side rendering, file-based routing, and full-stack apps. It sits on Nitro so the same project can deploy to Node, serverless, and the edge, with a large module ecosystem for UI, CMS, and hosting."
+    "description": {
+      "en": [
+        "Nuxt is the Vue meta-framework for production: file-based routing, server-side rendering, and a Nitro server so the same project can run on Node, serverless, or the edge.",
+        "Teams choose it when SEO, first-load speed, or full-stack Vue (API routes plus UI) matter — marketing sites, content platforms, and SaaS dashboards.",
+        "Learn Nuxt after Vue if you want to ship real products, not only client-only SPAs.",
+        "Its module ecosystem covers auth, CMS, UI kits, and hosting so you spend less time on boilerplate.",
+        "Understanding Nuxt also teaches how modern web apps handle routing, data fetching, and deployment."
+      ],
+      "my": [
+        "Nuxt သည် Vue.js အတွက် production-ready meta-framework ဖြစ်ပြီး file-based routing၊ server-side rendering (SSR) နှင့် Nitro engine တို့ကြောင့် project တစ်ခုတည်းကို Node.js၊ serverless သို့မဟုတ် edge network တွေပေါ်မှာ အလွယ်တကူ deploy လုပ်နိုင်ပါတယ်။",
+        "SEO ကောင်းမွန်ရန် လိုအပ်သော marketing site များ၊ content platform များနှင့် full-stack Vue (API routes + UI) လိုအပ်သော SaaS dashboard များ တည်ဆောက်ရာတွင် အဖွဲ့အစည်းများက အဓိက ရွေးချယ်ကြပါတယ်။",
+        "Client-side SPA သက်သက်သာမကဘဲ စွမ်းဆောင်ရည်မြင့် production application အစစ်အမှန်တွေကို တည်ဆောက်လိုပါက Vue ပြီးနောက် Nuxt ကို ဆက်လက်လေ့လာသင့်ပါတယ်။",
+        "Nuxt ၏ ကြွယ်ဝသော module ecosystem ကြောင့် auth၊ CMS၊ UI kits နှင့် hosting တွေအတွက် boilerplate code ရေးရသည့် အချိန်ကုန်သက်သာစေပါတယ်။",
+        "Nuxt ကို နားလည်ထားခြင်းဖြင့် ခေတ်မီ web application များ၏ routing၊ data fetching နှင့် deployment လုပ်ဆောင်ပုံ အပြည့်အစုံကို သဘောပေါက်နားလည်စေပါတယ်။"
+      ]
+    }
   },
   {
     "id": 6,
     "title": "React",
     "class": "react",
     "category": "Frameworks & Libraries",
-    "description": "React is a JavaScript library developed by Facebook for creating dynamic, component-based user interfaces. It improves performance using a virtual DOM and is widely used in single-page applications (SPAs) and mobile development with React Native."
+    "description": {
+      "en": [
+        "React is a JavaScript library for building UIs from reusable components, using a virtual DOM so updates stay fast.",
+        "Created at Meta, it powers huge products plus countless startups, admin panels, and design systems.",
+        "You should learn React because it is one of the most requested frontend skills and the foundation of Next.js and React Native.",
+        "Component thinking — props, state, effects — is how most teams structure interfaces today.",
+        "Once you know React, you can move into full-stack with Next.js or mobile with React Native without starting from zero."
+      ],
+      "my": [
+        "React သည် ပြန်လည်အသုံးပြုနိုင်တဲ့ reusable components တွေနဲ့ dynamic UI တွေ တည်ဆောက်ဖို့ Meta က ဖန်တီးထားတဲ့ JavaScript library ဖြစ်ပြီး Virtual DOM ကြောင့် UI update လုပ်ဆောင်ချက်တွေ အလွန်မြန်ဆန်ပါတယ်။",
+        "Facebook၊ Instagram ကဲ့သို့သော ကမ္ဘာ့ထိပ်တန်း platform ကြီးများ၊ startup များ၊ admin dashboard များနှင့် design system များစွာမှာ အဓိက အသုံးပြုနေကြပါတယ်။",
+        "ယနေ့ခေတ် frontend developer အလုပ်ခေါ်စာများတွင် အလိုအပ်ဆုံး skill တစ်ခုဖြစ်ပြီး Next.js နှင့် React Native တို့၏ အခြေခံဖြစ်တာကြောင့် မဖြစ်မနေ လေ့လာသင့်ပါတယ်။",
+        "Props၊ state၊ hooks နှင့် component lifecycle အယူအဆများသည် ယနေ့ခေတ် UI တည်ဆောက်ပုံ၏ အဓိက စံနှုန်းတစ်ခု ဖြစ်ပါတယ်။",
+        "React ကို ကျွမ်းကျင်ထားပါက Next.js ဖြင့် full-stack web development ဘက်သို့ဖြစ်စေ၊ React Native ဖြင့် mobile app development ဘက်သို့ဖြစ်စေ အစကနေ ပြန်မစရဘဲ အလွယ်တကူ ကူးပြောင်းနိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 23,
     "title": "Next.js",
     "class": "nextjs",
     "category": "Frameworks & Libraries",
-    "description": "Next.js is the React framework for production. The App Router, Server Components, and Server Actions let you build full-stack apps with file-based routing, streaming, and first-class deployment on Vercel or any Node host."
+    "description": {
+      "en": [
+        "Next.js is the React framework for production: the App Router, Server Components, and Server Actions let you build full-stack apps with file-based routing and streaming.",
+        "Companies use it for marketing sites, dashboards, and e-commerce because SEO, performance, and deployment (especially on Vercel) come built in.",
+        "Learn Next.js when you already know React and want to ship real products with APIs, auth, and data fetching in one repo.",
+        "It is the default choice for many new React jobs.",
+        "Understanding Next.js also teaches server versus client rendering — a concept every modern frontend engineer needs."
+      ],
+      "my": [
+        "Next.js သည် React အတွက် အသုံးအများဆုံး production framework ဖြစ်ပြီး App Router၊ Server Components နှင့် Server Actions တို့ဖြင့် file-based routing နှင့် streaming ပါဝင်တဲ့ full-stack app တွေကို တည်ဆောက်နိုင်ပါတယ်။",
+        "SEO အထူးကောင်းမွန်ခြင်း၊ မြန်ဆန်သော စွမ်းဆောင်ရည်နှင့် Vercel ပေါ်တွင် လွယ်ကူစွာ deploy ပြုလုပ်နိုင်ခြင်းတို့ကြောင့် marketing site များ၊ e-commerce နှင့် SaaS dashboard များအတွက် ကုမ္ပဏီကြီးများက သုံးစွဲကြပါတယ်။",
+        "React အခြေခံ ရှိပြီးနောက် API၊ authentication နှင့် data fetching တွေကို repo တစ်ခုတည်းမှာ full-stack အဖြစ် ပေါင်းစပ်တည်ဆောက်လိုပါက Next.js ကို လေ့လာရပါမယ်။",
+        "လက်ရှိ React developer အလုပ်ခေါ်စာ အသစ်အများစုတွင် Next.js ကို မရှိမဖြစ် ကျွမ်းကျင်မှုအဖြစ် သတ်မှတ်လာကြပါပြီ။",
+        "Next.js ကို နားလည်ထားခြင်းဖြင့် server-side rendering နှင့် client-side rendering ကွာခြားချက်များကို ရှင်းလင်းစွာ သဘောပေါက်စေပြီး modern frontend engineer တိုင်းအတွက် အထူးအရေးပါပါတယ်။"
+      ]
+    }
   },
   {
     "id": 17,
     "title": "React Native",
     "class": "react-native",
     "category": "Frameworks & Libraries",
-    "description": "React Native is a popular framework for building native mobile applications using JavaScript and React. It allows developers to create cross-platform apps that run natively on iOS and Android using a single codebase, significantly reducing development time and maintenance costs."
+    "description": {
+      "en": [
+        "React Native lets you build iOS and Android apps with JavaScript and React, sharing one codebase instead of writing Swift and Kotlin separately.",
+        "Teams use it for consumer apps, internal tools, and startups that need both app stores without two native teams.",
+        "Learn it if you already know React and want to move into mobile: your component skills transfer, and you can still use native modules for device APIs.",
+        "One codebase cuts development time and maintenance compared with two fully separate apps.",
+        "That is why many companies look for React plus React Native on the same resume."
+      ],
+      "my": [
+        "React Native သည် JavaScript နှင့် React ကို အသုံးပြု၍ iOS နှင့် Android နှစ်မျိုးလုံးအတွက် native mobile app များကို single codebase တစ်ခုတည်းဖြင့် တည်ဆောက်နိုင်တဲ့ framework ဖြစ်ပါတယ်။",
+        "iOS အတွက် Swift၊ Android အတွက် Kotlin သီးခြားစီ ရေးစရာမလိုဘဲ app store နှစ်ခုလုံးသို့ လျင်မြန်စွာ ပို့ဆောင်လိုတဲ့ startup များနှင့် လုပ်ငန်းသုံး mobile app တွေမှာ အဓိက သုံးစွဲကြပါတယ်။",
+        "React တတ်မြောက်ပြီး mobile development လောကသို့ ကူးပြောင်းလိုသူများအတွက် အကောင်းဆုံးဖြစ်ပြီး ရှိပြီးသား component skill များကို တိုက်ရိုက် ပြန်လည်အသုံးချနိုင်ပါတယ်။",
+        "Codebase တစ်ခုတည်းဖြင့် ထိန်းသိမ်းနိုင်တာကြောင့် သီးခြား app နှစ်ခု ရေးသားခြင်းထက် ကုန်ကျစရိတ်၊ အချိန်နှင့် ပြုပြင်ထိန်းသိမ်းမှုတို့ကို များစွာ သက်သာစေပါတယ်။",
+        "ထို့ကြောင့် ကုမ္ပဏီအများအပြားသည် web ရော mobile ပါ ရေးသားနိုင်သော Developer များကို ဦးစားပေး ရှာဖွေခန့်ထားလေ့ ရှိပါတယ်။"
+      ]
+    }
   },
   {
     "id": 7,
     "title": "Angular",
     "class": "angular",
     "category": "Frameworks & Libraries",
-    "description": "Angular is a powerful frontend framework developed by Google, used for building large-scale, enterprise-level applications. It offers features like two-way data binding, dependency injection, and built-in state management."
+    "description": {
+      "en": [
+        "Angular is Google's full-featured frontend framework for large, long-lived applications.",
+        "It includes routing, forms, HTTP, and dependency injection so enterprise teams get structure instead of assembling a pile of libraries.",
+        "Learn Angular if you target banks, government, or large product orgs — those codebases often choose it for consistency and TypeScript-first architecture.",
+        "Two-way binding, services, and reactive streams are part of daily work in Angular teams.",
+        "Even if you mainly use React or Vue, knowing Angular makes you a stronger candidate and helps you read a huge share of corporate frontend."
+      ],
+      "my": [
+        "Angular သည် enterprise-level application ကြီးများ တည်ဆောက်ရန် Google က ဖန်တီးထားတဲ့ feature အစုံအလင်ပါဝင်သော frontend framework ဖြစ်ပါတယ်။",
+        "Routing၊ form validation၊ HTTP client နှင့် dependency injection စနစ်များ built-in ပါဝင်ပြီးသားဖြစ်တာကြောင့် ပြင်ပ library များကို တကူးတက စုစည်းစရာမလိုဘဲ စနစ်ကျတဲ့ architecture ကို ရရှိစေပါတယ်။",
+        "ဘဏ်လုပ်ငန်းများ၊ အစိုးရဌာနများနှင့် enterprise ကုမ္ပဏီကြီးများတွင် လုပ်ကိုင်လိုပါက Angular ကို လေ့လာသင့်ပြီး ထို codebase များသည် TypeScript-first စံနှုန်းနှင့် တည်ငြိမ်မှုတို့အတွက် Angular ကို အဓိက ရွေးချယ်ကြပါတယ်။",
+        "Two-way data binding၊ reusable services များနှင့် RxJS reactive streams များကို အသုံးပြု၍ ရှုပ်ထွေးသော business logic များကို စနစ်တကျ စီမံခန့်ခွဲနိုင်ပါတယ်။",
+        "အခြား framework များကို အဓိကသုံးနေလျှင်ပင် Angular ကို နားလည်ထားခြင်းဖြင့် နိုင်ငံတကာ enterprise အလုပ်အကိုင် အခွင့်အလမ်းများစွာကို ရရှိစေနိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 18,
     "title": "Flutter",
     "class": "flutter",
     "category": "Frameworks & Libraries",
-    "description": "Flutter is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides rich customizable widgets, hot reload for fast development, and excellent performance."
+    "description": {
+      "en": [
+        "Flutter is Google's UI toolkit for building natively compiled apps for mobile, web, and desktop from one Dart codebase.",
+        "Teams use it for branded consumer apps and internal tools that need pixel-perfect UI and smooth animation on both iOS and Android.",
+        "Learn Flutter if you want a single skill that covers mobile (and increasingly web and desktop) without living only in the JavaScript ecosystem.",
+        "Hot reload, a rich widget catalog, and strong performance are why teams pick it.",
+        "Dart is part of the deal, so you gain a second language while you ship real interfaces."
+      ],
+      "my": [
+        "Flutter သည် Dart programming language ဖြင့် single codebase တစ်ခုတည်းမှ iOS၊ Android၊ Web နှင့် Desktop အတွက် natively compiled application များကို တည်ဆောက်နိုင်တဲ့ Google ၏ UI toolkit ဖြစ်ပါတယ်။",
+        "မည်သည့် platform မှာမဆို pixel-perfect ဖြစ်ပြီး ချောမွေ့လှပတဲ့ UI နှင့် animation များကို ဖန်တီးနိုင်တာကြောင့် modern consumer apps များနှင့် startup တွေကြား အလွန်ရေပန်းစားပါတယ်။",
+        "JavaScript ecosystem သက်သက်သာမကဘဲ cross-platform app များကို စွမ်းဆောင်ရည်မြင့်မားစွာ တည်ဆောက်လိုပါက Flutter ကို လေ့လာထားသင့်ပါတယ်။",
+        "Hot reload feature ကြောင့် code ပြင်ဆင်မှုကို ချက်ချင်း မြင်တွေ့နိုင်ပြီး ကြွယ်ဝသော built-in widget များကြောင့် ဖွံ့ဖြိုးတိုးတက်မှု အလွန်လျင်မြန်ပါတယ်။",
+        "Flutter ကို လေ့လာရင်း Dart ဘာသာစကားကိုပါ ကျွမ်းကျင်လာစေပြီး အရည်အသွေးမြင့် multi-platform app များကို ယုံကြည်စိတ်ချစွာ ဖန်တီးနိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 8,
     "title": "Git",
     "class": "git",
     "category": "Developer Tools",
-    "description": "Git is a version control system that allows developers to track code changes, collaborate with teams, and manage different versions of a project. It’s essential for working in teams and using platforms like GitHub, GitLab, and Bitbucket."
+    "description": {
+      "en": [
+        "Git is the version control system that records every change to your code so you can experiment, collaborate, and roll back mistakes.",
+        "You use it with GitHub, GitLab, or Bitbucket on every professional project — pull requests, code review, and CI all assume Git.",
+        "Learn Git early because without it you cannot contribute to a team, an open-source repo, or even keep a personal project safe.",
+        "Branching and merging are how features are built in parallel without overwriting each other.",
+        "It is not optional: interviews and daily work both expect you to commit, merge, and explain your history."
+      ],
+      "my": [
+        "Git သည် code အပြောင်းအလဲ မှတ်တမ်းတိုင်းကို စနစ်တကျ သိမ်းဆည်းပေးတဲ့ version control စနစ်ဖြစ်ပြီး feature အသစ်များ စမ်းသပ်ခြင်း၊ အသင်းလိုက် ပူးပေါင်းလုပ်ဆောင်ခြင်းနှင့် အမှားများကို အရင်ဗားရှင်းသို့ ပြန်လည်ပြင်ဆင်ခြင်းတို့အတွက် အသုံးပြုပါတယ်။",
+        "လုပ်ငန်းခွင် ပရောဂျက်တိုင်းတွင် GitHub၊ GitLab သို့မဟုတ် Bitbucket တို့နှင့် တွဲဖက်အသုံးပြုကြပြီး pull requests၊ code review နှင့် CI/CD pipeline အားလုံးသည် Git အပေါ်တွင် အခြေခံထားတာ ဖြစ်ပါတယ်။",
+        "Git ကို မကျွမ်းကျင်ပါက team တစ်ခုတွင် ပူးပေါင်းလုပ်ကိုင်ရန် သို့မဟုတ် open-source ပရောဂျက်များတွင် ပါဝင်ရန် မဖြစ်နိုင်တာကြောင့် အစောဆုံး မဖြစ်မနေ လေ့လာထားသင့်ပါတယ်။",
+        "Branching နှင့် merging စနစ်များကြောင့် developer အချင်းချင်း code များ ထပ်မသွားဘဲ feature မျိုးစုံကို တစ်ပြိုင်နက်တည်း တည်ဆောက်နိုင်စေပါတယ်။",
+        "Git သည် developer တိုင်းအတွက် ရွေးချယ်စရာမဟုတ်ဘဲ နေ့စဉ်အလုပ်ခွင်နှင့် technical interview တိုင်းမှာ မရှိမဖြစ် လိုအပ်တဲ့ အခြေခံကျွမ်းကျင်မှု ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 24,
     "title": "Vite",
     "class": "vite",
     "category": "Developer Tools",
-    "description": "Vite is the default frontend build tool for new Vue, React, and vanilla JS apps. Instant dev-server startup, Hot Module Replacement, and a Rolldown-powered production build make it the toolchain most modern frontend projects start with."
+    "description": {
+      "en": [
+        "Vite is the build tool most new Vue, React, and vanilla JS apps start with: a near-instant dev server, Hot Module Replacement, and a fast production bundle.",
+        "You use it every time you run npm run dev on a modern frontend repo — including this collection.",
+        "Learn Vite because understanding the toolchain (plugins, env files, code splitting) saves hours of debugging why the app will not start.",
+        "It replaced slower bundlers for local development and is the default in official Vue starters and many React setups.",
+        "Knowing Vite also makes you comfortable adding TypeScript, Tailwind, and PWA plugins the way real projects do."
+      ],
+      "my": [
+        "Vite သည် ခေတ်မီ Vue၊ React နှင့် Vanilla JS ပရောဂျက်များအတွက် အလွန်မြန်ဆန်သော dev server၊ ချက်ချင်း update ဖြစ်သော Hot Module Replacement (HMR) နှင့် အကောင်းဆုံး production bundle တို့ကို ပေးစွမ်းတဲ့ next-generation build tool ဖြစ်ပါတယ်။",
+        "ယနေ့ခေတ် frontend repo အများစုတွင် npm run dev ပြေးလိုက်တိုင်း Vite က နောက်ကွယ်ကနေ အလုပ်လုပ်ပေးနေတာဖြစ်ပြီး ဤ Frontend Collection app ကိုယ်တိုင်လည်း Vite ဖြင့် တည်ဆောက်ထားတာ ဖြစ်ပါတယ်။",
+        "Build toolchain၊ plugins၊ environment variables များနှင့် code splitting တို့ကို နားလည်ထားပါက project setup လုပ်ရာတွင် ဖြစ်တတ်သော error များကို လျင်မြန်စွာ debug လုပ်နိုင်မှာ ဖြစ်ပါတယ်။",
+        "အရင်က သုံးခဲ့ကြတဲ့ နှေးကွေးသော bundler များကို အစားထိုးနိုင်ခဲ့ပြီး Vue နှင့် React တရားဝင် starter များစွာတွင် default အဖြစ် အသုံးပြုလာကြပါတယ်။",
+        "Vite ကို နားလည်ထားခြင်းဖြင့် TypeScript၊ Tailwind CSS နှင့် PWA စတဲ့ plugin များကို စနစ်တကျ ပေါင်းစပ်ပြီး production-ready project များကို စိတ်ချလက်ချ တည်ဆောက်နိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 25,
     "title": "Testing",
     "class": "testing",
     "category": "Developer Tools",
-    "description": "Frontend testing tools for unit, component, and end-to-end coverage: Vitest, Playwright, Cypress, Testing Library, Jest, and Mock Service Worker. Catch regressions before users do."
+    "description": {
+      "en": [
+        "Frontend testing covers unit tests, component tests, and end-to-end flows with tools like Vitest, Playwright, Cypress, Testing Library, Jest, and Mock Service Worker.",
+        "Teams use tests to catch regressions before users do — a refactor that breaks checkout should fail in CI, not in production.",
+        "You should learn testing because \"it works on my machine\" is not a career strategy, and many job listings ask for it.",
+        "Writing tests also forces you to design clearer components and APIs.",
+        "Start with unit tests for logic, then add a few critical user journeys so you can ship with confidence."
+      ],
+      "my": [
+        "Frontend Testing သည် Vitest၊ Playwright၊ Cypress၊ Testing Library၊ Jest နှင့် Mock Service Worker (MSW) ကဲ့သို့သော tools များကို အသုံးပြု၍ unit test၊ component test နှင့် end-to-end test များကို ရေးသားစစ်ဆေးခြင်း ဖြစ်ပါတယ်။",
+        "Code ပြင်ဆင်လိုက်ခြင်းကြောင့် ရှိပြီးသား feature တွေ (ဥပမာ- checkout process သို့မဟုတ် login) ပျက်စီးမသွားစေရန် production သို့ မရောက်မီ CI pipeline မှာတင် ကြိုတင်ဖမ်းယူနိုင်ဖို့ test များကို အသုံးပြုကြပါတယ်။",
+        "Developer တစ်ယောက်အနေဖြင့် ‘ကိုယ့်စက်မှာပဲ run လို့ရတယ်’ ဆိုရုံနှင့် မလုံလောက်သလို လုပ်ငန်းခွင် အလုပ်ခေါ်စာများစွာမှာလည်း testing ကျွမ်းကျင်မှုကို ဦးစားပေး တောင်းဆိုကြပါတယ်။",
+        "Test ရေးသားခြင်း အလေ့အကျင့်သည် component များနှင့် API များကို ပိုမိုသန့်ရှင်းပြီး modular ဖြစ်အောင် စနစ်တကျ ဒီဇိုင်းဆွဲတတ်စေပါတယ်။",
+        "Business logic များအတွက် unit test မှ စတင်ပြီး အရေးကြီးသော user flow များကို test ရေးထားခြင်းဖြင့် မိမိ project ကို ယုံကြည်စိတ်ချစွာ deploy လုပ်နိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 9,
     "title": "Free Icons",
     "class": "free-icons",
     "category": "Design Resources",
-    "description": "A collection of free icons that can enhance user interfaces. Icons are commonly used in web and app design to improve navigation, create visual hierarchy, and make interfaces more user-friendly."
+    "description": {
+      "en": [
+        "Icons are small graphics that label actions, navigation, and status so users understand a UI at a glance.",
+        "You will drop them into buttons, menus, empty states, and docs on every real project.",
+        "Learn how to choose, size, and license free icon sets because a missing or inconsistent icon makes an interface feel unfinished.",
+        "Good icons also improve accessibility when they sit next to clear labels.",
+        "This collection points you to free sources so you can ship polished UI without a design budget."
+      ],
+      "my": [
+        "Icons များသည် ခလုတ်များ၊ navigation menu များနှင့် status များကို ဖော်ပြပေးတဲ့ သေးငယ်သော visual သင်္ကေတများဖြစ်ပြီး အသုံးပြုသူများ UI ကို တစ်ချက်ကြည့်ရုံဖြင့် ချက်ချင်း နားလည်စေပါတယ်။",
+        "လက်တွေ့ web application တိုင်းတွင် buttons၊ navbar၊ empty states နှင့် documentation တွေမှာ icon များကို မဖြစ်မနေ အသုံးပြုရပါတယ်။",
+        "Icon တွေ မညီညာခြင်း သို့မဟုတ် ပျောက်ဆုံးနေခြင်းသည် UI တစ်ခုလုံးကို အရည်အသွေးမပြည့်မီသလို ဖြစ်စေတာကြောင့် သင့်လျော်သော icon set များကို ရွေးချယ်အသုံးပြုတတ်ဖို့ အရေးကြီးပါတယ်။",
+        "စာသား label များနှင့် သပ်ရပ်စွာ တွဲဖက်ထားသော icon များသည် UI ရဲ့ visual hierarchy နှင့် accessibility ကို သိသိသာသာ တိုးတက်စေပါတယ်။",
+        "ဤနေရာတွင် ဖော်ပြထားသော အခမဲ့ icon resource များမှတစ်ဆင့် design budget အပိုကုန်စရာမလိုဘဲ လှပသပ်ရပ်တဲ့ interface များကို ဖန်တီးတည်ဆောက်နိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 26,
     "title": "Fonts",
     "class": "fonts",
     "category": "Design Resources",
-    "description": "Typefaces, pairings, and self-hosting tools for the web: Google Fonts, Fontsource, Bunny Fonts, system stacks, and fluid type scales. Pair with CSS so text is readable, licensed, and fast."
+    "description": {
+      "en": [
+        "Fonts (typefaces) control how text feels: readable, branded, or chaotic.",
+        "You load them in CSS via Google Fonts, Fontsource, Bunny Fonts, or system stacks, and you should self-host when performance and privacy matter.",
+        "Learn fonts because users spend most of their time reading — poor pairing, tiny sizes, or unlicensed files hurt both UX and legal safety.",
+        "Fluid type scales keep headlines and body text balanced from phone to desktop.",
+        "Pairing type with your layout is a core design skill even if you think of yourself as \"just\" a developer."
+      ],
+      "my": [
+        "Fonts (Typefaces) များသည် ဝဘ်ဆိုဒ်တစ်ခု၏ စာသားများကို ဖတ်ရှုရလွယ်ကူစေပြီး brand ၏ ပုံရိပ်နှင့် ခံစားချက်ကို အဓိက ဖော်ပြပေးပါတယ်။",
+        "CSS တွင် Google Fonts၊ Fontsource၊ Bunny Fonts သို့မဟုတ် system fonts များကို ချိတ်ဆက်အသုံးပြုနိုင်ပြီး performance နှင့် privacy အတွက် font များကို self-host လုပ်၍လည်း အသုံးပြုနိုင်ပါတယ်။",
+        "အသုံးပြုသူများသည် website ပေါ်တွင် အချိန်အများစု စာဖတ်ကြတာကြောင့် font ရွေးချယ်မှု မှားယွင်းခြင်း သို့မဟုတ် အရွယ်အစား မညီညာခြင်းသည် UX ကို ထိခိုက်စေသလို font license ကိုလည်း သတိပြုရပါမယ်။",
+        "Fluid typography စနစ်ကို အသုံးပြုခြင်းဖြင့် ဖုန်းမှသည် desktop အထိ ခေါင်းစဉ်များနှင့် စာကိုယ်များကို ညီညွတ်မျှတစွာ ပြသပေးနိုင်ပါတယ်။",
+        "Frontend developer တစ်ယောက်အနေဖြင့် layout နှင့် လိုက်ဖက်သော font များကို တွဲဖက်အသုံးပြုတတ်ခြင်းသည် မရှိမဖြစ် အခြေခံ design ကျွမ်းကျင်မှုတစ်ခု ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 10,
     "title": "Free UI Libraries",
     "class": "free-templates",
     "category": "Design Resources",
-    "description": "UI libraries provide pre-designed components like buttons, modals, and forms to speed up development. Free UI libraries, such as Material UI and Tailwind CSS, help developers build beautiful applications without designing everything from scratch."
+    "description": {
+      "en": [
+        "UI libraries give you pre-built buttons, modals, forms, and tables so you do not design every pixel from scratch.",
+        "Material UI, Headless UI, Element Plus, and similar kits are how teams ship admin panels and SaaS products on a deadline.",
+        "Learn them to move faster and to see how accessible, composable components are structured.",
+        "You still need HTML, CSS, and your framework — libraries sit on top of those skills.",
+        "A solid free library is often the difference between a weekend prototype and something users can actually click through."
+      ],
+      "my": [
+        "UI Libraries များသည် buttons၊ modals၊ dropdowns၊ forms နှင့် tables စတဲ့ ကြိုတင်တည်ဆောက်ပြီးသား component များကို ပေးစွမ်းတာကြောင့် အရာအားလုံးကို သုညကနေ ကိုယ်တိုင် ပြန်ဆွဲစရာမလိုဘဲ အချိန်ကုန် သက်သာစေပါတယ်။",
+        "Material UI၊ Headless UI၊ Element Plus၊ Shadcn UI ကဲ့သို့သော kit များကို အသုံးပြု၍ လုပ်ငန်းခွင်အဖွဲ့အစည်းများသည် admin dashboard များနှင့် SaaS product များကို အချိန်တိုအတွင်း အောင်မြင်စွာ တည်ဆောက်ကြပါတယ်။",
+        "ဖွံ့ဖြိုးတိုးတက်မှု မြန်ဆန်စေရန်သာမက accessible ဖြစ်ပြီး ပြန်လည်အသုံးပြုနိုင်သော component တွေရဲ့ architecture ကို နားလည်လေ့လာနိုင်ဖို့အတွက် UI library များကို အသုံးပြုတတ်သင့်ပါတယ်။",
+        "မည်သို့ပင်ဖြစ်စေ HTML၊ CSS နှင့် JavaScript framework အခြေခံများကို ပိုင်နိုင်ထားမှသာ ဤ library များကို စိတ်ကြိုက် customize ပြုလုပ်နိုင်မှာ ဖြစ်ပါတယ်။",
+        "အရည်အသွေးမြင့် free UI library များကို အသုံးချတတ်ခြင်းဖြင့် ရိုးရိုး prototype အဆင့်မှသည် အသုံးပြုသူများ အမှန်တကယ် အသုံးပြုနိုင်သော production app အဖြစ်သို့ လျင်မြန်စွာ ဖန်တီးနိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 11,
     "title": "Free Images and Videos",
     "class": "free-img-vdo",
     "category": "Design Resources",
-    "description": "A collection of high-quality, royalty-free images and videos that developers and designers can use in their projects. Websites like Unsplash, Pexels, and Pixabay offer thousands of free assets for creative use."
+    "description": {
+      "en": [
+        "Royalty-free photos and videos from sites like Unsplash, Pexels, and Pixabay fill hero sections, blog posts, and product mockups when you have no photographer.",
+        "Empty gray boxes make a portfolio or landing page look unfinished, and stock with a proper license keeps you out of copyright trouble.",
+        "Learn to search, crop, compress, and credit assets so pages stay fast and legal.",
+        "These files pair with CSS and your layout to set mood and visual hierarchy.",
+        "Treat media as part of the frontend craft, not an afterthought."
+      ],
+      "my": [
+        "Unsplash၊ Pexels နှင့် Pixabay ကဲ့သို့သော platform များမှ royalty-free ဓာတ်ပုံများနှင့် ဗီဒီယိုများသည် landing page၊ hero section၊ blog post များနှင့် product mockup များကို ပိုမိုလှပဆွဲဆောင်မှုရှိစေပါတယ်။",
+        "ပုံဗလာများ သို့မဟုတ် placeholder အကွက်များအစား အရည်အသွေးမြင့် ဓာတ်ပုံများကို အသုံးပြုခြင်းဖြင့် portfolio သို့မဟုတ် website များကို ပရော်ဖက်ရှင်နယ်ဆန်စေပြီး မူပိုင်ခွင့်ပြဿနာများမှလည်း ကင်းဝေးစေပါတယ်။",
+        "Website မြန်ဆန်ပြီး ဥပဒေနှင့် ညီညွတ်စေရန် ပုံနှင့် ဗီဒီယိုများကို ရှာဖွေခြင်း၊ အရွယ်အစား ချုံ့ခြင်း (compression) နှင့် မှန်ကန်စွာ credit ပေးခြင်းတို့ကို လေ့လာထားသင့်ပါတယ်။",
+        "ဤ visual media များသည် CSS layout များနှင့် တွဲဖက်ကာ website ၏ visual hierarchy နှင့် အသုံးပြုသူ ခံစားချက်ကို ပိုမိုထင်ရှားစေပါတယ်။",
+        "ဓာတ်ပုံနှင့် ဗီဒီယို media များကို စနစ်တကျ ရွေးချယ်အသုံးပြုခြင်းသည်လည်း modern frontend developer တစ်ယောက်အတွက် အလွန်အသုံးဝင်သော ကျွမ်းကျင်မှု ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 12,
     "title": "Premium Templates",
     "class": "premium-templates",
     "category": "Design Resources",
-    "description": "Professionally designed website templates that can be purchased and customized. These templates save time and ensure high-quality design for businesses, portfolios, and e-commerce sites."
+    "description": {
+      "en": [
+        "Premium templates are professionally designed site kits you buy and customize — dashboards, portfolios, and storefronts that would take weeks to invent from zero.",
+        "Freelancers and small teams use them to launch businesses faster while still looking credible.",
+        "Learn to evaluate and adapt templates so you can deliver client work without pretending you illustrated every screen.",
+        "You will still need HTML, CSS, and your framework to change branding, content, and behavior.",
+        "A good template is a head start, not a substitute for understanding the code you ship."
+      ],
+      "my": [
+        "Premium Templates များသည် ပရော်ဖက်ရှင်နယ် ဒီဇိုင်နာများ ဖန်တီးထားသော အဆင့်မြင့် website kits များဖြစ်ပြီး dashboard များ၊ portfolio များနှင့် e-commerce စာမျက်နှာများကို သုညကနေ အချိန်ကုန်ခံ ရေးစရာမလိုဘဲ အသင့်အသုံးပြုနိုင်ပါတယ်။",
+        "Freelancer များနှင့် အဖွဲ့ငယ်များသည် client ပရောဂျက်များကို သတ်မှတ်ရက်အတွင်း အမြန်ဆုံး ပို့ဆောင်နိုင်ရန်နှင့် ယုံကြည်စိတ်ချရသော UI ရရှိစေရန် ဤ template များကို အသုံးပြုကြပါတယ်။",
+        "Screen တိုင်းကို ကိုယ်တိုင် အစကနေ ဆွဲမနေဘဲ အရည်အသွေးကောင်းမွန်သော template များကို ရွေးချယ်၍ လိုအပ်သလို customize ပြင်ဆင်တတ်ဖို့ လေ့လာထားသင့်ပါတယ်။",
+        "Client ၏ branding၊ content နှင့် လုပ်ဆောင်ချက်များကို လိုသလို ပြောင်းလဲနိုင်ရန်အတွက် HTML၊ CSS နှင့် သက်ဆိုင်ရာ framework အခြေခံများကို ကျွမ်းကျင်စွာ တတ်မြောက်ထားဖို့ လိုအပ်ပါတယ်။",
+        "Template ကောင်းတစ်ခုသည် အလုပ်မြန်ဆန်စေရန် အစပြုမှုတစ်ခုဖြစ်ပြီး မိမိရေးသားအသုံးပြုသော code များကို သေချာနားလည်ထားခြင်းကို အစားမထိုးနိုင်တာကို သတိပြုရပါမယ်။"
+      ]
+    }
   },
   {
     "id": 13,
     "title": "Inspiration Galleries",
     "class": "inspiration-galleries",
     "category": "Design Resources",
-    "description": "Curated collections of beautifully designed websites and UI elements to inspire designers. Websites like Dribbble and Behance showcase top-notch design trends and ideas."
+    "description": {
+      "en": [
+        "Inspiration galleries like Dribbble and Behance show real UI patterns, motion, and branding so you are not designing in a vacuum.",
+        "Designers and developers use them to brief a look, compare layouts, and notice trends before they build.",
+        "You should browse them because not knowing what \"good\" looks like is a common blocker for learners — seeing strong work trains your eye.",
+        "Then you translate ideas into HTML, CSS, and components instead of copying blindly.",
+        "Treat galleries as a sketchbook, then implement with the resources in this collection."
+      ],
+      "my": [
+        "Dribbble၊ Behance နှင့် Awwwards ကဲ့သို့သော Inspiration Galleries များသည် ကမ္ဘာတစ်ဝန်းမှ ထိပ်တန်း UI patterns၊ animations နှင့် modern design trend များကို လေ့လာရှာဖွေနိုင်တဲ့ နေရာများ ဖြစ်ပါတယ်။",
+        "Designer များနှင့် Developer များသည် project အသစ်တစ်ခု မတည်ဆောက်မီ layout စိတ်ကူးသစ်များ ရယူရန်နှင့် ခေတ်မီ design trend များကို လေ့လာဆန်းစစ်ရန် ဤ gallery များကို ကြည့်ရှုကြပါတယ်။",
+        "ခေတ်မီဆန်းသစ်ပြီး လှပသော UI ဒီဇိုင်းစံနှုန်းများကို မြင်တွေ့ဖူးထားခြင်းဖြင့် developer များ၏ design အမြင်နှင့် စိတ်ကူးဉာဏ်ကို များစွာ တိုးတက်စေပါတယ်။",
+        "တွေ့ရှိသော design idea များကို မျက်စိမှိတ် ကူးယူခြင်းမဟုတ်ဘဲ HTML၊ CSS နှင့် reusable components များအဖြစ် လက်တွေ့အကောင်အထည်ဖော် တည်ဆောက်နိုင်ရပါမယ်။",
+        "ဤ gallery များကို စိတ်ကူးသစ်များ ရှာဖွေရာ နေရာအဖြစ် အသုံးပြုပြီး မိမိ၏ frontend project များကို ပိုမိုလှပဆန်းသစ်အောင် ဖန်တီးနိုင်မှာ ဖြစ်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 14,
     "title": "Animations",
     "class": "animations",
     "category": "UI/UX Enhancements",
-    "description": "CSS and JavaScript animations bring websites to life with motion effects, transitions, and interactive elements. They improve user engagement by making interfaces feel more dynamic and modern."
+    "description": {
+      "en": [
+        "CSS and JavaScript animations add motion — transitions, micro-interactions, loading states — that make an interface feel alive and easier to follow.",
+        "Product teams use them to show cause and effect: a menu opening, a form succeeding, a list reordering.",
+        "Learn animation because static pages feel dated, but overdoing it hurts accessibility and performance.",
+        "Start with CSS transitions, then reach for libraries when you need timeline control.",
+        "Motion is part of UX, not decoration, so it belongs in a frontend skill set."
+      ],
+      "my": [
+        "CSS နှင့် JavaScript Animations များသည် transitions၊ micro-interactions နှင့် loading states စတဲ့ လှုပ်ရှားမှုအထူးပြုလုပ်ချက်များကို ထည့်သွင်းပေးပြီး website ကို ပိုမိုသက်ဝင်လှုပ်ရှားစေပါတယ်။",
+        "Navigation menu ဖွင့်ခြင်း၊ form submit အောင်မြင်ခြင်းနှင့် list ပြန်လည်စီစဉ်ခြင်း စတဲ့ user action တွေကို ရှင်းလင်းစွာ သိရှိနိုင်စေရန် modern product အဖွဲ့များက အဓိက အသုံးပြုကြပါတယ်။",
+        "Animation လုံးဝမပါသော static website များသည် ခေတ်နောက်ကျသလို ခံစားရစေနိုင်သော်လည်း အလွန်အကျွံ သုံးစွဲပါက user experience နှင့် performance ကို ထိခိုက်စေနိုင်တာကြောင့် စနစ်တကျ သုံးတတ်ဖို့ လေ့လာရပါမယ်။",
+        "ရိုးရှင်းသော CSS transitions နှင့် keyframes များမှ စတင်ပြီး ရှုပ်ထွေးသော timeline ထိန်းချုပ်မှုများအတွက် GSAP သို့မဟုတ် Framer Motion ကဲ့သို့သော library များကို ဆက်လက်အသုံးပြုနိုင်ပါတယ်။",
+        "UI Motion သည် အလှဆင်ရုံသက်သက်မဟုတ်ဘဲ User Experience (UX) ၏ အရေးပါသော အစိတ်အပိုင်းတစ်ခုဖြစ်တာကြောင့် frontend developer တိုင်း တတ်မြောက်ထားသင့်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 15,
     "title": "Others",
     "class": "other",
     "category": "Miscellaneous",
-    "description": "A collection of additional web development resources that don’t fit into other specific categories."
+    "description": {
+      "en": [
+        "This bucket collects extra frontend resources that do not fit neatly into languages, frameworks, or design kits.",
+        "You will find utilities, references, and odds-and-ends that still show up in real projects.",
+        "Browse it when you are stuck on a tool, a spec, or a workflow that the main categories do not cover.",
+        "Learning frontend is not only the big languages — small tools often save the most time.",
+        "Treat this as a drawer of useful extras next to your core stack."
+      ],
+      "my": [
+        "ဤ Category သည် ပင်မ programming ဘာသာစကား သို့မဟုတ် UI library များထဲတွင် သီးခြားမပါဝင်သော်လည်း အလွန်အသုံးဝင်သော frontend developer tools များကို စုစည်းပေးထားတာ ဖြစ်ပါတယ်။",
+        "လက်တွေ့ web development လုပ်ငန်းခွင်တွင် နေ့စဉ်ကြုံတွေ့ရတတ်သော အထွေထွေ utility tools၊ code snippets နှင့် reference များကို ဤနေရာတွင် ရှာဖွေတွေ့ရှိနိုင်ပါတယ်။",
+        "အဓိက category များတွင် မပါဝင်သော tool များ သို့မဟုတ် workflow ပြဿနာများအတွက် အထောက်အကူရရှိစေရန် ဤနေရာတွင် လေ့လာရှာဖွေနိုင်ပါတယ်။",
+        "Frontend ပညာရပ်သည် framework ကြီးများ သက်သက်သာမကဘဲ ဤကဲ့သို့သော အထောက်အကူပြု tool ငယ်လေးများကလည်း developer တစ်ယောက်၏ အချိန်ကုန်သက်သာစေရန် များစွာ ကူညီပေးပါတယ်။",
+        "မိမိ၏ core development stack ဘေးတွင် အချိန်မရွေး ထုတ်ယူသုံးစွဲနိုင်သော အသုံးဝင် tool သေတ္တာလေးတစ်ခုအဖြစ် သဘောထားအသုံးပြုနိုင်ပါတယ်။"
+      ]
+    }
   },
   {
     "id": 16,
     "title": "AI Tools",
     "class": "ai-tools",
     "category": "Miscellaneous",
-    "description": "Artificial Intelligence (AI) tools and resources for developers and designers."
+    "description": {
+      "en": [
+        "AI tools help developers and designers draft code, copy, images, and debugging ideas faster than starting from a blank page.",
+        "Teams use them for boilerplate, explaining unfamiliar APIs, and exploring UI variations — then they review and test like any other code.",
+        "You should learn to work with AI because the job is shifting: the skill is prompting, verifying, and integrating output, not pretending the tools do not exist.",
+        "They will not replace HTML, CSS, or JavaScript knowledge; they amplify people who already understand the stack.",
+        "Use them as a pair programmer, then ship only what you can explain and maintain."
+      ],
+      "my": [
+        "AI Tools များသည် developer များနှင့် designer များအတွက် code ရေးသားခြင်း၊ စာသား/ပုံများ ဖန်တီးခြင်းနှင့် bug များကို လျင်မြန်စွာ ရှာဖွေဖြေရှင်းခြင်းတို့တွင် များစွာ အထောက်အကူပြုပေးပါတယ်။",
+        "Boilerplate code များ အမြန်ရေးသားခြင်း၊ မရင်းနှီးသော API များကို ရှင်းပြခိုင်းခြင်းနှင့် UI ဒီဇိုင်း ပုံစံအမျိုးမျိုး စမ်းသပ်ခြင်းတို့အတွက် လုပ်ငန်းခွင်အသင်းများက တွင်ကျယ်စွာ အသုံးပြုနေကြပါတယ်။",
+        "ခေတ်ကာလအရ developer များ၏ လုပ်ငန်းခွင်ပုံစံ ပြောင်းလဲလာတာကြောင့် AI ကို လျစ်လျူမရှုဘဲ ထိရောက်စွာ prompt ပေးခြင်း၊ ရလဒ်များကို စစ်ဆေးအတည်ပြုခြင်းနှင့် စနစ်တကျ ပေါင်းစပ်အသုံးချခြင်းတို့ကို လေ့လာထားသင့်ပါတယ်။",
+        "AI သည် HTML၊ CSS နှင့် JavaScript အခြေခံ အသိပညာများကို အစားထိုးနိုင်မည် မဟုတ်ဘဲ အခြေခံနားလည်ပြီးသား developer များ၏ စွမ်းဆောင်ရည်ကို ပိုမိုတိုးတက်စေတာ ဖြစ်ပါတယ်။",
+        "AI ကို မိမိ၏ အထောက်အကူပြု pair programmer အဖြစ် အသုံးပြုပြီး မိမိကိုယ်တိုင် သေချာနားလည်ထိန်းသိမ်းနိုင်သော code များကိုသာ production သို့ ပို့ဆောင်အသုံးပြုသင့်ပါတယ်။"
+      ]
+    }
   }
 ]
