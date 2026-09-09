@@ -5,10 +5,12 @@ import QuizSelection from '@/components/quiz/QuizSelection.vue';
 import QuizQuestion from '@/components/quiz/QuizQuestion.vue';
 import QuizResults from '@/components/quiz/QuizResults.vue';
 import QuizProgress from '@/components/quiz/QuizProgress.vue';
+import { ElDialog } from 'element-plus';
 import { useLocale } from '@/locale/useLocale';
 
 const { dict } = useLocale();
 const error = ref(null);
+const exitDialogOpen = ref(false);
 let quizStore;
 
 try {
@@ -62,10 +64,9 @@ const continueQuiz = () => {
   }
 };
 
-const exitQuiz = () => {
-  if (window.confirm(dict.exit_quiz_confirm)) {
-    restartQuiz();
-  }
+const confirmExitQuiz = () => {
+  exitDialogOpen.value = false;
+  currentView.value = 'selection';
 };
 
 // Compute the progress percentage
@@ -83,7 +84,7 @@ onErrorCaptured((e) => {
 </script>
 
 <template>
-  <div class="quiz-container max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+  <div class="quiz-container max-w-6xl mx-auto bg-white mt-5">
     <!-- Error display -->
     <div v-if="error" class="error-container p-4 bg-red-100 text-red-700 rounded-md mb-6">
       {{ error }}
@@ -99,7 +100,7 @@ onErrorCaptured((e) => {
         <img v-if="selectedQuizType" :src="`/resources/${selectedQuizType}.png`" :alt="`${selectedQuizType} Icon`"
           class="w-14 h-14" />
         <button type="button" class="text-sm text-gray-500 hover:text-cyan-600 transition-colors"
-          @click="exitQuiz">
+          @click="exitDialogOpen = true">
           {{ dict.exit_quiz }}
         </button>
       </div>
@@ -117,6 +118,24 @@ onErrorCaptured((e) => {
     <!-- Quiz Results -->
     <QuizResults v-else-if="currentView === 'results' && quizStore" :score="quizStore.score"
       :total="quizStore.totalQuestions" :quiz-type="quizStore.quizType" @restart="restartQuiz" />
+
+    <el-dialog v-model="exitDialogOpen" :title="dict.exit_quiz" width="400px" align-center append-to-body>
+      <p class="text-gray-600 leading-relaxed">{{ dict.exit_quiz_confirm }}</p>
+      <template #footer>
+        <div class="flex justify-end gap-2">
+          <button type="button"
+            class="px-4 py-2 text-sm font-medium rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50 transition-colors"
+            @click="exitDialogOpen = false">
+            {{ dict.cancel }}
+          </button>
+          <button type="button"
+            class="px-4 py-2 text-sm font-medium rounded-md bg-cyan-500 text-white hover:bg-cyan-600 transition-colors"
+            @click="confirmExitQuiz">
+            {{ dict.exit_quiz }}
+          </button>
+        </div>
+      </template>
+    </el-dialog>
   </div>
 </template>
 

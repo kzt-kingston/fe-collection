@@ -7,7 +7,7 @@ const multiLang = {
     close: "Close",
     music_tracks_used: "Music tracks used in this project are from Pixabay",
     no_video: "No video found",
-    choose_resource: "Choose a resource to explore",
+    choose_resource: "Choose resource",
     developed_by: "Developed by",
     search_result: "Search Result",
     search_resources: "Search Resources",
@@ -23,12 +23,41 @@ const multiLang = {
     no_search_results: "No resources found. Try a different keyword.",
     add_bookmark: "Save bookmark",
     exit_quiz: "Exit Quiz",
-    exit_quiz_confirm: "Leave this quiz and return to the selection screen?",
+    exit_quiz_confirm:
+      "Leave this quiz and go back to the selection screen? Your answers are saved, so you can continue later.",
+    cancel: "Cancel",
     bookmarks: "Bookmarks",
     view_roadmap: "View Roadmap 🚀",
     install_app: "Install App",
     carousel_intro:
       "You can find and learn many different resources and improve your skills by answering Quiz!",
+    hero_kicker: "A one-stop frontend learning hub",
+    features_heading: "Everything you need to learn frontend",
+    features_sub:
+      "Resources, practice, and tools in one place — no more hunting across a dozen bookmarks.",
+    feat_resources_title: "Curated resources",
+    feat_resources_desc:
+      "Websites, videos, and cheat sheets for HTML, CSS, JavaScript, frameworks, and design tools — grouped so you can find the right link fast.",
+    feat_quiz_title: "Skill quizzes",
+    feat_quiz_desc:
+      "Test HTML, CSS, JavaScript, TypeScript, React, Vue, and Angular. Review wrong answers and pick up where you left off.",
+    feat_bookmarks_title: "Personal bookmarks",
+    feat_bookmarks_desc:
+      "Save sites and videos on this device. Export or import JSON so your list survives a new browser.",
+    feat_images_title: "Free image search",
+    feat_images_desc:
+      "Search Unsplash for downloadable photos without leaving the app — handy when you need assets for a UI.",
+    feat_music_title: "Chill background music",
+    feat_music_desc:
+      "Play relaxing lofi, piano, and beats in the background while studying so learning stays fun and never feels boring.",
+    feat_lang_title: "English & Myanmar",
+    feat_lang_desc:
+      "Switch the whole UI between English and မြန်မာ so you can learn in the language that feels natural.",
+    topics_heading: "Topics inside the collection",
+    ready_heading: "Ready to explore?",
+    ready_sub: "Open the resource library or try a quiz — it all runs in your browser.",
+    github_star: "Star on GitHub",
+    github_star_sub: "If Frontend Collection helps you, a GitHub star helps others find it too.",
 
     voice_heading: "Developer Voice",
     voice_title: "Struggling to Find Frontend Resources? You're Not Alone.",
@@ -122,13 +151,13 @@ const multiLang = {
   },
   my: {
     a_place_where:
-      "Frontend နဲ့ ပတ်သက်တဲ့ resources တွေ၊ cheat sheets တွေ၊ ဗီဒီယိုတွေနဲ့ tips & tricks တွေကို တစ်နေရာတည်းမှာ အလွယ်တကူ လေ့လာရှာဖွေနိုင်ဖို့ စုစည်းပေးထားတဲ့ Platform တစ်ခု ဖြစ်ပါတယ်!",
+      "Frontend နှင့် ပတ်သက်သော resources များ၊ cheat sheets များ၊ ဗီဒီယိုများနှင့် tips & tricks များကို တစ်နေရာတည်းတွင် အလွယ်တကူ လေ့လာရှာဖွေနိုင်ရန် စုစည်းပေးထားသော Platform တစ်ခု ဖြစ်ပါသည်!",
     start_expore: "စတင် လေ့လာရှာဖွေပါ",
-    visit_website: "ဝဘ်ဆိုဒ်သို့ သွားရောက်ကြည့်ရှုပါ",
+    visit_website: "ဝဘ်ဆိုဒ်သို့ သွားရန်",
     close: "ပိတ်ရန်",
     music_tracks_used: "ဤပရောဂျက်တွင် အသုံးပြုထားသော သီချင်းများကို Pixabay မှ ရယူထားပါသည်",
     no_video: "ဗီဒီယို မတွေ့ရှိပါ",
-    choose_resource: "လေ့လာရန် resource ရွေးချယ်ပါ",
+    choose_resource: "Resource ရွေးချယ်ပါ",
     developed_by: "Developed by",
     search_result: "ရှာဖွေမှုရလဒ်",
     search_resources: "Resources များ ရှာဖွေပါ...",
@@ -138,18 +167,47 @@ const multiLang = {
     quiz: "Quiz",
     image_search: "ပုံရှာဖွေရန်",
     music_player: "Music Player",
-    more_tools: "အခြားကိရိယာများ",
+    more_tools: "အခြား Tools များ",
     menu: "မီနူး",
     playlist: "Playlist",
-    no_search_results: "Resource မတွေ့ရှိပါ။ အခြား keyword ဖြင့် ထပ်မံရှာဖွေကြည့်ပါ။",
+    no_search_results: "ရှာဖွေမှုရလဒ် မတွေ့ရှိပါ။ အခြား keyword ဖြင့် ထပ်မံရှာဖွေကြည့်ပါ။",
     add_bookmark: "Bookmark သိမ်းရန်",
     exit_quiz: "Quiz မှ ထွက်ရန်",
-    exit_quiz_confirm: "ဤ Quiz မှ ထွက်ပြီး ရွေးချယ်မှုစာမျက်နှာသို့ ပြန်သွားမလား။",
+    exit_quiz_confirm:
+      "ဤ Quiz မှ ထွက်ပြီး ရွေးချယ်မှုစာမျက်နှာသို့ ပြန်သွားမလား။ ဖြေပြီးသားအဖြေများကို သိမ်းထားမှာမို့ နောက်မှ ဆက်ဖြေနိုင်ပါတယ်။",
+    cancel: "မလုပ်တော့ပါ",
     bookmarks: "သိမ်းထားသည်များ",
     view_roadmap: "Roadmap ကြည့်ရန် 🚀",
     install_app: "App ထည့်သွင်းရန်",
     carousel_intro:
-      "Resources မျိုးစုံကို လေ့လာရှာဖွေနိုင်ပြီး Quiz များ ဖြေဆိုခြင်းဖြင့် မိမိရဲ့ ကျွမ်းကျင်မှုကို မြှင့်တင်နိုင်ပါတယ်!",
+      "Frontend နည်းပညာဆိုင်ရာ Resource မျိုးစုံကို လေ့လာရှာဖွေနိုင်သလို Quiz များ ဖြေဆိုခြင်းဖြင့်လည်း မိမိ၏ ကျွမ်းကျင်မှုကို တိုးတက်စေနိုင်ပါတယ်!",
+    hero_kicker: "Frontend လေ့လာမှုအတွက် One-stop Hub",
+    features_heading: "Frontend လေ့လာရန် လိုအပ်သမျှ အားလုံး တစ်နေရာတည်းတွင်",
+    features_sub:
+      "Resources၊ Quiz များနှင့် အသုံးဝင် tool များကို တစ်နေရာတည်းတွင် စုစည်းပေးထားတာကြောင့် နေရာအနှံ့ လိုက်လံရှာဖွေနေစရာ မလိုတော့ပါဘူး။",
+    feat_resources_title: "ရွေးချယ်စုစည်းထားသော Resource များ",
+    feat_resources_desc:
+      "HTML, CSS, JavaScript, Frameworks များနှင့် Design Tools များအတွက် အကောင်းဆုံး ဝဘ်ဆိုဒ်များ၊ ဗီဒီယိုများနှင့် Cheat Sheets များကို အမျိုးအစားအလိုက် စနစ်တကျ ရှာဖွေနိုင်ပါတယ်။",
+    feat_quiz_title: "ကျွမ်းကျင်မှုစစ် Quiz များ",
+    feat_quiz_desc:
+      "HTML, CSS, JavaScript, TypeScript, React, Vue, Angular ဆိုင်ရာ မေးခွန်းများကို ဖြေဆိုပြီး မိမိအရည်အချင်းကို စစ်ဆေးနိုင်ပါတယ်။ မှားသွားသော မေးခွန်းများကို ပြန်လည်လေ့လာနိုင်သလို မပြီးသေးတဲ့ Quiz ကိုလည်း ဆက်လက်ဖြေဆိုနိုင်ပါတယ်။",
+    feat_bookmarks_title: "ကိုယ်ပိုင် Bookmarks",
+    feat_bookmarks_desc:
+      "နှစ်သက်သော ဝဘ်ဆိုဒ်များနှင့် ဗီဒီယိုများကို သိမ်းဆည်းထားနိုင်ပါတယ်။ JSON ဖိုင်ဖြင့် Export / Import ပြုလုပ်ပြီး အခြား browser များတွင်လည်း အလွယ်တကူ ပြန်လည်အသုံးပြုနိုင်ပါတယ်။",
+    feat_images_title: "အခမဲ့ ပုံများ ရှာဖွေခြင်း",
+    feat_images_desc:
+      "Unsplash မှ အရည်အသွေးမြင့် အခမဲ့ပုံများကို app ထဲကနေ တိုက်ရိုက် လွယ်ကူစွာ ရှာဖွေဒေါင်းလုဒ်လုပ်နိုင်ပါတယ်။",
+    feat_music_title: "Chill & Background သီချင်းများ",
+    feat_music_desc:
+      "စာလေ့လာနေချိန် ပျင်းမသွားစေဖို့ Lofi, Piano နဲ့ Beat သီချင်းအေးအေးလေးတွေကို background မှာ ဖွင့်ပြီး စိတ်အေးလက်အေး chill ရင်း လေ့လာနိုင်ပါတယ်။",
+    feat_lang_title: "English နှင့် မြန်မာ",
+    feat_lang_desc:
+      "UI တစ်ခုလုံးကို English နှင့် မြန်မာ နှစ်သက်ရာ ဘာသာစကားဖြင့် လွယ်ကူစွာ ပြောင်းလဲအသုံးပြုနိုင်ပါတယ်။",
+    topics_heading: "လေ့လာနိုင်သော နည်းပညာ ခေါင်းစဉ်များ",
+    ready_heading: "လေ့လာဖို့ အဆင်သင့်ဖြစ်ပြီလား။",
+    ready_sub: "Resource များကို ရှာဖွေလေ့လာနိုင်သလို Quiz များကိုလည်း ဝင်ရောက်ဖြေဆိုနိုင်ပါတယ်။ browser ထဲမှာတင် အားလုံး အလွယ်တကူ အလုပ်လုပ်ပါတယ်။",
+    github_star: "GitHub တွင် Star ပေးရန်",
+    github_star_sub: "Frontend Collection က အသုံးဝင်တယ်ဆိုရင် GitHub မှာ Star လေးပေးပေးပါ။ တခြားသူတွေလည်း ရှာတွေ့နိုင်အောင် ကူညီရာ ရပါတယ်။",
 
     voice_heading: "Developer Voice",
     voice_title: "Frontend resource တွေ ရှာဖွေရတာ အခက်တွေ့နေပါသလား။ သင်တစ်ယောက်တည်း မဟုတ်ပါဘူး။",
@@ -167,13 +225,13 @@ const multiLang = {
     cat_markup: "Markup နှင့် Styling ဘာသာစကားများ",
     cat_programming: "Programming ဘာသာစကားများ",
     cat_frameworks: "Frameworks နှင့် Libraries",
-    cat_dev_tools: "Developer ကိရိယာများ",
+    cat_dev_tools: "Developer Tools များ",
     cat_design: "Design Resources များ",
     cat_uiux: "UI/UX အစိတ်အပိုင်းများ",
     cat_misc: "အထွေထွေ",
     watch_on_youtube: "YouTube တွင် ကြည့်ရှုရန်",
     close_tab: "Tab ပိတ်ရန်",
-    no_tabs_open: "ဖွင့်ထားသော Tab မရှိပါ။ Resource တစ်ခုကို ရွေးချယ်၍ Tab အသစ်ထည့်ပါ။",
+    no_tabs_open: "ဖွင့်ထားသော Tab မရှိသေးပါ။ Resource တစ်ခုခုကို ရွေးချယ်ပြီး Tab အသစ် ဖွင့်နိုင်ပါသည်။",
     searching_result: "ရှာဖွေမှုရလဒ်",
 
     bookmarks_help:
