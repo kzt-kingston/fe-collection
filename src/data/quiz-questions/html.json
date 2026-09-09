@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "question": "What is the purpose of the <!DOCTYPE> declaration in HTML?",
+    "question": "What does the HTML5 <!DOCTYPE html> declaration do?",
     "options": [
-      "It is used to style the webpage.",
-      "It specifies the version of HTML used in the document.",
-      "It is a placeholder for comments.",
-      "It contains the metadata of the document."
+      "Puts the browser into standards mode",
+      "Specifies the HTML version number used in the document",
+      "It is a placeholder for comments",
+      "It contains the metadata of the document"
     ],
-    "answer": "It specifies the version of HTML used in the document."
+    "answer": "Puts the browser into standards mode"
   },
   {
     "id": 2,
@@ -59,7 +59,12 @@
   {
     "id": 8,
     "question": "Which attribute value is used to open a link in a new tab in HTML?",
-    "options": ["target=\"_blank\"", "target=\"new\"", "rel=\"external\"", "href=\"new\""],
+    "options": [
+      "target=\"_blank\"",
+      "target=\"new\"",
+      "rel=\"external\"",
+      "href=\"new\""
+    ],
     "answer": "target=\"_blank\""
   },
   {
@@ -126,9 +131,14 @@
   },
   {
     "id": 16,
-    "question": "Which HTML element is used for inline styles?",
-    "options": ["style", "class", "css", "format"],
-    "answer": "style"
+    "question": "What is the HTML <dialog> element used for?",
+    "options": [
+      "To create a native modal or non-modal dialog box",
+      "To define a conversation between two people",
+      "To log debug messages in the browser console",
+      "To embed an external HTML document"
+    ],
+    "answer": "To create a native modal or non-modal dialog box"
   },
   {
     "id": 17,
@@ -149,8 +159,8 @@
   },
   {
     "id": 19,
-    "question": "Which HTML element is used to define a table header?",
-    "options": ["<th>", "<td>", "<tr>", "<thead>"],
+    "question": "Which HTML element defines a single header cell in a table row?",
+    "options": ["<th>", "<td>", "<thead>", "<caption>"],
     "answer": "<th>"
   },
   {
@@ -206,9 +216,9 @@
   },
   {
     "id": 26,
-    "question": "Which attribute specifies the media type in the <link> tag?",
-    "options": ["rel", "type", "media", "target"],
-    "answer": "media"
+    "question": "Which attribute specifies the MIME type of a linked resource in a <link> tag?",
+    "options": ["type", "rel", "media", "href"],
+    "answer": "type"
   },
   {
     "id": 27,
@@ -299,12 +309,12 @@
     "id": 37,
     "question": "What does the 'autofocus' attribute do in an input field?",
     "options": [
-      "Automatically highlights the field on page load.",
-      "Sets a default value for the field.",
-      "Validates the input value.",
-      "Defines the maximum input length."
+      "Automatically focuses the field when the page loads",
+      "Sets a default value for the field",
+      "Validates the input value on submit",
+      "Defines the maximum input length"
     ],
-    "answer": "Automatically highlights the field on page load."
+    "answer": "Automatically focuses the field when the page loads"
   },
   {
     "id": 38,
@@ -327,12 +337,12 @@
     "id": 40,
     "question": "What does the <code> tag represent in HTML?",
     "options": [
-      "A block of programming code.",
-      "A special character or symbol.",
-      "A script file reference.",
-      "A generic inline container."
+      "An inline fragment of computer code",
+      "A block-level programming code section",
+      "A script file reference",
+      "A generic inline container for any text"
     ],
-    "answer": "A block of programming code."
+    "answer": "An inline fragment of computer code"
   },
   {
     "id": 41,
@@ -370,14 +380,14 @@
   },
   {
     "id": 45,
-    "question": "What is the correct way to add a background color to a table row?",
+    "question": "What is a recommended way to add a background color to a table row?",
     "options": [
-      "Using the 'style' attribute on the <tr> tag.",
-      "Adding a 'class' attribute to each cell.",
-      "Applying a background color to the <table> tag.",
-      "Using the <style> tag inside the table."
+      "Apply a CSS class to the <tr> and define the color in a stylesheet",
+      "Use the bgcolor attribute on each <td> cell",
+      "Wrap the row in a <font> tag with a color attribute",
+      "Set the background only on the <table> element"
     ],
-    "answer": "Using the 'style' attribute on the <tr> tag."
+    "answer": "Apply a CSS class to the <tr> and define the color in a stylesheet"
   },
   {
     "id": 46,
@@ -426,9 +436,9 @@
   },
   {
     "id": 51,
-    "question": "Which HTML element is used to group related options in a dropdown list?",
-    "options": ["<optgroup>", "<group>", "<options>", "<fieldset>"],
-    "answer": "<optgroup>"
+    "question": "Which attribute on a <label> associates it with a form control by id?",
+    "options": ["for", "name", "id", "href"],
+    "answer": "for"
   },
   {
     "id": 52,
@@ -706,14 +716,9 @@
   },
   {
     "id": 81,
-    "question": "What does the <fieldset> element do?",
-    "options": [
-      "Groups related input fields in a form.",
-      "Defines a section of a webpage.",
-      "Adds a description to an input field.",
-      "Creates a dropdown menu."
-    ],
-    "answer": "Groups related input fields in a form."
+    "question": "Which HTML element groups one or more header rows at the top of a table?",
+    "options": ["<thead>", "<th>", "<header>", "<caption>"],
+    "answer": "<thead>"
   },
   {
     "id": 82,
@@ -728,20 +733,20 @@
   },
   {
     "id": 83,
-    "question": "Which tag is used to represent user-submitted text?",
-    "options": ["<output>", "<input>", "<textarea>", "<response>"],
-    "answer": "<textarea>"
+    "question": "Which value of the input type attribute creates a checkbox control?",
+    "options": ["checkbox", "radio", "check", "toggle"],
+    "answer": "checkbox"
   },
   {
     "id": 84,
     "question": "What is the <dl> tag used for?",
     "options": [
-      "To define a description list.",
-      "To create a dropdown list.",
-      "To display a definition list.",
-      "To display a directory list."
+      "To define a description list of name-value groups",
+      "To create a dropdown list",
+      "To display tabular data",
+      "To define a navigation list"
     ],
-    "answer": "To define a description list."
+    "answer": "To define a description list of name-value groups"
   },
   {
     "id": 85,
@@ -767,9 +772,9 @@
   },
   {
     "id": 87,
-    "question": "Which HTML element is used for captions in a table?",
-    "options": ["<caption>", "<figcaption>", "<thead>", "<footer>"],
-    "answer": "<caption>"
+    "question": "Which HTML element wraps the body rows of a table?",
+    "options": ["<tbody>", "<tr>", "<td>", "<body>"],
+    "answer": "<tbody>"
   },
   {
     "id": 88,
@@ -817,15 +822,15 @@
   },
   {
     "id": 92,
-    "question": "Which element is used to structure navigation links in HTML?",
-    "options": ["<nav>", "<ul>", "<menu>", "<links>"],
-    "answer": "<nav>"
+    "question": "Which HTML element represents content tangentially related to the main content (e.g., a sidebar)?",
+    "options": ["<aside>", "<section>", "<article>", "<sidebar>"],
+    "answer": "<aside>"
   },
   {
     "id": 93,
-    "question": "Which tag is used for underlined text in modern HTML?",
-    "options": ["<u>", "<underline>", "<b>", "<ins>"],
-    "answer": "<u>"
+    "question": "Which HTML element indicates strong importance, seriousness, or urgency?",
+    "options": ["<strong>", "<b>", "<em>", "<mark>"],
+    "answer": "<strong>"
   },
   {
     "id": 94,
@@ -852,12 +857,7 @@
   {
     "id": 96,
     "question": "Which HTML element is used to include mathematical expressions using MathML?",
-    "options": [
-      "<math>",
-      "<formula>",
-      "<equation>",
-      "<calc>"
-    ],
+    "options": ["<math>", "<formula>", "<equation>", "<calc>"],
     "answer": "<math>"
   },
   {
@@ -874,12 +874,7 @@
   {
     "id": 98,
     "question": "Which HTML element is used for highlighting search results?",
-    "options": [
-      "<mark>",
-      "<highlight>",
-      "<search>",
-      "<result>"
-    ],
+    "options": ["<mark>", "<highlight>", "<search>", "<result>"],
     "answer": "<mark>"
   },
   {
@@ -917,14 +912,14 @@
   },
   {
     "id": 102,
-    "question": "Which attribute is used to specify an inline CSS style for an element?",
+    "question": "What does the loading=\"lazy\" attribute do on an <img> element?",
     "options": [
-      "style",
-      "css",
-      "format",
-      "design"
+      "Defers loading the image until it is near the viewport",
+      "Compresses the image to a smaller file size",
+      "Loads the image before any other page resource",
+      "Disables the image on slow network connections"
     ],
-    "answer": "style"
+    "answer": "Defers loading the image until it is near the viewport"
   },
   {
     "id": 103,

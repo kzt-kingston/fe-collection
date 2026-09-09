@@ -14,7 +14,12 @@
   {
     "id": 3,
     "question": "How do you properly check if a variable is an array in JavaScript?",
-    "options": ["Array.isArray(variable)", "variable.isArray()", "typeof variable === 'array'", "variable instanceof Array"],
+    "options": [
+      "Array.isArray(variable)",
+      "variable.isArray()",
+      "typeof variable === 'array'",
+      "variable instanceof Array"
+    ],
     "answer": "Array.isArray(variable)"
   },
   {
@@ -41,14 +46,14 @@
   },
   {
     "id": 6,
-    "question": "Which statement about the 'await' keyword is true?",
+    "question": "Where is the 'await' keyword valid in modern JavaScript?",
     "options": [
-      "It can only be used inside an async function",
-      "It can be used in any function",
-      "It can only be used with .then()",
-      "It's a replacement for Promises"
+      "Inside async functions and at the top level of ES modules",
+      "In any function, including regular non-async functions",
+      "Only inside .then() callbacks",
+      "Only in class static blocks, never in modules"
     ],
-    "answer": "It can only be used inside an async function"
+    "answer": "Inside async functions and at the top level of ES modules"
   },
   {
     "id": 7,
@@ -63,14 +68,14 @@
   },
   {
     "id": 8,
-    "question": "How do you properly clone a JavaScript object?",
+    "question": "Which statement about copying JavaScript objects is most accurate?",
     "options": [
-      "JSON.parse(JSON.stringify(obj))",
-      "Object.assign({}, obj)",
-      "{...obj}",
-      "All of these have different use cases"
+      "Spread and Object.assign create shallow copies; JSON cloning has type/data limits",
+      "Spread always creates a deep copy of nested objects",
+      "Object.assign mutates the source object",
+      "JSON.parse(JSON.stringify(obj)) preserves functions and undefined values"
     ],
-    "answer": "All of these have different use cases"
+    "answer": "Spread and Object.assign create shallow copies; JSON cloning has type/data limits"
   },
   {
     "id": 9,
@@ -96,14 +101,14 @@
   },
   {
     "id": 11,
-    "question": "How do you handle errors in async/await functions?",
+    "question": "What is the most idiomatic way to handle errors inside an async function that uses await?",
     "options": [
-      "Using try/catch blocks",
-      "Using .catch() on the function call",
-      "Using Promise.reject()",
+      "Using try/catch blocks around awaited code",
+      "Using .catch() on the function declaration",
+      "Using Promise.reject() instead of throw",
       "Errors cannot be caught in async functions"
     ],
-    "answer": "Using try/catch blocks"
+    "answer": "Using try/catch blocks around awaited code"
   },
   {
     "id": 12,
@@ -163,14 +168,14 @@
   },
   {
     "id": 18,
-    "question": "What's the best way to check if a property exists in an object?",
+    "question": "How do you check whether an object has its own property (not inherited)?",
     "options": [
-      "Using the 'in' operator or hasOwnProperty()",
-      "Using a try/catch block",
-      "If (object.property)",
-      "Using typeof object.property !== 'undefined'"
+      "Object.hasOwn(obj, 'key')",
+      "The 'in' operator alone",
+      "obj.hasOwnProperty without checking null prototype objects",
+      "typeof obj.key !== 'undefined' alone"
     ],
-    "answer": "Using the 'in' operator or hasOwnProperty()"
+    "answer": "Object.hasOwn(obj, 'key')"
   },
   {
     "id": 19,
@@ -196,14 +201,14 @@
   },
   {
     "id": 21,
-    "question": "What's the purpose of the 'this' keyword in JavaScript?",
+    "question": "What determines the value of 'this' inside a regular (non-arrow) function?",
     "options": [
-      "Refers to the object that is executing the current function",
-      "Refers to the previous function in the call stack",
-      "Refers to the global window object only",
-      "Refers to the parent function"
+      "How the function is called",
+      "The function's lexical scope at definition time",
+      "Always the global object in every environment",
+      "Always the object where the function was declared"
     ],
-    "answer": "Refers to the object that is executing the current function"
+    "answer": "How the function is called"
   },
   {
     "id": 22,
@@ -251,14 +256,14 @@
   },
   {
     "id": 26,
-    "question": "What does 'hoisting' mean in JavaScript?",
+    "question": "Which statement about hoisting in JavaScript is most accurate?",
     "options": [
-      "Variables and function declarations are moved to the top of their scope",
-      "Lifting variables to the global scope",
-      "Optimizing code by moving functions to the top",
-      "Automatically initializing variables with default values"
+      "var and function declarations are hoisted with initialization behavior; let/const are hoisted but uninitialized until their line runs",
+      "let and const are not hoisted at all",
+      "All variables are initialized to undefined at the top of every scope",
+      "Hoisting physically reorders source code before execution"
     ],
-    "answer": "Variables and function declarations are moved to the top of their scope"
+    "answer": "var and function declarations are hoisted with initialization behavior; let/const are hoisted but uninitialized until their line runs"
   },
   {
     "id": 27,
@@ -427,14 +432,14 @@
   },
   {
     "id": 42,
-    "question": "How do you check if a value is NaN?",
+    "question": "How do you strictly check if a value is NaN without type coercion?",
     "options": [
+      "Number.isNaN(value)",
       "isNaN(value)",
       "value === NaN",
-      "value.isNaN()",
-      "Object.is(value, NaN)"
+      "value.isNaN()"
     ],
-    "answer": "isNaN(value)"
+    "answer": "Number.isNaN(value)"
   },
   {
     "id": 43,
@@ -460,14 +465,14 @@
   },
   {
     "id": 45,
-    "question": "What's the difference between null and undefined?",
+    "question": "Which statement best describes the difference between null and undefined in JavaScript?",
     "options": [
-      "null is an assigned value representing no value, undefined is a variable declared but not assigned",
-      "They are exactly the same",
-      "null is a primitive, undefined is an object",
-      "undefined is used for numbers, null for objects"
+      "null is an intentional absence of value; undefined means a value was not assigned or is missing",
+      "They are identical in behavior and typeof results",
+      "undefined is only for numbers, null is only for objects",
+      "null is returned automatically by functions with no return statement"
     ],
-    "answer": "null is an assigned value representing no value, undefined is a variable declared but not assigned"
+    "answer": "null is an intentional absence of value; undefined means a value was not assigned or is missing"
   },
   {
     "id": 46,
@@ -484,12 +489,12 @@
     "id": 47,
     "question": "What does 'debouncing' mean in JavaScript?",
     "options": [
-      "Limiting how often a function can be called in a given time period",
-      "Removing duplicate code automatically",
-      "Preventing memory leaks",
-      "Handling multiple API responses"
+      "Delays execution until events stop firing for a set period",
+      "Limits how often a function can run during continuous events",
+      "Removes duplicate event listeners automatically",
+      "Queues events to run in strict order"
     ],
-    "answer": "Limiting how often a function can be called in a given time period"
+    "answer": "Delays execution until events stop firing for a set period"
   },
   {
     "id": 48,
@@ -576,9 +581,9 @@
   },
   {
     "id": 56,
-    "question": "What will the expression 4 + '2' evaluate to in JavaScript?",
-    "options": ["'42'", "6", "42", "NaN"],
-    "answer": "'42'"
+    "question": "What is the result of Boolean([]) in JavaScript?",
+    "options": ["true", "false", "undefined", "[]"],
+    "answer": "true"
   },
   {
     "id": 57,
@@ -599,14 +604,14 @@
   },
   {
     "id": 59,
-    "question": "What is the correct way to check if an object implements a specific interface in TypeScript?",
+    "question": "What is a practical way to verify an object has expected shape at runtime in JavaScript?",
     "options": [
-      "Using type predicates or type assertions",
-      "Using the 'implements' keyword at runtime",
-      "Using the 'instanceof' operator",
-      "Using the Object.isInterface() method"
+      "Validate required properties with explicit checks or a schema/validation library",
+      "Use the TypeScript 'implements' keyword",
+      "Use a type assertion with 'as'",
+      "Rely on 'instanceof InterfaceName'"
     ],
-    "answer": "Using type predicates or type assertions"
+    "answer": "Validate required properties with explicit checks or a schema/validation library"
   },
   {
     "id": 60,
@@ -754,14 +759,14 @@
   },
   {
     "id": 74,
-    "question": "What is the main advantage of using a Map instead of an Object in JavaScript?",
+    "question": "What is a key advantage of using a Map instead of a plain object for key/value storage?",
     "options": [
-      "Maps allow any type as keys and maintain insertion order",
-      "Maps are always faster than objects",
-      "Maps use less memory than objects",
-      "Maps provide built-in encryption for sensitive data"
+      "Keys can be any type, not just strings and symbols",
+      "Maps always use less memory than objects",
+      "Maps prevent all key collisions automatically",
+      "Objects cannot store numbers as keys"
     ],
-    "answer": "Maps allow any type as keys and maintain insertion order"
+    "answer": "Keys can be any type, not just strings and symbols"
   },
   {
     "id": 75,
@@ -842,25 +847,25 @@
   },
   {
     "id": 82,
-    "question": "What is a pure component in React?",
+    "question": "What does structuredClone() do in JavaScript?",
     "options": [
-      "A component that only re-renders when its props or state change",
-      "A component written entirely in JavaScript without JSX",
-      "A component that doesn't use hooks",
-      "A component that doesn't have side effects"
+      "Creates a deep copy of a value, including nested objects and many built-in types",
+      "Shallow-copies only the top-level properties of an object",
+      "Serializes a value to JSON and returns a string",
+      "Clones a DOM node and all of its event listeners"
     ],
-    "answer": "A component that only re-renders when its props or state change"
+    "answer": "Creates a deep copy of a value, including nested objects and many built-in types"
   },
   {
     "id": 83,
-    "question": "What is the purpose of the 'data-*' attributes in HTML?",
+    "question": "How do you read a data-user-id attribute from a DOM element in JavaScript?",
     "options": [
-      "To store custom data private to the page or application",
-      "To enhance SEO with additional metadata",
-      "To define data binding points for JavaScript frameworks",
-      "To validate form inputs using JavaScript"
+      "element.dataset.userId",
+      "element.data.userId",
+      "element.getData('user-id')",
+      "element.attributes.userId"
     ],
-    "answer": "To store custom data private to the page or application"
+    "answer": "element.dataset.userId"
   },
   {
     "id": 84,
@@ -1007,14 +1012,14 @@
   },
   {
     "id": 97,
-    "question": "What is the purpose of the 'super' keyword in a JavaScript class?",
+    "question": "What is 'super' used for in a JavaScript class?",
     "options": [
-      "Calls methods of the parent class",
-      "Creates a superclass from multiple parent classes",
-      "Accesses static properties of a class",
-      "Optimizes class methods for better performance"
+      "Calling the parent class constructor and accessing parent methods/properties",
+      "Creating multiple parent classes at once",
+      "Making a method static",
+      "Preventing method overriding"
     ],
-    "answer": "Calls methods of the parent class"
+    "answer": "Calling the parent class constructor and accessing parent methods/properties"
   },
   {
     "id": 98,

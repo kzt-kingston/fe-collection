@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "question": "What does CSS stand for?",
     "options": [
       "Cascading Style Sheets",
@@ -10,31 +11,37 @@
     "answer": "Cascading Style Sheets"
   },
   {
+    "id": 2,
     "question": "Which CSS property is used to change the text color of an element?",
     "options": ["color", "text-color", "font-color", "background-color"],
     "answer": "color"
   },
   {
+    "id": 3,
     "question": "How do you select an element with id 'demo' in CSS?",
     "options": ["#demo", ".demo", "demo", "*demo"],
     "answer": "#demo"
   },
   {
+    "id": 4,
     "question": "How do you select all paragraph elements in CSS?",
     "options": ["p", "#p", ".p", "*p"],
     "answer": "p"
   },
   {
+    "id": 5,
     "question": "Which CSS property controls the text size?",
     "options": ["font-size", "text-size", "font-style", "text-style"],
     "answer": "font-size"
   },
   {
+    "id": 6,
     "question": "Which CSS property is used to change the background color of an element?",
     "options": ["background-color", "color", "bgcolor", "background"],
     "answer": "background-color"
   },
   {
+    "id": 7,
     "question": "How do you add a comment in CSS?",
     "options": [
       "/* this is a comment */",
@@ -45,11 +52,13 @@
     "answer": "/* this is a comment */"
   },
   {
+    "id": 8,
     "question": "Which property is used to change the font of an element?",
     "options": ["font-family", "font", "font-style", "text-font"],
     "answer": "font-family"
   },
   {
+    "id": 9,
     "question": "What is the correct CSS syntax for making all the <p> elements bold?",
     "options": [
       "p {font-weight: bold;}",
@@ -60,6 +69,7 @@
     "answer": "p {font-weight: bold;}"
   },
   {
+    "id": 10,
     "question": "How do you display hyperlinks without an underline?",
     "options": [
       "text-decoration: none;",
@@ -70,6 +80,7 @@
     "answer": "text-decoration: none;"
   },
   {
+    "id": 11,
     "question": "How do you make each word in a text start with a capital letter?",
     "options": [
       "text-transform: capitalize;",
@@ -80,26 +91,31 @@
     "answer": "text-transform: capitalize;"
   },
   {
+    "id": 12,
     "question": "Which property is used to change the left margin of an element?",
     "options": ["margin-left", "padding-left", "indent", "left-margin"],
     "answer": "margin-left"
   },
   {
+    "id": 13,
     "question": "How do you select elements with class name 'test'?",
     "options": [".test", "#test", "test", "*test"],
     "answer": ".test"
   },
   {
+    "id": 14,
     "question": "What is the default value of the 'position' property?",
     "options": ["static", "relative", "fixed", "absolute"],
     "answer": "static"
   },
   {
+    "id": 15,
     "question": "Which CSS property is used to control the spacing between lines?",
     "options": ["line-height", "spacing", "line-spacing", "letter-spacing"],
     "answer": "line-height"
   },
   {
+    "id": 16,
     "question": "Which CSS property is used to specify the space between the borders of adjacent cells in a table?",
     "options": [
       "border-spacing",
@@ -110,11 +126,18 @@
     "answer": "border-spacing"
   },
   {
+    "id": 17,
     "question": "Which CSS property is used to make text bold?",
-    "options": ["font-weight", "font-style", "text-decoration", "text-transform"],
+    "options": [
+      "font-weight",
+      "font-style",
+      "text-decoration",
+      "text-transform"
+    ],
     "answer": "font-weight"
   },
   {
+    "id": 18,
     "question": "What does the 'z-index' property determine?",
     "options": [
       "The stacking order of elements",
@@ -125,21 +148,30 @@
     "answer": "The stacking order of elements"
   },
   {
+    "id": 19,
     "question": "How do you change the cursor to be a hand when hovering over a link?",
-    "options": ["cursor: pointer;", "cursor: hand;", "pointer: cursor;", "hand-cursor: true;"],
+    "options": [
+      "cursor: pointer;",
+      "cursor: hand;",
+      "pointer: cursor;",
+      "hand-cursor: true;"
+    ],
     "answer": "cursor: pointer;"
   },
   {
+    "id": 20,
     "question": "Which CSS property is used to change the opacity of an element?",
     "options": ["opacity", "transparency", "alpha", "rgba"],
     "answer": "opacity"
   },
   {
+    "id": 21,
     "question": "Which CSS property is used to specify rounded corners for an element?",
     "options": ["border-radius", "corner-radius", "border-corners", "radius"],
     "answer": "border-radius"
   },
   {
+    "id": 22,
     "question": "How do you add a box shadow to an element in CSS?",
     "options": [
       "box-shadow: 10px 10px 5px grey;",
@@ -150,6 +182,7 @@
     "answer": "box-shadow: 10px 10px 5px grey;"
   },
   {
+    "id": 23,
     "question": "Which is the correct CSS syntax for making all the <span> elements italic?",
     "options": [
       "span {font-style: italic;}",
@@ -160,6 +193,7 @@
     "answer": "span {font-style: italic;}"
   },
   {
+    "id": 24,
     "question": "How do you group selectors in CSS?",
     "options": [
       "Separate each selector with a comma",
@@ -170,11 +204,18 @@
     "answer": "Separate each selector with a comma"
   },
   {
+    "id": 25,
     "question": "Which CSS property controls the text spacing?",
-    "options": ["letter-spacing", "text-spacing", "font-spacing", "character-spacing"],
+    "options": [
+      "letter-spacing",
+      "text-spacing",
+      "font-spacing",
+      "character-spacing"
+    ],
     "answer": "letter-spacing"
   },
   {
+    "id": 26,
     "question": "What does the CSS property 'display: none' do?",
     "options": [
       "Hides an element without taking up space",
@@ -185,6 +226,7 @@
     "answer": "Hides an element without taking up space"
   },
   {
+    "id": 27,
     "question": "What does the CSS property 'visibility: hidden' do?",
     "options": [
       "Hides an element but still takes up space",
@@ -195,11 +237,13 @@
     "answer": "Hides an element but still takes up space"
   },
   {
-    "question": "Which CSS property is used for controlling the layout of multiple columns?",
+    "id": 28,
+    "question": "Which CSS property sets the number of columns in a multi-column layout?",
     "options": ["column-count", "columns", "column-layout", "grid-columns"],
     "answer": "column-count"
   },
   {
+    "id": 29,
     "question": "What does the 'box-sizing: border-box' property do?",
     "options": [
       "Include padding and border in the element's total width and height",
@@ -210,46 +254,55 @@
     "answer": "Include padding and border in the element's total width and height"
   },
   {
+    "id": 30,
     "question": "Which CSS property is used to create space around elements, outside of any defined borders?",
     "options": ["margin", "padding", "spacing", "border-spacing"],
     "answer": "margin"
   },
   {
+    "id": 31,
     "question": "Which CSS property is used to create space between a border and the content inside it?",
     "options": ["padding", "margin", "spacing", "border-spacing"],
     "answer": "padding"
   },
   {
+    "id": 32,
     "question": "What is the correct CSS syntax to select all p elements inside a div?",
     "options": ["div p", "div.p", "div > p", "div + p"],
     "answer": "div p"
   },
   {
+    "id": 33,
     "question": "What is the correct CSS syntax for selecting all direct child p elements of a div?",
     "options": ["div > p", "div p", "div.p", "div + p"],
     "answer": "div > p"
   },
   {
+    "id": 34,
     "question": "What is the CSS pseudo-class for styling unvisited links?",
     "options": [":link", ":visited", ":hover", ":active"],
     "answer": ":link"
   },
   {
+    "id": 35,
     "question": "What is the CSS pseudo-class for styling elements when the user hovers over them?",
     "options": [":hover", ":focus", ":active", ":visited"],
     "answer": ":hover"
   },
   {
+    "id": 36,
     "question": "What is the CSS pseudo-element used to style the first letter of an element?",
     "options": ["::first-letter", "::first", ":first-letter", ":letter-first"],
     "answer": "::first-letter"
   },
   {
+    "id": 37,
     "question": "What is the CSS pseudo-element used to insert content before an element?",
     "options": ["::before", "::after", ":before", ":first"],
     "answer": "::before"
   },
   {
+    "id": 38,
     "question": "What does the CSS 'flex-direction: column' do?",
     "options": [
       "Arranges flex items vertically",
@@ -260,41 +313,74 @@
     "answer": "Arranges flex items vertically"
   },
   {
+    "id": 39,
     "question": "What is the CSS property to align flex items vertically in a container?",
-    "options": ["align-items", "justify-content", "flex-align", "vertical-align"],
+    "options": [
+      "align-items",
+      "justify-content",
+      "flex-align",
+      "vertical-align"
+    ],
     "answer": "align-items"
   },
   {
+    "id": 40,
     "question": "What is the CSS property to align flex items horizontally in a container?",
-    "options": ["justify-content", "align-items", "flex-align", "horizontal-align"],
+    "options": [
+      "justify-content",
+      "align-items",
+      "flex-align",
+      "horizontal-align"
+    ],
     "answer": "justify-content"
   },
   {
+    "id": 41,
     "question": "Which CSS property defines how flex items grow if there's extra space?",
     "options": ["flex-grow", "flex-shrink", "flex-basis", "flex-expand"],
     "answer": "flex-grow"
   },
   {
+    "id": 42,
     "question": "What is the CSS property to create a CSS grid layout?",
-    "options": ["display: grid;", "display: flex;", "grid-template: auto;", "layout: grid;"],
+    "options": [
+      "display: grid;",
+      "display: flex;",
+      "grid-template: auto;",
+      "layout: grid;"
+    ],
     "answer": "display: grid;"
   },
   {
+    "id": 43,
     "question": "What CSS property defines the columns in a grid layout?",
-    "options": ["grid-template-columns", "grid-columns", "grid-template", "column-template"],
+    "options": [
+      "grid-template-columns",
+      "grid-columns",
+      "grid-template",
+      "column-template"
+    ],
     "answer": "grid-template-columns"
   },
   {
+    "id": 44,
     "question": "What CSS property defines the rows in a grid layout?",
-    "options": ["grid-template-rows", "grid-rows", "row-template", "template-rows"],
+    "options": [
+      "grid-template-rows",
+      "grid-rows",
+      "row-template",
+      "template-rows"
+    ],
     "answer": "grid-template-rows"
   },
   {
+    "id": 45,
     "question": "What CSS property creates a gap between grid rows and columns?",
     "options": ["gap", "grid-gap", "spacing", "grid-spacing"],
     "answer": "gap"
   },
   {
+    "id": 46,
     "question": "What does the CSS property 'position: absolute' do?",
     "options": [
       "Positions the element relative to its nearest positioned ancestor",
@@ -305,6 +391,7 @@
     "answer": "Positions the element relative to its nearest positioned ancestor"
   },
   {
+    "id": 47,
     "question": "What does the CSS property 'position: fixed' do?",
     "options": [
       "Positions the element relative to the viewport",
@@ -315,6 +402,7 @@
     "answer": "Positions the element relative to the viewport"
   },
   {
+    "id": 48,
     "question": "What does the CSS property 'position: relative' do?",
     "options": [
       "Positions the element relative to its normal position",
@@ -325,21 +413,35 @@
     "answer": "Positions the element relative to its normal position"
   },
   {
+    "id": 49,
     "question": "What is the CSS at-rule to define keyframe animations?",
     "options": ["@keyframes", "@animation", "@frame", "@sequence"],
     "answer": "@keyframes"
   },
   {
+    "id": 50,
     "question": "Which CSS property is used to specify the duration of an animation?",
-    "options": ["animation-duration", "animation-time", "transition-duration", "keyframe-time"],
+    "options": [
+      "animation-duration",
+      "animation-time",
+      "transition-duration",
+      "keyframe-time"
+    ],
     "answer": "animation-duration"
   },
   {
+    "id": 51,
     "question": "Which CSS property is used to specify the speed curve of an animation?",
-    "options": ["animation-timing-function", "animation-speed", "transition-speed", "keyframe-timing"],
+    "options": [
+      "animation-timing-function",
+      "animation-speed",
+      "transition-speed",
+      "keyframe-timing"
+    ],
     "answer": "animation-timing-function"
   },
   {
+    "id": 52,
     "question": "What does the CSS 'transform: rotate(45deg)' do?",
     "options": [
       "Rotates the element 45 degrees clockwise",
@@ -350,16 +452,19 @@
     "answer": "Rotates the element 45 degrees clockwise"
   },
   {
+    "id": 53,
     "question": "What is the CSS property to create a smooth transition between property values?",
     "options": ["transition", "animation", "transform", "ease"],
     "answer": "transition"
   },
   {
+    "id": 54,
     "question": "Which CSS property defines how an element is rendered when it overflows its container?",
     "options": ["overflow", "flow", "display-overflow", "overflow-style"],
     "answer": "overflow"
   },
   {
+    "id": 55,
     "question": "What does the CSS 'overflow: hidden' property do?",
     "options": [
       "Clips the overflowing content",
@@ -370,36 +475,47 @@
     "answer": "Clips the overflowing content"
   },
   {
-    "question": "What does the CSS 'overflow: scroll' property do?",
+    "id": 56,
+    "question": "How does overflow: scroll differ from overflow: auto?",
     "options": [
-      "Always shows scrollbars for the element",
-      "Shows scrollbars only when needed",
-      "Hides the overflowing content",
-      "Makes the element scrollable within the page"
+      "scroll always creates a scroll container; auto only when content overflows",
+      "scroll hides overflowing content; auto makes it visible",
+      "scroll applies only to horizontal overflow",
+      "There is no difference between them"
     ],
-    "answer": "Always shows scrollbars for the element"
+    "answer": "scroll always creates a scroll container; auto only when content overflows"
   },
   {
+    "id": 57,
     "question": "What is the CSS property to create text shadows?",
     "options": ["text-shadow", "font-shadow", "shadow", "text-effect"],
     "answer": "text-shadow"
   },
   {
+    "id": 58,
     "question": "Which CSS value is used to make a background image cover the entire container?",
-    "options": ["background-size: cover;", "background-size: fill;", "background-cover: true;", "background-fill: complete;"],
+    "options": [
+      "background-size: cover;",
+      "background-size: fill;",
+      "background-cover: true;",
+      "background-fill: complete;"
+    ],
     "answer": "background-size: cover;"
   },
   {
-    "question": "What CSS property is used to style an element when it's being clicked?",
+    "id": 59,
+    "question": "Which CSS pseudo-class styles an element while it is being activated (e.g., clicked)?",
     "options": [":active", ":visited", ":hover", ":focus"],
     "answer": ":active"
   },
   {
+    "id": 60,
     "question": "Which CSS property defines the order of elements in a flex container?",
     "options": ["order", "flex-order", "sequence", "position"],
     "answer": "order"
   },
   {
+    "id": 61,
     "question": "What does the CSS property 'text-align: justify' do?",
     "options": [
       "Aligns text so both edges are aligned to the container",
@@ -410,41 +526,59 @@
     "answer": "Aligns text so both edges are aligned to the container"
   },
   {
-    "question": "What is the CSS property to control the capitalization of text?",
-    "options": ["text-transform", "font-style", "text-style", "text-case"],
-    "answer": "text-transform"
+    "id": 62,
+    "question": "Which text-transform value converts all text to uppercase?",
+    "options": ["uppercase", "capitalize", "lowercase", "small-caps"],
+    "answer": "uppercase"
   },
   {
+    "id": 63,
     "question": "Which CSS unit is relative to the font-size of the element?",
     "options": ["em", "px", "pt", "vh"],
     "answer": "em"
   },
   {
+    "id": 64,
     "question": "Which CSS unit is relative to the viewport's width?",
     "options": ["vw", "vh", "em", "px"],
     "answer": "vw"
   },
   {
+    "id": 65,
     "question": "Which CSS unit is relative to the viewport's height?",
     "options": ["vh", "vw", "em", "px"],
     "answer": "vh"
   },
   {
-    "question": "What is the CSS property to add rounded corners to a border?",
-    "options": ["border-radius", "corner-radius", "round-corners", "border-corners"],
-    "answer": "border-radius"
+    "id": 66,
+    "question": "What does the CSS clamp() function do?",
+    "options": [
+      "Clamps a value between a minimum and a maximum (e.g., clamp(1rem, 4vw, 3rem))",
+      "Clips overflowing content to a rounded border",
+      "Locks an element's width to the viewport",
+      "Converts a color to its nearest named color"
+    ],
+    "answer": "Clamps a value between a minimum and a maximum (e.g., clamp(1rem, 4vw, 3rem))"
   },
   {
+    "id": 67,
     "question": "Which CSS property is used to create a gradient background?",
-    "options": ["background-image", "background-gradient", "gradient", "color-gradient"],
+    "options": [
+      "background-image",
+      "background-gradient",
+      "gradient",
+      "color-gradient"
+    ],
     "answer": "background-image"
   },
   {
-    "question": "What is the CSS property to style an element when it's in focus?",
+    "id": 68,
+    "question": "Which CSS pseudo-class styles an element when it receives keyboard focus?",
     "options": [":focus", ":hover", ":active", ":target"],
     "answer": ":focus"
   },
   {
+    "id": 69,
     "question": "What does the CSS selector 'a:visited' style?",
     "options": [
       "Links that have been clicked",
@@ -455,31 +589,47 @@
     "answer": "Links that have been clicked"
   },
   {
-    "question": "What is the CSS property to create columns in text content?",
-    "options": ["column-count", "text-columns", "content-columns", "split-text"],
-    "answer": "column-count"
+    "id": 70,
+    "question": "What are CSS container queries used for?",
+    "options": [
+      "Applying styles based on a parent container's size rather than the viewport",
+      "Querying the database for CSS class names",
+      "Selecting elements by their HTML container tag only",
+      "Measuring JavaScript performance of CSS animations"
+    ],
+    "answer": "Applying styles based on a parent container's size rather than the viewport"
   },
   {
+    "id": 71,
     "question": "Which CSS media feature is used to target different device orientations?",
     "options": ["orientation", "device-orientation", "rotate", "direction"],
     "answer": "orientation"
   },
   {
+    "id": 72,
     "question": "What is the CSS at-rule for media queries?",
     "options": ["@media", "@query", "@device", "@responsive"],
     "answer": "@media"
   },
   {
+    "id": 73,
     "question": "What CSS property is used to prevent text wrapping?",
-    "options": ["white-space: nowrap;", "wrap: none;", "text-wrap: none;", "word-wrap: off;"],
+    "options": [
+      "white-space: nowrap;",
+      "wrap: none;",
+      "text-wrap: none;",
+      "word-wrap: off;"
+    ],
     "answer": "white-space: nowrap;"
   },
   {
+    "id": 74,
     "question": "What CSS property creates a clipping region on an element?",
     "options": ["clip-path", "clip", "region-clip", "shape"],
     "answer": "clip-path"
   },
   {
+    "id": 75,
     "question": "What does the CSS property 'user-select: none' do?",
     "options": [
       "Prevents text selection",
@@ -490,51 +640,70 @@
     "answer": "Prevents text selection"
   },
   {
+    "id": 76,
     "question": "Which CSS property creates a mask over an element?",
     "options": ["mask-image", "clip-mask", "image-mask", "overlay"],
     "answer": "mask-image"
   },
   {
+    "id": 77,
     "question": "What CSS property controls whether an element is treated as a block or inline element?",
     "options": ["display", "visibility", "position", "float"],
     "answer": "display"
   },
   {
+    "id": 78,
     "question": "What CSS value makes an element adopt its parent's font properties?",
     "options": ["inherit", "parent", "adopt", "cascade"],
     "answer": "inherit"
   },
   {
-    "question": "What CSS property is used to create a container for a grid layout?",
-    "options": ["display: grid;", "grid: container;", "layout: grid;", "grid-display: true;"],
-    "answer": "display: grid;"
+    "id": 79,
+    "question": "What does the CSS logical property margin-inline control?",
+    "options": [
+      "The inline-start and inline-end margins, which map to left/right in horizontal writing modes",
+      "Only the top and bottom margins of an element",
+      "The gap between flex or grid items",
+      "The margin of the root html element only"
+    ],
+    "answer": "The inline-start and inline-end margins, which map to left/right in horizontal writing modes"
   },
   {
-    "question": "What CSS property is used to align content vertically within a container?",
-    "options": ["align-items", "vertical-align", "justify-content", "align-content"],
-    "answer": "align-items"
+    "id": 80,
+    "question": "What does the CSS :has() pseudo-class do?",
+    "options": [
+      "Selects an element if it contains a matching descendant or child",
+      "Checks whether a property has been inherited",
+      "Applies styles only when JavaScript has loaded",
+      "Creates a CSS custom property if it is missing"
+    ],
+    "answer": "Selects an element if it contains a matching descendant or child"
   },
   {
+    "id": 81,
     "question": "Which CSS selector targets the fifth child of its parent?",
     "options": [":nth-child(5)", ":fifth-child", ":child(5)", ":5th-child"],
     "answer": ":nth-child(5)"
   },
   {
-    "question": "What does the CSS property 'float' do?",
+    "id": 82,
+    "question": "What is a primary effect of applying float: left or float: right?",
     "options": [
-      "Places an element to the left or right of its container",
-      "Makes an element hover above other elements",
-      "Allows text to flow around an element",
-      "Creates a floating animation for an element"
+      "Removes the element from normal flow and lets inline content wrap around it",
+      "Creates a floating animation for the element",
+      "Makes the element hover above other elements on the z-axis",
+      "Centers the element horizontally in its container"
     ],
-    "answer": "Places an element to the left or right of its container"
+    "answer": "Removes the element from normal flow and lets inline content wrap around it"
   },
   {
+    "id": 83,
     "question": "What CSS property is commonly used to clear floats?",
     "options": ["clear", "float-clear", "clearfix", "remove-float"],
     "answer": "clear"
   },
   {
+    "id": 84,
     "question": "What is the purpose of the CSS 'calc()' function?",
     "options": [
       "Performs calculations for property values",
@@ -545,11 +714,13 @@
     "answer": "Performs calculations for property values"
   },
   {
+    "id": 85,
     "question": "What CSS property specifies whether an element is resizable by the user?",
     "options": ["resize", "user-resize", "resizable", "stretch"],
     "answer": "resize"
   },
   {
+    "id": 86,
     "question": "What does the CSS property 'object-fit: cover' do for images?",
     "options": [
       "Scales the image to cover the container while maintaining aspect ratio",
@@ -560,6 +731,7 @@
     "answer": "Scales the image to cover the container while maintaining aspect ratio"
   },
   {
+    "id": 87,
     "question": "What does the CSS 'initial' value do?",
     "options": [
       "Sets the property to its default value",
@@ -570,11 +742,13 @@
     "answer": "Sets the property to its default value"
   },
   {
-    "question": "Which CSS property is used to control word wrapping?",
-    "options": ["word-wrap", "text-wrap", "overflow-wrap", "line-wrap"],
-    "answer": "word-wrap"
+    "id": 88,
+    "question": "Which CSS property allows long words to break and wrap onto the next line?",
+    "options": ["overflow-wrap", "word-wrap", "text-wrap", "line-wrap"],
+    "answer": "overflow-wrap"
   },
   {
+    "id": 89,
     "question": "What does CSS 'filter: blur(5px)' do?",
     "options": [
       "Applies a blur effect to the element",
@@ -585,16 +759,29 @@
     "answer": "Applies a blur effect to the element"
   },
   {
+    "id": 90,
     "question": "What is the CSS property to create a container that behaves like a table?",
-    "options": ["display: table;", "layout: table;", "table: true;", "format: table;"],
+    "options": [
+      "display: table;",
+      "layout: table;",
+      "table: true;",
+      "format: table;"
+    ],
     "answer": "display: table;"
   },
   {
+    "id": 91,
     "question": "Which CSS property sets the base font size for a document?",
-    "options": ["font-size on the html element", "base-font", "root-font", "document-font"],
+    "options": [
+      "font-size on the html element",
+      "base-font",
+      "root-font",
+      "document-font"
+    ],
     "answer": "font-size on the html element"
   },
   {
+    "id": 92,
     "question": "What does 'em' refer to when setting top and bottom margins?",
     "options": [
       "The font size of the element",
@@ -605,16 +792,29 @@
     "answer": "The font size of the element"
   },
   {
+    "id": 93,
     "question": "What is the CSS property to make text italic?",
-    "options": ["font-style: italic;", "text-style: italic;", "font: italic;", "style: italic;"],
+    "options": [
+      "font-style: italic;",
+      "text-style: italic;",
+      "font: italic;",
+      "style: italic;"
+    ],
     "answer": "font-style: italic;"
   },
   {
-    "question": "What CSS property is used to add or remove borders from a table?",
-    "options": ["border-collapse", "border-display", "table-borders", "border-style"],
-    "answer": "border-collapse"
+    "id": 94,
+    "question": "What does the CSS border-collapse property control on a table?",
+    "options": [
+      "Whether adjacent table cell borders are collapsed into a single border",
+      "Whether the table has visible outer borders",
+      "The spacing between the table border and its caption",
+      "Whether table rows can be resized by the user"
+    ],
+    "answer": "Whether adjacent table cell borders are collapsed into a single border"
   },
   {
+    "id": 95,
     "question": "What does CSS 'backdrop-filter' do?",
     "options": [
       "Applies filters to the area behind an element",
@@ -625,11 +825,18 @@
     "answer": "Applies filters to the area behind an element"
   },
   {
+    "id": 96,
     "question": "What CSS property is used to control the space between grid columns?",
-    "options": ["column-gap", "grid-column-gap", "space-columns", "column-space"],
+    "options": [
+      "column-gap",
+      "grid-column-gap",
+      "space-columns",
+      "column-space"
+    ],
     "answer": "column-gap"
   },
   {
+    "id": 97,
     "question": "What does the CSS property 'touch-action' control?",
     "options": [
       "How an element responds to touch input",
@@ -640,41 +847,47 @@
     "answer": "How an element responds to touch input"
   },
   {
+    "id": 98,
     "question": "Which CSS property is used for breaking words when they overflow their container?",
     "options": ["word-break", "text-overflow", "overflow-text", "word-wrap"],
     "answer": "word-break"
   },
   {
+    "id": 99,
     "question": "What is the purpose of the CSS 'currentColor' value?",
     "options": [
-      "Inherits the color property's value",
-      "Sets an element's color based on the theme",
-      "Uses the browser's default color setting",
-      "Applies the closest named color value"
+      "Uses the element's computed color value for the property it is applied to",
+      "Inherits the color value from the parent element",
+      "Uses the browser's default text color",
+      "Applies the closest named CSS color keyword"
     ],
-    "answer": "Inherits the color property's value"
+    "answer": "Uses the element's computed color value for the property it is applied to"
   },
   {
-    "question": "What does the CSS property 'all' do?",
+    "id": 100,
+    "question": "What does all: unset do on an element?",
     "options": [
-      "Resets all properties to their initial or inherited values",
+      "Resets each property to inherited if inheritable, otherwise to its initial value",
       "Selects all elements on the page",
-      "Applies styles to all versions of an element",
-      "Configures all possible variations of a property"
+      "Removes all CSS custom properties permanently",
+      "Restarts all running animations on the element"
     ],
-    "answer": "Resets all properties to their initial or inherited values"
+    "answer": "Resets each property to inherited if inheritable, otherwise to its initial value"
   },
   {
+    "id": 101,
     "question": "What CSS property is used to set the color of SVG elements?",
     "options": ["fill", "color", "svg-color", "stroke"],
     "answer": "fill"
   },
   {
+    "id": 102,
     "question": "Which CSS property defines the width of the stroke on SVG elements?",
     "options": ["stroke-width", "line-width", "path-width", "border-width"],
     "answer": "stroke-width"
   },
   {
+    "id": 103,
     "question": "What does the CSS property 'scroll-behavior: smooth' do?",
     "options": [
       "Creates smooth scrolling animations",
@@ -685,11 +898,18 @@
     "answer": "Creates smooth scrolling animations"
   },
   {
+    "id": 104,
     "question": "Which CSS pseudo-element is used to style the first line of a text block?",
-    "options": ["::first-line", ":first-line", "text-first-line", "initial-line"],
+    "options": [
+      "::first-line",
+      ":first-line",
+      "text-first-line",
+      "initial-line"
+    ],
     "answer": "::first-line"
   },
   {
+    "id": 105,
     "question": "What is the purpose of the CSS property 'will-change'?",
     "options": [
       "Hints browsers about elements that will be animated",
@@ -700,13 +920,14 @@
     "answer": "Hints browsers about elements that will be animated"
   },
   {
-    "question": "Which CSS function allows you to create custom variables?",
+    "id": 106,
+    "question": "How do you declare a custom property (CSS variable) on an element?",
     "options": [
-      "var()",
-      "custom()",
-      "property()",
-      "create()"
+      "--primary-color: blue;",
+      "var(--primary-color: blue);",
+      "custom-property(--primary-color, blue);",
+      "variable(--primary-color: blue);"
     ],
-    "answer": "var()"
+    "answer": "--primary-color: blue;"
   }
 ]
