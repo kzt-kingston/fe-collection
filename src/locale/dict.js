@@ -29,6 +29,7 @@ const multiLang = {
     bookmarks: "Bookmarks",
     view_roadmap: "View Roadmap 🚀",
     install_app: "Install App",
+    read_developer_voice: "Developer Voice",
     carousel_intro:
       "You can find and learn many different resources and improve your skills by answering Quiz!",
     hero_kicker: "A one-stop frontend learning hub",
@@ -82,14 +83,16 @@ const multiLang = {
     pwa_desktop_step3: "Confirm Install. The app opens in its own window.",
 
     voice_heading: "Developer Voice",
-    voice_title: "Struggling to Find Frontend Resources? You're Not Alone.",
+    voice_title: "Tired of Scattered Bookmarks? Why I Built Frontend Collection.",
     voice_greeting: "Hey there! ",
-    voice_name: "I'm Kingston (Kyaw Zin Thet)",
+    voice_name: "I'm Kyaw Zin Thet (Kingston)",
     voice_welcome: ", and welcome to Frontend Collection (FC)!",
     voice_p1:
-      "Ever spent hours hunting for that perfect frontend resource – a tutorial, a code snippet, a design tip – only to come up empty-handed? You're not alone.",
+      "Like many frontend developers and learners, I was exhausted from constantly bookmarking resources across different browsers, forgotten tabs, and cluttered notes apps — UI component libraries, free icon sets, fonts, cheatsheets, and video tutorials. Whenever I actually needed to build something or look up a syntax on the fly, finding that one specific link was always a frustrating treasure hunt.",
     voice_p2:
-      "We've all been there. Juggling browser bookmarks, overflowing notes apps, and scattered resources can be a real drag. That's why I created FC: a one-stop shop for everything frontend development.",
+      "I wanted a single, dedicated home where all frontend resources live together. A place where every time you need to find a tool, inspect a cheat sheet, or learn a new concept, it's already there waiting for you. That simple desire is what brought Frontend Collection to life.",
+    voice_p3:
+      "I built this not just for myself, but to share with fellow developers and passionate learners facing the exact same problem. I hope this hub saves you time, keeps you inspired, and makes your frontend journey a lot more fun!",
 
     all: "All",
     websites: "Websites",
@@ -175,7 +178,7 @@ const multiLang = {
   },
   my: {
     a_place_where:
-      "Frontend နှင့် ပတ်သက်သော resources များ၊ cheat sheets များ၊ ဗီဒီယိုများနှင့် tips & tricks များကို တစ်နေရာတည်းတွင် အလွယ်တကူ လေ့လာရှာဖွေနိုင်ရန် စုစည်းပေးထားသော Platform တစ်ခု ဖြစ်ပါသည်!",
+      "Frontend နှင့် ပတ်သက်သော resources များ၊ cheat sheets များ၊ ဗီဒီယိုများနှင့် tips & tricks များကို တစ်နေရာတည်းတွင် အလွယ်တကူ လေ့လာရှာဖွေနိုင်ရန် စုစည်းပေးထားသော Platform တစ်ခု ဖြစ်ပါတယ်!",
     start_expore: "စတင် လေ့လာရှာဖွေပါ",
     visit_website: "ဝဘ်ဆိုဒ်သို့ သွားရန်",
     close: "ပိတ်ရန်",
@@ -198,13 +201,14 @@ const multiLang = {
     add_bookmark: "Bookmark သိမ်းရန်",
     exit_quiz: "Quiz မှ ထွက်ရန်",
     exit_quiz_confirm:
-      "ဤ Quiz မှ ထွက်ပြီး ရွေးချယ်မှုစာမျက်နှာသို့ ပြန်သွားမလား။ ဖြေပြီးသားအဖြေများကို သိမ်းထားမှာမို့ နောက်မှ ဆက်ဖြေနိုင်ပါတယ်။",
+      "ဤ Quiz မှ ထွက်ပြီး ရွေးချယ်မှုစာမျက်နှာသို့ ပြန်သွားမလား။ ဖြေပြီးသား အဖြေများကို သိမ်းထားပေးမှာမို့ နောက်မှ ဆက်လက်ဖြေဆိုနိုင်ပါတယ်။",
     cancel: "မလုပ်တော့ပါ",
     bookmarks: "သိမ်းထားသည်များ",
     view_roadmap: "Roadmap ကြည့်ရန် 🚀",
     install_app: "App ထည့်သွင်းရန်",
+    read_developer_voice: "Developer Voice ဖတ်ရန်",
     carousel_intro:
-      "Frontend နည်းပညာဆိုင်ရာ Resource မျိုးစုံကို လေ့လာရှာဖွေနိုင်သလို Quiz များ ဖြေဆိုခြင်းဖြင့်လည်း မိမိ၏ ကျွမ်းကျင်မှုကို တိုးတက်စေနိုင်ပါတယ်!",
+      "Frontend နည်းပညာဆိုင်ရာ Resource မျိုးစုံကို လေ့လာရှာဖွေနိုင်သလို Quiz များ ဖြေဆိုပြီး မိမိကျွမ်းကျင်မှုကို တိုးတက်စေနိုင်ပါတယ်!",
     hero_kicker: "Frontend လေ့လာမှုအတွက် One-stop Hub",
     features_heading: "Frontend လေ့လာရန် လိုအပ်သမျှ အားလုံး တစ်နေရာတည်းတွင်",
     features_sub:
@@ -229,43 +233,45 @@ const multiLang = {
       "UI တစ်ခုလုံးကို English နှင့် မြန်မာ နှစ်သက်ရာ ဘာသာစကားဖြင့် လွယ်ကူစွာ ပြောင်းလဲအသုံးပြုနိုင်ပါတယ်။",
     topics_heading: "လေ့လာနိုင်သော နည်းပညာ ခေါင်းစဉ်များ",
     ready_heading: "လေ့လာဖို့ အဆင်သင့်ဖြစ်ပြီလား။",
-    ready_sub: "Resource များကို ရှာဖွေလေ့လာနိုင်သလို Quiz များကိုလည်း ဝင်ရောက်ဖြေဆိုနိုင်ပါတယ်။ browser ထဲမှာတင် အားလုံး အလွယ်တကူ အလုပ်လုပ်ပါတယ်။",
+    ready_sub: "Resource များကို ရှာဖွေလေ့လာနိုင်သလို Quiz များကိုလည်း ဝင်ရောက်ဖြေဆိုနိုင်ပါတယ်။ Browser ထဲမှာတင် အားလုံး အလွယ်တကူ အလုပ်လုပ်ပါတယ်။",
     github_star: "GitHub တွင် Star ပေးရန်",
-    github_star_sub: "Frontend Collection က အသုံးဝင်တယ်ဆိုရင် GitHub မှာ Star လေးပေးပေးပါ။ တခြားသူတွေလည်း ရှာတွေ့နိုင်အောင် ကူညီရာ ရပါတယ်။",
+    github_star_sub: "Frontend Collection က သင့်အတွက် အသုံးဝင်တယ်ဆိုရင် GitHub မှာ Star လေးပေးခဲ့ပါ။ တခြားသူတွေလည်း ရှာတွေ့နိုင်အောင် ကူညီပေးရာ ရောက်ပါတယ်။",
 
     pwa_heading: "App အဖြစ် ထည့်သွင်းအသုံးပြုရန်",
     pwa_sub:
-      "Frontend Collection သည် Progressive Web App ဖြစ်ပါတယ်။ Home Screen တွင် ထည့်သွင်းပြီး native app ကဲ့သို့ full screen ဖြင့် ဖွင့်သုံးနိုင်ပါတယ် — App Store မလိုပါဘူး။",
+      "Frontend Collection သည် Progressive Web App (PWA) ဖြစ်တာကြောင့် Home Screen ပေါ် ထည့်သွင်းပြီး native app ကဲ့သို့ full screen ဖြင့် ဖွင့်လှစ်အသုံးပြုနိုင်ပါတယ် — App Store မှ ဒေါင်းလုဒ်လုပ်စရာ မလိုပါဘူး။",
     pwa_chrome_hint:
-      "Android သို့မဟုတ် ကွန်ပျူတာရှိ Chrome / Edge တွင် Install App ခလုတ် ပေါ်လာပါက တစ်ချက်နှိပ်ရုံဖြင့် ထည့်သွင်းနိုင်ပါတယ်။",
-    pwa_already_installed: "Frontend Collection ကို App အဖြစ် ထည့်သွင်းပြီးသား ဖြစ်ပါသည်။",
+      "Android သို့မဟုတ် ကွန်ပျူတာ Chrome / Edge တွင် Install App ခလုတ် ပေါ်လာပါက နှိပ်ပြီး အလွယ်တကူ ထည့်သွင်းနိုင်ပါတယ်။",
+    pwa_already_installed: "Frontend Collection ကို App အဖြစ် ထည့်သွင်းအသုံးပြုနေပါပြီ။",
     pwa_android_title: "Android",
     pwa_android_step1: "ဤဝဘ်ဆိုဒ်ကို Chrome ဖြင့် ဖွင့်ပါ။",
     pwa_android_step2:
-      "အစက်သုံးစက် menu ကို နှိပ်ပြီး Install app သို့မဟုတ် Add to Home screen ကို ရွေးချယ်ပါ။",
+      "ညာဘက်အပေါ်ထောင့်ရှိ အစက်သုံးစက် (⋮) menu ကို နှိပ်ပြီး 'Install app' (သို့မဟုတ် 'Add to Home screen') ကို ရွေးချယ်ပါ။",
     pwa_android_step3:
-      "Install ကို နှိပ်ပါ။ Home Screen တွင် icon ပေါ်လာပြီး app ကဲ့သို့ ဖွင့်သုံးနိုင်ပါတယ်။",
+      "'Install' ကို နှိပ်ပါ။ Home Screen တွင် app icon ပေါ်လာပြီး native app ကဲ့သို့ full screen ဖြင့် ဖွင့်သုံးနိုင်ပါပြီ။",
     pwa_ios_title: "iPhone နှင့် iPad",
     pwa_ios_step1: "ဤဝဘ်ဆိုဒ်ကို Safari သို့မဟုတ် Chrome ဖြင့် ဖွင့်ပါ။",
     pwa_ios_step2:
-      "Share ခလုတ် (အပေါ်သို့ ညွှန်သော မြှားပါ စတုရန်း) ကို နှိပ်ပြီး Add to Home Screen ကို ရွေးပါ။ မတွေ့ရင် list ကို scroll ဆွဲပါ။",
+      "Share ခလုတ်ကို နှိပ်ပြီး 'Add to Home Screen' ကို ရွေးချယ်ပါ (မတွေ့ပါက menu list ကို အောက်သို့ scroll ဆွဲကြည့်ပါ)။",
     pwa_ios_step3:
-      "Add ကို နှိပ်ပါ။ Home Screen တွင် icon ပေါ်လာပြီး app ကဲ့သို့ ဖွင့်သုံးနိုင်ပါတယ်။",
-    pwa_desktop_title: "ကွန်ပျူတာ",
+      "ညာဘက်အပေါ်ထောင့်ရှိ 'Add' ကို နှိပ်ပါ။ Home Screen တွင် icon ပေါ်လာပြီး app ကဲ့သို့ တိုက်ရိုက် ဖွင့်သုံးနိုင်ပါပြီ။",
+    pwa_desktop_title: "ကွန်ပျူတာ (Desktop)",
     pwa_desktop_step1: "ဤဝဘ်ဆိုဒ်ကို Chrome သို့မဟုတ် Edge ဖြင့် ဖွင့်ပါ။",
     pwa_desktop_step2:
-      "ဤစာမျက်နှာရှိ Install App ခလုတ်ကို နှိပ်ပါ။ သို့မဟုတ် address bar ရှိ install icon ကို နှိပ်ပါ။",
-    pwa_desktop_step3: "Install ကို အတည်ပြုပါ။ App သည် ကိုယ်ပိုင် window ဖြင့် ဖွင့်လာပါမည်။",
+      "ဤစာမျက်နှာရှိ 'Install App' ခလုတ် (သို့မဟုတ် address bar ရှိ install icon) ကို နှိပ်ပါ။",
+    pwa_desktop_step3: "Install ကို အတည်ပြုပါ။ App သည် browser bar မပါဘဲ သီးခြား window ဖြင့် ပွင့်လာပါမည်။",
 
     voice_heading: "Developer Voice",
-    voice_title: "Frontend resource တွေ ရှာဖွေရတာ အခက်တွေ့နေပါသလား။ သင်တစ်ယောက်တည်း မဟုတ်ပါဘူး။",
+    voice_title: "ပြန့်ကျဲနေတဲ့ Bookmarks တွေနဲ့ မောပန်းနေပြီလား။ Frontend Collection ကို ဘာကြောင့် ဖန်တီးခဲ့တာလဲ။",
     voice_greeting: "မင်္ဂလာပါ! ",
-    voice_name: "ကျွန်တော် Kingston (Kyaw Zin Thet)",
+    voice_name: "ကျွန်တော် Kyaw Zin Thet (Kingston)",
     voice_welcome: " ဖြစ်ပါတယ်။ Frontend Collection (FC) မှ နွေးထွေးစွာ ကြိုဆိုပါတယ်!",
     voice_p1:
-      "ကိုယ်လိုချင်တဲ့ frontend resource တစ်ခုခု (tutorial ဖြစ်ဖြစ်၊ code snippet ဖြစ်ဖြစ်၊ design tip ဖြစ်ဖြစ်) ကို နာရီနဲ့ချီ အချိန်ကုန်ခံ ရှာဖွေပေမယ့် ဘာမှ မတွေ့ဘဲ လက်ချည်းဗလာ ဖြစ်ခဲ့ဖူးပါသလား။ သင်တစ်ယောက်တည်း ဒီလိုဖြစ်နေတာ မဟုတ်ပါဘူး။",
+      "Frontend Developer တွေနဲ့ လေ့လာသူအများစု ကြုံဖူးကြသလိုပဲ ကျွန်တော်လည်း အရင်က UI libraries တွေ၊ free icons တွေ၊ fonts တွေ၊ cheatsheets တွေနဲ့ video tutorials တွေကို browser မျိုးစုံ၊ tab မျိုးစုံနဲ့ notes app တွေထဲ နေရာအနှံ့ bookmark လုပ်ပြီး သိမ်းထားတတ်ပါတယ်။ ဒါပေမဲ့ တကယ့်လက်တွေ့ project ရေးတဲ့အခါ ဒါမှမဟုတ် လိုအပ်တဲ့ tool တစ်ခုခုကို အမြန်ရှာချင်တဲ့အခါ ဘယ် browser ထဲမှာ သိမ်းခဲ့လဲဆိုတာ အမြဲလိုက်ရှာရင်း အချိန်ကုန်ခဲ့ရပါတယ်။",
     voice_p2:
-      "ကျွန်တော်တို့အားလုံး ဒီလို အခြေအနေမျိုးကို ကြုံဖူးကြပါတယ်။ browser bookmarks တွေ၊ နေရာအနှံ့ များပြားလှတဲ့ notes app တွေထဲမှာ ဟိုတစ်စ ဒီတစ်စ ပြန့်ကျဲနေတဲ့ resources တွေကို လိုက်ရှာရတာ တကယ်ကို စိတ်ရှုပ်စရာ ကောင်းလှပါတယ်။ ဒါကြောင့်မို့ Frontend Development နဲ့ ပတ်သက်တာ အားလုံးကို တစ်နေရာတည်းမှာ အလွယ်တကူ ရှာဖွေလေ့လာနိုင်မယ့် One-stop Platform လေးတစ်ခုအဖြစ် FC ကို ဖန်တီးတည်ဆောက်ခဲ့တာ ဖြစ်ပါတယ်။",
+      "ဒီလို ဟိုတစ်စ ဒီတစ်စ ပြန့်ကျဲနေတဲ့ link တွေကို လိုက်ရှာရတာ ငြီးငွေ့လာတာကြောင့် Frontend နဲ့ ပတ်သက်သမျှ အားလုံးကို တစ်နေရာတည်းမှာ အလွယ်တကူ ရှာတွေ့နိုင်မယ့် Single Hub တစ်ခု ဖန်တီးချင်ခဲ့ပါတယ်။ တစ်ခုခု ရှာချင်တိုင်း၊ အသစ်တစ်ခုခု လေ့လာချင်တိုင်း ချက်ချင်း အဆင်သင့် ရှိနေစေဖို့ဆိုတဲ့ ရည်ရွယ်ချက်နဲ့ Frontend Collection ကို စတင်တည်ဆောက်ဖြစ်ခဲ့တာပါ။",
+    voice_p3:
+      "ဒီ platform ကို ကိုယ်တိုင်သုံးဖို့တင် မဟုတ်ဘဲ ကျွန်တော့်လို အခက်အခဲမျိုး ကြုံတွေ့နေရတဲ့ fellow developer တွေနဲ့ frontend ကို စိတ်အားထက်သန်စွာ လေ့လာနေသူတွေ အားလုံးအတွက်ပါ အထောက်အကူ ဖြစ်စေဖို့ ရည်ရွယ်ပြီး မျှဝေပေးလိုက်တာ ဖြစ်ပါတယ်။ Frontend Collection က သင့်ရဲ့ အချိန်တွေကို သက်သာစေပြီး frontend လေ့လာမှုခရီးစဉ်ကို ပိုမိုပျော်ရွှင်လွယ်ကူစေမယ်လို့ မျှော်လင့်ပါတယ်!",
 
     all: "အားလုံး",
     websites: "ဝဘ်ဆိုဒ်များ",
@@ -285,7 +291,7 @@ const multiLang = {
     searching_result: "ရှာဖွေမှုရလဒ်",
 
     bookmarks_help:
-      "Bookmarks များကို သင့် Browser ရဲ့ Local Storage တွင် သိမ်းဆည်းထားပါသည်။ Browser Cache ရှင်းလင်းလိုက်ပါက Bookmarks များ ပျက်သွားနိုင်ပါသည်။ ထို့ကြောင့် Bookmarks များကို သိမ်းဆည်းထားလိုပါက JSON ဖိုင်အဖြစ် Export လုပ်ထားနိုင်ပြီး နောက်မှ Import ပြန်လည် ထည့်သွင်းနိုင်ပါသည်။",
+      "Bookmarks များကို သင့် Browser ရဲ့ Local Storage တွင် သိမ်းဆည်းထားပါသည်။ Browser Cache ရှင်းလင်းလိုက်ပါက Bookmarks များ ပျက်သွားနိုင်ပါသည်။ ထို့ကြောင့် Bookmarks များကို သိမ်းဆည်းထားလိုပါက JSON ဖိုင်အဖြစ် Export ထုတ်ထားနိုင်ပြီး နောက်မှ Import ပြန်လည် ထည့်သွင်းနိုင်ပါသည်။",
     export: "Export ထုတ်ရန်",
     import: "Import သွင်းရန်",
     clear_all: "အားလုံး ဖျက်ရန်",
@@ -298,7 +304,7 @@ const multiLang = {
     open_link: "လင့်ခ်ဖွင့်ရန်",
     remove_bookmark: "Bookmark ဖယ်ရှားရန်",
     invalid_file_type: "ဖိုင်အမျိုးအစား မှားယွင်းနေပါသည်",
-    upload_json: "ကျေးဇူးပြု၍ JSON ဖိုင်ကိုသာ တင်ပေးပါ။",
+    upload_json: "ကျေးဇူးပြု၍ JSON ဖိုင် (.json) ကိုသာ တင်ပေးပါ။",
     bookmarks_imported: "Bookmarks များ ထည့်သွင်းပြီးပါပြီ",
     bookmarks_imported_msg: "Bookmarks များကို အောင်မြင်စွာ ထည့်သွင်းပြီးပါပြီ",
     bookmarks_cleared: "Bookmarks များ ဖျက်ပြီးပါပြီ",
@@ -308,7 +314,7 @@ const multiLang = {
     bookmark_removed: "Bookmark ဖယ်ရှားပြီးပါပြီ",
     bookmark_removed_msg: "Bookmark ကို အောင်မြင်စွာ ဖယ်ရှားပြီးပါပြီ",
 
-    unfinished_quiz: "မပြီးပြတ်သေးသော Quiz ရှိနေပါသည်။ ဆက်လက်ဖြေဆိုလိုပါသလား။",
+    unfinished_quiz: "မပြီးသေးသော Quiz တစ်ခု ရှိနေပါသည်။ ဆက်လက်ဖြေဆိုလိုပါသလား။",
     continue_quiz: "Quiz ဆက်လက်ဖြေဆိုရန်",
     select_a_quiz: "Quiz ခေါင်းစဉ် ရွေးချယ်ပါ",
     start_quiz: "Quiz စတင်ဖြေဆိုရန်",
@@ -329,18 +335,18 @@ const multiLang = {
     try_another_quiz: "အခြား Quiz တစ်ခု ဖြေဆိုရန်",
     quiz_init_error: "Quiz စနစ် စတင်၍ မရပါ။ စာမျက်နှာကို Refresh ပြုလုပ်ပေးပါ။",
     quiz_error: "အမှားတစ်ခု ဖြစ်ပွားခဲ့ပါသည်။ စာမျက်နှာကို Refresh ပြုလုပ်ပေးပါ။",
-    quiz_desc_html: "HTML tags များ၊ attributes များနှင့် semantic structure ဆိုင်ရာ အသိပညာများကို စစ်ဆေးစမ်းသပ်ပါ။",
-    quiz_desc_css: "CSS properties၊ selectors များနှင့် layout techniques ဆိုင်ရာ မေးခွန်းများဖြင့် စိန်ခေါ်စမ်းသပ်ပါ။",
+    quiz_desc_html: "HTML tags များ၊ attributes များနှင့် semantic structure ဆိုင်ရာ အခြေခံများကို စစ်ဆေးစမ်းသပ်ပါ။",
+    quiz_desc_css: "CSS properties၊ selectors များနှင့် layout techniques ဆိုင်ရာ မေးခွန်းများဖြင့် မိမိကျွမ်းကျင်မှုကို စမ်းသပ်ပါ။",
     quiz_desc_javascript:
       "JavaScript syntax၊ functions များနှင့် core concepts ဆိုင်ရာ ကျွမ်းကျင်မှုများကို စစ်ဆေးအကဲဖြတ်ပါ။",
     quiz_desc_typescript:
       "TypeScript types၊ interfaces များနှင့် advanced features များဆိုင်ရာ အသိပညာကို စစ်ဆေးစမ်းသပ်ပါ။",
-    quiz_desc_react: "React components၊ hooks များနှင့် state management ဆိုင်ရာ နားလည်သဘောပေါက်မှုများကို အကဲဖြတ်ပါ။",
+    quiz_desc_react: "React components၊ hooks များနှင့် state management ဆိုင်ရာ နားလည်သဘောပေါက်မှုများကို စစ်ဆေးအကဲဖြတ်ပါ။",
     quiz_desc_vue: "Vue components၊ directives များနှင့် reactivity system ဆိုင်ရာ အသိပညာများကို စစ်ဆေးစမ်းသပ်ပါ။",
-    quiz_desc_angular: "Angular components၊ services များနှင့် routing ဆိုင်ရာ မေးခွန်းများဖြင့် စိန်ခေါ်စမ်းသပ်ပါ။",
+    quiz_desc_angular: "Angular components၊ services များနှင့် routing ဆိုင်ရာ မေးခွန်းများဖြင့် မိမိကျွမ်းကျင်မှုကို စမ်းသပ်ပါ။",
 
     image_search_desc:
-      "Unsplash မှ လှပပြီး အရည်အသွေးမြင့် အခမဲ့ ဒေါင်းလုဒ်လုပ်နိုင်သော ပုံများကို ရှာဖွေလိုက်ပါ။ keyword ရိုက်ထည့်လိုက်ရုံနဲ့ အလွယ်တကူ ရှာဖွေပေးသွားမှာပါ!",
+      "Unsplash မှ လှပပြီး အရည်အသွေးမြင့် အခမဲ့ပုံများကို ရှာဖွေလိုက်ပါ။ Keyword ရိုက်ထည့်လိုက်ရုံဖြင့် အလွယ်တကူ ရှာဖွေဒေါင်းလုဒ်လုပ်နိုင်ပါတယ်!",
     search_images: "ပုံများ ရှာဖွေရန်...",
     search: "ရှာဖွေရန်",
     loading_model: "Model နှင့် Database ကို စတင်ပြင်ဆင်နေပါသည်...",

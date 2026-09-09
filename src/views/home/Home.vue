@@ -74,6 +74,10 @@ const installPWA = async () => {
     document.getElementById('pwa')?.scrollIntoView({ behavior: 'smooth' });
 };
 
+const scrollToDeveloperVoice = () => {
+    document.getElementById('developer-voice')?.scrollIntoView({ behavior: 'smooth' });
+};
+
 onMounted(() => {
     isStandalone.value =
         window.matchMedia('(display-mode: standalone)').matches ||
@@ -111,11 +115,18 @@ onMounted(() => {
                             {{ dict.view_roadmap }}
                         </a>
                     </div>
-                    <button v-if="!isStandalone" type="button" @click="installPWA"
-                        class="mt-4 inline-flex items-center gap-2 text-xs text-cyan-600 hover:text-cyan-700">
-                        {{ dict.install_app }}
-                        <Download size="12" />
-                    </button>
+                    <div class="mt-4 flex flex-wrap items-center justify-center md:justify-start gap-3">
+                        <button type="button" @click="scrollToDeveloperVoice"
+                            class="inline-flex items-center gap-1.5 rounded-lg border border-cyan-200 bg-cyan-50/80 px-3 py-1.5 text-xs font-medium text-cyan-700 hover:bg-cyan-100 hover:border-cyan-300 transition-colors">
+                            <Quote :size="13" class="text-cyan-600" />
+                            {{ dict.read_developer_voice }}
+                        </button>
+                        <button v-if="!isStandalone" type="button" @click="installPWA"
+                            class="inline-flex items-center gap-1.5 rounded-lg border border-transparent px-2.5 py-1.5 text-xs text-gray-600 hover:text-cyan-700 hover:bg-cyan-50/60 transition-colors">
+                            <Download :size="13" />
+                            {{ dict.install_app }}
+                        </button>
+                    </div>
                 </div>
                 <div class="flex justify-center">
                     <SplineViewer url="https://prod.spline.design/2p2V3R-GYEWxtFBR/scene.splinecode" height="300px"
@@ -151,7 +162,7 @@ onMounted(() => {
             </div>
         </section>
 
-        <section id="pwa" class="max-w-5xl mx-auto mt-16 md:mt-24">
+        <section id="pwa" class="max-w-5xl mx-auto mt-16 md:mt-24 scroll-mt-20">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <h2 class="text-2xl md:text-3xl font-bold mb-3">{{ dict.pwa_heading }}</h2>
                 <p class="text-gray-600 leading-relaxed">{{ dict.pwa_sub }}</p>
@@ -213,7 +224,7 @@ onMounted(() => {
             <ResourceCarousel :logos="logos" />
         </section>
 
-        <section id="developer-voice" class="max-w-5xl mx-auto mt-16 md:mt-24">
+        <section id="developer-voice" class="max-w-5xl mx-auto mt-16 md:mt-24 scroll-mt-20">
             <div class="rounded-xl border border-cyan-200 bg-cyan-50/50 px-6 py-8 md:px-10 text-left">
                 <div class="flex items-center gap-2 text-cyan-600 mb-3">
                     <Quote size="16" aria-hidden="true" />
@@ -228,6 +239,7 @@ onMounted(() => {
                     </p>
                     <p>{{ dict.voice_p1 }}</p>
                     <p>{{ dict.voice_p2 }}</p>
+                    <p v-if="dict.voice_p3">{{ dict.voice_p3 }}</p>
                 </div>
             </div>
         </section>
