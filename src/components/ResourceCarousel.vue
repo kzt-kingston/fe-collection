@@ -14,7 +14,7 @@
                                 <img :src="logo.src || '/placeholder.svg'" :alt="logo.alt"
                                     :width="logo.position === 'center' ? 200 : 150"
                                     :height="logo.position === 'center' ? 200 : 150" :class="cn(
-                                    'rounded-lg shadow-md transition-all duration-500 p-5'
+                                    'rounded-lg shadow-md transition-all duration-500 p-5 object-contain bg-white'
                                 )" />
                             </div>
                         </div>

@@ -185,8 +185,8 @@ watch(() => route.fullPath, closeMobileMenu)
 }
 
 .lang-select :deep(.el-select__wrapper) {
-    min-height: 28px;
-    font-size: 12px;
+    min-height: 32px;
+    font-size: 16px;
     box-shadow: 0 0 0 1px #e5e7eb inset;
 }
 

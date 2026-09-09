@@ -59,6 +59,28 @@ const multiLang = {
     github_star: "Star on GitHub",
     github_star_sub: "If Frontend Collection helps you, a GitHub star helps others find it too.",
 
+    pwa_heading: "Install as an app",
+    pwa_sub:
+      "Frontend Collection is a Progressive Web App. Add it to your Home Screen and open it full screen, like a native app — no App Store needed.",
+    pwa_chrome_hint:
+      "On Chrome or Edge (Android and computer), tap Install App when it appears on this page.",
+    pwa_already_installed: "You are already using Frontend Collection as an installed app.",
+    pwa_android_title: "Android",
+    pwa_android_step1: "Open this site in Chrome.",
+    pwa_android_step2:
+      "Tap the three-dot menu, then Install app or Add to Home screen.",
+    pwa_android_step3: "Tap Install. The icon appears on your Home Screen and opens like an app.",
+    pwa_ios_title: "iPhone & iPad",
+    pwa_ios_step1: "Open this site in Safari or Chrome.",
+    pwa_ios_step2:
+      "Tap Share (the square with an arrow), then Add to Home Screen. Scroll the list if you do not see it.",
+    pwa_ios_step3: "Tap Add. The icon appears on your Home Screen and opens like an app.",
+    pwa_desktop_title: "Computer",
+    pwa_desktop_step1: "Open this site in Chrome or Edge.",
+    pwa_desktop_step2:
+      "Click Install App on this page, or the install icon in the address bar.",
+    pwa_desktop_step3: "Confirm Install. The app opens in its own window.",
+
     voice_heading: "Developer Voice",
     voice_title: "Struggling to Find Frontend Resources? You're Not Alone.",
     voice_greeting: "Hey there! ",
@@ -210,6 +232,30 @@ const multiLang = {
     ready_sub: "Resource များကို ရှာဖွေလေ့လာနိုင်သလို Quiz များကိုလည်း ဝင်ရောက်ဖြေဆိုနိုင်ပါတယ်။ browser ထဲမှာတင် အားလုံး အလွယ်တကူ အလုပ်လုပ်ပါတယ်။",
     github_star: "GitHub တွင် Star ပေးရန်",
     github_star_sub: "Frontend Collection က အသုံးဝင်တယ်ဆိုရင် GitHub မှာ Star လေးပေးပေးပါ။ တခြားသူတွေလည်း ရှာတွေ့နိုင်အောင် ကူညီရာ ရပါတယ်။",
+
+    pwa_heading: "App အဖြစ် ထည့်သွင်းအသုံးပြုရန်",
+    pwa_sub:
+      "Frontend Collection သည် Progressive Web App ဖြစ်ပါတယ်။ Home Screen တွင် ထည့်သွင်းပြီး native app ကဲ့သို့ full screen ဖြင့် ဖွင့်သုံးနိုင်ပါတယ် — App Store မလိုပါဘူး။",
+    pwa_chrome_hint:
+      "Android သို့မဟုတ် ကွန်ပျူတာရှိ Chrome / Edge တွင် Install App ခလုတ် ပေါ်လာပါက တစ်ချက်နှိပ်ရုံဖြင့် ထည့်သွင်းနိုင်ပါတယ်။",
+    pwa_already_installed: "Frontend Collection ကို App အဖြစ် ထည့်သွင်းပြီးသား ဖြစ်ပါသည်။",
+    pwa_android_title: "Android",
+    pwa_android_step1: "ဤဝဘ်ဆိုဒ်ကို Chrome ဖြင့် ဖွင့်ပါ။",
+    pwa_android_step2:
+      "အစက်သုံးစက် menu ကို နှိပ်ပြီး Install app သို့မဟုတ် Add to Home screen ကို ရွေးချယ်ပါ။",
+    pwa_android_step3:
+      "Install ကို နှိပ်ပါ။ Home Screen တွင် icon ပေါ်လာပြီး app ကဲ့သို့ ဖွင့်သုံးနိုင်ပါတယ်။",
+    pwa_ios_title: "iPhone နှင့် iPad",
+    pwa_ios_step1: "ဤဝဘ်ဆိုဒ်ကို Safari သို့မဟုတ် Chrome ဖြင့် ဖွင့်ပါ။",
+    pwa_ios_step2:
+      "Share ခလုတ် (အပေါ်သို့ ညွှန်သော မြှားပါ စတုရန်း) ကို နှိပ်ပြီး Add to Home Screen ကို ရွေးပါ။ မတွေ့ရင် list ကို scroll ဆွဲပါ။",
+    pwa_ios_step3:
+      "Add ကို နှိပ်ပါ။ Home Screen တွင် icon ပေါ်လာပြီး app ကဲ့သို့ ဖွင့်သုံးနိုင်ပါတယ်။",
+    pwa_desktop_title: "ကွန်ပျူတာ",
+    pwa_desktop_step1: "ဤဝဘ်ဆိုဒ်ကို Chrome သို့မဟုတ် Edge ဖြင့် ဖွင့်ပါ။",
+    pwa_desktop_step2:
+      "ဤစာမျက်နှာရှိ Install App ခလုတ်ကို နှိပ်ပါ။ သို့မဟုတ် address bar ရှိ install icon ကို နှိပ်ပါ။",
+    pwa_desktop_step3: "Install ကို အတည်ပြုပါ။ App သည် ကိုယ်ပိုင် window ဖြင့် ဖွင့်လာပါမည်။",
 
     voice_heading: "Developer Voice",
     voice_title: "Frontend resource တွေ ရှာဖွေရတာ အခက်တွေ့နေပါသလား။ သင်တစ်ယောက်တည်း မဟုတ်ပါဘူး။",

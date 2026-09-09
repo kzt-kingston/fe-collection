@@ -13,6 +13,9 @@ import {
     ArrowRight,
     Github,
     Star,
+    Smartphone,
+    Share,
+    Monitor,
 } from 'lucide-vue-next';
 import ResourceCarousel from '@/components/ResourceCarousel.vue';
 import SplineViewer from '@/components/SplineViewer.vue';
@@ -21,6 +24,7 @@ import { useLocale } from '@/locale/useLocale';
 const { dict } = useLocale();
 const deferredPrompt = ref(null);
 const showInstallButton = ref(false);
+const isStandalone = ref(false);
 const githubStarCount = ref(null);
 const GITHUB_REPO_URL = 'https://github.com/kzt-kingston/fe-collection';
 const logos = [
@@ -28,10 +32,13 @@ const logos = [
     { id: 2, name: 'HTML', src: '/resources/html-large.png', alt: 'HTML Logo' },
     { id: 3, name: 'CSS', src: '/resources/css-large.png', alt: 'CSS Logo' },
     { id: 4, name: 'React', src: '/resources/react-large.png', alt: 'React Logo' },
-    { id: 5, name: 'Angular', src: '/resources/angular-large.png', alt: 'Angular Logo' },
+    { id: 5, name: 'Next.js', src: '/resources/nextjs-large.png', alt: 'Next.js Logo' },
     { id: 6, name: 'Vue', src: '/resources/vue-large.png', alt: 'Vue Logo' },
-    { id: 7, name: 'SASS', src: '/resources/sass-large.png', alt: 'SASS Logo' },
-    { id: 8, name: 'TypeScript', src: '/resources/typescript-large.png', alt: 'TypeScript Logo' },
+    { id: 7, name: 'Nuxt', src: '/resources/nuxt-large.png', alt: 'Nuxt Logo' },
+    { id: 8, name: 'Angular', src: '/resources/angular-large.png', alt: 'Angular Logo' },
+    { id: 9, name: 'TypeScript', src: '/resources/typescript-large.png', alt: 'TypeScript Logo' },
+    { id: 10, name: 'Tailwind', src: '/resources/tailwind-large.png', alt: 'Tailwind CSS Logo' },
+    { id: 11, name: 'SASS', src: '/resources/sass-large.png', alt: 'SASS Logo' },
 ];
 
 const features = [
@@ -62,10 +69,15 @@ const installPWA = async () => {
         await deferredPrompt.value.userChoice;
         deferredPrompt.value = null;
         showInstallButton.value = false;
+        return;
     }
+    document.getElementById('pwa')?.scrollIntoView({ behavior: 'smooth' });
 };
 
 onMounted(() => {
+    isStandalone.value =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true;
     fetchGithubStars();
     window.addEventListener('beforeinstallprompt', (event) => {
         event.preventDefault();
@@ -99,7 +111,7 @@ onMounted(() => {
                             {{ dict.view_roadmap }}
                         </a>
                     </div>
-                    <button v-if="showInstallButton" type="button" @click="installPWA"
+                    <button v-if="!isStandalone" type="button" @click="installPWA"
                         class="mt-4 inline-flex items-center gap-2 text-xs text-cyan-600 hover:text-cyan-700">
                         {{ dict.install_app }}
                         <Download size="12" />
@@ -136,6 +148,60 @@ onMounted(() => {
                         <p class="text-sm text-gray-600 leading-relaxed">{{ dict[feature.descKey] }}</p>
                     </div>
                 </template>
+            </div>
+        </section>
+
+        <section id="pwa" class="max-w-5xl mx-auto mt-16 md:mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">{{ dict.pwa_heading }}</h2>
+                <p class="text-gray-600 leading-relaxed">{{ dict.pwa_sub }}</p>
+            </div>
+            <p v-if="isStandalone"
+                class="mb-6 rounded-lg border border-cyan-200 bg-cyan-50 px-4 py-3 text-sm text-cyan-800 text-center">
+                {{ dict.pwa_already_installed }}
+            </p>
+            <div v-else class="mb-8 text-center">
+                <button v-if="showInstallButton" type="button" @click="installPWA"
+                    class="inline-flex items-center justify-center gap-2 bg-cyan-500 text-white font-semibold rounded-lg px-6 py-3 hover:bg-cyan-600 transition-colors">
+                    {{ dict.install_app }}
+                    <Download :size="18" />
+                </button>
+                <p class="mt-3 text-sm text-gray-500">{{ dict.pwa_chrome_hint }}</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <div class="rounded-xl border border-gray-200 bg-white p-6 text-left shadow-sm h-full">
+                    <div class="w-11 h-11 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center mb-4">
+                        <Smartphone :size="22" />
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">{{ dict.pwa_android_title }}</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm text-gray-600 leading-relaxed">
+                        <li>{{ dict.pwa_android_step1 }}</li>
+                        <li>{{ dict.pwa_android_step2 }}</li>
+                        <li>{{ dict.pwa_android_step3 }}</li>
+                    </ol>
+                </div>
+                <div class="rounded-xl border border-gray-200 bg-white p-6 text-left shadow-sm h-full">
+                    <div class="w-11 h-11 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center mb-4">
+                        <Share :size="22" />
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">{{ dict.pwa_ios_title }}</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm text-gray-600 leading-relaxed">
+                        <li>{{ dict.pwa_ios_step1 }}</li>
+                        <li>{{ dict.pwa_ios_step2 }}</li>
+                        <li>{{ dict.pwa_ios_step3 }}</li>
+                    </ol>
+                </div>
+                <div class="rounded-xl border border-gray-200 bg-white p-6 text-left shadow-sm h-full">
+                    <div class="w-11 h-11 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center mb-4">
+                        <Monitor :size="22" />
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">{{ dict.pwa_desktop_title }}</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm text-gray-600 leading-relaxed">
+                        <li>{{ dict.pwa_desktop_step1 }}</li>
+                        <li>{{ dict.pwa_desktop_step2 }}</li>
+                        <li>{{ dict.pwa_desktop_step3 }}</li>
+                    </ol>
+                </div>
             </div>
         </section>
 
