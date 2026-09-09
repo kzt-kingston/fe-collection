@@ -4,9 +4,13 @@ import { storeToRefs } from 'pinia'
 import { Search, ExternalLink, HeartOff, Globe, Video } from 'lucide-vue-next'
 import { ElNotification } from 'element-plus';
 import { useBookmarkStore } from '@/stores/bookmarkStore';
+import { useLocale } from '@/locale/useLocale';
 
+const { dict } = useLocale();
 const bookmarkStore = useBookmarkStore();
 const { bookmarks } = storeToRefs(bookmarkStore);
+
+const SEARCHING_RESULT = 'Searching Result'
 
 const searchTerm = ref('')
 const selectedCategory = ref(null)
@@ -14,6 +18,9 @@ const selectedCategory = ref(null)
 const categories = computed(() =>
     Array.from(new Set(bookmarks.value.map(b => b.category)))
 )
+
+const categoryLabel = (category) =>
+    category === SEARCHING_RESULT ? dict.searching_result : category
 
 const filteredBookmarks = computed(() =>
     bookmarks.value.filter(bookmark =>
@@ -48,8 +55,8 @@ const exportBookmarks = () => {
 const importBookmarks = (file) => {
     if (file.raw.type !== 'application/json') {
         ElNotification({
-            title: 'Invalid File Type',
-            message: 'Please upload a JSON file.',
+            title: dict.invalid_file_type,
+            message: dict.upload_json,
             type: 'error',
             duration: 1000
         })
@@ -61,8 +68,8 @@ const importBookmarks = (file) => {
         const importedBookmarks = JSON.parse(reader.result)
         bookmarkStore.replaceAll(importedBookmarks)
         ElNotification({
-            title: 'Bookmarks Imported',
-            message: 'Bookmarks imported successfully',
+            title: dict.bookmarks_imported,
+            message: dict.bookmarks_imported_msg,
             type: 'success',
             duration: 1000
         })
@@ -73,8 +80,8 @@ const importBookmarks = (file) => {
 const clearBookmarks = () => {
     bookmarkStore.clear()
     ElNotification({
-        title: 'Bookmarks Cleared',
-        message: 'Bookmarks cleared successfully',
+        title: dict.bookmarks_cleared,
+        message: dict.bookmarks_cleared_msg,
         type: 'warning',
         duration: 1000
     })
@@ -83,26 +90,25 @@ const clearBookmarks = () => {
 
 <template>
     <div class="min-h-screen bg-white p-8">
-        <h1 class="text-4xl font-bold mb-6 text-cyan-500">Bookmarks</h1>
+        <h1 class="text-4xl font-bold mb-6 text-cyan-500">{{ dict.bookmarks }}</h1>
         <p class="text-gray-500 text-sm mb-2">
-            Your bookmarks are stored in your local storage. Clearing your cache will remove your bookmarks.
-            If you want to keep your bookmarks, you can export them as a JSON file and import them later.
+            {{ dict.bookmarks_help }}
         </p>
         <!-- Create export and import bookmark feature from local storage -->
         <div class="flex space-x-2 mb-5 items-center">
-            <el-button style="color: white;" type="primary" color="#06B6D4" size="small" @click="exportBookmarks">Export
+            <el-button style="color: white;" type="primary" color="#06B6D4" size="small" @click="exportBookmarks">{{ dict.export }}
             </el-button>
             <!-- import bookmark by selecting the file and import the json file and set it inside the local storage -->
             <el-upload class="inline-block" action="#" :on-change="importBookmarks" :show-file-list="false"
                 :before-upload="() => false" accept=".json">
-                <el-button style="color: white;" type="primary" color="#06B6D4" size="small">Import
+                <el-button style="color: white;" type="primary" color="#06B6D4" size="small">{{ dict.import }}
                 </el-button>
             </el-upload>
             <!-- clear all bookmarks and ask for confirmation first whether confirm to delete or not -->
-            <el-popconfirm :hide-icon="true" width="200" title="Are you sure to clear all bookmarks?"
+            <el-popconfirm :hide-icon="true" width="200" :title="dict.clear_bookmarks_confirm"
                 @confirm="clearBookmarks">
                 <template #reference>
-                    <el-button style="color: white;" type="danger" size="small">Clear All</el-button>
+                    <el-button style="color: white;" type="danger" size="small">{{ dict.clear_all }}</el-button>
                 </template>
             </el-popconfirm>
 
@@ -110,14 +116,14 @@ const clearBookmarks = () => {
 
         <div class="mb-6 grid sm:grid-cols-2">
             <div class="relative w-full col-span-1 flex items-center">
-                <input class="pl-10 p-2 rounded-lg border border-cyan-500" type="text" placeholder="Search bookmarks..."
+                <input class="pl-10 p-2 rounded-lg border border-cyan-500" type="text" :placeholder="dict.search_bookmarks"
                     v-model="searchTerm" />
                 <Search class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" :size="20" />
             </div>
             <div class="w-full col-span-1 max-sm:mt-5">
-                <el-select placeholder="Select">
-                    <el-option label="All" value="" @click="clearCategory"></el-option>
-                    <el-option v-for="category in categories" :key="category" :label="category" :value="category"
+                <el-select :placeholder="dict.select">
+                    <el-option :label="dict.all" value="" @click="clearCategory"></el-option>
+                    <el-option v-for="category in categories" :key="category" :label="categoryLabel(category)" :value="category"
                         @click="selectCategory(category)">
                     </el-option>
                 </el-select>
@@ -127,7 +133,7 @@ const clearBookmarks = () => {
         <el-card class="overflow-hidden">
             <div class="p-0">
                 <template v-if="filteredBookmarks.length === 0">
-                    <p class="text-center py-8 text-gray-500">No bookmarks found.</p>
+                    <p class="text-center py-8 text-gray-500">{{ dict.no_bookmarks }}</p>
                 </template>
                 <template v-else>
                     <ul class="divide-y divide-gray-200">
@@ -144,9 +150,9 @@ const clearBookmarks = () => {
                                     <span class="flex items-center text-gray-400">
                                         <Globe class="w-4" v-if="bookmark.resourceType === 'websites'" />
                                         <Video class="w-4" v-else-if="bookmark.resourceType === 'videos'" />
-                                        <span v-else class="text-xs">[Website]</span>
+                                        <span v-else class="text-xs">{{ dict.website_fallback }}</span>
                                     </span>
-                                    <span class="text-gray-500 text-sm">{{ bookmark.category }}</span>
+                                    <span class="text-gray-500 text-sm">{{ categoryLabel(bookmark.category) }}</span>
 
                                 </div>
                                 <span class="block text-gray-800 font-medium truncate max-w-full mt-1">
@@ -158,11 +164,11 @@ const clearBookmarks = () => {
                             <div class="md:col-span-3 flex items-center justify-end space-x-4">
                                 <a :href="bookmark.url" target="_blank" rel="noopener noreferrer"
                                     class="flex items-center">
-                                    <el-tooltip content="Open link" placement="top">
+                                    <el-tooltip :content="dict.open_link" placement="top">
                                         <ExternalLink class="text-cyan-500 w-6 h-6" />
                                     </el-tooltip>
                                 </a>
-                                <el-tooltip content="Remove bookmark" placement="top">
+                                <el-tooltip :content="dict.remove_bookmark" placement="top">
                                     <HeartOff class="text-red-500 cursor-pointer"
                                         @click="() => removeBookmark(bookmark.id, bookmark.title, bookmark.url, bookmark.category)" />
                                 </el-tooltip>

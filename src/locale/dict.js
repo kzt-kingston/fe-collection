@@ -11,6 +11,92 @@ const multiLang = {
     developed_by: "Developed by",
     search_result: "Search Result",
     search_resources: "Search Resources",
+
+    start_here: "Start Here",
+    bookmarks: "Bookmarks",
+    view_roadmap: "View Roadmap 🚀",
+    install_app: "Install App",
+    carousel_intro:
+      "You can find and learn many different resources and improve your skills by answering Quiz!",
+
+    all: "All",
+    websites: "Websites",
+    videos: "Videos",
+    cat_markup: "Markup and Styling Languages",
+    cat_programming: "Programming Languages",
+    cat_frameworks: "Frameworks & Libraries",
+    cat_dev_tools: "Developer Tools",
+    cat_design: "Design Resources",
+    cat_uiux: "UI/UX Enhancements",
+    cat_misc: "Miscellaneous",
+    watch_on_youtube: "Watch on YouTube",
+    close_tab: "Close tab",
+    no_tabs_open: "No tabs open. Click the plus icon to add a new tab.",
+    searching_result: "Searching Result",
+
+    bookmarks_help:
+      "Your bookmarks are stored in your local storage. Clearing your cache will remove your bookmarks. If you want to keep your bookmarks, you can export them as a JSON file and import them later.",
+    export: "Export",
+    import: "Import",
+    clear_all: "Clear All",
+    clear_bookmarks_confirm: "Are you sure to clear all bookmarks?",
+    search_bookmarks: "Search bookmarks...",
+    select: "Select",
+    no_bookmarks: "No bookmarks found.",
+    website_fallback: "[Website]",
+    open_link: "Open link",
+    remove_bookmark: "Remove bookmark",
+    invalid_file_type: "Invalid File Type",
+    upload_json: "Please upload a JSON file.",
+    bookmarks_imported: "Bookmarks Imported",
+    bookmarks_imported_msg: "Bookmarks imported successfully",
+    bookmarks_cleared: "Bookmarks Cleared",
+    bookmarks_cleared_msg: "Bookmarks cleared successfully",
+    bookmark_saved: "Bookmark Saved",
+    bookmark_saved_msg: "Bookmark saved successfully",
+    bookmark_removed: "Bookmark Removed",
+    bookmark_removed_msg: "Bookmark removed successfully",
+
+    unfinished_quiz: "You have an unfinished quiz. Would you like to continue?",
+    continue_quiz: "Continue Quiz",
+    select_a_quiz: "Select a Quiz",
+    start_quiz: "Start Quiz",
+    previous: "Previous",
+    next: "Next",
+    finish_quiz: "Finish Quiz",
+    question_of: "Question {current} of {total}",
+    percent_complete: "{percentage}% Complete",
+    quiz_result: "Quiz Result",
+    excellent: "Excellent!",
+    great_job: "Great job!",
+    good_effort: "Good effort!",
+    keep_practicing: "Keep practicing!",
+    you_scored: "You scored {score} out of {total} in the {type} quiz.",
+    review_incorrect: "Review Incorrect Answers",
+    your_answer: "Your answer:",
+    correct_answer: "Correct answer:",
+    try_another_quiz: "Try Another Quiz",
+    quiz_init_error: "Failed to initialize quiz store. Please try refreshing the page.",
+    quiz_error: "An error occurred. Please try refreshing the page.",
+    quiz_desc_html: "Test your knowledge of HTML tags, attributes, and semantic structure.",
+    quiz_desc_css:
+      "Challenge yourself with questions about CSS properties, selectors, and layout techniques.",
+    quiz_desc_javascript:
+      "Assess your JavaScript skills with questions on syntax, functions, and core concepts.",
+    quiz_desc_typescript:
+      "Test your TypeScript knowledge with questions on types, interfaces, and advanced features.",
+    quiz_desc_react: "Evaluate your understanding of React components, hooks, and state management.",
+    quiz_desc_vue: "Check your knowledge of Vue components, directives, and reactivity system.",
+    quiz_desc_angular:
+      "Challenge yourself with questions on Angular components, services, and routing.",
+
+    image_search_desc:
+      "Search for stunning, free downloadable images from Unsplash. Just type in a keyword and let the magic happen!",
+    search_images: "Search for images...",
+    search: "Search",
+    loading_model: "Loading model and database...",
+    view_on_unsplash: "View on Unsplash",
+    download: "Download",
   },
   my: {
     a_place_where:
@@ -24,12 +110,102 @@ const multiLang = {
     developed_by: "Developed by",
     search_result: "ရှာဖွေမှုရလဒ်",
     search_resources: "resources များရှာဖွေပါ",
+
+    start_here: "စတင်ရန်",
+    bookmarks: "သိမ်းထားသည်များ",
+    view_roadmap: "Roadmap ကြည့်ရန် 🚀",
+    install_app: "App ထည့်သွင်းရန်",
+    carousel_intro:
+      "resources မျိုးစုံကို ရှာဖွေလေ့လာပြီး Quiz ဖြေခြင်းဖြင့် ကျွမ်းကျင်မှုကို တိုးတက်စေနိုင်ပါသည်!",
+
+    all: "အားလုံး",
+    websites: "ဝဘ်ဆိုဒ်များ",
+    videos: "ဗီဒီယိုများ",
+    cat_markup: "Markup နှင့် Styling ဘာသာစကားများ",
+    cat_programming: "Programming ဘာသာစကားများ",
+    cat_frameworks: "Frameworks နှင့် Libraries",
+    cat_dev_tools: "Developer ကိရိယာများ",
+    cat_design: "Design resources များ",
+    cat_uiux: "UI/UX တိုးတက်မှုများ",
+    cat_misc: "အခြားအရာများ",
+    watch_on_youtube: "YouTube တွင်ကြည့်ရန်",
+    close_tab: "tab ပိတ်ပါ",
+    no_tabs_open: "tab မရှိပါ။ အသစ်ထည့်ရန် plus ကိုနှိပ်ပါ။",
+    searching_result: "ရှာဖွေမှုရလဒ်",
+
+    bookmarks_help:
+      "bookmarks များကို local storage တွင်သိမ်းထားပါသည်။ cache ရှင်းလင်းပါက bookmarks ပျောက်သွားမည်။ ထိန်းသိမ်းလိုပါက JSON ဖိုင်အဖြစ် export လုပ်ပြီး နောက်မှ import ပြန်လုပ်နိုင်ပါသည်။",
+    export: "ထုတ်ယူရန်",
+    import: "သွင်းရန်",
+    clear_all: "အားလုံးဖျက်ရန်",
+    clear_bookmarks_confirm: "bookmarks အားလုံးကို ဖျက်မှာသေချာပါသလား။",
+    search_bookmarks: "bookmarks များရှာဖွေပါ...",
+    select: "ရွေးချယ်ပါ",
+    no_bookmarks: "bookmark မရှိပါ။",
+    website_fallback: "[Website]",
+    open_link: "လင့်ခ်ဖွင့်ရန်",
+    remove_bookmark: "bookmark ဖယ်ရှားရန်",
+    invalid_file_type: "ဖိုင်အမျိုးအစားမှားနေသည်",
+    upload_json: "JSON ဖိုင်တင်ပါ။",
+    bookmarks_imported: "Bookmarks သွင်းပြီးပါပြီ",
+    bookmarks_imported_msg: "bookmarks များကို အောင်မြင်စွာသွင်းပြီးပါပြီ",
+    bookmarks_cleared: "Bookmarks ဖျက်ပြီးပါပြီ",
+    bookmarks_cleared_msg: "bookmarks များကို အောင်မြင်စွာဖျက်ပြီးပါပြီ",
+    bookmark_saved: "Bookmark သိမ်းပြီးပါပြီ",
+    bookmark_saved_msg: "bookmark ကို အောင်မြင်စွာသိမ်းပြီးပါပြီ",
+    bookmark_removed: "Bookmark ဖယ်ရှားပြီးပါပြီ",
+    bookmark_removed_msg: "bookmark ကို အောင်မြင်စွာဖယ်ရှားပြီးပါပြီ",
+
+    unfinished_quiz: "မပြီးသေးသော quiz ရှိပါသည်။ ဆက်ဖြေလိုပါသလား။",
+    continue_quiz: "Quiz ဆက်ဖြေရန်",
+    select_a_quiz: "Quiz ရွေးချယ်ပါ",
+    start_quiz: "Quiz စတင်ရန်",
+    previous: "ယခင်",
+    next: "ရှေ့သို့",
+    finish_quiz: "Quiz အပြီးသတ်ရန်",
+    question_of: "မေးခွန်း {current} / {total}",
+    percent_complete: "{percentage}% ပြီးပါပြီ",
+    quiz_result: "Quiz ရလဒ်",
+    excellent: "အလွန်ကောင်းပါတယ်!",
+    great_job: "ကောင်းပါတယ်!",
+    good_effort: "ကြိုးစားမှုကောင်းပါတယ်!",
+    keep_practicing: "ဆက်လက်လေ့ကျင့်ပါ!",
+    you_scored: "{type} quiz တွင် {score} / {total} ရရှိပါသည်။",
+    review_incorrect: "မှားသောအဖြေများကို ပြန်ကြည့်ရန်",
+    your_answer: "သင့်အဖြေ:",
+    correct_answer: "မှန်ကန်သောအဖြေ:",
+    try_another_quiz: "အခြား Quiz ဖြေရန်",
+    quiz_init_error: "quiz store စတင်၍မရပါ။ စာမျက်နှာကို refresh လုပ်ကြည့်ပါ။",
+    quiz_error: "အမှားတစ်ခုဖြစ်ပွားခဲ့သည်။ စာမျက်နှာကို refresh လုပ်ကြည့်ပါ။",
+    quiz_desc_html: "HTML tags, attributes နှင့် semantic structure အကြောင်း အသိပညာကို စမ်းသပ်ပါ။",
+    quiz_desc_css: "CSS properties, selectors နှင့် layout techniques မေးခွန်းများဖြင့် စမ်းသပ်ပါ။",
+    quiz_desc_javascript:
+      "JavaScript syntax, functions နှင့် core concepts ကျွမ်းကျင်မှုကို အကဲဖြတ်ပါ။",
+    quiz_desc_typescript:
+      "TypeScript types, interfaces နှင့် advanced features အကြောင်း စမ်းသပ်ပါ။",
+    quiz_desc_react: "React components, hooks နှင့် state management နားလည်မှုကို အကဲဖြတ်ပါ။",
+    quiz_desc_vue: "Vue components, directives နှင့် reactivity system အကြောင်း စစ်ဆေးပါ။",
+    quiz_desc_angular: "Angular components, services နှင့် routing မေးခွန်းများဖြင့် စမ်းသပ်ပါ။",
+
+    image_search_desc:
+      "Unsplash မှ အခမဲ့ download လုပ်နိုင်သော ပုံများကို ရှာဖွေပါ။ keyword ရိုက်ထည့်ရုံပါပဲ!",
+    search_images: "ပုံများရှာဖွေပါ...",
+    search: "ရှာဖွေရန်",
+    loading_model: "model နှင့် database ကို ဖွင့်နေသည်...",
+    view_on_unsplash: "Unsplash တွင်ကြည့်ရန်",
+    download: "ဒေါင်းလုဒ်",
   },
 };
 
-// return specific language dictionary based on the language code
+export const interpolate = (template, vars = {}) => {
+  if (template == null) return "";
+  return String(template).replace(/\{(\w+)\}/g, (match, name) =>
+    vars[name] != null ? String(vars[name]) : match,
+  );
+};
+
 export const getDictionary = (languageCode) => {
   return {
-    ...multiLang[languageCode],
+    ...(multiLang[languageCode] || multiLang.en),
   };
 };

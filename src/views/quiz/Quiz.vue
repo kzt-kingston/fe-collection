@@ -5,14 +5,16 @@ import QuizSelection from '@/components/quiz/QuizSelection.vue';
 import QuizQuestion from '@/components/quiz/QuizQuestion.vue';
 import QuizResults from '@/components/quiz/QuizResults.vue';
 import QuizProgress from '@/components/quiz/QuizProgress.vue';
+import { useLocale } from '@/locale/useLocale';
 
+const { dict } = useLocale();
 const error = ref(null);
 let quizStore;
 
 try {
   quizStore = useQuizStore();
 } catch (e) {
-  error.value = 'Failed to initialize quiz store. Please try refreshing the page.';
+  error.value = dict.quiz_init_error;
   console.error('Pinia store error:', e);
 }
 
@@ -69,7 +71,7 @@ const progressPercentage = computed(() => {
 // Capture any errors that occur during component lifecycle
 onErrorCaptured((e) => {
   console.error('Quiz component error:', e);
-  error.value = 'An error occurred. Please try refreshing the page.';
+  error.value = dict.quiz_error;
   return false; // Prevent error from propagating
 });
 </script>

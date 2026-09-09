@@ -1,16 +1,21 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import { ElNotification } from 'element-plus';
+import { getDictionary } from '@/locale/dict';
 
 const STORAGE_KEY = 'bookmarks';
 
-const notify = (action) =>
+const dict = () => getDictionary(localStorage.getItem('lang') || 'en');
+
+const notify = (action) => {
+  const d = dict();
   ElNotification({
-    title: action === 'added' ? 'Bookmark Saved' : 'Bookmark Removed',
-    message: action === 'added' ? 'Bookmark saved successfully' : 'Bookmark removed successfully',
+    title: action === 'added' ? d.bookmark_saved : d.bookmark_removed,
+    message: action === 'added' ? d.bookmark_saved_msg : d.bookmark_removed_msg,
     type: action === 'added' ? 'success' : 'info',
     duration: 1000,
   });
+};
 
 export const useBookmarkStore = defineStore('bookmarks', () => {
   const bookmarks = ref(JSON.parse(localStorage.getItem(STORAGE_KEY)) || []);

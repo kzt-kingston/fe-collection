@@ -1,4 +1,6 @@
 <script setup>
+import { useLocale } from '@/locale/useLocale';
+
 defineProps({
   percentage: {
     type: Number,
@@ -13,13 +15,15 @@ defineProps({
     required: true
   }
 });
+
+const { t } = useLocale();
 </script>
 
 <template>
   <div class="progress-container mb-6">
     <div class="flex justify-between items-center mb-2">
-      <span class="text-sm text-gray-500">Question {{ current }} of {{ total }}</span>
-      <span class="text-sm font-medium text-cyan-500">{{ Math.round(percentage) }}% Complete</span>
+      <span class="text-sm text-gray-500">{{ t('question_of', { current, total }) }}</span>
+      <span class="text-sm font-medium text-cyan-500">{{ t('percent_complete', { percentage: Math.round(percentage) }) }}</span>
     </div>
     
     <div class="h-2 w-full bg-gray-200 rounded-full overflow-hidden">

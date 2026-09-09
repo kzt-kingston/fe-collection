@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-center font-semibold">You can find and learn many different resources and improve your skills by answering Quiz!</p>
+        <p class="text-center font-semibold">{{ dict.carousel_intro }}</p>
         <div class="flex mx-auto items-center justify-center">
             <div class="relative w-full max-w-4xl overflow-hidden">
                 <div class="flex items-center justify-center h-64 md:h-80">
@@ -29,6 +29,9 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { cn } from '@/util/cn';
+import { useLocale } from '@/locale/useLocale';
+
+const { dict } = useLocale();
 
 const props = defineProps({
     logos: Array,

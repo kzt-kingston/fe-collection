@@ -3,10 +3,13 @@ import { ref, watch, nextTick } from 'vue';
 import { X } from 'lucide-vue-next';
 import Resource from './Resource.vue';
 import ResourceDetails from './components/ResourceDetails.vue';
+import { useLocale } from '@/locale/useLocale';
+
+const { dict } = useLocale();
 
 // Define tabs data and state
 const tabs = ref([
-    { id: '1', title: 'Choose Resource' },
+    { id: '1', title: dict.choose_resource },
 ]);
 const activeTab = ref(tabs.value[0].id);
 const tabsContainer = ref(null);
@@ -64,11 +67,11 @@ watch(activeTab, async (newVal) => {
                             :class="{ 'bg-cyan-500 text-white': tab.id === activeTab }" @click="activeTab = tab.id">
                             <img v-if="tab.id !== '1'" :src="'/resources/' + tab.title.toLowerCase() + '.png'"
                                 class="h-4 w-4 shrink-0" />
-                            {{ tab.title }}
+                            {{ tab.id === '1' ? dict.choose_resource : tab.title }}
                             <button v-if="tab.id !== '1'" :id="tab.id" class="h-4 w-4 p-0 opacity-50 hover:opacity-100"
                                 @click.stop="removeTab(tab.id)">
                                 <X class="h-3 w-3" />
-                                <span class="sr-only">Close tab</span>
+                                <span class="sr-only">{{ dict.close_tab }}</span>
                             </button>
                         </div>
                     </div>
@@ -87,7 +90,7 @@ watch(activeTab, async (newVal) => {
             </div>
         </div>
         <div v-else class="text-center p-4 border-x border-b rounded-b-lg bg-white">
-            No tabs open. Click the plus icon to add a new tab.
+            {{ dict.no_tabs_open }}
         </div>
     </div>
 </template>

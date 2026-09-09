@@ -1,9 +1,12 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { Music, House, Heart, ChevronDown, Image, MenuSquare, Puzzle, Shapes } from 'lucide-vue-next';
 import Drawer from '@/components/Drawer.vue';
 import ImageSearch from './AI/ImageSearch/ImageSearch.vue';
+import { useLocale } from '@/locale/useLocale';
+
+const { dict, lang, setLang } = useLocale();
 
 const props = defineProps({
     activeMusicPlayer: {
@@ -22,21 +25,8 @@ const goBack = () => {
     router.push('/')
 }
 
-onMounted(async () => {
-    // check the local storage for the language and if not set yet, set it to 'en'
-    const lang = localStorage.getItem('lang')
-    if (!lang) {
-        localStorage.setItem('lang', 'en')
-    }
-    else {
-        // set the selected language in the dropdown
-        document.querySelector('select[name="language"]').value = lang
-    }
-})
-
 const changeLang = (e) => {
-    localStorage.setItem('lang', e.target.value)
-    location.reload()
+    setLang(e.target.value)
 }
 </script>
 <template>
@@ -53,7 +43,7 @@ const changeLang = (e) => {
                 <div class="flex items-center">
                     <router-link to="/resource"
                         class="text-xs hover:text-cyan-500 transition-colors animate-pulse font-bold border-2 border-cyan-500 px-2 py-1 rounded-md">
-                        Start Here
+                        {{ dict.start_here }}
                     </router-link>
                 </div>
                 <div class="flex items-center mx-2">|</div>
@@ -76,7 +66,7 @@ const changeLang = (e) => {
                             <router-link to="/bookmark" class="hover:text-red-500 transition-colors">
                                 <el-dropdown-item>
                                     <span class="flex items-center text-sm">
-                                        <Heart class="mr-1" size="20" /> Bookmarks
+                                        <Heart class="mr-1" size="20" /> {{ dict.bookmarks }}
                                     </span>
                                 </el-dropdown-item>
                             </router-link>
@@ -126,7 +116,7 @@ const changeLang = (e) => {
             <div class="flex items-center mx-2">|</div>
             <!-- Language Dropdown -->
             <div class="flex items-center">
-                <select name="language" class="rounded-md text-xs" @change="changeLang">
+                <select name="language" class="rounded-md text-xs" :value="lang" @change="changeLang">
                     <option value="en">English</option>
                     <option value="my">မြန်မာ</option>
                 </select>

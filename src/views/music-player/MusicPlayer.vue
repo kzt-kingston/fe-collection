@@ -81,7 +81,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Play, Pause, SkipBack, SkipForward, Rewind, FastForward, CircleX, ListMusic, X } from 'lucide-vue-next'
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
-import { getDictionary } from '@/locale/dict';
+import { useLocale } from '@/locale/useLocale';
 
 const props = defineProps({
   showMusicPlayer: {
@@ -91,6 +91,8 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['close-player']);
+
+const { dict } = useLocale();
 
 const closeMusicPlayer = () => {
   emit('close-player');
@@ -155,7 +157,6 @@ const currentTrack = ref(null)
 const currentTrackIndex = ref(0)
 const currentTrackName = ref('')
 const audioRef = ref(null)
-const dict = ref({});
 const showPlaylist = ref(false);
 
 const handleTimeUpdate = () => {
@@ -246,8 +247,6 @@ const pauseAudio = () => {
 };
 
 onMounted(() => {
-  const lang = localStorage.getItem('lang') || 'en';
-  dict.value = getDictionary(lang);
   init();
 })
 

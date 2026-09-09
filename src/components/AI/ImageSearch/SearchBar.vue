@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from 'vue';
+import { useLocale } from '@/locale/useLocale';
 
 const searchText = ref('');
+const { dict } = useLocale();
 
 const emit = defineEmits(['search']);
 
@@ -17,8 +19,7 @@ const emitSearch = (event) => {
     <div class="-mt-10">
         <div class="text-start mb-4">
             <h1 class="text-4xl font-bold mb-6 text-cyan-500">Image Search</h1>
-            <p class="text-xs text-gray-500">Search for stunning, free downloadable images from Unsplash. Just type in a
-                keyword and let the magic happen!</p>
+            <p class="text-xs text-gray-500">{{ dict.image_search_desc }}</p>
         </div>
         <form @submit="emitSearch" class="relative mb-2">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -30,10 +31,10 @@ const emitSearch = (event) => {
             </div>
             <input v-model="searchText" type="search" name="text" id="default-search"
                 class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
-                placeholder="Search for images..." required />
+                :placeholder="dict.search_images" required />
             <button type="submit"
                 class="text-white absolute right-2.5 bottom-2.5 bg-cyan-500 hover:bg-cyan-600 font-medium rounded-lg text-sm px-4 py-2 ">
-                Search
+                {{ dict.search }}
             </button>
         </form>
     </div>

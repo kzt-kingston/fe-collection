@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue';
+import { useLocale } from '@/locale/useLocale';
 
 defineProps({
     video: Object
 });
 
+const { dict } = useLocale();
 const openVideo = ref(false);
 </script>
 
@@ -47,7 +49,7 @@ const openVideo = ref(false);
         <h3 class="text-lg font-semibold">{{ video.title }}</h3>
         <a :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank"
             class="text-blue-500 hover:underline flex items-center">
-            Watch on YouTube <span class="ml-1">▶️</span>
+            {{ dict.watch_on_youtube }} <span class="ml-1">▶️</span>
         </a>
     </div>
 </template>

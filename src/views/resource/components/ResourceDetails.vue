@@ -13,10 +13,10 @@
         </div>
         <div class="mb-8">
           <el-tabs v-model="activeTab" class="demo-tabs">
-            <el-tab-pane label="All" name="all">
+            <el-tab-pane :label="dict.all" name="all">
               <template #label>
                 <span class="flex items-center gap-2">
-                  All
+                  {{ dict.all }}
                   <span
                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
                     {{ totalCount }}
@@ -28,7 +28,7 @@
             <el-tab-pane v-if="hasWebsites" name="websites">
               <template #label>
                 <span class="flex items-center gap-2">
-                  Websites
+                  {{ dict.websites }}
                   <span
                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
                     {{ websitesCount }}
@@ -40,7 +40,7 @@
             <el-tab-pane v-if="hasVideos" name="videos">
               <template #label>
                 <span class="flex items-center gap-2">
-                  Videos
+                  {{ dict.videos }}
                   <span
                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-cyan-500 rounded-full">
                     {{ videosCount }}
@@ -54,7 +54,7 @@
         <div v-if="
           hasWebsites && (activeTab === 'websites' || activeTab === 'all')
         " class="mb-5">
-          <h2 class="text-2xl font-semibold mb-4">Websites</h2>
+          <h2 class="text-2xl font-semibold mb-4">{{ dict.websites }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="website in resourceData.websites" :key="website.id" class="relative">
               <component :is="isBookmarked(website.id, website.title, title)
@@ -82,7 +82,7 @@
         </div>
 
         <div v-if="hasVideos && (activeTab === 'videos' || activeTab === 'all')" class="mb-5">
-          <h2 class="text-2xl font-semibold mb-4">Videos</h2>
+          <h2 class="text-2xl font-semibold mb-4">{{ dict.videos }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="video in resourceData.videos" :key="video.id" class="relative">
               <component :is="isBookmarked(video.id, video.title, title)
@@ -108,6 +108,10 @@
             </div>
           </div>
         </div>
+        <div v-else-if="!hasVideos && (activeTab === 'all' || activeTab === 'videos')" class="mb-5">
+          <h2 class="text-2xl font-semibold mb-4">{{ dict.videos }}</h2>
+          <p class="text-gray-500">{{ dict.no_video }}</p>
+        </div>
 
       </div>
     </div>
@@ -117,14 +121,15 @@
 <script setup>
 import getData from "@/util/getData";
 import { onMounted, ref, computed } from "vue";
-import { getDictionary } from "@/locale/dict";
 import { Heart, HeartOff } from "lucide-vue-next";
 import { ElTabs } from "element-plus";
 import WebsiteCard from "./WebsiteCard.vue";
 import VideoCard from "./VideoCard.vue";
 import resourceTitles from '../data.json';
 import { useBookmarkStore } from '@/stores/bookmarkStore';
+import { useLocale } from '@/locale/useLocale';
 
+const { dict } = useLocale();
 const bookmarkStore = useBookmarkStore();
 
 const props = defineProps({
@@ -135,7 +140,6 @@ const props = defineProps({
   }
 });
 
-const dict = ref({});
 const activeTab = ref('all'); // Change activeTab to match ElTabs expected value type
 const resourceData = ref({});
 
@@ -155,8 +159,6 @@ const isBookmarked = (id, title, category) =>
 
 onMounted(async () => {
   await fetchData();
-  const lang = localStorage.getItem("lang") || "en";
-  dict.value = getDictionary(lang);
 });
 
 const fetchData = async () => {

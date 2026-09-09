@@ -1,12 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { onMounted, ref } from 'vue';
-import { getDictionary } from '@/locale/dict';
 import { Download } from 'lucide-vue-next';
 import ResourceCarousel from '@/components/ResourceCarousel.vue';
 import SplineViewer from '@/components/SplineViewer.vue';
+import { useLocale } from '@/locale/useLocale';
 
-const dict = ref({});
+const { dict } = useLocale();
 const deferredPrompt = ref(null);
 const showInstallButton = ref(false);
 const logos = [
@@ -70,9 +70,6 @@ const installPWA = async () => {
 };
 
 onMounted(() => {
-    const lang = localStorage.getItem('lang') || 'en';
-    dict.value = getDictionary(lang);
-
     window.addEventListener('beforeinstallprompt', (event) => {
         event.preventDefault(); // Prevent automatic prompt
         deferredPrompt.value = event;
@@ -92,8 +89,8 @@ onMounted(() => {
                 <div class="mb-5">{{ dict.a_place_where }}
                 </div>
                 <a href="https://roadmap.sh/frontend" target="_blank" rel="noopener noreferrer"
-                    class="text-cyan-500 text-md font-bold rounded-md p-3 hover:text-cyan-600 cursor-pointer">View
-                    Roadmap 🚀</a>
+                    class="text-cyan-500 text-md font-bold rounded-md p-3 hover:text-cyan-600 cursor-pointer">{{
+                        dict.view_roadmap }}</a>
             </div>
             <div class="col-span-1 flex justify-center">
                 <!-- <img class="w-80 flex mx-auto" src="/logo.jpeg" alt="logo" /> -->
@@ -107,7 +104,7 @@ onMounted(() => {
         <div v-if="showInstallButton" class="flex items-center justify-center my-5">
             <button @click="installPWA"
                 class="flex items-center gap-2 text-xs text-cyan-500 hover:text-cyan-600 p-2 border-solid border border-cyan-500 rounded-md">
-                Install App
+                {{ dict.install_app }}
                 <Download size="12" class="text-cyan-500 hover:text-cyan-600" />
             </button>
         </div>
@@ -130,7 +127,7 @@ onMounted(() => {
     <!-- Developed By -->
     <div class="text-center text-xs text-gray-500 mt-10">
         <a href="https://kyawzinthet.tech" target="_blank" rel="noopener noreferrer">
-            Developed by Kyaw Zin Thet
+            {{ dict.developed_by }} Kyaw Zin Thet
         </a>
     </div>
 </template>

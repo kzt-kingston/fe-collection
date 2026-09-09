@@ -1,4 +1,6 @@
 <script setup>
+import { useLocale } from '@/locale/useLocale';
+
 defineProps({
   question: {
     type: Object,
@@ -23,6 +25,7 @@ defineProps({
 });
 
 const emit = defineEmits(['select-answer', 'next-question', 'previous-question']);
+const { dict } = useLocale();
 
 const selectAnswer = (index) => {
   emit('select-answer', index);
@@ -63,13 +66,13 @@ const previousQuestion = () => {
       <button @click="previousQuestion"
         class="px-5 py-2 border border-gray-300 rounded-md text-gray-700 font-medium hover:bg-gray-50 transition-colors"
         :disabled="!canGoPrevious" :class="{ 'opacity-50 cursor-not-allowed': !canGoPrevious }">
-        Previous
+        {{ dict.previous }}
       </button>
 
       <button @click="nextQuestion"
         class="px-5 py-2 bg-cyan-500 text-white font-medium rounded-md hover:bg-cyan-600 transition-colors"
         :disabled="selectedAnswer === null" :class="{ 'opacity-50 cursor-not-allowed': selectedAnswer === null }">
-        {{ isLastQuestion ? 'Finish Quiz' : 'Next' }}
+        {{ isLastQuestion ? dict.finish_quiz : dict.next }}
       </button>
     </div>
   </div>

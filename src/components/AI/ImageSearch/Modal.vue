@@ -21,7 +21,7 @@
             <div class="absolute top-0 right-0 flex items-center gap-2 p-3 text-white">
                 <a :href="photoUrl"
                     class="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
-                    target="_blank" title="View on Unsplash" rel="noreferrer">
+                    target="_blank" :title="dict.view_on_unsplash" rel="noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" aria-hidden="true" class="h-5 w-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -31,7 +31,7 @@
                 </a>
                 <button @click="downloadImage(photoImageUrl, `${currentImage.id}.png`)"
                     class="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
-                    title="Download">
+                    :title="dict.download">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" aria-hidden="true" class="h-5 w-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -47,6 +47,9 @@
 <script setup>
 import { computed } from 'vue';
 import { downloadImage } from './util/utils';
+import { useLocale } from '@/locale/useLocale';
+
+const { dict } = useLocale();
 
 const props = defineProps({
     currentImage: Object,
