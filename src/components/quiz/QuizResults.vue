@@ -36,12 +36,16 @@ const performance = computed(() => {
 });
 
 const quizTypeName = computed(() => {
-  switch (props.quizType) {
-    case 'html': return 'HTML';
-    case 'css': return 'CSS';
-    case 'javascript': return 'JavaScript';
-    default: return props.quizType;
-  }
+  const names = {
+    html: 'HTML',
+    css: 'CSS',
+    javascript: 'JavaScript',
+    typescript: 'TypeScript',
+    react: 'React',
+    vue: 'Vue',
+    angular: 'Angular',
+  };
+  return names[props.quizType] || props.quizType;
 });
 
 const restart = () => {

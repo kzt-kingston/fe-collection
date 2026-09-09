@@ -58,7 +58,7 @@ watch(activeTab, async (newVal) => {
 
 <template>
     <div id="resource-tabs" class="w-full mx-auto">
-        <div class="tab-bar-sticky sticky top-24 z-40 bg-white md:top-20 md:-mt-5">
+        <div class="tab-bar-sticky sticky top-14 z-40 -mx-5 bg-white px-5">
             <div id="tab-container" class="bg-white border rounded-t-lg">
                 <div ref="tabsContainer" class="flex items-center overflow-x-auto overflow-y-hidden">
                     <div class="flex h-10 min-w-max items-center pr-3">
@@ -97,7 +97,7 @@ watch(activeTab, async (newVal) => {
 
 <style scoped>
 .tab-bar-sticky {
-    /* Cover the gap between the navbar and the tab bar while scrolling */
-    box-shadow: 0 -24px 0 0 #fff;
+    /* Sit flush under the navbar (h-14) and hide scrolling cards in the seam */
+    box-shadow: 0 -2px 0 0 #fff;
 }
 </style>

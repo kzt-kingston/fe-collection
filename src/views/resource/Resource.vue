@@ -4,9 +4,10 @@ import { ref, computed, watch } from 'vue';
 import resourceTitles from './data.json';
 import { searchForData } from '@/util/getData';
 import { ElInput, ElTabs, ElTabPane } from 'element-plus';
-import { Search, Heart, HeartOff, X } from 'lucide-vue-next';
+import { Search, X } from 'lucide-vue-next';
 import WebsiteCard from './components/WebsiteCard.vue';
 import VideoCard from './components/VideoCard.vue';
+import BookmarkToggle from '@/components/BookmarkToggle.vue';
 import { debounce } from 'lodash';
 import { useBookmarkStore } from '@/stores/bookmarkStore';
 import { useLocale } from '@/locale/useLocale';
@@ -32,6 +33,10 @@ watch(() => inputData.value, (newValue) => {
   debouncedSearch(newValue);
 });
 
+watch(searchResult, () => {
+  activeTab.value = 'all';
+});
+
 const SEARCHING_RESULT = 'Searching Result';
 
 const saveBookMark = (id, title, url, resourceType) =>
@@ -46,6 +51,7 @@ const hasVideos = computed(() => (searchResult.value?.videos?.length || 0) > 0);
 const websitesCount = computed(() => searchResult.value?.websites?.length || 0);
 const videosCount = computed(() => searchResult.value?.videos?.length || 0);
 const totalCount = computed(() => websitesCount.value + videosCount.value);
+const hasNoResults = computed(() => Boolean(searchResult.value) && totalCount.value === 0);
 
 const openNewResourceTab = (title) => {
   emits("openNewTab", title);
@@ -87,9 +93,11 @@ const clearSearch = () => {
       <div class="px-4 py-4">
         <h1 class="text-3xl font-bold mb-6">{{ dict.search_result }}</h1>
 
-        <!-- Replace buttons with ElTabs -->
+        <p v-if="hasNoResults" class="text-gray-500 py-8 text-center">{{ dict.no_search_results }}</p>
+
+        <template v-else>
         <div class="mb-8">
-          <el-tabs v-model="activeTab" class="demo-tabs">
+          <el-tabs v-model="activeTab" class="resource-el-tabs">
             <el-tab-pane :label="dict.all" name="all">
               <template #label>
                 <span class="flex items-center gap-2">
@@ -132,11 +140,8 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">{{ dict.websites }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="website in searchResult.websites" :key="website.id" class="relative">
-              <component :is="isBookmarked(website.id, website.title) ? HeartOff : Heart"
-                @click="() => saveBookMark(website.id, website.title, website.url, 'websites')"
-                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(website.id, website.title),
-                }" />
+              <BookmarkToggle :bookmarked="isBookmarked(website.id, website.title)"
+                @toggle="saveBookMark(website.id, website.title, website.url, 'websites')" />
               <WebsiteCard :website="website" />
             </div>
           </div>
@@ -146,15 +151,13 @@ const clearSearch = () => {
           <h2 class="text-2xl font-semibold mb-4">{{ dict.videos }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="video in searchResult.videos" :key="video.id" class="relative">
-              <component :is="isBookmarked(video.id, video.title) ? HeartOff : Heart"
-                @click="() => saveBookMark(video.id, video.title, `https://www.youtube.com/watch?v=${video.id}`, 'videos')"
-                class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(video.id, video.title),
-                }" />
+              <BookmarkToggle :bookmarked="isBookmarked(video.id, video.title)"
+                @toggle="saveBookMark(video.id, video.title, `https://www.youtube.com/watch?v=${video.id}`, 'videos')" />
               <VideoCard :video="video" />
             </div>
           </div>
         </div>
+        </template>
 
       </div>
     </div>
@@ -181,33 +184,12 @@ const clearSearch = () => {
 </template>
 
 <style scoped lang="scss">
-// import resource: .scss;
 @import '../../assets/resource.scss';
 
 .all-resource:hover {
   background-color: rgb(6, 182, 212);
   transform: scale(1.1);
   transition: transform 0.5s;
-}
-
-:deep(.el-tabs__nav-wrap::after) {
-  height: 1px;
-}
-
-:deep(.el-tabs__item) {
-  font-size: 14px;
-
-  &.is-active {
-    color: rgb(6, 182, 212);
-  }
-
-  &:hover {
-    color: rgb(6, 182, 212);
-  }
-}
-
-:deep(.el-tabs__active-bar) {
-  background-color: rgb(6, 182, 212);
 }
 
 :deep(.el-input__suffix) {

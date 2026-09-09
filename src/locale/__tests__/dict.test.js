@@ -6,6 +6,9 @@ describe("getDictionary", () => {
   it("returns English strings for en", () => {
     const dict = getDictionary("en");
     expect(dict.start_here).toBe("Start Here");
+    expect(dict.resources).toBe("Resources");
+    expect(dict.quiz).toBe("Quiz");
+    expect(dict.image_search).toBe("Image Search");
     expect(dict.visit_website).toBe("Visit Website");
     expect(dict.voice_heading).toBe("Developer Voice");
   });
@@ -14,6 +17,8 @@ describe("getDictionary", () => {
     const dict = getDictionary("my");
     expect(dict.start_here).toBe("စတင်ရန်");
     expect(dict.bookmarks).toBe("သိမ်းထားသည်များ");
+    expect(dict.image_search).toBe("ပုံရှာဖွေရန်");
+    expect(dict.no_tabs_open).toContain("Resource");
     expect(dict.developed_by).toBe("Developed by");
   });
 

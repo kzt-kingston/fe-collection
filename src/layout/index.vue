@@ -13,7 +13,7 @@ const toggleMusicPlayer = () => {
 <template>
     <div>
         <Navbar :active-music-player="showMusicPlayer" @toggleMusicPlayer="toggleMusicPlayer" />
-        <div class="max-w-7xl mx-auto p-5 min-h-screen mt-20">
+        <div class="max-w-7xl mx-auto min-h-screen pt-14 px-5 pb-5">
             <MusicPlayer :show-music-player="showMusicPlayer" @close-player="showMusicPlayer = false" />
             <slot />
         </div>

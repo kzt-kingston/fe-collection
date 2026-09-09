@@ -3,16 +3,12 @@
   <div id="resource-details" class="py-6">
     <div class="my-5">
       <div class="px-4">
-        <div :class="title.replace(/\s+/g,'').toLowerCase() + '_header p-5 rounded-lg mb-5 text-white'">
+        <div :class="headerClass">
           <div class="text-start text-lg mb-2 font-bold">{{ title }}</div>
-          <div class="text-start text-md mb-5">{{resourceTitles.filter((resource) => {
-            return resource.title === title;
-            }).map((resource) => {
-            return resource.description;
-            }) }}</div>
+          <div class="text-start text-md mb-5">{{ resourceDescription }}</div>
         </div>
         <div class="mb-8">
-          <el-tabs v-model="activeTab" class="demo-tabs">
+          <el-tabs v-model="activeTab" class="resource-el-tabs">
             <el-tab-pane :label="dict.all" name="all">
               <template #label>
                 <span class="flex items-center gap-2">
@@ -57,25 +53,8 @@
           <h2 class="text-2xl font-semibold mb-4">{{ dict.websites }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="website in resourceData.websites" :key="website.id" class="relative">
-              <component :is="isBookmarked(website.id, website.title, title)
-                ? HeartOff
-                : Heart
-                " @click="
-                  () =>
-                    saveBookMark(
-                      website.id,
-                      website.title,
-                      website.url,
-                      title,
-                      'websites'
-                    )
-                " class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(
-                    website.id,
-                    website.title,
-                    title
-                  ),
-                }" />
+              <BookmarkToggle :bookmarked="isBookmarked(website.id, website.title, title)"
+                @toggle="saveBookMark(website.id, website.title, website.url, title, 'websites')" />
               <WebsiteCard :website="website" />
             </div>
           </div>
@@ -85,25 +64,8 @@
           <h2 class="text-2xl font-semibold mb-4">{{ dict.videos }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="video in resourceData.videos" :key="video.id" class="relative">
-              <component :is="isBookmarked(video.id, video.title, title)
-                ? HeartOff
-                : Heart
-                " @click="
-                  () =>
-                    saveBookMark(
-                      video.id,
-                      video.title,
-                      `https://www.youtube.com/watch?v=${video.id}`,
-                      title,
-                      'videos'
-                    )
-                " class="hover:text-red-500 text-gray-400 cursor-pointer absolute top-2 right-2 z-10" size="20" :class="{
-                  'text-red-500': isBookmarked(
-                    video.id,
-                    video.title,
-                    title
-                  ),
-                }" />
+              <BookmarkToggle :bookmarked="isBookmarked(video.id, video.title, title)"
+                @toggle="saveBookMark(video.id, video.title, `https://www.youtube.com/watch?v=${video.id}`, title, 'videos')" />
               <VideoCard :video="video" />
             </div>
           </div>
@@ -121,10 +83,10 @@
 <script setup>
 import getData from "@/util/getData";
 import { onMounted, ref, computed } from "vue";
-import { Heart, HeartOff } from "lucide-vue-next";
 import { ElTabs } from "element-plus";
 import WebsiteCard from "./WebsiteCard.vue";
 import VideoCard from "./VideoCard.vue";
+import BookmarkToggle from "@/components/BookmarkToggle.vue";
 import resourceTitles from '../data.json';
 import { useBookmarkStore } from '@/stores/bookmarkStore';
 import { useLocale } from '@/locale/useLocale';
@@ -151,6 +113,20 @@ const websitesCount = computed(() => resourceData.value?.websites?.length || 0);
 const videosCount = computed(() => resourceData.value?.videos?.length || 0);
 const totalCount = computed(() => websitesCount.value + videosCount.value);
 
+const DARK_TEXT_HEADERS = new Set(['javascript', 'react', 'reactnative', 'flutter', 'freeicons']);
+
+const headerKey = computed(() => props.title.replace(/\s+/g, '').toLowerCase());
+
+const headerClass = computed(() => {
+  const text = DARK_TEXT_HEADERS.has(headerKey.value) ? 'text-gray-900' : 'text-white';
+  return `${headerKey.value}_header p-5 rounded-lg mb-5 ${text}`;
+});
+
+const resourceDescription = computed(() => {
+  const match = resourceTitles.find((resource) => resource.title === props.title);
+  return match?.description || '';
+});
+
 const saveBookMark = (id, title, url, category, resourceType) =>
   bookmarkStore.toggle({ id, title, url, category, resourceType });
 
@@ -173,30 +149,4 @@ const fetchData = async () => {
 
 <style scoped lang="scss">
 @import '../../../assets/resource.scss';
-
-:deep(.el-tabs__nav-wrap::after) {
-  height: 1px;
-}
-
-:deep(.el-tabs__item) {
-  font-size: 14px;
-
-  &.is-active {
-    color: rgb(6, 182, 212);
-  }
-
-  &:hover {
-    color: rgb(6, 182, 212);
-  }
-}
-
-:deep(.el-tabs__active-bar) {
-  background-color: rgb(6, 182, 212);
-}
-
-:deep(.el-input__suffix) {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
 </style>

@@ -62,6 +62,12 @@ const continueQuiz = () => {
   }
 };
 
+const exitQuiz = () => {
+  if (window.confirm(dict.exit_quiz_confirm)) {
+    restartQuiz();
+  }
+};
+
 // Compute the progress percentage
 const progressPercentage = computed(() => {
   if (!quizStore || !quizStore.totalQuestions) return 0;
@@ -89,9 +95,14 @@ onErrorCaptured((e) => {
 
     <!-- Quiz Questions -->
     <div v-else-if="currentView === 'quiz' && quizStore" class="quiz-questions">
-      <!-- image of the quiz type -->
-      <img v-if="selectedQuizType" :src="`/resources/${selectedQuizType}.png`" :alt="`${selectedQuizType} Icon`"
-        class="w-14 h-14 inline-block mb-5" />
+      <div class="flex items-center justify-between mb-5">
+        <img v-if="selectedQuizType" :src="`/resources/${selectedQuizType}.png`" :alt="`${selectedQuizType} Icon`"
+          class="w-14 h-14" />
+        <button type="button" class="text-sm text-gray-500 hover:text-cyan-600 transition-colors"
+          @click="exitQuiz">
+          {{ dict.exit_quiz }}
+        </button>
+      </div>
 
       <QuizProgress :percentage="progressPercentage" :current="quizStore.currentQuestionIndex + 1"
         :total="quizStore.totalQuestions" />

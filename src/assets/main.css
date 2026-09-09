@@ -8,3 +8,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.resource-el-tabs .el-tabs__nav-wrap::after {
+  height: 1px;
+}
+
+.resource-el-tabs .el-tabs__item {
+  font-size: 14px;
+}
+
+.resource-el-tabs .el-tabs__item.is-active,
+.resource-el-tabs .el-tabs__item:hover {
+  color: rgb(6, 182, 212);
+}
+
+.resource-el-tabs .el-tabs__active-bar {
+  background-color: rgb(6, 182, 212);
+}

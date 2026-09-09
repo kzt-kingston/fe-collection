@@ -82,7 +82,7 @@ onMounted(() => {
         <div class="mt-28 grid md:grid-cols-2 gap-4 items-center">
             <div class="col-span-1 text-lg leading-normal text-center">
                 <!-- <div class="text-xl">Welcome to</div> -->
-                <span class="text-6xl font-bold"><span class="text-cyan-500 animate-pulse">Frontend</span>
+                <span class="text-6xl font-bold"><span class="text-cyan-500">Frontend</span>
                     Collection!</span>
                 <br />
                 <br />
@@ -109,16 +109,12 @@ onMounted(() => {
             </button>
         </div>
 
-        <router-link to="/resource">
-            <div class="flex items-center justify-center my-10">
-
-                <button class="bg-cyan-500 text-white font-bold rounded-md p-3 hover:bg-cyan-600 cursor-pointer w-4/5">
-                    <div>
-                        {{ dict.start_expore }}
-                    </div>
-                </button>
-            </div>
-        </router-link>
+        <div class="flex items-center justify-center my-10">
+            <router-link to="/resource"
+                class="bg-cyan-500 text-white font-bold rounded-md p-3 hover:bg-cyan-600 cursor-pointer w-4/5 text-center">
+                {{ dict.start_expore }}
+            </router-link>
+        </div>
     </section>
     <section id="developer-voice" class="max-w-4xl mx-auto mt-6">
         <div class="rounded-xl border border-cyan-200 bg-cyan-50/50 px-6 py-8 md:px-10 text-left">

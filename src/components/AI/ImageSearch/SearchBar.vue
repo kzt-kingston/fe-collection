@@ -18,7 +18,7 @@ const emitSearch = (event) => {
 <template>
     <div class="-mt-10">
         <div class="text-start mb-4">
-            <h1 class="text-4xl font-bold mb-6 text-cyan-500">Image Search</h1>
+            <h1 class="text-4xl font-bold mb-6 text-cyan-500">{{ dict.image_search }}</h1>
             <p class="text-xs text-gray-500">{{ dict.image_search_desc }}</p>
         </div>
         <form @submit="emitSearch" class="relative mb-2">

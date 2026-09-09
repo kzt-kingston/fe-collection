@@ -12,8 +12,7 @@ const router = createRouter({
     },
     {
       path: '/about',
-      name: 'About',
-      component: () => import('@/views/about/About.vue'),
+      redirect: '/',
     },
     {
       path: '/music-player',
